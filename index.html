@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MythicGhoul's collection of Minecraft plugins: progression, events, cosmetics, moderation and server utilities.">
+  <meta name="theme-color" content="#090611">
+  <title>MythicGhoul Plugins</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/plugins.js"></script>
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogue">Skip to plugins</a>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="MythicGhoul Plugins home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>
+          <strong>MYTHICGHOUL</strong>
+          <small>PLUGIN FORGE</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#catalogue">Plugins</a>
+        <a href="#flagship">Flagship</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Find my resources</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Minecraft systems forged with purpose</p>
+        <h1>Plugins built to make servers feel <em>alive.</em></h1>
+        <p class="hero-lead">
+          Progression, magic, world events, cosmetics, moderation and quality-of-life systems —
+          designed by MythicGhoul for communities that want more than vanilla.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalogue">Explore the collection</a>
+          <a class="button button-secondary" href="#flagship">See LevelCraft</a>
+        </div>
+        <div class="hero-meta" aria-label="Portfolio highlights">
+          <div><strong id="plugin-count">18</strong><span>Projects</span></div>
+          <div><strong>Paper</strong><span>Modern server focus</span></div>
+          <div><strong>RPG</strong><span>Systems-first design</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Featured plugin interface illustration">
+        <div class="forge-ring ring-one"></div>
+        <div class="forge-ring ring-two"></div>
+        <div class="forge-core">
+          <span class="core-rune">G</span>
+          <span class="core-label">PLUGIN<br>FORGE</span>
+        </div>
+        <article class="floating-card card-a">
+          <span class="mini-icon">⚔</span>
+          <div><b>LevelCraft</b><small>RPG progression suite</small></div>
+        </article>
+        <article class="floating-card card-b">
+          <span class="mini-icon">✦</span>
+          <div><b>MythicEnchant</b><small>Arcane library system</small></div>
+        </article>
+        <article class="floating-card card-c">
+          <span class="mini-icon">☠</span>
+          <div><b>PixelBlood</b><small>Immersive combat effects</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Plugin categories">
+      <div class="shell trust-items">
+        <span>RPG PROGRESSION</span>
+        <i></i>
+        <span>SERVER UTILITIES</span>
+        <i></i>
+        <span>COSMETICS</span>
+        <i></i>
+        <span>WORLD EVENTS</span>
+        <i></i>
+        <span>ADMIN TOOLS</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="catalogue">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> The collection</p>
+          <h2>Every system has a purpose.</h2>
+        </div>
+        <p>Browse the current portfolio. Open any card for features, integrations and project status.</p>
+      </div>
+
+      <div class="catalogue-tools reveal">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Search plugins</span>
+          <input id="plugin-search" type="search" placeholder="Search plugins or features…" autocomplete="off">
+        </label>
+        <div class="filter-row" role="group" aria-label="Filter plugins">
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="public">Public</button>
+          <button class="filter" type="button" data-filter="exclusive">Server exclusive</button>
+          <button class="filter" type="button" data-filter="development">In development</button>
+        </div>
+      </div>
+
+      <div class="plugin-grid" id="plugin-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No plugins match that search yet.</p>
+    </section>
+
+    <section class="section flagship-wrap" id="flagship">
+      <div class="shell flagship reveal">
+        <div class="flagship-copy">
+          <p class="eyebrow"><span></span> Flagship project</p>
+          <span class="status-chip status-exclusive">GhoulCraft Exclusive</span>
+          <h2>LevelCraft</h2>
+          <p class="flagship-lead">A full RPG progression layer built around survival — not pasted over it.</p>
+          <p>
+            Level skills, choose a rank path, forge rarity gear, socket gems, master magic, hunt scaling bosses,
+            complete questlines and survive a world that grows alongside you.
+          </p>
+          <button class="button button-primary js-open-plugin" type="button" data-plugin="levelcraft">Explore LevelCraft</button>
+        </div>
+        <div class="feature-stack" aria-label="LevelCraft feature highlights">
+          <article><span>01</span><div><b>Skills & prestige</b><small>Long-term progression with meaningful milestones.</small></div></article>
+          <article><span>02</span><div><b>Rarity & forging</b><small>Power, sockets, gems, runes and crafted identity.</small></div></article>
+          <article><span>03</span><div><b>Living world systems</b><small>Bosses, corruption, quests, events and scaling enemies.</small></div></article>
+          <article><span>04</span><div><b>Built as one ecosystem</b><small>Systems interact instead of feeling like separate add-ons.</small></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell principles" id="about">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> Design principles</p>
+          <h2>More than another config file.</h2>
+        </div>
+        <p>Each project is shaped around real server problems, readable administration and player-facing polish.</p>
+      </div>
+      <div class="principle-grid">
+        <article class="reveal"><span>✧</span><h3>Player-first systems</h3><p>Features should create stories, goals and identity rather than background noise.</p></article>
+        <article class="reveal"><span>⌘</span><h3>Admin-friendly control</h3><p>Clear GUIs, sensible configuration and practical integrations for live communities.</p></article>
+        <article class="reveal"><span>⬡</span><h3>Built to connect</h3><p>Vault, PlaceholderAPI, Discord webhooks and cross-plugin hooks where they genuinely help.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell cta reveal" id="contact">
+      <div>
+        <p class="eyebrow"><span></span> MythicGhoul resources</p>
+        <h2>Find releases, updates and support.</h2>
+        <p>Platform buttons appear automatically after their URLs are added to <code>assets/plugins.js</code>.</p>
+      </div>
+      <div class="platform-links" id="platform-links"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <a class="brand compact" href="#top">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span><strong>MYTHICGHOUL</strong><small>PLUGIN FORGE</small></span>
+      </a>
+      <p>Independent Minecraft plugin development by <strong>@ghoultycoon</strong>.</p>
+      <p>Not affiliated with Mojang Studios or Microsoft.</p>
+    </div>
+  </footer>
+
+  <dialog class="plugin-modal" id="plugin-modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close plugin details">×</button>
+    <div class="modal-hero">
+      <span class="modal-icon" id="modal-icon"></span>
+      <div>
+        <span class="status-chip" id="modal-status"></span>
+        <p class="modal-category" id="modal-category"></p>
+        <h2 id="modal-title"></h2>
+        <p id="modal-tagline"></p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-description" id="modal-description"></p>
+      <h3>Core features</h3>
+      <ul id="modal-features"></ul>
+      <div class="integration-wrap" id="integration-wrap">
+        <h3>Integrations</h3>
+        <div class="integration-list" id="modal-integrations"></div>
+      </div>
+      <div class="modal-actions" id="modal-actions"></div>
+    </div>
+  </dialog>
+
+  <template id="plugin-card-template">
+    <article class="plugin-card reveal">
+      <div class="card-top">
+        <span class="plugin-icon"></span>
+        <span class="status-chip"></span>
+      </div>
+      <p class="plugin-category"></p>
+      <h3></h3>
+      <p class="plugin-tagline"></p>
+      <div class="card-tags"></div>
+      <button class="card-link" type="button">View plugin <span>→</span></button>
+    </article>
+  </template>
+</body>
+</html>
