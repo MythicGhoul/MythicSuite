@@ -1,0 +1,952 @@
+[
+  {
+    "id": "mythicenchant",
+    "name": "MythicEnchant",
+    "category": "Enchanting Overhaul",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Turn enchanted books into a living, physical arcane library.",
+    "description": "A complete alternative to random enchanting. Players discover books, store them in nearby chiseled bookshelves and browse compatible knowledge through a custom enchanting interface.",
+    "features": [
+      "Selectable enchanting GUI",
+      "Physical bookshelf libraries",
+      "Vanilla and custom enchantments",
+      "100 custom enchantments",
+      "Configurable XP and lapis costs",
+      "Natural book discovery and drops"
+    ],
+    "tags": [
+      "Magic",
+      "GUI",
+      "Enchanting"
+    ],
+    "integrations": [
+      "LevelCraft edition",
+      "Vault-ready design"
+    ],
+    "compatibility": "Paper/Spigot 1.21.10",
+    "version": "2.1.1",
+    "spigot_url": "https://www.spigotmc.org/resources/mythicenchant-1-21-10-%E2%9C%A8-100-custom-enchants-arcane-libraries-selectable-enchanting-%E2%9C%A8.136976/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "136976",
+      "downloads": 6,
+      "rating": 0,
+      "ratings": 0,
+      "version": "2.1.1",
+      "updated": "11 Jul 2026"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "pickupfilter",
+    "name": "PickupFilter",
+    "category": "Inventory Utility",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Let players decide exactly which items enter their inventory.",
+    "description": "A persistent per-player pickup filter designed for survival servers, farms and busy inventories. Choices remain intact through relogs, restarts, storage and item transfers.",
+    "features": [
+      "Per-player item filters",
+      "Persistent saved choices",
+      "Simple management GUI",
+      "Farm-friendly behaviour",
+      "Restart-safe storage",
+      "Lightweight event handling"
+    ],
+    "tags": [
+      "Inventory",
+      "Filter",
+      "QoL"
+    ],
+    "integrations": [],
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "version": "1.2.1",
+    "spigot_url": "https://www.spigotmc.org/resources/pickupfilter-1-20-1-21-x-%E2%9C%A8-pickup-filters-gui-geyser-%E2%9C%A8.136241/",
+    "modrinth_url": "https://modrinth.com/project/26myPReK",
+    "spigot": {
+      "id": "136241",
+      "downloads": 18,
+      "rating": 5,
+      "ratings": 1,
+      "version": "1.2.1",
+      "updated": "2 Jul 2026"
+    },
+    "modrinth": {
+      "id": "26myPReK",
+      "downloads": 1,
+      "followers": 0
+    }
+  },
+  {
+    "id": "mythicjoins",
+    "name": "MythicJoins",
+    "category": "Cosmetics & Economy",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Purchasable join and leave messages with real player identity.",
+    "description": "A cosmetic message marketplace where players collect and select themed arrivals and departures, backed by an economy and clean management GUIs.",
+    "features": [
+      "Join and leave message shops",
+      "Owned cosmetics menus",
+      "Random default message pool",
+      "Vault economy purchases",
+      "Admin grants and removal",
+      "Discord join and leave embeds"
+    ],
+    "tags": [
+      "Cosmetics",
+      "Vault",
+      "GUI"
+    ],
+    "integrations": [
+      "Vault",
+      "Discord webhooks"
+    ],
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "version": "1.0",
+    "spigot_url": "https://www.spigotmc.org/resources/mythicjoins-1-20-1-21-x-%E2%9C%A8-mythic-join-leave-effects-gui-shop-vault-discord-webhooks-%E2%9C%A8.136663/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "136663",
+      "downloads": 8,
+      "rating": 0,
+      "ratings": 0,
+      "version": "1.0",
+      "updated": "1 Jul 2026"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "mythicvote",
+    "name": "MythicVote",
+    "category": "Voting & Rewards",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Vote rewards, milestones, leaderboards and Discord updates.",
+    "description": "A focused vote management plugin for rewarding loyal players and keeping server voting visible through milestones, rankings and configurable command rewards.",
+    "features": [
+      "Per-vote command rewards",
+      "Lifetime vote tracking",
+      "Milestone rewards",
+      "Leaderboards",
+      "Discord webhook embeds",
+      "Player data persistence"
+    ],
+    "tags": [
+      "Votes",
+      "Rewards",
+      "Discord"
+    ],
+    "integrations": [
+      "NuVotifier",
+      "Discord webhooks",
+      "PlaceholderAPI"
+    ],
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "version": "1.2.2",
+    "spigot_url": "https://www.spigotmc.org/resources/mythicvote-1-20-1-21-x-%E2%9C%A8-vote-rewards-leaderboards-milestones-discord-webhooks-%E2%9C%A8.135078/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "135078",
+      "downloads": 32,
+      "rating": 0,
+      "ratings": 0,
+      "version": "1.2.2",
+      "updated": "24 Jun 2026"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "lastwords",
+    "name": "LastWords",
+    "category": "Death Messages",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Hundreds of funny death messages with an in-game editor.",
+    "description": "LastWords replaces repetitive vanilla death text with a huge configurable message library, an editor for live servers and optional Discord presentation.",
+    "features": [
+      "597 default funny messages",
+      "Cause-specific message pools",
+      "In-game message editor",
+      "Prefix and chat compatibility",
+      "Discord webhook embeds",
+      "Configurable formatting"
+    ],
+    "tags": [
+      "Chat",
+      "Fun",
+      "Editor"
+    ],
+    "integrations": [
+      "Discord webhooks",
+      "Essentials-style chat"
+    ],
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "version": "1.2.4",
+    "spigot_url": "https://www.spigotmc.org/resources/lastwords-%E2%9C%A6-funny-custom-death-messages-in-game-editor-%E2%9C%A6.135578/",
+    "modrinth_url": "https://modrinth.com/project/oyuWDHN2",
+    "spigot": {
+      "id": "135578",
+      "downloads": 104,
+      "rating": 5,
+      "ratings": 5,
+      "version": "1.2.4",
+      "updated": "22 Jun 2026"
+    },
+    "modrinth": {
+      "id": "oyuWDHN2",
+      "downloads": 75,
+      "followers": 2
+    }
+  },
+  {
+    "id": "pixelblood",
+    "name": "PixelBlood",
+    "category": "Combat Immersion",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Responsive blood trails, pools, bursts and bleeding effects.",
+    "description": "PixelBlood gives combat visual weight without forcing a resource pack. Fine-grained settings cover players, bosses, passive mobs, hostile mobs, critical hits, death effects and optional bleeding damage.",
+    "features": [
+      "Damage and critical bursts",
+      "Ground trails and blood pools",
+      "Configurable bleeding effect",
+      "Mob-category controls",
+      "Boss and death effects",
+      "In-game administration GUI"
+    ],
+    "tags": [
+      "Effects",
+      "Combat",
+      "Configurable"
+    ],
+    "integrations": [
+      "WorldGuard awareness",
+      "bStats",
+      "Update checker"
+    ],
+    "compatibility": "Paper/Spigot 1.20.x\u201326.1.x",
+    "version": "3.7",
+    "spigot_url": "https://www.spigotmc.org/resources/pixelblood-1-20-x-1-26-x-%E2%9A%94-dynamic-blood-effects-%E2%9A%94-trails-pools-splatter-bleeding.95684/",
+    "modrinth_url": "https://modrinth.com/project/1oCiyYKI",
+    "spigot": {
+      "id": "95684",
+      "downloads": 12102,
+      "rating": 4.2,
+      "ratings": 5,
+      "version": "3.7",
+      "updated": "20 Jun 2026"
+    },
+    "modrinth": {
+      "id": "1oCiyYKI",
+      "downloads": 733,
+      "followers": 14
+    }
+  },
+  {
+    "id": "mythictrash",
+    "name": "MythicTrash",
+    "category": "Inventory Utility",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "A safe, configurable double-chest trash interface.",
+    "description": "A polished disposal GUI with safeguards for valuable items, configurable presentation and optional confirmation workflows.",
+    "features": [
+      "Double-chest trash GUI",
+      "Protected items",
+      "Optional confirmation",
+      "Blocked worlds and materials",
+      "Usage statistics",
+      "Fully configurable visuals"
+    ],
+    "tags": [
+      "Utility",
+      "GUI",
+      "Safety"
+    ],
+    "integrations": [
+      "Geyser",
+      "Floodgate"
+    ],
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "version": "1.0.2",
+    "spigot_url": "https://www.spigotmc.org/resources/mythictrash-1-20-x-1-21-x-%EF%B8%8F-safe-item-disposal-%EF%B8%8F-%E2%9C%A8-trash-gui-%E2%9C%A8.136211/",
+    "modrinth_url": "https://modrinth.com/project/40jnsAKM",
+    "spigot": {
+      "id": "136211",
+      "downloads": 12,
+      "rating": 5,
+      "ratings": 1,
+      "version": "1.0.2",
+      "updated": "17 Jun 2026"
+    },
+    "modrinth": {
+      "id": "40jnsAKM",
+      "downloads": 1,
+      "followers": 0
+    }
+  },
+  {
+    "id": "arcanebuilder",
+    "name": "ArcaneBuilder",
+    "category": "Building Utility",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
+    "tagline": "Watch schematics assemble themselves, one block at a time.",
+    "description": "A visual schematic construction tool that turns instant pastes into animated building sequences suitable for events, reveals and world development.",
+    "features": [
+      "Schematic file support",
+      "Animated block placement",
+      "Builder chest workflow",
+      "Admin tab completion",
+      "Configurable pacing",
+      "Event-friendly presentation"
+    ],
+    "tags": [
+      "Building",
+      "Schematics",
+      "Effects"
+    ],
+    "integrations": [
+      "WorldEdit formats"
+    ],
+    "compatibility": "Paper/Spigot \u2014 see release page",
+    "version": "1.4",
+    "spigot_url": "https://www.spigotmc.org/resources/arcanebuilder-%E2%9A%A1-cinematic-building-animated-schematics-preview-claim-protections-undo-%E2%9A%A1.134753/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "134753",
+      "downloads": 55,
+      "rating": 5,
+      "ratings": 2,
+      "version": "1.4",
+      "updated": "7 Jun 2026"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "auto-breeding",
+    "name": "Auto Breeding",
+    "category": "Farming Automation",
+    "statusLabel": "Published Resource",
+    "lifecycle": "current",
+    "tagline": "Let animals breed naturally using nearby food sources.",
+    "description": "Auto Breeding removes repetitive manual feeding from established farms while keeping the process tied to survival resources. Animals locate and consume nearby food, then enter breeding mode under configurable conditions.",
+    "features": [
+      "Natural automated breeding",
+      "Nearby food consumption",
+      "Species-aware food handling",
+      "Configurable timing and limits",
+      "Farm-friendly behaviour",
+      "Lightweight server utility"
+    ],
+    "tags": [
+      "Farming",
+      "Mobs",
+      "Automation"
+    ],
+    "integrations": [],
+    "compatibility": "1.19\u20131.20.x and 26.1.x",
+    "version": "1.5",
+    "spigot_url": "https://www.spigotmc.org/resources/%E2%9D%A4%EF%B8%8F-auto-breeding-%E2%9D%A4%EF%B8%8F-1-19-1-20-x-26-1-x.119205/",
+    "modrinth_url": "https://modrinth.com/project/SzSnrhRB",
+    "spigot": {
+      "id": "119205",
+      "downloads": 456,
+      "rating": 5,
+      "ratings": 3,
+      "version": "1.5",
+      "updated": "21 May 2026"
+    },
+    "modrinth": {
+      "id": "SzSnrhRB",
+      "downloads": 529,
+      "followers": 5
+    }
+  },
+  {
+    "id": "arcane-exchange",
+    "name": "Arcane Exchange",
+    "category": "Magical Automation",
+    "statusLabel": "Published Resource",
+    "lifecycle": "current",
+    "tagline": "A magical machine system powered by arcane energy.",
+    "description": "Arcane Exchange brings an arcane-technology progression loop to survival. Players build tiered machines, generate or route energy and automate useful processes through a fantasy-first presentation.",
+    "features": [
+      "Arcane energy system",
+      "Tiered machines",
+      "Magical automation loop",
+      "Progression-based upgrades",
+      "Survival economy hooks",
+      "Configurable machine behaviour"
+    ],
+    "tags": [
+      "Automation",
+      "Magic",
+      "Machines"
+    ],
+    "integrations": [],
+    "compatibility": "See the current resource release",
+    "version": "1.0",
+    "spigot_url": "https://www.spigotmc.org/resources/%E2%9C%A8arcane-exchange-%E2%9C%A8-magical-automation-%E2%80%A2-energy-system-%E2%80%A2-tiered-machines.133728/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "133728",
+      "downloads": 10,
+      "rating": 5,
+      "ratings": 1,
+      "version": "1.0",
+      "updated": "25 Mar 2026"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "healing-stone",
+    "name": "Healing Stone",
+    "category": "Survival Utility",
+    "statusLabel": "Legacy Resource",
+    "lifecycle": "legacy",
+    "tagline": "Crystal-themed healing tools for survival gameplay.",
+    "description": "Healing Stone adds a compact set of healing-focused items with a crystal identity. It is designed as a lightweight survival utility rather than a full magic framework.",
+    "features": [
+      "Healing stone items",
+      "Crystal-themed utility",
+      "Simple player commands",
+      "Lightweight gameplay loop",
+      "Server reward potential",
+      "Straightforward configuration"
+    ],
+    "tags": [
+      "Healing",
+      "Crystals",
+      "Legacy"
+    ],
+    "integrations": [],
+    "compatibility": "Legacy resource \u2014 check the release page",
+    "version": "2.3",
+    "spigot_url": "https://www.spigotmc.org/resources/healing-stone.60488/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "60488",
+      "downloads": 4994,
+      "rating": 5,
+      "ratings": 6,
+      "version": "2.3",
+      "updated": "5 Jan 2026"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "exp-gems",
+    "name": "EXP-Gems",
+    "category": "RPG Progression",
+    "statusLabel": "Legacy Resource",
+    "lifecycle": "legacy",
+    "tagline": "Craftable gems that enhance experience gains.",
+    "description": "EXP-Gems gives RPG and fantasy servers a tangible way to reward progression. Players can craft or obtain gems that improve experience gains and provide a more visible upgrade path than invisible permissions.",
+    "features": [
+      "Craftable experience gems",
+      "Multiple gem strengths",
+      "RPG-friendly progression",
+      "Visual item effects",
+      "Configurable gain bonuses",
+      "Reward and economy potential"
+    ],
+    "tags": [
+      "RPG",
+      "Experience",
+      "Gems"
+    ],
+    "integrations": [],
+    "compatibility": "1.18\u20131.20",
+    "version": "3.3",
+    "spigot_url": "https://www.spigotmc.org/resources/exp-gems-1-18-1-20-%E2%9A%94%EF%B8%8F-mega-exp-gains-%E2%9A%94%EF%B8%8F-%E2%9A%92%EF%B8%8F-gem-crafting-%E2%9A%92%EF%B8%8F-%E2%9A%A1-cool-effects-%E2%9A%A1.96947/",
+    "modrinth_url": "https://modrinth.com/project/8pKhVJ8t",
+    "spigot": {
+      "id": "96947",
+      "downloads": 1832,
+      "rating": 4.7,
+      "ratings": 6,
+      "version": "3.3",
+      "updated": "1 Sep 2024"
+    },
+    "modrinth": {
+      "id": "8pKhVJ8t",
+      "downloads": 204,
+      "followers": 7
+    }
+  },
+  {
+    "id": "uncraftable",
+    "name": "Uncraftable",
+    "category": "Recipe Utility",
+    "statusLabel": "Legacy Resource",
+    "lifecycle": "legacy",
+    "tagline": "Make useful vanilla items craftable.",
+    "description": "Uncraftable adds recipes for selected items that vanilla normally leaves unavailable at a crafting table. It is a focused quality-of-life resource for servers that want more renewable progression.",
+    "features": [
+      "Recipes for uncraftable items",
+      "Simple survival integration",
+      "Configurable recipe set",
+      "No large gameplay framework",
+      "Easy server adoption",
+      "Useful for limited worlds"
+    ],
+    "tags": [
+      "Recipes",
+      "Utility",
+      "Legacy"
+    ],
+    "integrations": [],
+    "compatibility": "Check the current resource release",
+    "version": "1.2",
+    "spigot_url": "https://www.spigotmc.org/resources/uncraftable-a-simple-yet-helpful-plugin.110348/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "110348",
+      "downloads": 149,
+      "rating": 3,
+      "ratings": 1,
+      "version": "1.2",
+      "updated": "10 Jun 2023"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "easyreplant",
+    "name": "EasyReplant",
+    "category": "Farming Utility",
+    "statusLabel": "Utility Plugin",
+    "lifecycle": "legacy",
+    "tagline": "Fast crop harvesting with sensible inventory-based replanting.",
+    "description": "A straightforward farming quality-of-life plugin that replants supported crops only when the player actually has the required item.",
+    "features": [
+      "Automatic crop replanting",
+      "Inventory requirement",
+      "Sugar cane support",
+      "Cactus support",
+      "Growth controls",
+      "Survival-friendly handling"
+    ],
+    "tags": [
+      "Farming",
+      "QoL",
+      "Lightweight"
+    ],
+    "integrations": [],
+    "compatibility": "Spigot 1.18\u20131.19.x",
+    "version": "3.0",
+    "spigot_url": "https://www.spigotmc.org/resources/easyreplant-1-18-1-19-x-%E2%AD%90-auto-replant-%E2%AD%90-%E2%9A%A1-multi-harvest-chance-%E2%9A%A1-%E2%AD%90-fast-growth-%E2%AD%90.106994/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "106994",
+      "downloads": 4070,
+      "rating": 5,
+      "ratings": 2,
+      "version": "3.0",
+      "updated": "19 Mar 2023"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "simplecrystals",
+    "name": "SimpleCrystals",
+    "category": "Custom Items",
+    "statusLabel": "Utility Plugin",
+    "lifecycle": "legacy",
+    "tagline": "A clean foundation for collectible crystal items and server rewards.",
+    "description": "A focused custom-item project for adding identifiable crystal rewards and collectible materials to server progression loops.",
+    "features": [
+      "Custom crystal items",
+      "Persistent item identity",
+      "Reward-ready commands",
+      "Configurable presentation",
+      "Simple administration",
+      "Progression integration"
+    ],
+    "tags": [
+      "Items",
+      "Rewards",
+      "Lightweight"
+    ],
+    "integrations": [],
+    "compatibility": "Spigot \u2014 legacy resource",
+    "version": "1.6",
+    "spigot_url": "https://www.spigotmc.org/resources/simplecrystals.66824/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "66824",
+      "downloads": 1066,
+      "rating": 5,
+      "ratings": 3,
+      "version": "1.6",
+      "updated": "13 Mar 2023"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "mithrilchains",
+    "name": "MithrilChains",
+    "category": "Recipe Utility",
+    "statusLabel": "Legacy Resource",
+    "lifecycle": "legacy",
+    "tagline": "Make chainmail armour craftable again.",
+    "description": "MithrilChains is a small recipe-focused plugin that restores a direct crafting path for chainmail armour. It is intentionally simple and easy to drop into survival servers.",
+    "features": [
+      "Craftable chainmail armour",
+      "Simple recipe progression",
+      "Lightweight implementation",
+      "Survival-friendly materials",
+      "No database requirement",
+      "Minimal setup"
+    ],
+    "tags": [
+      "Recipes",
+      "Armour",
+      "Legacy"
+    ],
+    "integrations": [],
+    "compatibility": "Check the current resource release",
+    "version": "1.0",
+    "spigot_url": "https://www.spigotmc.org/resources/mithrilchains.106812/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "106812",
+      "downloads": 331,
+      "rating": 5,
+      "ratings": 1,
+      "version": "1.0",
+      "updated": "18 Dec 2022"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "simplespawn",
+    "name": "SimpleSpawn",
+    "category": "Server Utility",
+    "statusLabel": "Legacy Resource",
+    "lifecycle": "legacy",
+    "tagline": "A lightweight way to set and use a server spawn.",
+    "description": "SimpleSpawn provides the core spawn commands a small server needs without bundling an entire essentials suite.",
+    "features": [
+      "Set a server spawn",
+      "Teleport to spawn",
+      "Simple permissions",
+      "Low-overhead commands",
+      "Straightforward configuration",
+      "Small-server friendly"
+    ],
+    "tags": [
+      "Spawn",
+      "Commands",
+      "Legacy"
+    ],
+    "integrations": [],
+    "compatibility": "Legacy resource \u2014 check the release page",
+    "version": "1.0",
+    "spigot_url": "https://www.spigotmc.org/resources/simplespawn.71281/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "71281",
+      "downloads": 310,
+      "rating": 0,
+      "ratings": 0,
+      "version": "1.0",
+      "updated": "22 Aug 2021"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "levelrewards",
+    "name": "LevelRewards",
+    "category": "Progression Utility",
+    "statusLabel": "Legacy Resource",
+    "lifecycle": "legacy",
+    "tagline": "Reward players for reaching vanilla experience levels.",
+    "description": "LevelRewards turns vanilla levelling into a simple reward track. Server owners can use it to recognise milestones without installing a full RPG progression suite.",
+    "features": [
+      "Vanilla level milestones",
+      "Configurable rewards",
+      "Simple progression loop",
+      "Command-based delivery",
+      "Lightweight operation",
+      "Easy server setup"
+    ],
+    "tags": [
+      "Rewards",
+      "Levels",
+      "Legacy"
+    ],
+    "integrations": [],
+    "compatibility": "Legacy resource \u2014 check the release page",
+    "version": "1.0",
+    "spigot_url": "https://www.spigotmc.org/resources/levelrewards.67276/",
+    "modrinth_url": null,
+    "spigot": {
+      "id": "67276",
+      "downloads": 290,
+      "rating": 4,
+      "ratings": 1,
+      "version": "1.0",
+      "updated": "18 Mar 2020"
+    },
+    "modrinth": null
+  },
+  {
+    "id": "levelcraft",
+    "name": "LevelCraft",
+    "category": "RPG Progression Suite",
+    "statusLabel": "GhoulCraft Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "A complete RPG progression ecosystem built around survival gameplay.",
+    "description": "LevelCraft transforms a survival server into a connected RPG world. Skills, ranks, rarity equipment, magic, bosses, questlines, prestige, souls, scaling enemies and world threats all feed into one long-term progression loop.",
+    "features": [
+      "Skill levelling and milestones",
+      "F-to-S rank progression",
+      "Rarity gear, power and sockets",
+      "Gems, runes, wands and souls",
+      "Bosses and corruption events",
+      "Questlines, parties and prestige"
+    ],
+    "tags": [
+      "RPG",
+      "Progression",
+      "Private"
+    ],
+    "integrations": [
+      "Vault",
+      "PlaceholderAPI",
+      "Dynmap",
+      "Discord webhooks"
+    ],
+    "compatibility": "Paper 1.21.x",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "staffcore",
+    "name": "StaffCore",
+    "category": "Staff Management",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "A complete moderation workspace built around fast, informed action.",
+    "description": "StaffCore combines common moderation tasks with player context, evidence and history so staff can act consistently without juggling unrelated commands.",
+    "features": [
+      "Freeze, warn, mute, kick and ban",
+      "Staff mode",
+      "Player profiles and notes",
+      "Punishment history",
+      "Inventory snapshots",
+      "Alt checking and ladders"
+    ],
+    "tags": [
+      "Moderation",
+      "GUI",
+      "Private"
+    ],
+    "integrations": [
+      "Discord webhooks",
+      "Permissions plugins"
+    ],
+    "compatibility": "Paper 1.21.x",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "mythicrifts",
+    "name": "MythicRifts",
+    "category": "Living World System",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "Corruption cores that spread danger and reshape the world around them.",
+    "description": "A persistent world-threat system built around escalating corruption cores, guardians, spreading terrain pressure and server-wide outbreak reporting.",
+    "features": [
+      "Tiered corruption cores",
+      "Escalating guardians",
+      "Controlled regional spread",
+      "Ambient particles and sound",
+      "Map and sign tracking",
+      "Outbreak Discord alerts"
+    ],
+    "tags": [
+      "World",
+      "Events",
+      "Private"
+    ],
+    "integrations": [
+      "LevelCraft",
+      "Dynmap",
+      "Discord webhooks",
+      "Clan claims"
+    ],
+    "compatibility": "Paper 1.21.x",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "mythicevents",
+    "name": "MythicEvents",
+    "category": "Server Events",
+    "statusLabel": "In Development",
+    "lifecycle": "development",
+    "tagline": "Automated world events and chat games that keep quiet hours active.",
+    "description": "A modular event engine for scheduled server activity, ranging from lightweight chat games to treasure hunts, mob hunts, mining rushes and blood moons.",
+    "features": [
+      "Automatic event rotation",
+      "Chat games and quizzes",
+      "Treasure and block hunts",
+      "Mob and mining events",
+      "Blood moon system",
+      "Reward and question editor"
+    ],
+    "tags": [
+      "Events",
+      "Games",
+      "Automation"
+    ],
+    "integrations": [
+      "Vault",
+      "Discord webhooks",
+      "LevelCraft hooks"
+    ],
+    "compatibility": "Paper 1.21.x",
+    "version": "In development",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "mythicportals",
+    "name": "MythicPortals",
+    "category": "Travel & Effects",
+    "statusLabel": "In Development",
+    "lifecycle": "development",
+    "tagline": "Location-based portals with animated particles and cinematic build-up.",
+    "description": "Create physical portals from trigger blocks and custom regions, with configurable delays, particle animations and destination handling.",
+    "features": [
+      "Custom trigger locations",
+      "Multiple portal sizes",
+      "Particle animation presets",
+      "Optional teleport countdown",
+      "Movement cancellation",
+      "Destination management"
+    ],
+    "tags": [
+      "Teleport",
+      "Particles",
+      "World"
+    ],
+    "integrations": [],
+    "compatibility": "Paper 1.21.x",
+    "version": "In development",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "mythicprefixes",
+    "name": "MythicPrefixes",
+    "category": "Chat & Cosmetics",
+    "statusLabel": "Direct Release Planned",
+    "lifecycle": "planned",
+    "tagline": "A prefix marketplace and complete lightweight chat formatter.",
+    "description": "Players purchase, collect and equip cosmetic prefixes while server owners control chat layout, placeholders, defaults and rarity presentation.",
+    "features": [
+      "Purchasable prefix shop",
+      "Owned-prefix management",
+      "Built-in chat formatting",
+      "Rarity tiers and pricing",
+      "Default prefix support",
+      "Admin management menus"
+    ],
+    "tags": [
+      "Chat",
+      "Cosmetics",
+      "Economy"
+    ],
+    "integrations": [
+      "Vault",
+      "PlaceholderAPI",
+      "DiscordSRV"
+    ],
+    "compatibility": "Paper 1.21.x",
+    "version": "Direct release planned",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "mythicshop",
+    "name": "MythicShop",
+    "category": "Dynamic Economy",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "A GUI market with stock pressure, category editing and custom-item support.",
+    "description": "A production-focused server shop designed around controlled stock, buying and selling limits, configurable categories and deep support for custom server items.",
+    "features": [
+      "Buy and sell GUI",
+      "Stock floors and caps",
+      "Amount selector",
+      "In-game category editor",
+      "Dynamic item pricing",
+      "Custom item providers"
+    ],
+    "tags": [
+      "Economy",
+      "Shop",
+      "Private"
+    ],
+    "integrations": [
+      "Vault",
+      "LevelCraft"
+    ],
+    "compatibility": "Paper 1.21.x",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  },
+  {
+    "id": "spawnercontrol",
+    "name": "MythicSpawnerControl",
+    "category": "Performance Utility",
+    "statusLabel": "Direct Release Planned",
+    "lifecycle": "planned",
+    "tagline": "Control when and where mob spawners are allowed to work.",
+    "description": "A lightweight administration tool for controlling spawner activation distance, spawn radius and registered spawner locations.",
+    "features": [
+      "Activation range control",
+      "Spawn radius control",
+      "Saved spawner locations",
+      "Admin commands",
+      "Low-overhead checks",
+      "Farm balancing"
+    ],
+    "tags": [
+      "Performance",
+      "Mobs",
+      "Admin"
+    ],
+    "integrations": [],
+    "compatibility": "Paper 1.21.x",
+    "version": "Direct release planned",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null
+  }
+]
