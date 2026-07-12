@@ -6,7 +6,7 @@
   <meta name="description" content="MythicGhoul's collection of Minecraft plugins: progression, events, cosmetics, moderation and server utilities.">
   <meta name="theme-color" content="#090611">
   <title>MythicGhoul Plugins</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23c084fc%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%234de6e2%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%20%20%3Cpath%20d%3D%22M32%203%2056%2017v30L32%2061%208%2047V17z%22%20fill%3D%22%23100b18%22%20stroke%3D%22url%28%23g%29%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Cpath%20d%3D%22M19%2043V20h7l6%2010%206-10h7v23h-7V31l-6%209-6-9v12z%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3C/svg%3E%0A" type="image/svg+xml">
   <style>
 
 :root {
@@ -354,8 +354,8 @@ code { color: var(--purple-bright); }
 .modal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 31px; padding-top: 24px; border-top: 1px solid var(--line); }
 .modal-actions .button { min-height: 43px; font-size: 12px; }
 
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 1; transform: none; }
+.reveal.visible { opacity: 1; transform: none; }
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes spinReverse { to { transform: rotate(-360deg); } }
@@ -429,471 +429,82 @@ code { color: var(--purple-bright); }
   .reveal { opacity: 1; transform: none; }
 }
 
+
+/* Published resource directory */
+.resource-section {
+  position: relative;
+  border-block: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(168, 85, 247, .035), transparent 22%),
+    rgba(255, 255, 255, .012);
+}
+.resource-profiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.resource-profiles a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.025);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.resource-profiles a:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  background: rgba(168,85,247,.07);
+}
+.resource-profiles b { font-family: Space Grotesk, sans-serif; font-size: 18px; }
+.resource-profiles span { color: var(--muted); font-size: 13px; }
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.resource-card {
+  display: flex;
+  min-height: 255px;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(155deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+  box-shadow: 0 20px 50px rgba(0,0,0,.16);
+  transition: transform .22s ease, border-color .22s ease;
+}
+.resource-card:hover { transform: translateY(-4px); border-color: rgba(192,132,252,.33); }
+.resource-card-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.resource-icon {
+  display:grid; place-items:center; width:44px; height:44px; border-radius:12px;
+  color: var(--purple-bright); background: rgba(168,85,247,.11); border:1px solid rgba(192,132,252,.17);
+  font-size:20px;
+}
+.resource-version { color:var(--muted); font:700 11px/1 Space Grotesk,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+.resource-card h3 { margin:20px 0 8px; font:700 21px/1.15 Space Grotesk,sans-serif; }
+.resource-card > p { margin:0; color:var(--muted); font-size:14px; line-height:1.55; }
+.resource-actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:auto; padding-top:22px; }
+.resource-button {
+  display:inline-flex; align-items:center; justify-content:center; min-height:38px; padding:0 13px;
+  border:1px solid var(--line); border-radius:9px; background:rgba(255,255,255,.035);
+  font-size:12px; font-weight:800; transition:.2s ease;
+}
+.resource-button:hover { border-color:var(--line-strong); background:rgba(168,85,247,.09); }
+.resource-button.primary { color:#100916; border-color:transparent; background:linear-gradient(135deg,var(--purple-bright),#d6a6ff); }
+@media (max-width: 900px) { .resource-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 650px) {
+  .resource-profiles, .resource-grid { grid-template-columns:1fr; }
+  .resource-profiles a { align-items:flex-start; flex-direction:column; gap:4px; }
+  .resource-card { min-height:225px; }
+}
+
   </style>
-  <script>
-/*
-  EDIT THIS FILE TO MAINTAIN THE WEBSITE.
-  Add your real platform/resource URLs below. Empty URLs stay disabled.
-*/
-window.MYTHIC_SITE = {
-  owner: "MythicGhoul",
-  handle: "@ghoultycoon",
-  platforms: [
-    { name: "SpigotMC", url: "" },
-    { name: "Modrinth", url: "" },
-    { name: "Discord", url: "" },
-    { name: "GitHub", url: "" }
-  ],
-  plugins: [
-    {
-      id: "levelcraft",
-      name: "LevelCraft",
-      icon: "⚔",
-      accent: "#f4c95d",
-      status: "exclusive",
-      statusLabel: "GhoulCraft Exclusive",
-      category: "RPG Progression Suite",
-      tagline: "A complete RPG progression ecosystem built around survival gameplay.",
-      description: "LevelCraft transforms a survival server into a connected RPG world. Skills, ranks, rarity equipment, magic, bosses, questlines, prestige, souls, scaling enemies and world threats all feed into one long-term progression loop.",
-      features: ["Skill levelling and milestones", "F-to-S rank progression", "Rarity gear, power and sockets", "Gems, runes, wands and souls", "Bosses and corruption events", "Questlines, parties and prestige"],
-      tags: ["RPG", "Progression", "Private"],
-      integrations: ["Vault", "PlaceholderAPI", "Dynmap", "Discord webhooks"],
-      links: []
-    },
-    {
-      id: "mythicenchant",
-      name: "MythicEnchant",
-      icon: "✦",
-      accent: "#c084fc",
-      status: "development",
-      statusLabel: "Public Edition",
-      category: "Enchanting Overhaul",
-      tagline: "Turn enchanted books into a living, physical arcane library.",
-      description: "A complete alternative to random enchanting. Players discover books, store them in nearby chiseled bookshelves and browse compatible knowledge through a custom enchanting interface.",
-      features: ["Selectable enchanting GUI", "Physical bookshelf libraries", "Vanilla and custom enchantments", "100 custom enchantments", "Configurable XP and lapis costs", "Natural book discovery and drops"],
-      tags: ["Magic", "GUI", "Enchanting"],
-      integrations: ["LevelCraft edition", "Vault-ready design"],
-      links: []
-    },
-    {
-      id: "pixelblood",
-      name: "PixelBlood",
-      icon: "☠",
-      accent: "#fb7185",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Combat Immersion",
-      tagline: "Responsive blood trails, pools, bursts and bleeding effects.",
-      description: "PixelBlood gives combat visual weight without forcing a resource pack. Fine-grained settings cover players, bosses, passive mobs, hostile mobs, critical hits, death effects and optional bleeding damage.",
-      features: ["Damage and critical bursts", "Ground trails and blood pools", "Configurable bleeding effect", "Mob-category controls", "Boss and death effects", "In-game administration GUI"],
-      tags: ["Effects", "Combat", "Configurable"],
-      integrations: ["WorldGuard awareness", "bStats", "Update checker"],
-      links: []
-    },
-    {
-      id: "mythicvote",
-      name: "MythicVote",
-      icon: "★",
-      accent: "#4de6e2",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Voting & Rewards",
-      tagline: "Vote rewards, milestones, leaderboards and Discord updates.",
-      description: "A focused vote management plugin for rewarding loyal players and keeping server voting visible through milestones, rankings and configurable command rewards.",
-      features: ["Per-vote command rewards", "Lifetime vote tracking", "Milestone rewards", "Leaderboards", "Discord webhook embeds", "Player data persistence"],
-      tags: ["Votes", "Rewards", "Discord"],
-      integrations: ["NuVotifier", "Discord webhooks", "PlaceholderAPI"],
-      links: []
-    },
-    {
-      id: "lastwords",
-      name: "LastWords",
-      icon: "✝",
-      accent: "#f97316",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Death Messages",
-      tagline: "Hundreds of funny death messages with an in-game editor.",
-      description: "LastWords replaces repetitive vanilla death text with a huge configurable message library, an editor for live servers and optional Discord presentation.",
-      features: ["597 default funny messages", "Cause-specific message pools", "In-game message editor", "Prefix and chat compatibility", "Discord webhook embeds", "Configurable formatting"],
-      tags: ["Chat", "Fun", "Editor"],
-      integrations: ["Discord webhooks", "Essentials-style chat"],
-      links: []
-    },
-    {
-      id: "staffcore",
-      name: "StaffCore",
-      icon: "⚖",
-      accent: "#60a5fa",
-      status: "exclusive",
-      statusLabel: "Server Exclusive",
-      category: "Staff Management",
-      tagline: "A complete moderation workspace built around fast, informed action.",
-      description: "StaffCore combines common moderation tasks with player context, evidence and history so staff can act consistently without juggling unrelated commands.",
-      features: ["Freeze, warn, mute, kick and ban", "Staff mode", "Player profiles and notes", "Punishment history", "Inventory snapshots", "Alt checking and ladders"],
-      tags: ["Moderation", "GUI", "Private"],
-      integrations: ["Discord webhooks", "Permissions plugins"],
-      links: []
-    },
-    {
-      id: "mythictrash",
-      name: "MythicTrash",
-      icon: "♲",
-      accent: "#65e0a3",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Inventory Utility",
-      tagline: "A safe, configurable double-chest trash interface.",
-      description: "A polished disposal GUI with safeguards for valuable items, configurable presentation and optional confirmation workflows.",
-      features: ["Double-chest trash GUI", "Protected items", "Optional confirmation", "Blocked worlds and materials", "Usage statistics", "Fully configurable visuals"],
-      tags: ["Utility", "GUI", "Safety"],
-      integrations: ["Geyser", "Floodgate"],
-      links: []
-    },
-    {
-      id: "pickupfilter",
-      name: "PickupFilter",
-      icon: "◈",
-      accent: "#22d3ee",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Inventory Utility",
-      tagline: "Let players decide exactly which items enter their inventory.",
-      description: "A persistent per-player pickup filter designed for survival servers, farms and busy inventories. Choices remain intact through relogs, restarts, storage and item transfers.",
-      features: ["Per-player item filters", "Persistent saved choices", "Simple management GUI", "Farm-friendly behaviour", "Restart-safe storage", "Lightweight event handling"],
-      tags: ["Inventory", "Filter", "QoL"],
-      integrations: [],
-      links: []
-    },
-    {
-      id: "mythicrifts",
-      name: "MythicRifts",
-      icon: "◉",
-      accent: "#8b5cf6",
-      status: "exclusive",
-      statusLabel: "Server Exclusive",
-      category: "Living World System",
-      tagline: "Corruption cores that spread danger and reshape the world around them.",
-      description: "A persistent world-threat system built around escalating corruption cores, guardians, spreading terrain pressure and server-wide outbreak reporting.",
-      features: ["Tiered corruption cores", "Escalating guardians", "Controlled regional spread", "Ambient particles and sound", "Map and sign tracking", "Outbreak Discord alerts"],
-      tags: ["World", "Events", "Private"],
-      integrations: ["LevelCraft", "Dynmap", "Discord webhooks", "Clan claims"],
-      links: []
-    },
-    {
-      id: "mythicevents",
-      name: "MythicEvents",
-      icon: "⌛",
-      accent: "#f59e0b",
-      status: "development",
-      statusLabel: "In Development",
-      category: "Server Events",
-      tagline: "Automated world events and chat games that keep quiet hours active.",
-      description: "A modular event engine for scheduled server activity, ranging from lightweight chat games to treasure hunts, mob hunts, mining rushes and blood moons.",
-      features: ["Automatic event rotation", "Chat games and quizzes", "Treasure and block hunts", "Mob and mining events", "Blood moon system", "Reward and question editor"],
-      tags: ["Events", "Games", "Automation"],
-      integrations: ["Vault", "Discord webhooks", "LevelCraft hooks"],
-      links: []
-    },
-    {
-      id: "mythicportals",
-      name: "MythicPortals",
-      icon: "⬡",
-      accent: "#a78bfa",
-      status: "development",
-      statusLabel: "In Development",
-      category: "Travel & Effects",
-      tagline: "Location-based portals with animated particles and cinematic build-up.",
-      description: "Create physical portals from trigger blocks and custom regions, with configurable delays, particle animations and destination handling.",
-      features: ["Custom trigger locations", "Multiple portal sizes", "Particle animation presets", "Optional teleport countdown", "Movement cancellation", "Destination management"],
-      tags: ["Teleport", "Particles", "World"],
-      integrations: [],
-      links: []
-    },
-    {
-      id: "mythicjoins",
-      name: "MythicJoins",
-      icon: "↯",
-      accent: "#d946ef",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Cosmetics & Economy",
-      tagline: "Purchasable join and leave messages with real player identity.",
-      description: "A cosmetic message marketplace where players collect and select themed arrivals and departures, backed by an economy and clean management GUIs.",
-      features: ["Join and leave message shops", "Owned cosmetics menus", "Random default message pool", "Vault economy purchases", "Admin grants and removal", "Discord join and leave embeds"],
-      tags: ["Cosmetics", "Vault", "GUI"],
-      integrations: ["Vault", "Discord webhooks"],
-      links: []
-    },
-    {
-      id: "mythicprefixes",
-      name: "MythicPrefixes",
-      icon: "♛",
-      accent: "#e879f9",
-      status: "public",
-      statusLabel: "Public Plugin",
-      category: "Chat & Cosmetics",
-      tagline: "A prefix marketplace and complete lightweight chat formatter.",
-      description: "Players purchase, collect and equip cosmetic prefixes while server owners control chat layout, placeholders, defaults and rarity presentation.",
-      features: ["Purchasable prefix shop", "Owned-prefix management", "Built-in chat formatting", "Rarity tiers and pricing", "Default prefix support", "Admin management menus"],
-      tags: ["Chat", "Cosmetics", "Economy"],
-      integrations: ["Vault", "PlaceholderAPI", "DiscordSRV"],
-      links: []
-    },
-    {
-      id: "mythicshop",
-      name: "MythicShop",
-      icon: "◆",
-      accent: "#34d399",
-      status: "exclusive",
-      statusLabel: "Server Exclusive",
-      category: "Dynamic Economy",
-      tagline: "A GUI market with stock pressure, category editing and custom-item support.",
-      description: "A production-focused server shop designed around controlled stock, buying and selling limits, configurable categories and deep support for custom server items.",
-      features: ["Buy and sell GUI", "Stock floors and caps", "Amount selector", "In-game category editor", "Dynamic item pricing", "Custom item providers"],
-      tags: ["Economy", "Shop", "Private"],
-      integrations: ["Vault", "LevelCraft"],
-      links: []
-    },
-    {
-      id: "spawnercontrol",
-      name: "MythicSpawnerControl",
-      icon: "▦",
-      accent: "#94a3b8",
-      status: "public",
-      statusLabel: "Utility Plugin",
-      category: "Performance Utility",
-      tagline: "Control when and where mob spawners are allowed to work.",
-      description: "A lightweight administration tool for controlling spawner activation distance, spawn radius and registered spawner locations.",
-      features: ["Activation range control", "Spawn radius control", "Saved spawner locations", "Admin commands", "Low-overhead checks", "Farm balancing"],
-      tags: ["Performance", "Mobs", "Admin"],
-      integrations: [],
-      links: []
-    },
-    {
-      id: "arcanebuilder",
-      name: "ArcaneBuilder",
-      icon: "▧",
-      accent: "#38bdf8",
-      status: "development",
-      statusLabel: "In Development",
-      category: "Building Utility",
-      tagline: "Watch schematics assemble themselves, one block at a time.",
-      description: "A visual schematic construction tool that turns instant pastes into animated building sequences suitable for events, reveals and world development.",
-      features: ["Schematic file support", "Animated block placement", "Builder chest workflow", "Admin tab completion", "Configurable pacing", "Event-friendly presentation"],
-      tags: ["Building", "Schematics", "Effects"],
-      integrations: ["WorldEdit formats"],
-      links: []
-    },
-    {
-      id: "easyreplant",
-      name: "EasyReplant",
-      icon: "♣",
-      accent: "#84cc16",
-      status: "public",
-      statusLabel: "Utility Plugin",
-      category: "Farming Utility",
-      tagline: "Fast crop harvesting with sensible inventory-based replanting.",
-      description: "A straightforward farming quality-of-life plugin that replants supported crops only when the player actually has the required item.",
-      features: ["Automatic crop replanting", "Inventory requirement", "Sugar cane support", "Cactus support", "Growth controls", "Survival-friendly handling"],
-      tags: ["Farming", "QoL", "Lightweight"],
-      integrations: [],
-      links: []
-    },
-    {
-      id: "simplecrystals",
-      name: "SimpleCrystals",
-      icon: "◇",
-      accent: "#67e8f9",
-      status: "public",
-      statusLabel: "Utility Plugin",
-      category: "Custom Items",
-      tagline: "A clean foundation for collectible crystal items and server rewards.",
-      description: "A focused custom-item project for adding identifiable crystal rewards and collectible materials to server progression loops.",
-      features: ["Custom crystal items", "Persistent item identity", "Reward-ready commands", "Configurable presentation", "Simple administration", "Progression integration"],
-      tags: ["Items", "Rewards", "Lightweight"],
-      integrations: [],
-      links: []
-    }
-  ]
-};
-
-  </script>
-  <script>
-(() => {
-  const site = window.MYTHIC_SITE;
-  const grid = document.querySelector('#plugin-grid');
-  const template = document.querySelector('#plugin-card-template');
-  const search = document.querySelector('#plugin-search');
-  const filters = [...document.querySelectorAll('.filter')];
-  const emptyState = document.querySelector('#empty-state');
-  const modal = document.querySelector('#plugin-modal');
-  const menuButton = document.querySelector('.menu-button');
-  const navLinks = document.querySelector('#nav-links');
-  let activeFilter = 'all';
-
-  document.querySelector('#plugin-count').textContent = site.plugins.length;
-
-  const statusClass = status => `status-${status}`;
-
-  function makeCard(plugin) {
-    const fragment = template.content.cloneNode(true);
-    const card = fragment.querySelector('.plugin-card');
-    const icon = fragment.querySelector('.plugin-icon');
-    const status = fragment.querySelector('.status-chip');
-    const category = fragment.querySelector('.plugin-category');
-    const name = fragment.querySelector('h3');
-    const tagline = fragment.querySelector('.plugin-tagline');
-    const tags = fragment.querySelector('.card-tags');
-    const button = fragment.querySelector('.card-link');
-
-    card.dataset.id = plugin.id;
-    card.dataset.status = plugin.status;
-    card.dataset.search = [plugin.name, plugin.category, plugin.tagline, ...plugin.tags, ...plugin.features].join(' ').toLowerCase();
-    card.style.setProperty('--card-accent', plugin.accent);
-    icon.textContent = plugin.icon;
-    status.textContent = plugin.statusLabel;
-    status.classList.add(statusClass(plugin.status));
-    category.textContent = plugin.category;
-    name.textContent = plugin.name;
-    tagline.textContent = plugin.tagline;
-    plugin.tags.slice(0, 3).forEach(tag => {
-      const pill = document.createElement('span');
-      pill.textContent = tag;
-      tags.append(pill);
-    });
-    button.addEventListener('click', () => openPlugin(plugin.id));
-    return fragment;
-  }
-
-  site.plugins.forEach(plugin => grid.append(makeCard(plugin)));
-
-  function applyFilters() {
-    const term = search.value.trim().toLowerCase();
-    let visible = 0;
-    document.querySelectorAll('.plugin-card').forEach(card => {
-      const statusMatch = activeFilter === 'all' || card.dataset.status === activeFilter;
-      const searchMatch = !term || card.dataset.search.includes(term);
-      const show = statusMatch && searchMatch;
-      card.hidden = !show;
-      if (show) visible += 1;
-    });
-    emptyState.hidden = visible !== 0;
-  }
-
-  search.addEventListener('input', applyFilters);
-  filters.forEach(filter => filter.addEventListener('click', () => {
-    filters.forEach(item => item.classList.remove('active'));
-    filter.classList.add('active');
-    activeFilter = filter.dataset.filter;
-    applyFilters();
-  }));
-
-  function createAction(label, url, primary = false) {
-    const link = document.createElement('a');
-    link.className = `button ${primary ? 'button-primary' : 'button-secondary'}`;
-    link.textContent = label;
-    link.href = url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    return link;
-  }
-
-  function openPlugin(id) {
-    const plugin = site.plugins.find(item => item.id === id);
-    if (!plugin) return;
-
-    modal.style.setProperty('--modal-accent', plugin.accent);
-    document.querySelector('#modal-icon').textContent = plugin.icon;
-    const modalStatus = document.querySelector('#modal-status');
-    modalStatus.className = `status-chip ${statusClass(plugin.status)}`;
-    modalStatus.textContent = plugin.statusLabel;
-    document.querySelector('#modal-category').textContent = plugin.category;
-    document.querySelector('#modal-title').textContent = plugin.name;
-    document.querySelector('#modal-tagline').textContent = plugin.tagline;
-    document.querySelector('#modal-description').textContent = plugin.description;
-
-    const features = document.querySelector('#modal-features');
-    features.replaceChildren();
-    plugin.features.forEach(feature => {
-      const li = document.createElement('li');
-      li.textContent = feature;
-      features.append(li);
-    });
-
-    const integrationWrap = document.querySelector('#integration-wrap');
-    const integrations = document.querySelector('#modal-integrations');
-    integrations.replaceChildren();
-    integrationWrap.hidden = plugin.integrations.length === 0;
-    plugin.integrations.forEach(integration => {
-      const span = document.createElement('span');
-      span.textContent = integration;
-      integrations.append(span);
-    });
-
-    const actions = document.querySelector('#modal-actions');
-    actions.replaceChildren();
-    plugin.links.filter(link => link.url).forEach((link, index) => actions.append(createAction(link.label, link.url, index === 0)));
-    if (!actions.children.length) {
-      const note = document.createElement('span');
-      note.className = 'status-chip';
-      note.textContent = plugin.status === 'exclusive' ? 'Not publicly distributed' : 'Resource links coming soon';
-      actions.append(note);
-    }
-
-    if (typeof modal.showModal === 'function') modal.showModal();
-  }
-
-  window.openPlugin = openPlugin;
-  document.querySelectorAll('.js-open-plugin').forEach(button => button.addEventListener('click', () => openPlugin(button.dataset.plugin)));
-  document.querySelector('.modal-close').addEventListener('click', () => modal.close());
-  modal.addEventListener('click', event => {
-    const rect = modal.getBoundingClientRect();
-    const outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
-    if (outside) modal.close();
-  });
-
-  const platformLinks = document.querySelector('#platform-links');
-  site.platforms.forEach(platform => {
-    const link = document.createElement(platform.url ? 'a' : 'span');
-    link.className = `platform-link${platform.url ? '' : ' disabled'}`;
-    link.textContent = platform.url ? platform.name : `${platform.name} — add URL`;
-    if (platform.url) {
-      link.href = platform.url;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-    }
-    platformLinks.append(link);
-  });
-
-  menuButton.addEventListener('click', () => {
-    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!isOpen));
-    navLinks.classList.toggle('open', !isOpen);
-  });
-  navLinks.addEventListener('click', event => {
-    if (event.target.matches('a')) {
-      navLinks.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: .08 });
-  document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
-
-  window.addEventListener('scroll', () => {
-    document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 16);
-  }, { passive: true });
-})();
-
-  </script>
 </head>
 <body>
   <a class="skip-link" href="#catalogue">Skip to plugins</a>
@@ -919,6 +530,7 @@ window.MYTHIC_SITE = {
 
       <div class="nav-links" id="nav-links">
         <a href="#catalogue">Plugins</a>
+        <a href="#resources">Resources</a>
         <a href="#flagship">Flagship</a>
         <a href="#about">About</a>
         <a class="nav-cta" href="#contact">Find my resources</a>
@@ -937,11 +549,11 @@ window.MYTHIC_SITE = {
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#catalogue">Explore the collection</a>
-          <a class="button button-secondary" href="#flagship">See LevelCraft</a>
+          <a class="button button-secondary" href="#resources">Open plugin pages</a>
         </div>
         <div class="hero-meta" aria-label="Portfolio highlights">
           <div><strong id="plugin-count">18</strong><span>Projects</span></div>
-          <div><strong>Paper</strong><span>Modern server focus</span></div>
+          <div><strong id="resource-count">18</strong><span>Published resources</span></div>
           <div><strong>RPG</strong><span>Systems-first design</span></div>
         </div>
       </div>
@@ -988,7 +600,7 @@ window.MYTHIC_SITE = {
           <p class="eyebrow"><span></span> The collection</p>
           <h2>Every system has a purpose.</h2>
         </div>
-        <p>Browse the current portfolio. Open any card for features, integrations and project status.</p>
+        <p>Browse active projects and server systems. Open any card for features, integrations and direct resource links.</p>
       </div>
 
       <div class="catalogue-tools reveal">
@@ -1007,6 +619,24 @@ window.MYTHIC_SITE = {
 
       <div class="plugin-grid" id="plugin-grid" aria-live="polite"></div>
       <p class="empty-state" id="empty-state" hidden>No plugins match that search yet.</p>
+    </section>
+
+
+    <section class="section resource-section" id="resources">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Published plugin pages</p>
+            <h2>Download from the platforms you trust.</h2>
+          </div>
+          <p>Every public resource currently listed on the MythicGhoul SpigotMC and Modrinth profiles, linked directly from one place.</p>
+        </div>
+        <div class="resource-profiles reveal">
+          <a href="https://www.spigotmc.org/resources/authors/ikffxrapzz.29623/" target="_blank" rel="noopener noreferrer"><b>SpigotMC profile</b><span>18 published resources →</span></a>
+          <a href="https://modrinth.com/user/MythicGhoul" target="_blank" rel="noopener noreferrer"><b>Modrinth profile</b><span>Plugin downloads and updates →</span></a>
+        </div>
+        <div class="resource-grid" id="resource-grid"></div>
+      </div>
     </section>
 
     <section class="section flagship-wrap" id="flagship">
@@ -1050,7 +680,7 @@ window.MYTHIC_SITE = {
       <div>
         <p class="eyebrow"><span></span> MythicGhoul resources</p>
         <h2>Find releases, updates and support.</h2>
-        <p>Platform buttons appear automatically after their URLs are added to <code>assets/plugins.js</code>.</p>
+        <p>Browse the complete public catalogue, follow development and join the support community.</p>
       </div>
       <div class="platform-links" id="platform-links"></div>
     </section>
@@ -1103,5 +733,935 @@ window.MYTHIC_SITE = {
       <button class="card-link" type="button">View plugin <span>→</span></button>
     </article>
   </template>
+
+  <template id="resource-card-template">
+    <article class="resource-card reveal">
+      <div class="resource-card-head">
+        <span class="resource-icon"></span>
+        <span class="resource-version"></span>
+      </div>
+      <h3></h3>
+      <p></p>
+      <div class="resource-actions"></div>
+    </article>
+  </template>
+  <script>
+window.MYTHIC_SITE = {
+  "owner": "MythicGhoul",
+  "handle": "@ghoultycoon",
+  "platforms": [
+    {
+      "name": "SpigotMC",
+      "url": "https://www.spigotmc.org/resources/authors/ikffxrapzz.29623/"
+    },
+    {
+      "name": "Modrinth",
+      "url": "https://modrinth.com/user/MythicGhoul"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg/HxMp5ejvKU"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/MythicGhoul"
+    }
+  ],
+  "plugins": [
+    {
+      "id": "levelcraft",
+      "name": "LevelCraft",
+      "icon": "⚔",
+      "accent": "#f4c95d",
+      "status": "exclusive",
+      "statusLabel": "GhoulCraft Exclusive",
+      "category": "RPG Progression Suite",
+      "tagline": "A complete RPG progression ecosystem built around survival gameplay.",
+      "description": "LevelCraft transforms a survival server into a connected RPG world. Skills, ranks, rarity equipment, magic, bosses, questlines, prestige, souls, scaling enemies and world threats all feed into one long-term progression loop.",
+      "features": [
+        "Skill levelling and milestones",
+        "F-to-S rank progression",
+        "Rarity gear, power and sockets",
+        "Gems, runes, wands and souls",
+        "Bosses and corruption events",
+        "Questlines, parties and prestige"
+      ],
+      "tags": [
+        "RPG",
+        "Progression",
+        "Private"
+      ],
+      "integrations": [
+        "Vault",
+        "PlaceholderAPI",
+        "Dynmap",
+        "Discord webhooks"
+      ],
+      "links": []
+    },
+    {
+      "id": "mythicenchant",
+      "name": "MythicEnchant",
+      "icon": "✦",
+      "accent": "#c084fc",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Enchanting Overhaul",
+      "tagline": "Turn enchanted books into a living, physical arcane library.",
+      "description": "A complete alternative to random enchanting. Players discover books, store them in nearby chiseled bookshelves and browse compatible knowledge through a custom enchanting interface.",
+      "features": [
+        "Selectable enchanting GUI",
+        "Physical bookshelf libraries",
+        "Vanilla and custom enchantments",
+        "100 custom enchantments",
+        "Configurable XP and lapis costs",
+        "Natural book discovery and drops"
+      ],
+      "tags": [
+        "Magic",
+        "GUI",
+        "Enchanting"
+      ],
+      "integrations": [
+        "LevelCraft edition",
+        "Vault-ready design"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/mythicenchant-1-21-10-%E2%9C%A8-100-custom-enchants-arcane-libraries-selectable-enchanting-%E2%9C%A8.136976/"
+        }
+      ]
+    },
+    {
+      "id": "pixelblood",
+      "name": "PixelBlood",
+      "icon": "☠",
+      "accent": "#fb7185",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Combat Immersion",
+      "tagline": "Responsive blood trails, pools, bursts and bleeding effects.",
+      "description": "PixelBlood gives combat visual weight without forcing a resource pack. Fine-grained settings cover players, bosses, passive mobs, hostile mobs, critical hits, death effects and optional bleeding damage.",
+      "features": [
+        "Damage and critical bursts",
+        "Ground trails and blood pools",
+        "Configurable bleeding effect",
+        "Mob-category controls",
+        "Boss and death effects",
+        "In-game administration GUI"
+      ],
+      "tags": [
+        "Effects",
+        "Combat",
+        "Configurable"
+      ],
+      "integrations": [
+        "WorldGuard awareness",
+        "bStats",
+        "Update checker"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/pixelblood-1-20-x-1-26-x-%E2%9A%94-dynamic-blood-effects-%E2%9A%94-trails-pools-splatter-bleeding.95684/"
+        },
+        {
+          "label": "View on Modrinth",
+          "url": "https://modrinth.com/project/1oCiyYKI"
+        }
+      ]
+    },
+    {
+      "id": "mythicvote",
+      "name": "MythicVote",
+      "icon": "★",
+      "accent": "#4de6e2",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Voting & Rewards",
+      "tagline": "Vote rewards, milestones, leaderboards and Discord updates.",
+      "description": "A focused vote management plugin for rewarding loyal players and keeping server voting visible through milestones, rankings and configurable command rewards.",
+      "features": [
+        "Per-vote command rewards",
+        "Lifetime vote tracking",
+        "Milestone rewards",
+        "Leaderboards",
+        "Discord webhook embeds",
+        "Player data persistence"
+      ],
+      "tags": [
+        "Votes",
+        "Rewards",
+        "Discord"
+      ],
+      "integrations": [
+        "NuVotifier",
+        "Discord webhooks",
+        "PlaceholderAPI"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/mythicvote-1-20-1-21-x-%E2%9C%A8-vote-rewards-leaderboards-milestones-discord-webhooks-%E2%9C%A8.135078/"
+        }
+      ]
+    },
+    {
+      "id": "lastwords",
+      "name": "LastWords",
+      "icon": "✝",
+      "accent": "#f97316",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Death Messages",
+      "tagline": "Hundreds of funny death messages with an in-game editor.",
+      "description": "LastWords replaces repetitive vanilla death text with a huge configurable message library, an editor for live servers and optional Discord presentation.",
+      "features": [
+        "597 default funny messages",
+        "Cause-specific message pools",
+        "In-game message editor",
+        "Prefix and chat compatibility",
+        "Discord webhook embeds",
+        "Configurable formatting"
+      ],
+      "tags": [
+        "Chat",
+        "Fun",
+        "Editor"
+      ],
+      "integrations": [
+        "Discord webhooks",
+        "Essentials-style chat"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/lastwords-%E2%9C%A6-funny-custom-death-messages-in-game-editor-%E2%9C%A6.135578/"
+        },
+        {
+          "label": "View on Modrinth",
+          "url": "https://modrinth.com/project/oyuWDHN2"
+        }
+      ]
+    },
+    {
+      "id": "staffcore",
+      "name": "StaffCore",
+      "icon": "⚖",
+      "accent": "#60a5fa",
+      "status": "exclusive",
+      "statusLabel": "Server Exclusive",
+      "category": "Staff Management",
+      "tagline": "A complete moderation workspace built around fast, informed action.",
+      "description": "StaffCore combines common moderation tasks with player context, evidence and history so staff can act consistently without juggling unrelated commands.",
+      "features": [
+        "Freeze, warn, mute, kick and ban",
+        "Staff mode",
+        "Player profiles and notes",
+        "Punishment history",
+        "Inventory snapshots",
+        "Alt checking and ladders"
+      ],
+      "tags": [
+        "Moderation",
+        "GUI",
+        "Private"
+      ],
+      "integrations": [
+        "Discord webhooks",
+        "Permissions plugins"
+      ],
+      "links": []
+    },
+    {
+      "id": "mythictrash",
+      "name": "MythicTrash",
+      "icon": "♲",
+      "accent": "#65e0a3",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Inventory Utility",
+      "tagline": "A safe, configurable double-chest trash interface.",
+      "description": "A polished disposal GUI with safeguards for valuable items, configurable presentation and optional confirmation workflows.",
+      "features": [
+        "Double-chest trash GUI",
+        "Protected items",
+        "Optional confirmation",
+        "Blocked worlds and materials",
+        "Usage statistics",
+        "Fully configurable visuals"
+      ],
+      "tags": [
+        "Utility",
+        "GUI",
+        "Safety"
+      ],
+      "integrations": [
+        "Geyser",
+        "Floodgate"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/mythictrash-1-20-x-1-21-x-%EF%B8%8F-safe-item-disposal-%EF%B8%8F-%E2%9C%A8-trash-gui-%E2%9C%A8.136211/"
+        },
+        {
+          "label": "View on Modrinth",
+          "url": "https://modrinth.com/project/40jnsAKM"
+        }
+      ]
+    },
+    {
+      "id": "pickupfilter",
+      "name": "PickupFilter",
+      "icon": "◈",
+      "accent": "#22d3ee",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Inventory Utility",
+      "tagline": "Let players decide exactly which items enter their inventory.",
+      "description": "A persistent per-player pickup filter designed for survival servers, farms and busy inventories. Choices remain intact through relogs, restarts, storage and item transfers.",
+      "features": [
+        "Per-player item filters",
+        "Persistent saved choices",
+        "Simple management GUI",
+        "Farm-friendly behaviour",
+        "Restart-safe storage",
+        "Lightweight event handling"
+      ],
+      "tags": [
+        "Inventory",
+        "Filter",
+        "QoL"
+      ],
+      "integrations": [],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/pickupfilter-1-20-1-21-x-%E2%9C%A8-pickup-filters-gui-geyser-%E2%9C%A8.136241/"
+        },
+        {
+          "label": "View on Modrinth",
+          "url": "https://modrinth.com/project/26myPReK"
+        }
+      ]
+    },
+    {
+      "id": "mythicrifts",
+      "name": "MythicRifts",
+      "icon": "◉",
+      "accent": "#8b5cf6",
+      "status": "exclusive",
+      "statusLabel": "Server Exclusive",
+      "category": "Living World System",
+      "tagline": "Corruption cores that spread danger and reshape the world around them.",
+      "description": "A persistent world-threat system built around escalating corruption cores, guardians, spreading terrain pressure and server-wide outbreak reporting.",
+      "features": [
+        "Tiered corruption cores",
+        "Escalating guardians",
+        "Controlled regional spread",
+        "Ambient particles and sound",
+        "Map and sign tracking",
+        "Outbreak Discord alerts"
+      ],
+      "tags": [
+        "World",
+        "Events",
+        "Private"
+      ],
+      "integrations": [
+        "LevelCraft",
+        "Dynmap",
+        "Discord webhooks",
+        "Clan claims"
+      ],
+      "links": []
+    },
+    {
+      "id": "mythicevents",
+      "name": "MythicEvents",
+      "icon": "⌛",
+      "accent": "#f59e0b",
+      "status": "development",
+      "statusLabel": "In Development",
+      "category": "Server Events",
+      "tagline": "Automated world events and chat games that keep quiet hours active.",
+      "description": "A modular event engine for scheduled server activity, ranging from lightweight chat games to treasure hunts, mob hunts, mining rushes and blood moons.",
+      "features": [
+        "Automatic event rotation",
+        "Chat games and quizzes",
+        "Treasure and block hunts",
+        "Mob and mining events",
+        "Blood moon system",
+        "Reward and question editor"
+      ],
+      "tags": [
+        "Events",
+        "Games",
+        "Automation"
+      ],
+      "integrations": [
+        "Vault",
+        "Discord webhooks",
+        "LevelCraft hooks"
+      ],
+      "links": []
+    },
+    {
+      "id": "mythicportals",
+      "name": "MythicPortals",
+      "icon": "⬡",
+      "accent": "#a78bfa",
+      "status": "development",
+      "statusLabel": "In Development",
+      "category": "Travel & Effects",
+      "tagline": "Location-based portals with animated particles and cinematic build-up.",
+      "description": "Create physical portals from trigger blocks and custom regions, with configurable delays, particle animations and destination handling.",
+      "features": [
+        "Custom trigger locations",
+        "Multiple portal sizes",
+        "Particle animation presets",
+        "Optional teleport countdown",
+        "Movement cancellation",
+        "Destination management"
+      ],
+      "tags": [
+        "Teleport",
+        "Particles",
+        "World"
+      ],
+      "integrations": [],
+      "links": []
+    },
+    {
+      "id": "mythicjoins",
+      "name": "MythicJoins",
+      "icon": "↯",
+      "accent": "#d946ef",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Cosmetics & Economy",
+      "tagline": "Purchasable join and leave messages with real player identity.",
+      "description": "A cosmetic message marketplace where players collect and select themed arrivals and departures, backed by an economy and clean management GUIs.",
+      "features": [
+        "Join and leave message shops",
+        "Owned cosmetics menus",
+        "Random default message pool",
+        "Vault economy purchases",
+        "Admin grants and removal",
+        "Discord join and leave embeds"
+      ],
+      "tags": [
+        "Cosmetics",
+        "Vault",
+        "GUI"
+      ],
+      "integrations": [
+        "Vault",
+        "Discord webhooks"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/mythicjoins-1-20-1-21-x-%E2%9C%A8-mythic-join-leave-effects-gui-shop-vault-discord-webhooks-%E2%9C%A8.136663/"
+        }
+      ]
+    },
+    {
+      "id": "mythicprefixes",
+      "name": "MythicPrefixes",
+      "icon": "♛",
+      "accent": "#e879f9",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Chat & Cosmetics",
+      "tagline": "A prefix marketplace and complete lightweight chat formatter.",
+      "description": "Players purchase, collect and equip cosmetic prefixes while server owners control chat layout, placeholders, defaults and rarity presentation.",
+      "features": [
+        "Purchasable prefix shop",
+        "Owned-prefix management",
+        "Built-in chat formatting",
+        "Rarity tiers and pricing",
+        "Default prefix support",
+        "Admin management menus"
+      ],
+      "tags": [
+        "Chat",
+        "Cosmetics",
+        "Economy"
+      ],
+      "integrations": [
+        "Vault",
+        "PlaceholderAPI",
+        "DiscordSRV"
+      ],
+      "links": []
+    },
+    {
+      "id": "mythicshop",
+      "name": "MythicShop",
+      "icon": "◆",
+      "accent": "#34d399",
+      "status": "exclusive",
+      "statusLabel": "Server Exclusive",
+      "category": "Dynamic Economy",
+      "tagline": "A GUI market with stock pressure, category editing and custom-item support.",
+      "description": "A production-focused server shop designed around controlled stock, buying and selling limits, configurable categories and deep support for custom server items.",
+      "features": [
+        "Buy and sell GUI",
+        "Stock floors and caps",
+        "Amount selector",
+        "In-game category editor",
+        "Dynamic item pricing",
+        "Custom item providers"
+      ],
+      "tags": [
+        "Economy",
+        "Shop",
+        "Private"
+      ],
+      "integrations": [
+        "Vault",
+        "LevelCraft"
+      ],
+      "links": []
+    },
+    {
+      "id": "spawnercontrol",
+      "name": "MythicSpawnerControl",
+      "icon": "▦",
+      "accent": "#94a3b8",
+      "status": "public",
+      "statusLabel": "Utility Plugin",
+      "category": "Performance Utility",
+      "tagline": "Control when and where mob spawners are allowed to work.",
+      "description": "A lightweight administration tool for controlling spawner activation distance, spawn radius and registered spawner locations.",
+      "features": [
+        "Activation range control",
+        "Spawn radius control",
+        "Saved spawner locations",
+        "Admin commands",
+        "Low-overhead checks",
+        "Farm balancing"
+      ],
+      "tags": [
+        "Performance",
+        "Mobs",
+        "Admin"
+      ],
+      "integrations": [],
+      "links": []
+    },
+    {
+      "id": "arcanebuilder",
+      "name": "ArcaneBuilder",
+      "icon": "▧",
+      "accent": "#38bdf8",
+      "status": "public",
+      "statusLabel": "Public Plugin",
+      "category": "Building Utility",
+      "tagline": "Watch schematics assemble themselves, one block at a time.",
+      "description": "A visual schematic construction tool that turns instant pastes into animated building sequences suitable for events, reveals and world development.",
+      "features": [
+        "Schematic file support",
+        "Animated block placement",
+        "Builder chest workflow",
+        "Admin tab completion",
+        "Configurable pacing",
+        "Event-friendly presentation"
+      ],
+      "tags": [
+        "Building",
+        "Schematics",
+        "Effects"
+      ],
+      "integrations": [
+        "WorldEdit formats"
+      ],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/arcanebuilder-%E2%9A%A1-cinematic-building-animated-schematics-preview-claim-protections-undo-%E2%9A%A1.134753/"
+        }
+      ]
+    },
+    {
+      "id": "easyreplant",
+      "name": "EasyReplant",
+      "icon": "♣",
+      "accent": "#84cc16",
+      "status": "public",
+      "statusLabel": "Utility Plugin",
+      "category": "Farming Utility",
+      "tagline": "Fast crop harvesting with sensible inventory-based replanting.",
+      "description": "A straightforward farming quality-of-life plugin that replants supported crops only when the player actually has the required item.",
+      "features": [
+        "Automatic crop replanting",
+        "Inventory requirement",
+        "Sugar cane support",
+        "Cactus support",
+        "Growth controls",
+        "Survival-friendly handling"
+      ],
+      "tags": [
+        "Farming",
+        "QoL",
+        "Lightweight"
+      ],
+      "integrations": [],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/easyreplant-1-18-1-19-x-%E2%AD%90-auto-replant-%E2%AD%90-%E2%9A%A1-multi-harvest-chance-%E2%9A%A1-%E2%AD%90-fast-growth-%E2%AD%90.106994/"
+        }
+      ]
+    },
+    {
+      "id": "simplecrystals",
+      "name": "SimpleCrystals",
+      "icon": "◇",
+      "accent": "#67e8f9",
+      "status": "public",
+      "statusLabel": "Utility Plugin",
+      "category": "Custom Items",
+      "tagline": "A clean foundation for collectible crystal items and server rewards.",
+      "description": "A focused custom-item project for adding identifiable crystal rewards and collectible materials to server progression loops.",
+      "features": [
+        "Custom crystal items",
+        "Persistent item identity",
+        "Reward-ready commands",
+        "Configurable presentation",
+        "Simple administration",
+        "Progression integration"
+      ],
+      "tags": [
+        "Items",
+        "Rewards",
+        "Lightweight"
+      ],
+      "integrations": [],
+      "links": [
+        {
+          "label": "View on SpigotMC",
+          "url": "https://www.spigotmc.org/resources/simplecrystals.66824/"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "MythicEnchant",
+      "version": "2.1.1",
+      "description": "100 custom enchants, arcane libraries and selectable enchanting.",
+      "icon": "✦",
+      "spigot": "https://www.spigotmc.org/resources/mythicenchant-1-21-10-%E2%9C%A8-100-custom-enchants-arcane-libraries-selectable-enchanting-%E2%9C%A8.136976/"
+    },
+    {
+      "name": "PickupFilter",
+      "version": "1.2.1",
+      "description": "Persistent per-player pickup filters with a clean GUI.",
+      "icon": "◈",
+      "spigot": "https://www.spigotmc.org/resources/pickupfilter-1-20-1-21-x-%E2%9C%A8-pickup-filters-gui-geyser-%E2%9C%A8.136241/",
+      "modrinth": "https://modrinth.com/project/26myPReK"
+    },
+    {
+      "name": "MythicJoins",
+      "version": "1.0",
+      "description": "Purchasable join and leave effects with Vault and Discord webhooks.",
+      "icon": "↯",
+      "spigot": "https://www.spigotmc.org/resources/mythicjoins-1-20-1-21-x-%E2%9C%A8-mythic-join-leave-effects-gui-shop-vault-discord-webhooks-%E2%9C%A8.136663/"
+    },
+    {
+      "name": "MythicVote",
+      "version": "1.2.2",
+      "description": "Vote rewards, milestones, leaderboards and webhook updates.",
+      "icon": "★",
+      "spigot": "https://www.spigotmc.org/resources/mythicvote-1-20-1-21-x-%E2%9C%A8-vote-rewards-leaderboards-milestones-discord-webhooks-%E2%9C%A8.135078/"
+    },
+    {
+      "name": "LastWords",
+      "version": "1.2.4",
+      "description": "Funny custom death messages with an in-game editor.",
+      "icon": "✝",
+      "spigot": "https://www.spigotmc.org/resources/lastwords-%E2%9C%A6-funny-custom-death-messages-in-game-editor-%E2%9C%A6.135578/",
+      "modrinth": "https://modrinth.com/project/oyuWDHN2"
+    },
+    {
+      "name": "PixelBlood",
+      "version": "3.7",
+      "description": "Dynamic blood trails, pools, splatter and bleeding effects.",
+      "icon": "☠",
+      "spigot": "https://www.spigotmc.org/resources/pixelblood-1-20-x-1-26-x-%E2%9A%94-dynamic-blood-effects-%E2%9A%94-trails-pools-splatter-bleeding.95684/",
+      "modrinth": "https://modrinth.com/project/1oCiyYKI"
+    },
+    {
+      "name": "MythicTrash",
+      "version": "1.0.2",
+      "description": "A safe, configurable trash GUI for item disposal.",
+      "icon": "♲",
+      "spigot": "https://www.spigotmc.org/resources/mythictrash-1-20-x-1-21-x-%EF%B8%8F-safe-item-disposal-%EF%B8%8F-%E2%9C%A8-trash-gui-%E2%9C%A8.136211/",
+      "modrinth": "https://modrinth.com/project/40jnsAKM"
+    },
+    {
+      "name": "ArcaneBuilder",
+      "version": "1.4",
+      "description": "Cinematic schematic placement with previews, protection and undo.",
+      "icon": "▧",
+      "spigot": "https://www.spigotmc.org/resources/arcanebuilder-%E2%9A%A1-cinematic-building-animated-schematics-preview-claim-protections-undo-%E2%9A%A1.134753/"
+    },
+    {
+      "name": "Auto Breeding",
+      "version": "1.5",
+      "description": "Animals consume nearby crops and breed naturally.",
+      "icon": "♥",
+      "spigot": "https://www.spigotmc.org/resources/%E2%9D%A4%EF%B8%8F-auto-breeding-%E2%9D%A4%EF%B8%8F-1-19-1-20-x-26-1-x.119205/",
+      "modrinth": "https://modrinth.com/project/SzSnrhRB"
+    },
+    {
+      "name": "Arcane Exchange",
+      "version": "1.0",
+      "description": "Magical automation powered by an energy system and tiered machines.",
+      "icon": "⚡",
+      "spigot": "https://www.spigotmc.org/resources/%E2%9C%A8arcane-exchange-%E2%9C%A8-magical-automation-%E2%80%A2-energy-system-%E2%80%A2-tiered-machines.133728/"
+    },
+    {
+      "name": "Healing Stone",
+      "version": "2.3",
+      "description": "Healing stones and crystal-themed survival utility.",
+      "icon": "✚",
+      "spigot": "https://www.spigotmc.org/resources/healing-stone.60488/"
+    },
+    {
+      "name": "EXP-Gems",
+      "version": "3.3",
+      "description": "Craftable gems for enhanced experience gains and RPG servers.",
+      "icon": "◇",
+      "spigot": "https://www.spigotmc.org/resources/exp-gems-1-18-1-20-%E2%9A%94%EF%B8%8F-mega-exp-gains-%E2%9A%94%EF%B8%8F-%E2%9A%92%EF%B8%8F-gem-crafting-%E2%9A%92%EF%B8%8F-%E2%9A%A1-cool-effects-%E2%9A%A1.96947/",
+      "modrinth": "https://modrinth.com/project/8pKhVJ8t"
+    },
+    {
+      "name": "Uncraftable",
+      "version": "1.2",
+      "description": "Adds recipes for useful items that vanilla leaves uncraftable.",
+      "icon": "⌘",
+      "spigot": "https://www.spigotmc.org/resources/uncraftable-a-simple-yet-helpful-plugin.110348/"
+    },
+    {
+      "name": "EasyReplant",
+      "version": "3.0",
+      "description": "Automatic crop replanting, multi-harvest chances and growth tools.",
+      "icon": "♣",
+      "spigot": "https://www.spigotmc.org/resources/easyreplant-1-18-1-19-x-%E2%AD%90-auto-replant-%E2%AD%90-%E2%9A%A1-multi-harvest-chance-%E2%9A%A1-%E2%AD%90-fast-growth-%E2%AD%90.106994/"
+    },
+    {
+      "name": "SimpleCrystals",
+      "version": "1.6",
+      "description": "Useful and collectible custom crystal items through commands and GUI.",
+      "icon": "◆",
+      "spigot": "https://www.spigotmc.org/resources/simplecrystals.66824/"
+    },
+    {
+      "name": "MithrilChains",
+      "version": "1.0",
+      "description": "Makes chainmail armour craftable again.",
+      "icon": "⛓",
+      "spigot": "https://www.spigotmc.org/resources/mithrilchains.106812/"
+    },
+    {
+      "name": "SimpleSpawn",
+      "version": "1.0",
+      "description": "A lightweight plugin for setting and using a server spawn point.",
+      "icon": "⌂",
+      "spigot": "https://www.spigotmc.org/resources/simplespawn.71281/"
+    },
+    {
+      "name": "LevelRewards",
+      "version": "1.0",
+      "description": "Simple configurable rewards for vanilla player levels.",
+      "icon": "⬆",
+      "spigot": "https://www.spigotmc.org/resources/levelrewards.67276/"
+    }
+  ]
+};
+
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const site = window.MYTHIC_SITE || { plugins: [], resources: [], platforms: [] };
+  const grid = document.querySelector('#plugin-grid');
+  const template = document.querySelector('#plugin-card-template');
+  const search = document.querySelector('#plugin-search');
+  const filters = [...document.querySelectorAll('.filter')];
+  const emptyState = document.querySelector('#empty-state');
+  const modal = document.querySelector('#plugin-modal');
+  const menuButton = document.querySelector('.menu-button');
+  const navLinks = document.querySelector('#nav-links');
+  let activeFilter = 'all';
+
+  const pluginCount = document.querySelector('#plugin-count');
+  const resourceCount = document.querySelector('#resource-count');
+  if (pluginCount) pluginCount.textContent = site.plugins.length;
+  if (resourceCount) resourceCount.textContent = site.resources.length;
+  const statusClass = status => `status-${status}`;
+
+  function makeCard(plugin) {
+    const fragment = template.content.cloneNode(true);
+    const card = fragment.querySelector('.plugin-card');
+    const icon = fragment.querySelector('.plugin-icon');
+    const status = fragment.querySelector('.status-chip');
+    const category = fragment.querySelector('.plugin-category');
+    const name = fragment.querySelector('h3');
+    const tagline = fragment.querySelector('.plugin-tagline');
+    const tags = fragment.querySelector('.card-tags');
+    const button = fragment.querySelector('.card-link');
+
+    card.dataset.id = plugin.id;
+    card.dataset.status = plugin.status;
+    card.dataset.search = [plugin.name, plugin.category, plugin.tagline, ...plugin.tags, ...plugin.features].join(' ').toLowerCase();
+    card.style.setProperty('--card-accent', plugin.accent);
+    icon.textContent = plugin.icon;
+    status.textContent = plugin.statusLabel;
+    status.classList.add(statusClass(plugin.status));
+    category.textContent = plugin.category;
+    name.textContent = plugin.name;
+    tagline.textContent = plugin.tagline;
+    plugin.tags.slice(0, 3).forEach(tag => {
+      const pill = document.createElement('span');
+      pill.textContent = tag;
+      tags.append(pill);
+    });
+    button.addEventListener('click', () => openPlugin(plugin.id));
+    return fragment;
+  }
+
+  if (grid && template) site.plugins.forEach(plugin => grid.append(makeCard(plugin)));
+
+  function applyFilters() {
+    const term = search ? search.value.trim().toLowerCase() : '';
+    let visible = 0;
+    document.querySelectorAll('.plugin-card').forEach(card => {
+      const statusMatch = activeFilter === 'all' || card.dataset.status === activeFilter;
+      const searchMatch = !term || card.dataset.search.includes(term);
+      const show = statusMatch && searchMatch;
+      card.hidden = !show;
+      if (show) visible += 1;
+    });
+    if (emptyState) emptyState.hidden = visible !== 0;
+  }
+  if (search) search.addEventListener('input', applyFilters);
+  filters.forEach(filter => filter.addEventListener('click', () => {
+    filters.forEach(item => item.classList.remove('active'));
+    filter.classList.add('active');
+    activeFilter = filter.dataset.filter;
+    applyFilters();
+  }));
+
+  function createAction(label, url, primary = false) {
+    const link = document.createElement('a');
+    link.className = `button ${primary ? 'button-primary' : 'button-secondary'}`;
+    link.textContent = label;
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    return link;
+  }
+
+  function openPlugin(id) {
+    const plugin = site.plugins.find(item => item.id === id);
+    if (!plugin || !modal) return;
+    modal.style.setProperty('--modal-accent', plugin.accent);
+    document.querySelector('#modal-icon').textContent = plugin.icon;
+    const modalStatus = document.querySelector('#modal-status');
+    modalStatus.className = `status-chip ${statusClass(plugin.status)}`;
+    modalStatus.textContent = plugin.statusLabel;
+    document.querySelector('#modal-category').textContent = plugin.category;
+    document.querySelector('#modal-title').textContent = plugin.name;
+    document.querySelector('#modal-tagline').textContent = plugin.tagline;
+    document.querySelector('#modal-description').textContent = plugin.description;
+
+    const features = document.querySelector('#modal-features');
+    features.replaceChildren();
+    plugin.features.forEach(feature => { const li=document.createElement('li'); li.textContent=feature; features.append(li); });
+
+    const integrationWrap = document.querySelector('#integration-wrap');
+    const integrations = document.querySelector('#modal-integrations');
+    integrations.replaceChildren();
+    integrationWrap.hidden = plugin.integrations.length === 0;
+    plugin.integrations.forEach(integration => { const span=document.createElement('span'); span.textContent=integration; integrations.append(span); });
+
+    const actions = document.querySelector('#modal-actions');
+    actions.replaceChildren();
+    plugin.links.filter(link => link.url).forEach((link, index) => actions.append(createAction(link.label, link.url, index === 0)));
+    if (!actions.children.length) {
+      const note = document.createElement('span'); note.className='status-chip';
+      note.textContent = plugin.status === 'exclusive' ? 'Not publicly distributed' : 'No public resource page yet';
+      actions.append(note);
+    }
+    if (typeof modal.showModal === 'function') modal.showModal();
+  }
+
+  window.openPlugin = openPlugin;
+  document.querySelectorAll('.js-open-plugin').forEach(button => button.addEventListener('click', () => openPlugin(button.dataset.plugin)));
+  const closeButton = document.querySelector('.modal-close');
+  if (closeButton && modal) closeButton.addEventListener('click', () => modal.close());
+  if (modal) modal.addEventListener('click', event => {
+    const rect = modal.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) modal.close();
+  });
+
+  const resourceGrid = document.querySelector('#resource-grid');
+  const resourceTemplate = document.querySelector('#resource-card-template');
+  if (resourceGrid && resourceTemplate) {
+    site.resources.forEach(resource => {
+      const fragment = resourceTemplate.content.cloneNode(true);
+      fragment.querySelector('.resource-icon').textContent = resource.icon || '◆';
+      fragment.querySelector('.resource-version').textContent = `v${resource.version}`;
+      fragment.querySelector('h3').textContent = resource.name;
+      fragment.querySelector('p').textContent = resource.description;
+      const actions = fragment.querySelector('.resource-actions');
+      const links = [
+        resource.spigot && ['SpigotMC', resource.spigot],
+        resource.modrinth && ['Modrinth', resource.modrinth]
+      ].filter(Boolean);
+      links.forEach(([label, url], index) => {
+        const a = document.createElement('a');
+        a.className = `resource-button${index === 0 ? ' primary' : ''}`;
+        a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = `${label} ↗`;
+        actions.append(a);
+      });
+      resourceGrid.append(fragment);
+    });
+  }
+
+  const platformLinks = document.querySelector('#platform-links');
+  if (platformLinks) site.platforms.forEach(platform => {
+    const link = document.createElement('a');
+    link.className = 'platform-link';
+    link.textContent = platform.name;
+    link.href = platform.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    platformLinks.append(link);
+  });
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('open', !isOpen);
+    });
+    navLinks.addEventListener('click', event => {
+      if (event.target.matches('a')) { navLinks.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); }
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (header) header.classList.toggle('scrolled', window.scrollY > 16);
+  }, { passive: true });
+});
+
+  </script>
 </body>
 </html>
