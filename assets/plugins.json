@@ -36,7 +36,40 @@
       "version": "2.1.1",
       "updated": "11 Jul 2026"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicEnchant rebuilds enchanting around discovery, collection and player choice. Instead of repeatedly rolling a vanilla table until the right offer appears, players create a physical Arcane Library from enchanted books stored in nearby chiseled bookshelves.",
+        "When an item is placed into the custom enchanting interface, the library checks the knowledge physically available around that table and presents only compatible options. The result is a system that rewards exploration, trading and shared community builds while still respecting Minecraft items, XP and lapis."
+      ],
+      "workflowTitle": "From discovered book to permanent library knowledge",
+      "workflow": [
+        "Enchanted books enter the world through the server's chosen discovery methods. Players place those books into chiseled bookshelves around an enchanting table, turning a decorative build into a functional collection of magical knowledge.",
+        "The GUI filters entries by item type, level, compatibility and conflicts. Server owners decide how books combine, which enchantments can appear naturally, whether anvils remain usable and how much XP or lapis each rarity should cost."
+      ],
+      "benefits": [
+        "Exact enchantment selection instead of random rerolling",
+        "Physical public, personal or clan libraries",
+        "Vanilla and custom books in one progression loop",
+        "Configurable compatibility, conflicts, costs and discovery"
+      ],
+      "administration": "The plugin is designed for live survival servers: enchant data is stored safely on items, recursive multi-block and area effects are guarded, secondary PvP damage can be controlled and the GUI, messages, sounds and costs are configurable. LevelCraft support is optional, allowing Sorcery requirements and XP rewards without making LevelCraft a hard dependency.",
+      "featureDetails": {
+        "Selectable enchanting GUI": "Insert compatible equipment, inspect every valid option and apply the exact enchantment the player has unlocked.",
+        "Physical bookshelf libraries": "Chiseled bookshelves hold the real enchanted books that define what each enchanting table knows.",
+        "Vanilla and custom enchantments": "Minecraft enchantments and MythicEnchant content can coexist inside the same library and interface.",
+        "100 custom enchantments": "Weapons, tools, armour, shields and elytras receive active effects ranging from utility upgrades to boss-focused combat powers.",
+        "Configurable XP and lapis costs": "Rarity, treasure status and server balancing rules can all influence the final price.",
+        "Natural book discovery and drops": "Rare knowledge becomes exploration and trade content rather than an admin-only catalogue."
+      },
+      "bestFor": "Survival, RPG and economy servers that want enchanting to become a visible long-term collection system.",
+      "setup": [
+        "Install the plugin and restart the server to generate its files.",
+        "Configure enchanting rules, custom enchantments, messages and costs.",
+        "Place books in chiseled bookshelves around an enchanting table and test the scan range.",
+        "Install LevelCraft only when Sorcery progression integration is wanted."
+      ]
+    }
   },
   {
     "id": "pickupfilter",
@@ -60,7 +93,7 @@
       "QoL"
     ],
     "integrations": [],
-    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "compatibility": "Paper/Spigot 1.20–1.21.x",
     "version": "1.2.1",
     "spigot_url": "https://www.spigotmc.org/resources/pickupfilter-1-20-1-21-x-%E2%9C%A8-pickup-filters-gui-geyser-%E2%9C%A8.136241/",
     "modrinth_url": "https://modrinth.com/project/26myPReK",
@@ -76,6 +109,39 @@
       "id": "26myPReK",
       "downloads": 1,
       "followers": 0
+    },
+    "longDescription": {
+      "intro": [
+        "PickupFilter gives every player control over the items allowed into their inventory. It is aimed at the everyday frustration created by farms, mines, grinders and busy survival areas where unwanted drops repeatedly fill valuable slots.",
+        "Each player manages a personal filter through a clear GUI. Their choices are saved persistently, so the filter behaves like a real account preference rather than a temporary menu setting that disappears after a restart."
+      ],
+      "workflowTitle": "Personal filtering without changing the rest of the server",
+      "workflow": [
+        "Players open the management menu, choose the materials they do not want to collect and continue playing normally. Pickup events are checked before the item enters the inventory, preventing junk from becoming a cleanup problem later.",
+        "The system is intentionally player-specific. One player can ignore cobblestone while another collects it in the same area, making it suitable for shared farms and mixed playstyles."
+      ],
+      "benefits": [
+        "Per-player choices instead of global blacklists",
+        "Persistent settings across relogs and restarts",
+        "Useful around farms, grinders and large mining sessions",
+        "Designed to remain reliable through normal item movement and storage"
+      ],
+      "administration": "The plugin focuses on low-overhead event handling and straightforward configuration. It does not require a database or a large dependency stack, and its menu-driven approach is easier for both Java and Bedrock players than command-heavy filtering.",
+      "featureDetails": {
+        "Per-player item filters": "Every player creates their own material list without affecting anyone else.",
+        "Persistent saved choices": "Selections survive relogs and server restarts.",
+        "Simple management GUI": "Items can be added or removed through a visual inventory menu.",
+        "Farm-friendly behaviour": "Stops repetitive mob, crop and block drops before they flood inventories.",
+        "Restart-safe storage": "Player filter data is written to disk and restored automatically.",
+        "Lightweight event handling": "Checks are kept focused on pickup behaviour rather than running constant world scans."
+      },
+      "bestFor": "Survival servers with automated farms, grinders, resource worlds or players who prefer highly organised inventories.",
+      "setup": [
+        "Install the JAR and restart the server.",
+        "Review the default GUI and message settings.",
+        "Grant normal-use permissions to players where required.",
+        "Test common farm drops and verify saved choices after a restart."
+      ]
     }
   },
   {
@@ -103,7 +169,7 @@
       "Vault",
       "Discord webhooks"
     ],
-    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "compatibility": "Paper/Spigot 1.20–1.21.x",
     "version": "1.0",
     "spigot_url": "https://www.spigotmc.org/resources/mythicjoins-1-20-1-21-x-%E2%9C%A8-mythic-join-leave-effects-gui-shop-vault-discord-webhooks-%E2%9C%A8.136663/",
     "modrinth_url": null,
@@ -115,7 +181,40 @@
       "version": "1.0",
       "updated": "1 Jul 2026"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicJoins turns ordinary login and logout text into a cosmetic collection system. Players can browse themed join and leave messages, purchase them through a Vault economy and select the style that represents them.",
+        "The plugin keeps cosmetics separate from gameplay power. A player can build a collection, switch between owned messages and still fall back to a polished default pool when no custom option is selected."
+      ],
+      "workflowTitle": "A complete cosmetic shop for arrivals and departures",
+      "workflow": [
+        "The shop presents available join and leave messages with icons, prices and formatting. Purchased entries move into an owned-items menu where players choose their active message independently for joining and leaving.",
+        "Server staff can grant, revoke and manage cosmetics without editing player files. Optional Discord webhooks mirror the chosen message with the player's identity, creating a consistent experience between Minecraft and the community server."
+      ],
+      "benefits": [
+        "Economy sink with no competitive advantage",
+        "Separate shops and owned-message menus",
+        "Configurable defaults for players without a selection",
+        "Discord embeds using the player identity and selected message"
+      ],
+      "administration": "Messages, prices, icons, colours and categories are configuration-driven. This makes the resource suitable for small cosmetic catalogues or a large rarity-based collection without requiring code changes for every new message.",
+      "featureDetails": {
+        "Join and leave message shops": "Players browse purchasable arrivals and departures in dedicated menus.",
+        "Owned cosmetics menus": "Unlocked entries remain available for selection without being purchased again.",
+        "Random default message pool": "Players without an active cosmetic still receive varied, server-branded messages.",
+        "Vault economy purchases": "Cosmetic prices act as a configurable money sink.",
+        "Admin grants and removal": "Staff can manage ownership directly for rewards, refunds or moderation.",
+        "Discord join and leave embeds": "Optional webhooks carry the selected message outside the game."
+      },
+      "bestFor": "Community servers that want a visible cosmetic economy without selling gameplay power.",
+      "setup": [
+        "Install Vault and a supported economy provider.",
+        "Install MythicJoins and allow it to create the default catalogue.",
+        "Edit messages, prices, icons and webhook settings.",
+        "Test purchases, selection and default behaviour with a normal player account."
+      ]
+    }
   },
   {
     "id": "mythicvote",
@@ -143,7 +242,7 @@
       "Discord webhooks",
       "PlaceholderAPI"
     ],
-    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "compatibility": "Paper/Spigot 1.20–1.21.x",
     "version": "1.2.2",
     "spigot_url": "https://www.spigotmc.org/resources/mythicvote-1-20-1-21-x-%E2%9C%A8-vote-rewards-leaderboards-milestones-discord-webhooks-%E2%9C%A8.135078/",
     "modrinth_url": null,
@@ -155,7 +254,40 @@
       "version": "1.2.2",
       "updated": "24 Jun 2026"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicVote combines vote handling, repeatable rewards and long-term loyalty tracking in one focused plugin. Each confirmed vote can run configurable commands while the player's lifetime total feeds milestones and leaderboards.",
+        "The system is built to make voting visible rather than treating it as a silent reward command. Players can see progress, compete for ranking positions and receive meaningful recognition for continued support."
+      ],
+      "workflowTitle": "Reward the vote today and the loyalty behind it",
+      "workflow": [
+        "NuVotifier delivers the vote event, MythicVote records it and the configured reward commands are executed. Offline handling and stored totals keep the reward loop dependable even when a player is not standing in front of the server at the time of the vote.",
+        "Milestones provide larger one-time rewards at important totals, while leaderboards and PlaceholderAPI values make the same data available to menus, scoreboards and chat layouts."
+      ],
+      "benefits": [
+        "Configurable commands for every vote",
+        "Lifetime totals and milestone rewards",
+        "Leaderboard visibility for community competition",
+        "Discord webhook announcements and PlaceholderAPI support"
+      ],
+      "administration": "Rewards are command-driven, allowing the plugin to work with economies, permissions, custom items and other server systems. The design avoids forcing a specific crate or currency plugin and keeps player vote data in persistent storage.",
+      "featureDetails": {
+        "Per-vote command rewards": "Run one or multiple console commands whenever a valid vote is received.",
+        "Lifetime vote tracking": "Maintain a persistent total for every player across restarts.",
+        "Milestone rewards": "Grant larger rewards when players reach configured lifetime targets.",
+        "Leaderboards": "Show the community who is supporting the server most consistently.",
+        "Discord webhook embeds": "Publish polished vote activity and milestone announcements outside Minecraft.",
+        "Player data persistence": "Vote progress remains available for commands, placeholders and future rewards."
+      },
+      "bestFor": "Public servers that want voting to feel like an ongoing progression track instead of a single command payout.",
+      "setup": [
+        "Install NuVotifier and confirm vote services reach the server.",
+        "Install MythicVote and configure per-vote commands.",
+        "Define milestones, leaderboard presentation and webhook settings.",
+        "Send a test vote and confirm online, offline and restart behaviour."
+      ]
+    }
   },
   {
     "id": "lastwords",
@@ -182,7 +314,7 @@
       "Discord webhooks",
       "Essentials-style chat"
     ],
-    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "compatibility": "Paper/Spigot 1.20–1.21.x",
     "version": "1.2.4",
     "spigot_url": "https://www.spigotmc.org/resources/lastwords-%E2%9C%A6-funny-custom-death-messages-in-game-editor-%E2%9C%A6.135578/",
     "modrinth_url": "https://modrinth.com/project/oyuWDHN2",
@@ -198,6 +330,39 @@
       "id": "oyuWDHN2",
       "downloads": 75,
       "followers": 2
+    },
+    "longDescription": {
+      "intro": [
+        "LastWords replaces repetitive vanilla death messages with a large cause-aware library built for personality and variety. Rather than selecting a random line from one global list, the plugin can choose messages that match how the player actually died.",
+        "A built-in editor lets staff manage the message catalogue on a live server. This avoids constant file editing and makes it practical to refine jokes, formatting and placeholders as the community develops its own tone."
+      ],
+      "workflowTitle": "Cause-specific humour with live-server control",
+      "workflow": [
+        "When a player dies, LastWords identifies the relevant cause and chooses from the matching message pool. Placeholders are replaced with player, killer, weapon or environmental context where available.",
+        "Messages can be reviewed and changed through the editor, while optional Discord webhooks present deaths with consistent colours and player imagery. The result is a single death-message system for both in-game chat and community channels."
+      ],
+      "benefits": [
+        "Hundreds of ready-to-use messages",
+        "Separate pools for different death causes",
+        "Live in-game editing instead of restart-heavy maintenance",
+        "Optional Discord presentation with player context"
+      ],
+      "administration": "Formatting, prefixes, cause pools and webhook behaviour are configurable. The plugin is designed to coexist with common chat and permissions setups while keeping ownership of the final death message in one place.",
+      "featureDetails": {
+        "597 default funny messages": "Launch with a large varied catalogue rather than writing every line from scratch.",
+        "Cause-specific message pools": "Falls, mobs, fire, projectiles and other causes can each have their own tone.",
+        "In-game message editor": "Add, remove and review messages without leaving Minecraft.",
+        "Prefix and chat compatibility": "Keep server ranks and chat presentation consistent around death output.",
+        "Discord webhook embeds": "Mirror deaths to Discord with structured, readable embeds.",
+        "Configurable formatting": "Control colours, wording, placeholders and presentation from configuration."
+      },
+      "bestFor": "Community and survival servers that want deaths to become memorable chat moments.",
+      "setup": [
+        "Install the plugin and allow the default message library to generate.",
+        "Review formatting and cause-specific pools.",
+        "Configure the optional Discord webhook.",
+        "Use the editor to adjust messages to the tone of the community."
+      ]
     }
   },
   {
@@ -226,7 +391,7 @@
       "bStats",
       "Update checker"
     ],
-    "compatibility": "Paper/Spigot 1.20.x\u201326.1.x",
+    "compatibility": "Paper/Spigot 1.20.x–26.1.x",
     "version": "3.7",
     "spigot_url": "https://www.spigotmc.org/resources/pixelblood-1-20-x-1-26-x-%E2%9A%94-dynamic-blood-effects-%E2%9A%94-trails-pools-splatter-bleeding.95684/",
     "modrinth_url": "https://modrinth.com/project/1oCiyYKI",
@@ -242,6 +407,39 @@
       "id": "1oCiyYKI",
       "downloads": 733,
       "followers": 14
+    },
+    "longDescription": {
+      "intro": [
+        "PixelBlood adds responsive combat feedback through particles, trails, pools, splashes and optional bleeding damage. It is designed to make hits feel heavier without requiring a resource pack or replacing Minecraft combat.",
+        "Effects can be tuned separately for players, bosses, hostile mobs and passive mobs. This lets a server create dramatic boss fights while keeping routine animal or farm interactions restrained."
+      ],
+      "workflowTitle": "Layered effects that respond to real combat events",
+      "workflow": [
+        "Damage events create immediate bursts, critical hits can receive stronger presentation and wounded entities can leave temporary trails or pools. Death effects provide a final visual response without permanently changing the world.",
+        "Optional bleeding adds a short damage-over-time mechanic with configurable duration, interval and damage. Protection checks and category controls help the feature fit both PvE and PvP environments."
+      ],
+      "benefits": [
+        "No resource pack required",
+        "Separate control for different entity categories",
+        "Configurable visual intensity and bleeding mechanics",
+        "Administration GUI for rapid live-server tuning"
+      ],
+      "administration": "World restrictions, damage-source cooldowns, effect sizes, particle behaviour and bleeding values are configurable. The project also includes update checking, metrics and protection-aware behaviour for production use.",
+      "featureDetails": {
+        "Damage and critical bursts": "Immediate particle responses make ordinary and critical hits visually distinct.",
+        "Ground trails and blood pools": "Wounded entities can leave temporary environmental traces as they move.",
+        "Configurable bleeding effect": "Optional damage over time adds a mechanical layer to selected combat.",
+        "Mob-category controls": "Players, passive mobs, hostile mobs and bosses can use different settings.",
+        "Boss and death effects": "Major encounters receive stronger visual presentation and finishing effects.",
+        "In-game administration GUI": "Common visual and gameplay settings can be adjusted without manually editing every value."
+      },
+      "bestFor": "PvE, RPG and survival servers that want stronger combat atmosphere without custom textures.",
+      "setup": [
+        "Install the plugin and restart the server.",
+        "Choose which entity categories can produce effects.",
+        "Tune particles, trails, pools and optional bleeding values.",
+        "Test damage in protected areas, PvP zones and boss encounters."
+      ]
     }
   },
   {
@@ -269,7 +467,7 @@
       "Geyser",
       "Floodgate"
     ],
-    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "compatibility": "Paper/Spigot 1.20–1.21.x",
     "version": "1.0.2",
     "spigot_url": "https://www.spigotmc.org/resources/mythictrash-1-20-x-1-21-x-%EF%B8%8F-safe-item-disposal-%EF%B8%8F-%E2%9C%A8-trash-gui-%E2%9C%A8.136211/",
     "modrinth_url": "https://modrinth.com/project/40jnsAKM",
@@ -285,6 +483,39 @@
       "id": "40jnsAKM",
       "downloads": 1,
       "followers": 0
+    },
+    "longDescription": {
+      "intro": [
+        "MythicTrash provides a dedicated disposal interface without asking players to throw items into lava or rely on risky inventory shortcuts. The double-chest GUI gives enough space for bulk cleanup while keeping the interaction familiar.",
+        "Protection rules can stop important or configured items from being discarded, and an optional confirmation stage gives players a final chance to recover from a mistake."
+      ],
+      "workflowTitle": "Fast disposal with safeguards where they matter",
+      "workflow": [
+        "Players open the trash menu, place unwanted items into the inventory and close or confirm the action according to server settings. Blocked items are rejected before they can be destroyed.",
+        "The server controls where the command may be used, which materials are protected and how the GUI looks and sounds. Statistics make the system useful for understanding how often players use the utility."
+      ],
+      "benefits": [
+        "Large familiar disposal interface",
+        "Protection against valuable or server-specific items",
+        "Optional confirmation workflow",
+        "Bedrock-aware integration through Geyser and Floodgate"
+      ],
+      "administration": "Titles, filler items, sounds, particles, protected materials, blocked worlds and confirmation behaviour are configurable. The plugin is intentionally focused on safe disposal rather than becoming a general storage system.",
+      "featureDetails": {
+        "Double-chest trash GUI": "Provides enough room for clearing large inventories in one session.",
+        "Protected items": "Configured and specially marked items can be prevented from entering the trash.",
+        "Optional confirmation": "A second step reduces accidental deletion on valuable servers.",
+        "Blocked worlds and materials": "Limit use by location and define server-specific safety rules.",
+        "Usage statistics": "Track how the utility is used across the server.",
+        "Fully configurable visuals": "Match the title, icons, sounds and particles to the server theme."
+      },
+      "bestFor": "Survival and economy servers that want a polished cleanup command with stronger safety than a blank inventory.",
+      "setup": [
+        "Install the plugin and restart the server.",
+        "Configure protected items and blocked worlds first.",
+        "Choose whether confirmation is required.",
+        "Customise the GUI and test protected-item behaviour."
+      ]
     }
   },
   {
@@ -311,7 +542,7 @@
     "integrations": [
       "WorldEdit formats"
     ],
-    "compatibility": "Paper/Spigot \u2014 see release page",
+    "compatibility": "Paper/Spigot — see release page",
     "version": "1.4",
     "spigot_url": "https://www.spigotmc.org/resources/arcanebuilder-%E2%9A%A1-cinematic-building-animated-schematics-preview-claim-protections-undo-%E2%9A%A1.134753/",
     "modrinth_url": null,
@@ -323,7 +554,40 @@
       "version": "1.4",
       "updated": "7 Jun 2026"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "ArcaneBuilder turns schematic placement into a visible construction sequence. Instead of instantly pasting a finished structure, the plugin can preview it and then assemble the build block by block for a more cinematic result.",
+        "The approach works well for server events, unlockable structures, player rewards and world development where the act of construction should be part of the experience."
+      ],
+      "workflowTitle": "Preview, protect and animate a schematic build",
+      "workflow": [
+        "A schematic is prepared, positioned and previewed before construction begins. The plugin then schedules block placement at a configurable pace, allowing players to watch the structure grow rather than appear in a single tick.",
+        "Administrative tools help manage builds, undo mistakes and respect configured protection rules. Compact builder items can provide a controlled player-facing workflow without exposing unrestricted WorldEdit access."
+      ],
+      "benefits": [
+        "Cinematic structure reveals",
+        "Preview before committing a build",
+        "Configurable pacing and placement order",
+        "Controlled player use without full editing permissions"
+      ],
+      "administration": "Schematic selection, placement speed, preview behaviour, undo and protection handling are designed for event and production use. The plugin works with recognised schematic formats rather than locking structures into a custom editor.",
+      "featureDetails": {
+        "Schematic file support": "Use prepared builds instead of reconstructing structures through configuration.",
+        "Animated block placement": "Structures visibly grow over time at a server-defined speed.",
+        "Builder chest workflow": "Package a build into a controlled, player-friendly placement item.",
+        "Admin tab completion": "Commands remain practical while managing multiple schematic files.",
+        "Configurable pacing": "Balance cinematic presentation against server performance and build size.",
+        "Event-friendly presentation": "Construction becomes a reveal players can gather around and watch."
+      },
+      "bestFor": "Creative-survival servers, RPG worlds and events where structures should feel earned or magical.",
+      "setup": [
+        "Install ArcaneBuilder and any required schematic support.",
+        "Add or prepare schematic files.",
+        "Configure placement pacing and protection behaviour.",
+        "Preview a test structure before enabling player-facing use."
+      ]
+    }
   },
   {
     "id": "auto-breeding",
@@ -347,7 +611,7 @@
       "Automation"
     ],
     "integrations": [],
-    "compatibility": "1.19\u20131.20.x and 26.1.x",
+    "compatibility": "1.19–1.20.x and 26.1.x",
     "version": "1.5",
     "spigot_url": "https://www.spigotmc.org/resources/%E2%9D%A4%EF%B8%8F-auto-breeding-%E2%9D%A4%EF%B8%8F-1-19-1-20-x-26-1-x.119205/",
     "modrinth_url": "https://modrinth.com/project/SzSnrhRB",
@@ -363,6 +627,39 @@
       "id": "SzSnrhRB",
       "downloads": 529,
       "followers": 5
+    },
+    "longDescription": {
+      "intro": [
+        "Auto Breeding lets established animal farms continue producing without requiring players to manually feed every pair. The system still consumes real survival resources, preserving the cost of breeding while removing repetitive clicking.",
+        "Animals search for appropriate nearby food under configurable conditions. Limits and timing controls prevent the automation from turning a small farm into uncontrolled entity growth."
+      ],
+      "workflowTitle": "Survival resource consumption with less repetitive interaction",
+      "workflow": [
+        "Supported animals periodically look for valid food in the configured area. When requirements are met, the food is consumed and the animals enter the normal breeding state.",
+        "Species-aware handling keeps each animal tied to the correct resource. Server owners decide the search range, intervals, limits and other controls needed to fit the local economy and performance goals."
+      ],
+      "benefits": [
+        "Maintains survival resource costs",
+        "Reduces repetitive farm maintenance",
+        "Configurable timing and population controls",
+        "Works as a focused utility rather than a full farming overhaul"
+      ],
+      "administration": "The plugin is intentionally lightweight. Configuration centres on supported animals, food behaviour, timing, limits and range so administrators can balance convenience against entity count.",
+      "featureDetails": {
+        "Natural automated breeding": "Animals enter the familiar vanilla breeding state without direct player feeding.",
+        "Nearby food consumption": "Automation consumes available resources instead of creating free offspring.",
+        "Species-aware food handling": "Each mob recognises the food appropriate to its type.",
+        "Configurable timing and limits": "Control how often checks occur and prevent excessive growth.",
+        "Farm-friendly behaviour": "Designed around established pens and survival production areas.",
+        "Lightweight server utility": "Adds one focused mechanic without a large framework or database."
+      },
+      "bestFor": "Survival servers that allow farms but want breeding to remain resource-based and manageable.",
+      "setup": [
+        "Install the plugin and restart the server.",
+        "Configure supported species, ranges, delays and limits.",
+        "Place valid food near a small test farm.",
+        "Observe resource consumption and adjust population controls before production use."
+      ]
     }
   },
   {
@@ -399,7 +696,40 @@
       "version": "1.0",
       "updated": "25 Mar 2026"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "Arcane Exchange introduces a fantasy automation layer built around generated and routed arcane energy. Players progress through machines that feel like magical constructs rather than modern industrial blocks.",
+        "The system is intended to sit between manual survival and complete automation. Upgrades, tiers and resource costs create a progression path instead of handing powerful processing to players immediately."
+      ],
+      "workflowTitle": "Generate energy, build machines and unlock stronger automation",
+      "workflow": [
+        "Players begin with lower-tier arcane technology, produce energy and connect that power to useful machines. Each stage expands what can be processed or automated while demanding stronger resources and investment.",
+        "Machine behaviour and progression values are configurable, allowing a server to use the project as a compact side system or a central economy and crafting pillar."
+      ],
+      "benefits": [
+        "Fantasy presentation instead of industrial theming",
+        "Tiered progression rather than instant automation",
+        "New uses for economy and survival resources",
+        "Configurable machine behaviour and costs"
+      ],
+      "administration": "Administrators control machine recipes, energy expectations, upgrade pacing and the overall value of automation. The project is designed to support a server economy rather than bypass it.",
+      "featureDetails": {
+        "Arcane energy system": "A dedicated power resource connects magical production and machine use.",
+        "Tiered machines": "Stronger functionality is unlocked through progressively more valuable constructions.",
+        "Magical automation loop": "Processing feels integrated with a fantasy world rather than imported from a technology mod.",
+        "Progression-based upgrades": "Players invest over time instead of receiving maximum output immediately.",
+        "Survival economy hooks": "Resources and machine access can become meaningful market goals.",
+        "Configurable machine behaviour": "Server owners tune output, costs and pacing to suit the local balance."
+      },
+      "bestFor": "Fantasy survival and RPG servers that want automation without abandoning their world theme.",
+      "setup": [
+        "Install the plugin and generate its configuration.",
+        "Review machine recipes, tiers and energy values.",
+        "Introduce lower-tier machines first and test the progression curve.",
+        "Balance outputs against the server economy before wider release."
+      ]
+    }
   },
   {
     "id": "healing-stone",
@@ -423,7 +753,7 @@
       "Legacy"
     ],
     "integrations": [],
-    "compatibility": "Legacy resource \u2014 check the release page",
+    "compatibility": "Legacy resource — check the release page",
     "version": "2.3",
     "spigot_url": "https://www.spigotmc.org/resources/healing-stone.60488/",
     "modrinth_url": null,
@@ -435,7 +765,40 @@
       "version": "2.3",
       "updated": "5 Jan 2026"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "Healing Stone adds crystal-themed healing utilities that are easy to understand and easy to reward. It provides a compact magical item loop without requiring a complete spell or class framework.",
+        "The project works particularly well as a quest reward, donor-free convenience item or rare survival drop where healing should feel more distinctive than carrying another stack of food."
+      ],
+      "workflowTitle": "Simple magical healing with a recognisable item identity",
+      "workflow": [
+        "Players receive or obtain healing stones and use them according to the configured item behaviour. The clear crystal identity makes the items suitable for shops, quests and loot tables.",
+        "Because the plugin stays focused on healing, it can be introduced alongside larger RPG systems without competing with their classes, skill trees or combat rules."
+      ],
+      "benefits": [
+        "Easy-to-understand custom healing items",
+        "Useful as rewards, loot or shop stock",
+        "Lightweight alternative to a full magic system",
+        "Distinctive crystal-themed presentation"
+      ],
+      "administration": "Configuration and administration focus on item access and healing values. As a legacy resource, compatibility should be confirmed on a test server before production deployment.",
+      "featureDetails": {
+        "Healing stone items": "Give players a dedicated magical source of health restoration.",
+        "Crystal-themed utility": "A clear visual identity makes the items easy to recognise in rewards and shops.",
+        "Simple player commands": "Basic access remains understandable without a complex spell interface.",
+        "Lightweight gameplay loop": "Adds useful healing without rebuilding combat or progression.",
+        "Server reward potential": "Fits milestones, quests, voting, shops and event loot.",
+        "Straightforward configuration": "Healing values and access can be adjusted to the server's balance."
+      },
+      "bestFor": "Servers looking for a small magical reward system rather than a complete RPG framework.",
+      "setup": [
+        "Test the legacy build on the target server version.",
+        "Review healing values and item access.",
+        "Decide whether stones come from commands, rewards, shops or loot.",
+        "Confirm the items interact correctly with the server's health scaling."
+      ]
+    }
   },
   {
     "id": "exp-gems",
@@ -459,7 +822,7 @@
       "Gems"
     ],
     "integrations": [],
-    "compatibility": "1.18\u20131.20",
+    "compatibility": "1.18–1.20",
     "version": "3.3",
     "spigot_url": "https://www.spigotmc.org/resources/exp-gems-1-18-1-20-%E2%9A%94%EF%B8%8F-mega-exp-gains-%E2%9A%94%EF%B8%8F-%E2%9A%92%EF%B8%8F-gem-crafting-%E2%9A%92%EF%B8%8F-%E2%9A%A1-cool-effects-%E2%9A%A1.96947/",
     "modrinth_url": "https://modrinth.com/project/8pKhVJ8t",
@@ -475,6 +838,39 @@
       "id": "8pKhVJ8t",
       "downloads": 204,
       "followers": 7
+    },
+    "longDescription": {
+      "intro": [
+        "EXP-Gems turns experience bonuses into physical collectible items. Instead of hiding progression behind a permission node, the plugin gives players visible gems that can be crafted, traded, rewarded and upgraded.",
+        "Different strengths create a clear path from early utility to valuable end-game rewards. The system is especially suited to RPG servers where item identity matters as much as the numerical bonus."
+      ],
+      "workflowTitle": "A tangible progression path for experience bonuses",
+      "workflow": [
+        "Players obtain gems through the server's chosen recipes, shops or rewards. The gem then provides its configured experience benefit, giving progression a visible item and economy value.",
+        "Tiered strengths allow administrators to distribute smaller bonuses freely while protecting the most powerful versions as rare goals."
+      ],
+      "benefits": [
+        "Visible and tradeable experience progression",
+        "Multiple strengths for balanced reward tiers",
+        "Useful in crafting, loot and economy systems",
+        "Distinct particle and item presentation"
+      ],
+      "administration": "Experience multipliers and acquisition are configurable so the resource can support a modest survival bonus or a stronger RPG reward system. As a legacy plugin, test compatibility and stacking behaviour with other XP systems.",
+      "featureDetails": {
+        "Craftable experience gems": "Turn progression bonuses into items players can make or earn.",
+        "Multiple gem strengths": "Separate early, mid and late-game reward values.",
+        "RPG-friendly progression": "Physical upgrades fit naturally into quests, dungeons and ranks.",
+        "Visual item effects": "Gems feel like special rewards rather than ordinary renamed materials.",
+        "Configurable gain bonuses": "Adjust the experience increase to match the server economy.",
+        "Reward and economy potential": "Use gems as event prizes, shop stock or tradeable progression items."
+      },
+      "bestFor": "RPG and fantasy servers that want experience boosts to exist as real items with economy value.",
+      "setup": [
+        "Confirm the legacy version works on the target server.",
+        "Configure gem tiers and experience bonuses.",
+        "Choose recipes or reward sources.",
+        "Test interaction with other XP multipliers before release."
+      ]
     }
   },
   {
@@ -511,7 +907,40 @@
       "version": "1.2",
       "updated": "10 Jun 2023"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "Uncraftable adds crafting paths for selected vanilla items that are normally limited, non-renewable or unavailable at a crafting table. The goal is to improve long-term survival access without installing a large custom crafting framework.",
+        "It is particularly useful in limited worlds, long-running servers and environments where exploration structures have already been heavily looted."
+      ],
+      "workflowTitle": "Renewable access through familiar crafting",
+      "workflow": [
+        "Configured recipes are registered when the server starts and appear through the normal crafting system. Players do not need a custom workbench or special command to use them.",
+        "Administrators choose which formerly uncraftable items should become renewable and balance the recipe costs around the local economy."
+      ],
+      "benefits": [
+        "Familiar vanilla crafting flow",
+        "Improves item renewability in long-running worlds",
+        "Focused alternative to a large recipe engine",
+        "Easy to understand for new players"
+      ],
+      "administration": "The plugin should be treated as a deliberate balance tool: expensive recipes can preserve exploration value, while cheaper recipes can solve scarcity on smaller servers. Legacy compatibility should be tested before production use.",
+      "featureDetails": {
+        "Recipes for uncraftable items": "Adds direct crafting routes for selected limited vanilla resources.",
+        "Simple survival integration": "Players use ordinary crafting tables and familiar ingredients.",
+        "Configurable recipe set": "Enable only the additions that fit the server's design.",
+        "No large gameplay framework": "Provides recipes without classes, currencies or unrelated systems.",
+        "Easy server adoption": "The mechanic is immediately understandable to players.",
+        "Useful for limited worlds": "Reduces permanent scarcity after generated structures are exhausted."
+      },
+      "bestFor": "Small, long-running or border-limited survival worlds that need carefully balanced renewable items.",
+      "setup": [
+        "Test the legacy build on the current server version.",
+        "Review every added recipe for economy impact.",
+        "Disable recipes that conflict with other plugins.",
+        "Publish the final recipe list to players."
+      ]
+    }
   },
   {
     "id": "easyreplant",
@@ -535,7 +964,7 @@
       "Lightweight"
     ],
     "integrations": [],
-    "compatibility": "Spigot 1.18\u20131.19.x",
+    "compatibility": "Spigot 1.18–1.19.x",
     "version": "3.0",
     "spigot_url": "https://www.spigotmc.org/resources/easyreplant-1-18-1-19-x-%E2%AD%90-auto-replant-%E2%AD%90-%E2%9A%A1-multi-harvest-chance-%E2%9A%A1-%E2%AD%90-fast-growth-%E2%AD%90.106994/",
     "modrinth_url": null,
@@ -547,7 +976,40 @@
       "version": "3.0",
       "updated": "19 Mar 2023"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "EasyReplant streamlines crop harvesting while keeping seed and crop resources meaningful. Supported plants are replanted only when the player actually carries the required item, avoiding free infinite replanting.",
+        "Optional growth and multi-harvest mechanics can make farming more rewarding without replacing the basic survival loop."
+      ],
+      "workflowTitle": "Harvest quickly while preserving inventory costs",
+      "workflow": [
+        "When a supported mature crop is harvested, the plugin checks the player inventory for the correct replanting item. A valid item is consumed and the crop is restored at its starting age.",
+        "Additional settings can influence growth, harvest bonuses and special handling for plants such as sugar cane and cactus."
+      ],
+      "benefits": [
+        "Reduces repetitive planting clicks",
+        "Consumes real seeds or crops from inventory",
+        "Supports configurable farming bonuses",
+        "Keeps the mechanic lightweight and easy to learn"
+      ],
+      "administration": "Server owners control supported crops, growth behaviour and bonus chances. Because this is a legacy resource, modern server versions should be tested carefully for block-event and crop-age behaviour.",
+      "featureDetails": {
+        "Automatic crop replanting": "Mature crops are reset after harvest when requirements are met.",
+        "Inventory requirement": "The correct seed or crop item must be available and is consumed.",
+        "Sugar cane support": "Special handling supports vertical crops without breaking the whole plant.",
+        "Cactus support": "Cactus harvesting can follow controlled replant and growth rules.",
+        "Growth controls": "Adjust how the utility interacts with crop development.",
+        "Survival-friendly handling": "Convenience does not create seeds or crops from nothing."
+      },
+      "bestFor": "Survival servers that want faster farming without turning crops into a free automated resource.",
+      "setup": [
+        "Test the plugin on the target server version.",
+        "Choose supported crops and growth options.",
+        "Set harvest bonus chances conservatively.",
+        "Verify sugar cane and cactus behaviour in a test farm."
+      ]
+    }
   },
   {
     "id": "simplecrystals",
@@ -571,7 +1033,7 @@
       "Lightweight"
     ],
     "integrations": [],
-    "compatibility": "Spigot \u2014 legacy resource",
+    "compatibility": "Spigot — legacy resource",
     "version": "1.6",
     "spigot_url": "https://www.spigotmc.org/resources/simplecrystals.66824/",
     "modrinth_url": null,
@@ -583,7 +1045,40 @@
       "version": "1.6",
       "updated": "13 Mar 2023"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "SimpleCrystals provides a small custom-item foundation centred on collectible crystal rewards. The items can act as prizes, currencies, crafting components or visual progression tokens.",
+        "Its focused scope makes it suitable for servers that need recognisable custom rewards without a complete item-generation framework."
+      ],
+      "workflowTitle": "Create, distribute and recognise crystal rewards",
+      "workflow": [
+        "Administrators create or grant the available crystal items through the plugin's supported management flow. Persistent item identity separates genuine crystals from ordinary renamed materials.",
+        "The items can then be placed into shops, event rewards, quests or other server systems that accept custom items."
+      ],
+      "benefits": [
+        "Recognisable custom reward items",
+        "Persistent identity for safer integrations",
+        "Useful as currency or crafting material",
+        "Low-complexity administration"
+      ],
+      "administration": "Names, presentation and distribution are the centre of the plugin. As a legacy project, use a staging server to confirm item metadata and command behaviour before connecting it to an economy.",
+      "featureDetails": {
+        "Custom crystal items": "Adds a themed set of collectible materials with their own identity.",
+        "Persistent item identity": "Genuine plugin items can be distinguished from renamed vanilla copies.",
+        "Reward-ready commands": "Staff and other systems can distribute crystals as prizes.",
+        "Configurable presentation": "Names and visual details can match the server theme.",
+        "Simple administration": "The project avoids a large editor or database requirement.",
+        "Progression integration": "Crystals can represent milestones, currencies or crafting ingredients."
+      },
+      "bestFor": "Servers that need a lightweight custom currency or reward item with a fantasy presentation.",
+      "setup": [
+        "Confirm legacy compatibility on a test server.",
+        "Configure crystal names and presentation.",
+        "Decide how each crystal enters the economy.",
+        "Test recognition through shops, rewards and storage."
+      ]
+    }
   },
   {
     "id": "mithrilchains",
@@ -619,7 +1114,40 @@
       "version": "1.0",
       "updated": "18 Dec 2022"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MithrilChains restores a direct survival crafting route for chainmail armour. It is a deliberately small plugin for servers that like chainmail as a progression tier but do not want it restricted to rare mob drops or trading.",
+        "The recipe-focused design means players understand the feature immediately and administrators do not need to maintain a larger custom-item system."
+      ],
+      "workflowTitle": "A simple recipe addition with clear survival value",
+      "workflow": [
+        "The plugin registers chainmail recipes using the intended survival materials. Players craft the armour through an ordinary crafting table and receive standard chainmail equipment.",
+        "Because the output remains familiar vanilla gear, the resource can slot into most survival economies without introducing new combat mechanics."
+      ],
+      "benefits": [
+        "Makes chainmail a reliable progression option",
+        "Uses familiar crafting-table interaction",
+        "Minimal configuration and overhead",
+        "Does not replace vanilla armour behaviour"
+      ],
+      "administration": "The main balancing decision is the recipe cost. Test the value against iron equipment, villager access and any custom armour systems before publishing it to players.",
+      "featureDetails": {
+        "Craftable chainmail armour": "Provides recipes for the complete vanilla chainmail set.",
+        "Simple recipe progression": "Adds a clear route between early and stronger armour tiers.",
+        "Lightweight implementation": "No menus, databases or background tasks are required.",
+        "Survival-friendly materials": "Recipes can be balanced around obtainable world resources.",
+        "No database requirement": "The plugin does not need persistent player data.",
+        "Minimal setup": "Install, verify recipes and begin using the resource."
+      },
+      "bestFor": "Traditional survival servers that want chainmail to be a deliberate craftable tier.",
+      "setup": [
+        "Test the legacy JAR on the target version.",
+        "Review the chainmail recipes and economy value.",
+        "Check for recipe conflicts with other plugins.",
+        "Publish the recipes to players if they are not discoverable automatically."
+      ]
+    }
   },
   {
     "id": "simplespawn",
@@ -643,7 +1171,7 @@
       "Legacy"
     ],
     "integrations": [],
-    "compatibility": "Legacy resource \u2014 check the release page",
+    "compatibility": "Legacy resource — check the release page",
     "version": "1.0",
     "spigot_url": "https://www.spigotmc.org/resources/simplespawn.71281/",
     "modrinth_url": null,
@@ -655,7 +1183,40 @@
       "version": "1.0",
       "updated": "22 Aug 2021"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "SimpleSpawn supplies the essential set-spawn and return-to-spawn workflow without installing a broad essentials package. It is intended for small servers that want one clear location and a few dependable commands.",
+        "The focused feature set keeps configuration and permission management easy for administrators who do not need homes, warps, kits and dozens of unrelated utilities."
+      ],
+      "workflowTitle": "One server spawn with straightforward commands",
+      "workflow": [
+        "An administrator records the desired server spawn point. Players with access can then teleport back to that location through the plugin command.",
+        "The saved location persists across restarts, giving a small server a dependable central arrival and meeting point."
+      ],
+      "benefits": [
+        "Focused alternative to a full essentials suite",
+        "Simple spawn-setting workflow",
+        "Persistent saved location",
+        "Easy permissions for small communities"
+      ],
+      "administration": "The plugin is intentionally narrow in scope. Confirm teleport safety, world loading and legacy compatibility on the target build before using it as the main spawn system.",
+      "featureDetails": {
+        "Set a server spawn": "Administrators record the exact central location players should use.",
+        "Teleport to spawn": "Players return through a simple command.",
+        "Simple permissions": "Access can be separated between normal use and administration.",
+        "Low-overhead commands": "No constant tasks or large data model are required.",
+        "Straightforward configuration": "The utility is easy to understand and maintain.",
+        "Small-server friendly": "Provides the core need without unrelated commands."
+      },
+      "bestFor": "Small survival, lobby or community servers that only need a reliable central spawn.",
+      "setup": [
+        "Test the legacy build on the current server.",
+        "Set the spawn from a safe loaded location.",
+        "Configure player and administrator permissions.",
+        "Test teleporting from other worlds and after a restart."
+      ]
+    }
   },
   {
     "id": "levelrewards",
@@ -679,7 +1240,7 @@
       "Legacy"
     ],
     "integrations": [],
-    "compatibility": "Legacy resource \u2014 check the release page",
+    "compatibility": "Legacy resource — check the release page",
     "version": "1.0",
     "spigot_url": "https://www.spigotmc.org/resources/levelrewards.67276/",
     "modrinth_url": null,
@@ -691,7 +1252,40 @@
       "version": "1.0",
       "updated": "18 Mar 2020"
     },
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "LevelRewards converts vanilla experience levels into a lightweight milestone track. Server owners can recognise players for levelling without introducing a separate skill or class system.",
+        "Rewards are delivered when configured thresholds are reached, making ordinary mining, combat and enchanting contribute to an additional sense of progression."
+      ],
+      "workflowTitle": "Attach rewards to familiar vanilla progress",
+      "workflow": [
+        "The plugin watches player experience levels and compares them with configured milestones. Reaching an eligible level triggers the associated reward action.",
+        "Because the system uses existing Minecraft levels, players do not need to learn a new interface or currency."
+      ],
+      "benefits": [
+        "Adds progression without a full RPG framework",
+        "Uses familiar vanilla experience levels",
+        "Command-based rewards work with other plugins",
+        "Simple milestone configuration"
+      ],
+      "administration": "Milestone spacing and reward value should account for level loss, XP farms and any plugins that modify experience gain. As a legacy resource, verify duplicate-reward protection and compatibility before production use.",
+      "featureDetails": {
+        "Vanilla level milestones": "Use the experience bar players already understand.",
+        "Configurable rewards": "Choose what each important level should grant.",
+        "Simple progression loop": "Normal gameplay naturally moves players toward the next target.",
+        "Command-based delivery": "Connect milestones to economy, items, permissions or announcements.",
+        "Lightweight operation": "No large profile or skill database is required.",
+        "Easy server setup": "Define levels, test rewards and begin using the track."
+      },
+      "bestFor": "Small survival servers that want milestone rewards without installing a complete RPG suite.",
+      "setup": [
+        "Test legacy compatibility and reward repetition behaviour.",
+        "Define milestone levels and commands.",
+        "Balance rewards around the server's XP rate.",
+        "Verify behaviour after death, enchanting and administrative level changes."
+      ]
+    }
   },
   {
     "id": "levelcraft",
@@ -725,7 +1319,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "LevelCraft is the progression backbone of GhoulCraft: a private RPG suite that connects skills, ranks, equipment power, magic, quests, bosses, world threats and prestige into one survival ecosystem.",
+        "Its systems are not isolated menus. Mining, combat, farming, exploration, crafting and server events feed the same long-term character journey, giving ordinary survival actions permanent value."
+      ],
+      "workflowTitle": "A connected progression loop from first login to prestige",
+      "workflow": [
+        "Players develop multiple skills, unlock milestones and build enough overall strength to advance through the F-to-S rank structure. Rank paths give characters stronger identities rather than treating every build as identical.",
+        "Equipment rarity, power levels, sockets, gems, runes, wands and custom crafting expand the item layer. Bosses, corruption cores, questlines and events then give those upgrades meaningful challenges to overcome."
+      ],
+      "benefits": [
+        "One progression language across most server activities",
+        "Long-term ranks, skills and prestige goals",
+        "Connected equipment, magic, quest and boss systems",
+        "Private design tailored directly to the GhoulCraft economy and world"
+      ],
+      "administration": "LevelCraft includes configurable progression values, extensive custom content, integrations and administrative tools. Vault, PlaceholderAPI, Dynmap and Discord hooks allow the suite to share information with the rest of the server rather than operating as a closed system.",
+      "featureDetails": {
+        "Skill levelling and milestones": "Core survival activities award dedicated skill XP and unlock meaningful passive or active upgrades.",
+        "F-to-S rank progression": "Promotion quests and bosses turn rank advancement into a server-wide achievement path.",
+        "Rarity gear, power and sockets": "Equipment quality, player power and socketed gems create an item progression layer beyond vanilla materials.",
+        "Gems, runes, wands and souls": "Magic and custom resources introduce build choices, crafting goals and high-value rewards.",
+        "Bosses and corruption events": "Scaling encounters and world threats keep progression tied to dangerous content.",
+        "Questlines, parties and prestige": "Structured objectives, group rewards and reset-based advancement support long-term play."
+      },
+      "bestFor": "GhoulCraft's long-term survival RPG experience; the project is not currently distributed as a public resource.",
+      "setup": [
+        "Private deployment is managed as part of the GhoulCraft server stack.",
+        "Progression, economy and content values are balanced together rather than as independent plugins.",
+        "Integrations are tested against the live Vault, PlaceholderAPI, Dynmap and webhook setup.",
+        "Updates are staged before production because many systems share player data."
+      ]
+    }
   },
   {
     "id": "staffcore",
@@ -757,7 +1384,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "StaffCore brings routine moderation actions and player context into one workspace. Staff can move from a report to a profile, evidence, notes and punishment history without relying on disconnected commands or external spreadsheets.",
+        "The aim is faster action with better consistency: important information remains attached to the player so different moderators can understand what happened before making a decision."
+      ],
+      "workflowTitle": "Investigate, document and act from one moderation flow",
+      "workflow": [
+        "Staff mode and player profiles provide the context needed during an investigation. Notes, historical actions, inventory snapshots and alt information help moderators gather evidence before issuing a punishment.",
+        "Freeze, warn, mute, kick and ban actions can use structured reasons and punishment ladders. Discord webhooks create an external record for staff review and accountability."
+      ],
+      "benefits": [
+        "Fewer disconnected moderation commands",
+        "Persistent player context and staff notes",
+        "Structured punishment history and ladders",
+        "Discord records for accountability"
+      ],
+      "administration": "Permissions separate staff capabilities, while configurable ladders and webhook destinations adapt the system to the server team. The project is private and designed around GhoulCraft's moderation workflow.",
+      "featureDetails": {
+        "Freeze, warn, mute, kick and ban": "Common actions are available from a consistent moderation system.",
+        "Staff mode": "Prepare moderators with the tools and visibility needed during investigations.",
+        "Player profiles and notes": "Keep useful context attached to the player for the whole team.",
+        "Punishment history": "Review prior actions before deciding on escalation.",
+        "Inventory snapshots": "Capture evidence about a player's items at important moments.",
+        "Alt checking and ladders": "Support repeat-offender decisions and structured punishment progression."
+      },
+      "bestFor": "Private community servers that need a joined-up moderation process instead of isolated commands.",
+      "setup": [
+        "Private deployment is configured around the staff permission structure.",
+        "Punishment ladders, reason prompts and webhook channels are reviewed with the moderation team.",
+        "Staff actions are tested using non-production accounts.",
+        "Access is limited to the minimum permission level required for each role."
+      ]
+    }
   },
   {
     "id": "mythicrifts",
@@ -791,7 +1451,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicRifts creates persistent corruption outbreaks that make the world feel active even when players are not following a traditional quest. Cores appear as escalating regional threats with guardians, visual pressure and server-wide reporting.",
+        "The system is built around controlled spread rather than indiscriminate terrain replacement. Players have time to discover, organise and eliminate the threat before it reaches stronger stages."
+      ],
+      "workflowTitle": "Discover the outbreak, fight its guardians and stop the spread",
+      "workflow": [
+        "A corruption core establishes itself in an eligible region and begins progressing through configured levels. Each stage can increase environmental effects, danger and guardian strength.",
+        "Players track active outbreaks through world information, map hooks and physical signs. Defeating the core or guardian resolves the event and connects back into LevelCraft quests and rewards."
+      ],
+      "benefits": [
+        "Persistent world pressure outside scheduled events",
+        "Escalating difficulty with visible progression",
+        "Map, sign and Discord awareness",
+        "Claim-aware placement and controlled terrain effects"
+      ],
+      "administration": "Administrators control eligibility, spread rules, level timing, guardians and notification behaviour. Clan-claim awareness prevents outbreaks from ignoring protected community areas.",
+      "featureDetails": {
+        "Tiered corruption cores": "Outbreaks progress through multiple levels instead of appearing at full strength.",
+        "Escalating guardians": "Stronger stages introduce more dangerous defenders and encounters.",
+        "Controlled regional spread": "Corruption applies pressure without replacing every block in the area.",
+        "Ambient particles and sound": "Players can feel that a region is becoming unsafe before reaching the core.",
+        "Map and sign tracking": "Active threats remain visible through server information points.",
+        "Outbreak Discord alerts": "The wider community receives updates when corruption appears or intensifies."
+      },
+      "bestFor": "GhoulCraft's private living-world design, where threats should develop independently of normal quests.",
+      "setup": [
+        "Private deployment is configured alongside LevelCraft and claim systems.",
+        "Eligible regions, spread pressure and escalation timing are tested in a staging world.",
+        "Map, sign and Discord notifications are verified.",
+        "Guardian rewards are balanced against the wider server economy."
+      ]
+    }
   },
   {
     "id": "mythicevents",
@@ -824,7 +1517,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicEvents is a modular activity engine intended to keep the server active during both busy and quiet periods. It supports lightweight chat challenges alongside physical world events that send players exploring, mining, hunting or surviving unusual conditions.",
+        "Events can rotate automatically, announce through Discord and deliver configurable rewards, allowing the server to create regular moments without requiring a staff member to host each one manually."
+      ],
+      "workflowTitle": "Automatic rotation with very different kinds of activity",
+      "workflow": [
+        "The scheduler selects an eligible event, announces it and begins tracking the relevant objective. Chat games focus on speed and accuracy, while world events create locations, targets, mobs or temporary global conditions.",
+        "Each event manages its own completion state, winner information and rewards. Administrative menus are planned to make questions, reward commands and event settings editable without rebuilding configuration by hand."
+      ],
+      "benefits": [
+        "Mixes quick chat games with larger world activities",
+        "Reduces the need for staff-hosted events",
+        "Configurable rewards and Discord announcements",
+        "Expandable event types for future server content"
+      ],
+      "administration": "The project is in development. Automatic scheduling, reward editing, winner reporting and event cleanup are treated as production requirements so activities do not leave behind unmanaged entities or locations.",
+      "featureDetails": {
+        "Automatic event rotation": "Eligible activities begin on a schedule without manual staff commands.",
+        "Chat games and quizzes": "Maths, scrambles, typing and questions create quick participation opportunities.",
+        "Treasure and block hunts": "Players receive hints and search the world for temporary objectives.",
+        "Mob and mining events": "Tracked targets turn ordinary combat and gathering into competitions.",
+        "Blood moon system": "Selected nights can create dangerous global mob pressure and special announcements.",
+        "Reward and question editor": "Administration tools are designed to manage content from inside the server."
+      },
+      "bestFor": "Community survival servers that want varied automated activity without running a separate minigame network.",
+      "setup": [
+        "The project remains in development and is tested as part of the GhoulCraft stack.",
+        "Event cleanup, scheduling and rewards are verified individually.",
+        "Discord and economy hooks are staged before live use.",
+        "New event types are enabled only after their tracking and reset logic is confirmed."
+      ]
+    }
   },
   {
     "id": "mythicportals",
@@ -853,7 +1579,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicPortals creates physical travel points from locations, trigger blocks and configurable regions. Portals can feel like part of the world through particle animations, delays and visual build-up rather than acting as invisible command shortcuts.",
+        "Different portal sizes and destinations support small personal gateways, large server hubs and story-driven transitions between important locations."
+      ],
+      "workflowTitle": "Step into a visible portal and travel after a cinematic build-up",
+      "workflow": [
+        "Administrators define the trigger area and destination, then choose the particle style and optional countdown. Entering the region begins the effect and teleports the player when the configured delay completes.",
+        "Movement cancellation can prevent players from beginning a teleport and then walking away. Destination management keeps portal travel separate from broad player warp permissions."
+      ],
+      "benefits": [
+        "World-integrated travel rather than command-only warps",
+        "Multiple particle animation styles",
+        "Optional countdown and cancellation rules",
+        "Support for portals wider than one block"
+      ],
+      "administration": "Portal definitions focus on location data, dimensions, animation, timing and destination safety. The project is in development and is intended to remain standalone rather than require LevelCraft.",
+      "featureDetails": {
+        "Custom trigger locations": "Define exactly where players must stand or walk to activate travel.",
+        "Multiple portal sizes": "Build compact one-block portals or wider structures such as 2×1 gateways.",
+        "Particle animation presets": "Helixes and other patterns give each portal a distinct visual identity.",
+        "Optional teleport countdown": "Create anticipation before the destination change.",
+        "Movement cancellation": "Cancel a pending teleport when the player leaves the trigger area.",
+        "Destination management": "Store and edit portal endpoints without exposing general warp commands."
+      },
+      "bestFor": "RPG worlds, server hubs and survival networks that want travel to feel like a physical world mechanic.",
+      "setup": [
+        "The standalone plugin remains in development.",
+        "Create test portals with different dimensions and animations.",
+        "Verify countdown cancellation and destination safety.",
+        "Load-test particle settings before enabling high-traffic hubs."
+      ]
+    }
   },
   {
     "id": "mythicprefixes",
@@ -886,7 +1645,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicPrefixes combines a cosmetic prefix marketplace with a lightweight chat formatter. Players purchase, collect and equip titles while the server controls how that selection appears beside names and messages.",
+        "The system is designed to work without forcing a separate chat plugin. PlaceholderAPI content can be included in the format, and a configurable default prefix keeps players without a purchased cosmetic visually consistent."
+      ],
+      "workflowTitle": "Purchase a title, manage the collection and display it everywhere",
+      "workflow": [
+        "Players browse the prefix shop, purchase entries through Vault and choose an active prefix from the owned collection. Rarity, colour and price make the catalogue feel like a real cosmetic progression system.",
+        "The built-in chat formatter combines the selected prefix with display names, PlaceholderAPI output and the message. DiscordSRV compatibility keeps Minecraft chat forwarding functional."
+      ],
+      "benefits": [
+        "Cosmetic economy with no gameplay advantage",
+        "Owned-prefix collection and selection",
+        "Built-in chat formatting and default fallback",
+        "PlaceholderAPI and DiscordSRV-aware design"
+      ],
+      "administration": "Prefixes, rarity tiers, prices, permissions and formatting are configurable. Administration menus support catalogue management without requiring direct player-data edits.",
+      "featureDetails": {
+        "Purchasable prefix shop": "Players spend economy balance on permanent cosmetic titles.",
+        "Owned-prefix management": "Unlocked entries remain available through a personal collection menu.",
+        "Built-in chat formatting": "The plugin can own the final chat layout instead of depending on an outdated formatter.",
+        "Rarity tiers and pricing": "Common through exotic entries create clear cosmetic progression.",
+        "Default prefix support": "Players without a selected cosmetic still receive intentional presentation.",
+        "Admin management menus": "Staff can create, grant, remove and organise prefixes more easily."
+      },
+      "bestFor": "Community servers that want a prefix economy and modern chat formatting in one maintained project.",
+      "setup": [
+        "Install Vault, an economy provider and PlaceholderAPI.",
+        "Remove or disable conflicting chat-format ownership.",
+        "Configure prefixes, rarity prices, default presentation and DiscordSRV behaviour.",
+        "Test normal chat, nicknames, placeholders and Discord forwarding."
+      ]
+    }
   },
   {
     "id": "mythicshop",
@@ -918,7 +1710,40 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicShop is a GUI economy market built around controlled stock rather than unlimited server buying and selling. Categories, amount selection and editing tools make the shop approachable for players while stock floors and caps protect the economy.",
+        "The project also understands GhoulCraft custom items, allowing LevelCraft wands, runes, souls, gems, furnaces and other resources to exist beside vanilla materials in the same market."
+      ],
+      "workflowTitle": "Browse categories, choose an amount and trade against real stock",
+      "workflow": [
+        "Players enter a category, select an item and choose how many units to buy or sell. The transaction checks Vault balance, current stock and configured minimum or maximum limits before completing.",
+        "Administrators manage items, prices, order and categories from in-game tools. Dynamic pricing and stock behaviour can turn the shop into a stabilising economy system rather than an infinite money source."
+      ],
+      "benefits": [
+        "Familiar GUI shopping with amount selection",
+        "Stock caps and floors protect the economy",
+        "In-game category and item editing",
+        "Deep support for custom LevelCraft items"
+      ],
+      "administration": "Every category and listing is configurable, including buy and sell values, stock behaviour and display order. The private build is balanced around GhoulCraft's player economy and custom progression resources.",
+      "featureDetails": {
+        "Buy and sell GUI": "Players trade through clear category and item menus.",
+        "Stock floors and caps": "Prevent purchases at zero stock and sales beyond the configured maximum.",
+        "Amount selector": "Choose transaction sizes without repeating the same click dozens of times.",
+        "In-game category editor": "Create, reorder and maintain shop sections while the server is running.",
+        "Dynamic item pricing": "Prices can respond to the intended stock and economy model.",
+        "Custom item providers": "LevelCraft resources retain their identity when listed and traded."
+      },
+      "bestFor": "GhoulCraft's private player economy, especially where custom progression items must be traded safely.",
+      "setup": [
+        "Private deployment is connected to Vault and LevelCraft.",
+        "Every listing is reviewed for stock limits and economy impact.",
+        "Custom-item identity is tested before enabling sales.",
+        "Administrative changes are staged and verified with normal player permissions."
+      ]
+    }
   },
   {
     "id": "spawnercontrol",
@@ -947,6 +1772,39 @@
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
-    "modrinth": null
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicSpawnerControl provides focused control over the distances used by mob spawners. It allows administrators to balance farms and server performance without replacing the complete vanilla spawner system.",
+        "Saved spawner locations make it possible to manage important or intentionally placed spawners rather than applying one blind global rule to every world object."
+      ],
+      "workflowTitle": "Tune activation and spawn areas around registered spawners",
+      "workflow": [
+        "Administrators register or manage spawner locations and define the player activation distance and mob spawn radius. The plugin applies those values through lightweight checks during normal operation.",
+        "Smaller radii can reduce oversized farm designs, while carefully chosen activation ranges ensure players must remain meaningfully close to production."
+      ],
+      "benefits": [
+        "Direct farm-balancing controls",
+        "Per-location management potential",
+        "Low-overhead focused checks",
+        "No need for a complete mob-system replacement"
+      ],
+      "administration": "The project is planned as a direct release. Defaults should be tested against normal mob-cap behaviour, stacked spawners and any third-party spawner plugins before public deployment.",
+      "featureDetails": {
+        "Activation range control": "Set how close a player must be before a spawner works.",
+        "Spawn radius control": "Restrict how far spawned mobs may appear from the block.",
+        "Saved spawner locations": "Keep managed spawners available across restarts.",
+        "Admin commands": "Register and inspect controlled locations from the server.",
+        "Low-overhead checks": "Focuses specifically on spawner operation rather than scanning all mobs.",
+        "Farm balancing": "Reduces extreme layouts while preserving legitimate survival use."
+      },
+      "bestFor": "Survival servers that want predictable spawner farms and finer performance control.",
+      "setup": [
+        "The direct-release build is still planned.",
+        "Test default activation and spawn radii in a staging world.",
+        "Verify compatibility with stacked or custom spawner systems.",
+        "Document the final farm rules before public release."
+      ]
+    }
   }
 ]
