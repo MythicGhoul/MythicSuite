@@ -504,3 +504,66 @@ samp {
     height: 116px;
   }
 }
+
+
+/* =========================================================
+   FAVICON BRAND MARKS
+   ========================================================= */
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  clip-path: none;
+  border: 0;
+  background: transparent;
+  filter: drop-shadow(0 0 11px rgba(0,229,255,.22));
+}
+
+.brand-mark img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer-brand .brand-mark,
+.footer-brand .brand-mark img {
+  width: 44px;
+  height: 44px;
+}
+
+.portal-core > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-logo {
+  width: clamp(104px, 10vw, 132px);
+  height: auto;
+  margin: 0 auto .45rem;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 12px rgba(0,229,255,.34))
+    drop-shadow(0 0 26px rgba(157,78,221,.22));
+}
+
+.portal-core small {
+  margin-left: .25em;
+}
+
+@media (max-width: 760px) {
+  .brand-mark,
+  .brand-mark img {
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+  }
+
+  .portal-logo {
+    width: 96px;
+  }
+}

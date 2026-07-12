@@ -50,3 +50,10 @@ Custom matching badge artwork has now been added for EXP-Gems,
 MythicSpawnerControl, StaffCore, SimpleSpawn and Uncraftable. LevelCraft's
 badge was also rebuilt without the transparent padding that previously made it
 appear smaller than the other plugin images.
+
+
+## Favicon branding
+
+The shared `assets/favicon.svg` artwork is now used in the navigation header,
+footer branding and the large homepage portal logo. Sizing is responsive and
+all pages now declare the same browser favicon.
