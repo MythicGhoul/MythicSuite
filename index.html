@@ -504,7 +504,327 @@ code { color: var(--purple-bright); }
   .resource-card { min-height:225px; }
 }
 
-  </style>
+  
+/* =========================================================
+   PURPLE + NEON CYAN THEME
+   ========================================================= */
+:root {
+  --bg: #05070d;
+  --bg-raised: #090b14;
+  --panel: rgba(12, 10, 25, 0.82);
+  --panel-solid: #0d0b19;
+  --line: rgba(163, 197, 255, 0.13);
+  --line-strong: rgba(0, 229, 255, 0.48);
+  --text: #f8f7ff;
+  --muted: #aaa9bd;
+  --purple: #9d4edd;
+  --purple-bright: #c77dff;
+  --cyan: #00e5ff;
+  --cyan-blue: #2f8cff;
+  --shadow-neon: 0 0 24px rgba(0, 229, 255, .16),
+                 0 0 54px rgba(157, 78, 221, .12);
+}
+
+body {
+  background:
+    radial-gradient(circle at 11% 18%, rgba(157, 78, 221, .20), transparent 31%),
+    radial-gradient(circle at 87% 23%, rgba(0, 229, 255, .12), transparent 29%),
+    radial-gradient(circle at 52% 83%, rgba(47, 140, 255, .07), transparent 32%),
+    linear-gradient(125deg, #06050d 0%, #070915 50%, #040b12 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  opacity: .12;
+  background:
+    linear-gradient(rgba(0,229,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157,78,221,.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 75%, transparent);
+}
+
+.ambient-one {
+  background: var(--purple);
+  opacity: .17;
+}
+.ambient-two {
+  background: var(--cyan);
+  opacity: .11;
+}
+
+.site-header.scrolled {
+  background: rgba(5, 7, 13, .86);
+  border-color: rgba(0, 229, 255, .14);
+  box-shadow: 0 10px 36px rgba(0,0,0,.28), 0 1px 0 rgba(157,78,221,.13);
+}
+
+.brand-mark {
+  border-color: rgba(0,229,255,.55);
+  color: var(--cyan);
+  background: linear-gradient(145deg, rgba(157,78,221,.30), rgba(0,229,255,.12));
+  box-shadow:
+    inset 0 0 22px rgba(0,229,255,.14),
+    0 0 22px rgba(0,229,255,.17),
+    0 0 42px rgba(157,78,221,.12);
+}
+
+.brand small,
+.eyebrow,
+.nav-links > a:hover {
+  color: var(--cyan);
+}
+
+.nav-links > a:not(.nav-cta) {
+  position: relative;
+}
+.nav-links > a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -9px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple-bright), var(--cyan));
+  box-shadow: 0 0 10px var(--cyan);
+  transition: left .2s ease, right .2s ease;
+}
+.nav-links > a:not(.nav-cta):hover::after {
+  left: 0;
+  right: 0;
+}
+
+.nav-cta {
+  border-color: rgba(0,229,255,.50);
+  background: linear-gradient(135deg, rgba(157,78,221,.13), rgba(0,229,255,.08));
+  box-shadow: 0 0 20px rgba(0,229,255,.10);
+}
+.nav-cta:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 25px rgba(0,229,255,.22), inset 0 0 20px rgba(157,78,221,.10);
+}
+
+.eyebrow span {
+  background: linear-gradient(90deg, var(--purple-bright), var(--cyan));
+  box-shadow: 0 0 12px rgba(0,229,255,.5);
+}
+
+.hero h1 em {
+  color: transparent;
+  -webkit-text-stroke: 0;
+  background: linear-gradient(100deg, var(--purple-bright) 6%, var(--cyan-blue) 52%, var(--cyan) 96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 34px rgba(0,229,255,.22);
+}
+
+.button-primary {
+  color: #05070d;
+  background: linear-gradient(110deg, var(--purple-bright) 0%, #8c7dff 45%, var(--cyan) 100%);
+  box-shadow: 0 12px 34px rgba(157,78,221,.18), 0 0 27px rgba(0,229,255,.16);
+}
+.button-primary:hover {
+  box-shadow: 0 15px 38px rgba(157,78,221,.24), 0 0 35px rgba(0,229,255,.24);
+}
+.button-secondary {
+  border-color: rgba(0,229,255,.30);
+  background: linear-gradient(135deg, rgba(157,78,221,.06), rgba(0,229,255,.04));
+}
+.button-secondary:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 24px rgba(0,229,255,.13);
+}
+
+.hero-meta div:nth-child(odd) {
+  border-left-color: rgba(199,125,255,.48);
+}
+.hero-meta div:nth-child(even) {
+  border-left-color: rgba(0,229,255,.48);
+}
+.hero-meta strong {
+  color: #fff;
+  text-shadow: 0 0 18px rgba(0,229,255,.10);
+}
+
+.ring-one {
+  border-color: rgba(199,125,255,.34);
+  box-shadow:
+    inset 0 0 70px rgba(157,78,221,.09),
+    0 0 50px rgba(157,78,221,.08);
+}
+.ring-one::before {
+  border-color: rgba(0,229,255,.24);
+}
+.ring-one::after {
+  border-color: transparent var(--purple-bright) transparent var(--cyan);
+  filter: drop-shadow(0 0 7px rgba(0,229,255,.5));
+  opacity: .72;
+}
+.ring-two {
+  border-color: rgba(0,229,255,.22);
+  box-shadow: 0 0 35px rgba(0,229,255,.06);
+}
+.forge-core {
+  border-color: rgba(0,229,255,.48);
+  background:
+    radial-gradient(circle at 50% 36%, rgba(0,229,255,.32), transparent 24%),
+    radial-gradient(circle at 50% 46%, rgba(157,78,221,.31), rgba(8,7,17,.95) 67%);
+  box-shadow:
+    0 0 62px rgba(157,78,221,.24),
+    0 0 110px rgba(0,229,255,.15),
+    inset 0 0 28px rgba(0,229,255,.10);
+}
+.core-rune {
+  color: rgba(0,229,255,.11);
+}
+.core-label {
+  text-shadow: 0 0 14px rgba(0,229,255,.34);
+}
+
+.floating-card {
+  border-color: rgba(0,229,255,.17);
+  background: linear-gradient(145deg, rgba(18,12,33,.91), rgba(6,17,25,.88));
+}
+.floating-card:hover {
+  border-color: rgba(0,229,255,.42);
+  box-shadow: var(--shadow), 0 0 27px rgba(0,229,255,.10);
+}
+.mini-icon {
+  color: var(--cyan);
+  background: linear-gradient(135deg, rgba(157,78,221,.18), rgba(0,229,255,.14));
+  box-shadow: inset 0 0 18px rgba(0,229,255,.08);
+}
+.card-a { border-top-color: rgba(199,125,255,.45); }
+.card-b { border-right-color: rgba(0,229,255,.46); }
+.card-c { border-bottom-color: rgba(47,140,255,.40); }
+
+.trust-strip {
+  border-block-color: rgba(0,229,255,.11);
+  background:
+    linear-gradient(90deg, rgba(157,78,221,.035), rgba(0,229,255,.032));
+}
+.trust-items i {
+  background: var(--cyan);
+  box-shadow: 0 0 12px var(--cyan);
+}
+
+.search-box:focus-within {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(0,229,255,.08), 0 0 20px rgba(157,78,221,.08);
+}
+
+.filter:hover,
+.filter.active {
+  border-color: rgba(0,229,255,.44);
+  background: linear-gradient(135deg, rgba(157,78,221,.15), rgba(0,229,255,.10));
+  box-shadow: inset 0 0 18px rgba(0,229,255,.04);
+}
+
+.plugin-card {
+  border-color: rgba(160,190,255,.12);
+  background:
+    linear-gradient(155deg, rgba(24,16,40,.90), rgba(6,15,24,.84));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+}
+.plugin-card::before {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-accent, var(--purple)), var(--cyan), transparent);
+}
+.plugin-card:hover {
+  border-color: color-mix(in srgb, var(--card-accent, var(--cyan)) 42%, var(--cyan) 20%);
+  box-shadow:
+    0 24px 50px rgba(0,0,0,.28),
+    0 0 29px color-mix(in srgb, var(--card-accent, var(--purple)) 16%, transparent),
+    0 0 22px rgba(0,229,255,.07);
+}
+.plugin-icon,
+.modal-icon {
+  box-shadow:
+    inset 0 0 22px color-mix(in srgb, var(--card-accent, var(--purple)) 10%, transparent),
+    0 0 18px rgba(0,229,255,.04);
+}
+
+.resource-profiles a,
+.resource-card {
+  border-color: rgba(0,229,255,.13);
+  background: linear-gradient(145deg, rgba(22,14,36,.86), rgba(6,15,24,.84));
+}
+.resource-profiles a:hover,
+.resource-card:hover {
+  border-color: rgba(0,229,255,.42);
+  box-shadow: 0 0 28px rgba(0,229,255,.08), 0 0 34px rgba(157,78,221,.06);
+}
+.resource-icon {
+  color: var(--cyan);
+  background: linear-gradient(135deg, rgba(157,78,221,.16), rgba(0,229,255,.13));
+  border-color: rgba(0,229,255,.25);
+}
+.resource-button:hover {
+  border-color: var(--cyan);
+  background: rgba(0,229,255,.07);
+}
+.resource-button.primary {
+  color: #05070d;
+  background: linear-gradient(105deg, var(--purple-bright), var(--cyan));
+  box-shadow: 0 0 20px rgba(0,229,255,.10);
+}
+
+.flagship {
+  border-color: rgba(0,229,255,.23);
+  background:
+    radial-gradient(circle at 80% 18%, rgba(0,229,255,.13), transparent 28%),
+    radial-gradient(circle at 15% 85%, rgba(157,78,221,.22), transparent 35%),
+    linear-gradient(145deg, rgba(24,14,41,.95), rgba(5,17,25,.91));
+  box-shadow: 0 35px 90px rgba(0,0,0,.36), 0 0 44px rgba(0,229,255,.06);
+}
+.flagship::before {
+  background: linear-gradient(90deg, var(--purple-bright), var(--cyan));
+  box-shadow: 0 0 22px rgba(0,229,255,.25);
+}
+
+.principle-card {
+  background: linear-gradient(150deg, rgba(22,14,36,.77), rgba(6,16,24,.74));
+}
+.principle-card:nth-child(2) {
+  border-color: rgba(0,229,255,.18);
+}
+.principle-card:nth-child(2) .principle-number {
+  color: var(--cyan);
+}
+
+.cta {
+  border-color: rgba(0,229,255,.24);
+  background:
+    radial-gradient(circle at 15% 50%, rgba(157,78,221,.18), transparent 34%),
+    radial-gradient(circle at 85% 50%, rgba(0,229,255,.16), transparent 34%),
+    rgba(10,9,20,.88);
+  box-shadow: 0 0 40px rgba(0,229,255,.06);
+}
+
+.platform-link:hover {
+  color: var(--cyan);
+}
+
+.modal-card {
+  border-color: rgba(0,229,255,.26);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(0,229,255,.10), transparent 28%),
+    linear-gradient(145deg, #130d22, #07131c);
+  box-shadow: 0 42px 100px rgba(0,0,0,.60), 0 0 45px rgba(0,229,255,.08);
+}
+
+@media (max-width: 760px) {
+  .nav-links.open {
+    border-color: rgba(0,229,255,.18);
+    background: linear-gradient(155deg, rgba(15,9,27,.97), rgba(5,14,22,.97));
+    box-shadow: 0 24px 55px rgba(0,0,0,.45), 0 0 24px rgba(0,229,255,.06);
+  }
+}
+
+</style>
 </head>
 <body>
   <a class="skip-link" href="#catalogue">Skip to plugins</a>
@@ -1052,8 +1372,8 @@ window.MYTHIC_SITE = {
       "name": "MythicRifts",
       "icon": "◉",
       "accent": "#8b5cf6",
-      "status": "development",
-      "statusLabel": "In Development",
+      "status": "exclusive",
+      "statusLabel": "Server Exclusive",
       "category": "Living World System",
       "tagline": "Corruption cores that spread danger and reshape the world around them.",
       "description": "A persistent world-threat system built around escalating corruption cores, guardians, spreading terrain pressure and server-wide outbreak reporting.",
@@ -1083,8 +1403,8 @@ window.MYTHIC_SITE = {
       "name": "MythicEvents",
       "icon": "⌛",
       "accent": "#f59e0b",
-      "status": "exclusive",
-      "statusLabel": "Server Exclusive",
+      "status": "development",
+      "statusLabel": "In Development",
       "category": "Server Events",
       "tagline": "Automated world events and chat games that keep quiet hours active.",
       "description": "A modular event engine for scheduled server activity, ranging from lightweight chat games to treasure hunts, mob hunts, mining rushes and blood moons.",
@@ -1113,8 +1433,8 @@ window.MYTHIC_SITE = {
       "name": "MythicPortals",
       "icon": "⬡",
       "accent": "#a78bfa",
-      "status": "exclusive",
-      "statusLabel": "Server Exclusive",
+      "status": "development",
+      "statusLabel": "In Development",
       "category": "Travel & Effects",
       "tagline": "Location-based portals with animated particles and cinematic build-up.",
       "description": "Create physical portals from trigger blocks and custom regions, with configurable delays, particle animations and destination handling.",
@@ -1173,8 +1493,8 @@ window.MYTHIC_SITE = {
       "name": "MythicPrefixes",
       "icon": "♛",
       "accent": "#e879f9",
-      "status": "exclusive",
-      "statusLabel": "Server Exclusive",
+      "status": "public",
+      "statusLabel": "Public Plugin",
       "category": "Chat & Cosmetics",
       "tagline": "A prefix marketplace and complete lightweight chat formatter.",
       "description": "Players purchase, collect and equip cosmetic prefixes while server owners control chat layout, placeholders, defaults and rarity presentation.",
@@ -1232,8 +1552,8 @@ window.MYTHIC_SITE = {
       "name": "MythicSpawnerControl",
       "icon": "▦",
       "accent": "#94a3b8",
-      "status": "exclusive",
-      "statusLabel": "Server Exclusive",
+      "status": "public",
+      "statusLabel": "Utility Plugin",
       "category": "Performance Utility",
       "tagline": "Control when and where mob spawners are allowed to work.",
       "description": "A lightweight administration tool for controlling spawner activation distance, spawn radius and registered spawner locations.",
