@@ -42,3 +42,11 @@ their previous site icons.
 ## Full plugin descriptions
 
 Every detailed plugin page now includes a long-form overview, how-it-works section, administration notes, an expanded feature breakdown, compatibility details and rollout steps. The source content is also stored under `longDescription` inside `assets/plugins.json` for easier maintenance.
+
+
+## Complete plugin badges
+
+Custom matching badge artwork has now been added for EXP-Gems,
+MythicSpawnerControl, StaffCore, SimpleSpawn and Uncraftable. LevelCraft's
+badge was also rebuilt without the transparent padding that previously made it
+appear smaller than the other plugin images.

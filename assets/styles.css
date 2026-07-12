@@ -463,3 +463,44 @@ samp {
   .feature-detail { min-height: unset; }
   .full-description-panel { padding: 1.05rem; }
 }
+
+
+/* =========================================================
+   CONSISTENT FULL-SIZE PLUGIN BADGES
+   ========================================================= */
+.plugin-icon {
+  width: 76px;
+  height: 76px;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  border-radius: .9rem;
+  background: #03050b;
+}
+
+.detail-title img {
+  width: 140px;
+  height: 140px;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 1.2rem;
+  background: #03050b;
+}
+
+.related-grid .plugin-icon {
+  width: 70px;
+  height: 70px;
+}
+
+@media (max-width: 760px) {
+  .plugin-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .detail-title img {
+    width: 116px;
+    height: 116px;
+  }
+}
