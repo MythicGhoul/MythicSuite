@@ -593,7 +593,7 @@
     "id": "auto-breeding",
     "name": "Auto Breeding",
     "category": "Farming Automation",
-    "statusLabel": "Published Resource",
+    "statusLabel": "Public Plugin",
     "lifecycle": "current",
     "tagline": "Let animals breed naturally using nearby food sources.",
     "description": "Auto Breeding removes repetitive manual feeding from established farms while keeping the process tied to survival resources. Animals locate and consume nearby food, then enter breeding mode under configurable conditions.",
