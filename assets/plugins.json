@@ -666,7 +666,7 @@
     "id": "arcane-exchange",
     "name": "Arcane Exchange",
     "category": "Magical Automation",
-    "statusLabel": "Published Resource",
+    "statusLabel": "Public Plugin",
     "lifecycle": "current",
     "tagline": "A magical machine system powered by arcane energy.",
     "description": "Arcane Exchange brings an arcane-technology progression loop to survival. Players build tiered machines, generate or route energy and automate useful processes through a fantasy-first presentation.",
