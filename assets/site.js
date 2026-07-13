@@ -107,3 +107,24 @@
  });
 
 })();
+
+
+// Vibrant preview micro-interactions.
+document.addEventListener('DOMContentLoaded', () => {
+  const art = document.querySelector('.hero-art');
+  if (art && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    art.addEventListener('pointermove', event => {
+      const box = art.getBoundingClientRect();
+      const x = (event.clientX - box.left) / box.width - 0.5;
+      const y = (event.clientY - box.top) / box.height - 0.5;
+      art.style.setProperty('--studio-x', `${x * 10}px`);
+      art.style.setProperty('--studio-y', `${y * 8}px`);
+      const sigil = art.querySelector('.forge-sigil');
+      if (sigil) sigil.style.translate = `calc(-50% + ${x * 8}px) calc(-50% + ${y * 7}px)`;
+    });
+    art.addEventListener('pointerleave', () => {
+      const sigil = art.querySelector('.forge-sigil');
+      if (sigil) sigil.style.translate = '-50% -50%';
+    });
+  }
+});
