@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>MythicPrefixes — MythicGhoul Plugins</title><meta content="Players purchase, collect and equip cosmetic prefixes while server owners control chat layout, placeholders, defaults and rarity presentation." name="description"/><meta content="#080913" name="theme-color"/>
-<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-polished.css" rel="stylesheet"/><script defer="" src="../../assets/site-polished.js"></script></head><body data-plugin-id="mythicprefixes"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-live-admin.css" rel="stylesheet"/><script defer="" src="../../assets/site-live-admin.js"></script></head><body data-plugin-id="mythicprefixes"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
 <a class="brand" href="../../index.html"><span class="brand-mark"><img src="../../assets/favicon.svg" alt="" aria-hidden="true"></span><span><b>MYTHICGHOUL</b><small>PLUGIN FORGE</small></span></a>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-button" type="button">☰</button>
 <nav class="nav-links"><a href="../../index.html">Home</a><a class="active" href="../../resources/">Resources</a><a href="../../statistics/">Statistics</a><a href="../../about/">About</a><a class="nav-cta" href="https://www.spigotmc.org/resources/authors/ikffxrapzz.29623/" rel="noopener" target="_blank">Find my resources</a></nav>
@@ -32,7 +32,7 @@
     </a>
   </strong>
   <span>Live plugin page views</span>
-</div><div class="metric"><strong>—</strong><span>Spigot downloads</span></div><div class="metric"><strong>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Direct release planned</strong><span>Current version</span></div><div class="metric"><strong>—</strong><span>Last public update</span></div></section>
+</div><div class="metric live-version-metric"><strong data-live-release-version>—</strong><span>Spigot downloads</span></div><div class="metric live-update-metric"><strong data-live-release-date>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Direct release planned</strong><span>Current version</span></div><div class="metric"><strong>—</strong><span>Last public update</span></div></section>
 <div class="content-grid"><div>
 <section class="content-panel description-prose">
 <p class="eyebrow">Full overview</p>
@@ -57,7 +57,25 @@
 </div>
 </section></div>
 <aside class="side-stack"><section class="content-panel"><h2>Project details</h2><div class="info-list"><div class="info-row"><small>Category</small><span>Chat &amp; Cosmetics</span></div><div class="info-row"><small>Availability</small><span>Direct Release Planned</span></div><div class="info-row"><small>Compatibility</small><span>Paper 1.21.x</span></div><div class="info-row"><small>Integrations</small><span>Vault, PlaceholderAPI, DiscordSRV</span></div><div class="info-row"><small>Tags</small><div class="tag-row"><span class="tag">Chat</span><span class="tag">Cosmetics</span><span class="tag">Economy</span></div></div></div></section>
-<section class="content-panel"><h2>Download options</h2><p>This project does not currently have a public platform download. Direct GitHub Release links can be added when a build is ready.</p></section></aside></div><section class="content-panel full-description-panel">
+<section class="content-panel"><h2>Download options</h2><p>This project does not currently have a public platform download. Direct GitHub Release links can be added when a build is ready.</p></section>
+<section class="content-panel live-plugin-release" data-live-plugin-release hidden>
+  <div class="live-release-heading">
+    <div>
+      <p class="eyebrow">Latest public release</p>
+      <h2 data-live-release-title>Checking platform data…</h2>
+    </div>
+    <span class="live-release-platform" data-live-release-platform>Live</span>
+  </div>
+  <p class="live-release-copy" data-live-release-copy>
+    The newest public version and changelog will appear here.
+  </p>
+  <div class="live-release-footer">
+    <time data-live-release-time></time>
+    <a data-live-release-link target="_blank" rel="noopener">Open release ↗</a>
+  </div>
+</section>
+
+</aside></div><section class="content-panel full-description-panel">
 <div class="section-head compact"><div><p class="eyebrow">Feature breakdown</p><h2>Everything included in MythicPrefixes</h2><p>Each headline feature is expanded below so visitors can understand the real server use rather than seeing a short tag list.</p></div></div>
 <div class="feature-detail-grid"><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Purchasable prefix shop</h3><p>Players spend economy balance on permanent cosmetic titles.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Owned-prefix management</h3><p>Unlocked entries remain available through a personal collection menu.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Built-in chat formatting</h3><p>The plugin can own the final chat layout instead of depending on an outdated formatter.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Rarity tiers and pricing</h3><p>Common through exotic entries create clear cosmetic progression.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Default prefix support</h3><p>Players without a selected cosmetic still receive intentional presentation.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Admin management menus</h3><p>Staff can create, grant, remove and organise prefixes more easily.</p></div></article></div>
 </section><section class="content-panel full-description-panel setup-panel">
@@ -68,15 +86,15 @@
 </div>
 <ol class="setup-steps"><li><span>1</span><p>Install Vault, an economy provider and PlaceholderAPI.</p></li><li><span>2</span><p>Remove or disable conflicting chat-format ownership.</p></li><li><span>3</span><p>Configure prefixes, rarity prices, default presentation and DiscordSRV behaviour.</p></li><li><span>4</span><p>Test normal chat, nicknames, placeholders and Discord forwarding.</p></li></ol>
 </section>
-<section class="section"><div class="section-head"><div><p class="eyebrow">Related projects</p><h2>Continue exploring</h2></div></div><div class="related-grid"><article class="plugin-card" data-name="lastwords" data-status="current" data-tags="chat fun editor" style="--accent:#f97316">
+<section class="section"><div class="section-head"><div><p class="eyebrow">Related projects</p><h2>Continue exploring</h2></div></div><div class="related-grid"><article class="plugin-card" data-name="lastwords" data-status="current" data-tags="chat fun editor" style="--accent:#f97316" data-plugin-id="lastwords">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/lastwords.png"/><span class="status-chip status-public">Public Plugin</span></div>
 <p class="card-category">Death Messages</p><h3><a href="../../plugins/lastwords/">LastWords</a></h3><p>Hundreds of funny death messages with an in-game editor.</p>
 <div class="tag-row"><span class="tag">Chat</span><span class="tag">Fun</span><span class="tag">Editor</span></div><div class="card-stats"><span><b>179</b> downloads</span><span><b>1.2.4</b> version</span></div>
-<a class="card-link" href="../../plugins/lastwords/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicjoins" data-status="current" data-tags="cosmetics vault gui" style="--accent:#d946ef">
+<a class="card-link" href="../../plugins/lastwords/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicjoins" data-status="current" data-tags="cosmetics vault gui" style="--accent:#d946ef" data-plugin-id="mythicjoins">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/mythicjoins.png"/><span class="status-chip status-public">Public Plugin</span></div>
 <p class="card-category">Cosmetics &amp; Economy</p><h3><a href="../../plugins/mythicjoins/">MythicJoins</a></h3><p>Purchasable join and leave messages with real player identity.</p>
 <div class="tag-row"><span class="tag">Cosmetics</span><span class="tag">Vault</span><span class="tag">GUI</span></div><div class="card-stats"><span><b>8</b> downloads</span><span><b>1.0</b> version</span></div>
-<a class="card-link" href="../../plugins/mythicjoins/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicshop" data-status="exclusive" data-tags="economy shop private" style="--accent:#34d399">
+<a class="card-link" href="../../plugins/mythicjoins/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicshop" data-status="exclusive" data-tags="economy shop private" style="--accent:#34d399" data-plugin-id="mythicshop">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/mythicshop.png"/><span class="status-chip status-exclusive">Server Exclusive</span></div>
 <p class="card-category">Dynamic Economy</p><h3><a href="../../plugins/mythicshop/">MythicShop</a></h3><p>A GUI market with stock pressure, category editing and custom-item support.</p>
 <div class="tag-row"><span class="tag">Economy</span><span class="tag">Shop</span><span class="tag">Private</span></div><div class="card-stats"><span><b>Private</b></span><span><b>Server Exclusive</b></span></div>

@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#070811">
   <meta name="mythicsuite-build" content="repaired-vibrant-2026-07-13">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles-polished.css">
-  <script defer src="assets/site-polished.js"></script>
+  <link rel="stylesheet" href="assets/styles-live-admin.css">
+  <script defer src="assets/site-live-admin.js"></script>
 </head>
 <body class="studio-home">
   <a class="skip-link" href="#content">Skip to content</a>
@@ -97,15 +97,15 @@
             <span>PLUGIN STUDIO</span>
           </div>
 
-          <a class="orbit-card orbit-card-a" href="plugins/levelcraft/">
+          <a class="orbit-card orbit-card-a" href="plugins/levelcraft/ data-plugin-id="levelcraft">
             <img src="assets/icons/levelcraft.png" alt="">
             <span><b>LevelCraft</b><small>RPG ecosystem</small></span>
           </a>
-          <a class="orbit-card orbit-card-b" href="plugins/mythicenchant/">
+          <a class="orbit-card orbit-card-b" href="plugins/mythicenchant/ data-plugin-id="mythicenchant">
             <img src="assets/icons/mythicenchant.png" alt="">
             <span><b>MythicEnchant</b><small>Arcane library</small></span>
           </a>
-          <a class="orbit-card orbit-card-c" href="plugins/pixelblood/">
+          <a class="orbit-card orbit-card-c" href="plugins/pixelblood/ data-plugin-id="pixelblood">
             <img src="assets/icons/pixelblood.png" alt="">
             <span><b>PixelBlood</b><small>Combat effects</small></span>
           </a>
@@ -143,7 +143,7 @@
           <a class="studio-text-link" href="plugins/levelcraft/">Full plugin page <span>↗</span></a>
         </div>
 
-        <article class="flagship-bento">
+        <article class="flagship-bento" data-plugin-id="levelcraft">
           <div class="flagship-copy">
             <div class="flagship-topline">
               <span class="studio-pill pill-gold">GhoulCraft exclusive</span>
@@ -193,7 +193,7 @@
         </div>
 
         <div class="studio-bento">
-          <a class="bento-card bento-wide bento-purple" href="plugins/mythicenchant/">
+          <a class="bento-card bento-wide bento-purple" href="plugins/mythicenchant/ data-plugin-id="mythicenchant">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicenchant.png" alt="">
             <div class="bento-copy">
@@ -205,7 +205,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-tall bento-pink" href="plugins/pixelblood/">
+          <a class="bento-card bento-tall bento-pink" href="plugins/pixelblood/ data-plugin-id="pixelblood">
             <div class="bento-glow"></div>
             <img src="assets/icons/pixelblood.png" alt="">
             <div class="bento-copy">
@@ -217,7 +217,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-standard bento-cyan" href="plugins/mythicvote/">
+          <a class="bento-card bento-standard bento-cyan" href="plugins/mythicvote/ data-plugin-id="mythicvote">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicvote.png" alt="">
             <div class="bento-copy">
@@ -229,7 +229,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-standard bento-blue" href="plugins/mythicportals/">
+          <a class="bento-card bento-standard bento-blue" href="plugins/mythicportals/ data-plugin-id="mythicportals">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicportals.png" alt="">
             <div class="bento-copy">
@@ -241,7 +241,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-wide bento-gold" href="plugins/mythicevents/">
+          <a class="bento-card bento-wide bento-gold" href="plugins/mythicevents/ data-plugin-id="mythicevents">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicevents.png" alt="">
             <div class="bento-copy">
@@ -255,33 +255,52 @@
         </div>
       </section>
 
-      <section class="studio-section release-section">
+      <section class="studio-section release-section" id="release-radar">
         <div class="studio-section-head">
           <div>
             <p class="studio-kicker"><span></span> Release radar</p>
             <h2>The studio never feels static.</h2>
-            <p>A live-style feed makes the portfolio feel maintained, active and evolving.</p>
+            <p>Automatically showing the newest public releases across SpigotMC and Modrinth.</p>
           </div>
-          <span class="live-badge"><i></i> Preview feed</span>
+          <span class="live-badge" data-release-status>
+            <i aria-hidden="true"></i>
+            Checking releases…
+          </span>
         </div>
 
-        <div class="release-grid">
-          <article class="release-card">
+        <div class="release-grid" data-release-radar aria-live="polite">
+          <article class="release-card" data-release-fallback>
             <div class="release-icon"><img src="assets/icons/mythicvote.png" alt=""></div>
-            <div><span>Latest release</span><h3>MythicVote v2.4</h3><p>Improved milestones, cleaner webhooks and leaderboard refinements.</p></div>
-            <time>Recently</time>
+            <div>
+              <span>Saved release</span>
+              <h3>MythicVote v1.2.2</h3>
+              <p>Vote rewards, milestones, leaderboards and Discord webhook support.</p>
+            </div>
+            <time>Fallback</time>
           </article>
-          <article class="release-card">
+          <article class="release-card" data-release-fallback>
             <div class="release-icon"><img src="assets/icons/pixelblood.png" alt=""></div>
-            <div><span>Community milestone</span><h3>PixelBlood crossed 12K</h3><p>The immersive combat effects suite continues to grow.</p></div>
-            <time>Milestone</time>
+            <div>
+              <span>Saved release</span>
+              <h3>PixelBlood v3.7</h3>
+              <p>Immersive combat effects with trails, pools, bursts and bleeding.</p>
+            </div>
+            <time>Fallback</time>
           </article>
-          <article class="release-card">
+          <article class="release-card" data-release-fallback>
             <div class="release-icon"><img src="assets/icons/mythicenchant.png" alt=""></div>
-            <div><span>In development</span><h3>Arcane trading expansion</h3><p>More ways to place custom enchantments into an existing survival world.</p></div>
-            <time>Roadmap</time>
+            <div>
+              <span>Saved release</span>
+              <h3>MythicEnchant v2.1.1</h3>
+              <p>A physical arcane library with custom books and server integrations.</p>
+            </div>
+            <time>Fallback</time>
           </article>
         </div>
+
+        <p class="release-radar-note" data-release-note>
+          Live data is checked when the page opens. Saved entries remain available if a platform API is unavailable.
+        </p>
       </section>
 
       <section class="studio-cta">

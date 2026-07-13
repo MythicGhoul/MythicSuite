@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#070811">
+  <title>MythicSuite Admin</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles-admin.css">
+  <script defer src="../assets/admin.js"></script>
+</head>
+<body>
+  <div class="admin-noise" aria-hidden="true"></div>
+  <header class="admin-header">
+    <a class="admin-brand" href="../">
+      <img src="../assets/favicon.svg" alt="">
+      <span><b>MYTHICSUITE</b><small>CONTENT ADMIN</small></span>
+    </a>
+    <a class="public-link" href="../" target="_blank" rel="noopener">Open public site ↗</a>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-hero">
+      <p class="eyebrow">Repository-backed editor</p>
+      <h1>Manage plugin labels and tags.</h1>
+      <p>
+        Connect with a fine-grained GitHub token, edit <code>assets/plugins.json</code>,
+        and publish the change directly to the MythicSuite repository.
+      </p>
+    </section>
+
+    <section class="security-note">
+      <b>No password is embedded in this website.</b>
+      <span>
+        Access requires a GitHub token that can write only to the MythicSuite
+        repository. The token is kept in this browser tab and is never committed.
+      </span>
+    </section>
+
+    <section class="connection-card">
+      <div class="field-grid connection-grid">
+        <label>
+          <span>Repository owner</span>
+          <input id="repoOwner" value="MythicGhoul" autocomplete="off">
+        </label>
+        <label>
+          <span>Repository</span>
+          <input id="repoName" value="MythicSuite" autocomplete="off">
+        </label>
+        <label>
+          <span>Branch</span>
+          <input id="repoBranch" value="main" autocomplete="off">
+        </label>
+        <label class="token-field">
+          <span>Fine-grained GitHub token</span>
+          <div class="token-row">
+            <input id="githubToken" type="password" placeholder="github_pat_…" autocomplete="off">
+            <button type="button" class="icon-button" id="toggleToken" aria-label="Show token">Show</button>
+          </div>
+        </label>
+      </div>
+      <div class="connection-actions">
+        <button class="button primary" type="button" id="connectButton">Connect to GitHub</button>
+        <button class="button secondary" type="button" id="disconnectButton">Clear token</button>
+        <span class="connection-status" id="connectionStatus">Not connected</span>
+      </div>
+    </section>
+
+    <section class="editor-layout" id="editorLayout" hidden>
+      <aside class="plugin-browser">
+        <div class="browser-head">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2>Plugins</h2>
+          </div>
+          <span id="pluginCount">0</span>
+        </div>
+        <input class="search-input" id="pluginSearch" type="search" placeholder="Search plugins…">
+        <div class="plugin-list" id="pluginList"></div>
+      </aside>
+
+      <section class="plugin-editor">
+        <div class="editor-head">
+          <div>
+            <p class="eyebrow">Selected plugin</p>
+            <h2 id="editorTitle">Choose a plugin</h2>
+          </div>
+          <a id="publicPluginLink" href="../resources/" target="_blank" rel="noopener">View page ↗</a>
+        </div>
+
+        <form id="pluginForm">
+          <div class="preview-card">
+            <img id="previewIcon" src="../assets/favicon.svg" alt="">
+            <div>
+              <span class="status-preview" id="statusPreview">Status</span>
+              <h3 id="previewName">Plugin</h3>
+              <div class="tag-preview" id="tagPreview"></div>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              <span>Status label</span>
+              <input id="statusLabel" list="statusPresets" required>
+              <datalist id="statusPresets">
+                <option value="Public Plugin">
+                <option value="Published Resource">
+                <option value="GhoulCraft Exclusive">
+                <option value="Server Exclusive">
+                <option value="In Development">
+                <option value="Direct Release Planned">
+                <option value="Legacy Resource">
+                <option value="Utility Plugin">
+              </datalist>
+            </label>
+
+            <label>
+              <span>Lifecycle/filter bucket</span>
+              <select id="lifecycle" required>
+                <option value="current">Current / public</option>
+                <option value="exclusive">Exclusive</option>
+                <option value="development">Development</option>
+                <option value="planned">Planned release</option>
+                <option value="legacy">Legacy</option>
+              </select>
+            </label>
+
+            <label class="wide-field">
+              <span>Tags <small>Comma separated</small></span>
+              <input id="pluginTags" placeholder="RPG, Progression, Quests">
+            </label>
+
+            <label>
+              <span>Category</span>
+              <input id="pluginCategory">
+            </label>
+
+            <label>
+              <span>Compatibility</span>
+              <input id="pluginCompatibility">
+            </label>
+
+            <label>
+              <span>Fallback version</span>
+              <input id="pluginVersion">
+            </label>
+
+            <label class="wide-field">
+              <span>Short card description</span>
+              <textarea id="pluginDescription" rows="3"></textarea>
+            </label>
+          </div>
+
+          <div class="editor-actions">
+            <button class="button secondary" type="button" id="applyButton">Apply locally</button>
+            <button class="button primary" type="submit" id="publishButton">Publish changes to GitHub</button>
+            <span class="save-state" id="saveState">No unpublished changes</span>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <section class="setup-panel">
+      <p class="eyebrow">First-time setup</p>
+      <h2>Create a restricted GitHub token</h2>
+      <ol>
+        <li>GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.</li>
+        <li>Limit repository access to <b>MythicSuite</b> only.</li>
+        <li>Set repository permission <b>Contents</b> to <b>Read and write</b>.</li>
+        <li>Give the token an expiry date, then paste it above whenever you edit the site.</li>
+      </ol>
+      <p>
+        Do not put the token into source code, plugins.json, Discord, or a public screenshot.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

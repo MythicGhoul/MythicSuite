@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>MythicRifts — MythicGhoul Plugins</title><meta content="A persistent world-threat system built around escalating corruption cores, guardians, spreading terrain pressure and server-wide outbreak reporting." name="description"/><meta content="#080913" name="theme-color"/>
-<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-polished.css" rel="stylesheet"/><script defer="" src="../../assets/site-polished.js"></script></head><body data-plugin-id="mythicrifts"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-live-admin.css" rel="stylesheet"/><script defer="" src="../../assets/site-live-admin.js"></script></head><body data-plugin-id="mythicrifts"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
 <a class="brand" href="../../index.html"><span class="brand-mark"><img src="../../assets/favicon.svg" alt="" aria-hidden="true"></span><span><b>MYTHICGHOUL</b><small>PLUGIN FORGE</small></span></a>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-button" type="button">☰</button>
 <nav class="nav-links"><a href="../../index.html">Home</a><a class="active" href="../../resources/">Resources</a><a href="../../statistics/">Statistics</a><a href="../../about/">About</a><a class="nav-cta" href="https://www.spigotmc.org/resources/authors/ikffxrapzz.29623/" rel="noopener" target="_blank">Find my resources</a></nav>
@@ -32,7 +32,7 @@
     </a>
   </strong>
   <span>Live plugin page views</span>
-</div><div class="metric"><strong>—</strong><span>Spigot downloads</span></div><div class="metric"><strong>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Private</strong><span>Current version</span></div><div class="metric"><strong>Private build</strong><span>Last public update</span></div></section>
+</div><div class="metric live-version-metric"><strong data-live-release-version>—</strong><span>Spigot downloads</span></div><div class="metric live-update-metric"><strong data-live-release-date>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Private</strong><span>Current version</span></div><div class="metric"><strong>Private build</strong><span>Last public update</span></div></section>
 <div class="content-grid"><div>
 <section class="content-panel description-prose">
 <p class="eyebrow">Full overview</p>
@@ -57,7 +57,25 @@
 </div>
 </section></div>
 <aside class="side-stack"><section class="content-panel"><h2>Project details</h2><div class="info-list"><div class="info-row"><small>Category</small><span>Living World System</span></div><div class="info-row"><small>Availability</small><span>Server Exclusive</span></div><div class="info-row"><small>Compatibility</small><span>Paper 1.21.x</span></div><div class="info-row"><small>Integrations</small><span>LevelCraft, Dynmap, Discord webhooks, Clan claims</span></div><div class="info-row"><small>Tags</small><div class="tag-row"><span class="tag">World</span><span class="tag">Events</span><span class="tag">Private</span></div></div></div></section>
-<section class="content-panel"><h2>Download options</h2><p>This project does not currently have a public platform download. Direct GitHub Release links can be added when a build is ready.</p></section></aside></div><section class="content-panel full-description-panel">
+<section class="content-panel"><h2>Download options</h2><p>This project does not currently have a public platform download. Direct GitHub Release links can be added when a build is ready.</p></section>
+<section class="content-panel live-plugin-release" data-live-plugin-release hidden>
+  <div class="live-release-heading">
+    <div>
+      <p class="eyebrow">Latest public release</p>
+      <h2 data-live-release-title>Checking platform data…</h2>
+    </div>
+    <span class="live-release-platform" data-live-release-platform>Live</span>
+  </div>
+  <p class="live-release-copy" data-live-release-copy>
+    The newest public version and changelog will appear here.
+  </p>
+  <div class="live-release-footer">
+    <time data-live-release-time></time>
+    <a data-live-release-link target="_blank" rel="noopener">Open release ↗</a>
+  </div>
+</section>
+
+</aside></div><section class="content-panel full-description-panel">
 <div class="section-head compact"><div><p class="eyebrow">Feature breakdown</p><h2>Everything included in MythicRifts</h2><p>Each headline feature is expanded below so visitors can understand the real server use rather than seeing a short tag list.</p></div></div>
 <div class="feature-detail-grid"><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Tiered corruption cores</h3><p>Outbreaks progress through multiple levels instead of appearing at full strength.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Escalating guardians</h3><p>Stronger stages introduce more dangerous defenders and encounters.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Controlled regional spread</h3><p>Corruption applies pressure without replacing every block in the area.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Ambient particles and sound</h3><p>Players can feel that a region is becoming unsafe before reaching the core.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Map and sign tracking</h3><p>Active threats remain visible through server information points.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Outbreak Discord alerts</h3><p>The wider community receives updates when corruption appears or intensifies.</p></div></article></div>
 </section><section class="content-panel full-description-panel setup-panel">
@@ -68,15 +86,15 @@
 </div>
 <ol class="setup-steps"><li><span>1</span><p>Private deployment is configured alongside LevelCraft and claim systems.</p></li><li><span>2</span><p>Eligible regions, spread pressure and escalation timing are tested in a staging world.</p></li><li><span>3</span><p>Map, sign and Discord notifications are verified.</p></li><li><span>4</span><p>Guardian rewards are balanced against the wider server economy.</p></li></ol>
 </section>
-<section class="section"><div class="section-head"><div><p class="eyebrow">Related projects</p><h2>Continue exploring</h2></div></div><div class="related-grid"><article class="plugin-card" data-name="levelcraft" data-status="exclusive" data-tags="rpg progression private" style="--accent:#f4c95d">
+<section class="section"><div class="section-head"><div><p class="eyebrow">Related projects</p><h2>Continue exploring</h2></div></div><div class="related-grid"><article class="plugin-card" data-name="levelcraft" data-status="exclusive" data-tags="rpg progression private" style="--accent:#f4c95d" data-plugin-id="levelcraft">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/levelcraft.png"/><span class="status-chip status-exclusive">GhoulCraft Exclusive</span></div>
 <p class="card-category">RPG Progression Suite</p><h3><a href="../../plugins/levelcraft/">LevelCraft</a></h3><p>A complete RPG progression ecosystem built around survival gameplay.</p>
 <div class="tag-row"><span class="tag">RPG</span><span class="tag">Progression</span><span class="tag">Private</span></div><div class="card-stats"><span><b>Private</b></span><span><b>GhoulCraft Exclusive</b></span></div>
-<a class="card-link" href="../../plugins/levelcraft/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="staffcore" data-status="exclusive" data-tags="moderation gui private" style="--accent:#60a5fa">
+<a class="card-link" href="../../plugins/levelcraft/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="staffcore" data-status="exclusive" data-tags="moderation gui private" style="--accent:#60a5fa" data-plugin-id="staffcore">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/staffcore.png"/><span class="status-chip status-exclusive">Server Exclusive</span></div>
 <p class="card-category">Staff Management</p><h3><a href="../../plugins/staffcore/">StaffCore</a></h3><p>A complete moderation workspace built around fast, informed action.</p>
 <div class="tag-row"><span class="tag">Moderation</span><span class="tag">GUI</span><span class="tag">Private</span></div><div class="card-stats"><span><b>Private</b></span><span><b>Server Exclusive</b></span></div>
-<a class="card-link" href="../../plugins/staffcore/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicevents" data-status="development" data-tags="events games automation" style="--accent:#f59e0b">
+<a class="card-link" href="../../plugins/staffcore/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicevents" data-status="development" data-tags="events games automation" style="--accent:#f59e0b" data-plugin-id="mythicevents">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/mythicevents.png"/><span class="status-chip status-dev">In Development</span></div>
 <p class="card-category">Server Events</p><h3><a href="../../plugins/mythicevents/">MythicEvents</a></h3><p>Automated world events and chat games that keep quiet hours active.</p>
 <div class="tag-row"><span class="tag">Events</span><span class="tag">Games</span><span class="tag">Automation</span></div><div class="card-stats"><span><b>In development</b></span><span><b>In Development</b></span></div>
