@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>StaffCore — MythicGhoul Plugins</title><meta content="StaffCore combines common moderation tasks with player context, evidence and history so staff can act consistently without juggling unrelated commands." name="description"/><meta content="#080913" name="theme-color"/>
-<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-polished.css" rel="stylesheet"/><script defer="" src="../../assets/site-polished.js"></script></head><body data-plugin-id="staffcore"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-admin-sync.css" rel="stylesheet"/><script defer="" src="../../assets/site-admin-sync.js"></script></head><body data-plugin-id="staffcore"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
 <a class="brand" href="../../index.html"><span class="brand-mark"><img src="../../assets/favicon.svg" alt="" aria-hidden="true"></span><span><b>MYTHICGHOUL</b><small>PLUGIN FORGE</small></span></a>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-button" type="button">☰</button>
 <nav class="nav-links"><a href="../../index.html">Home</a><a class="active" href="../../resources/">Resources</a><a href="../../statistics/">Statistics</a><a href="../../about/">About</a><a class="nav-cta" href="https://www.spigotmc.org/resources/authors/ikffxrapzz.29623/" rel="noopener" target="_blank">Find my resources</a></nav>
@@ -32,7 +32,7 @@
     </a>
   </strong>
   <span>Live plugin page views</span>
-</div><div class="metric"><strong>—</strong><span>Spigot downloads</span></div><div class="metric"><strong>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Private</strong><span>Current version</span></div><div class="metric"><strong>Private build</strong><span>Last public update</span></div></section>
+</div><div class="metric live-version-metric"><strong data-live-release-version>—</strong><span>Spigot downloads</span></div><div class="metric live-update-metric"><strong data-live-release-date>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Private</strong><span>Current version</span></div><div class="metric"><strong>Private build</strong><span>Last public update</span></div></section>
 <div class="content-grid"><div>
 <section class="content-panel description-prose">
 <p class="eyebrow">Full overview</p>
@@ -57,7 +57,25 @@
 </div>
 </section></div>
 <aside class="side-stack"><section class="content-panel"><h2>Project details</h2><div class="info-list"><div class="info-row"><small>Category</small><span>Staff Management</span></div><div class="info-row"><small>Availability</small><span>Server Exclusive</span></div><div class="info-row"><small>Compatibility</small><span>Paper 1.21.x</span></div><div class="info-row"><small>Integrations</small><span>Discord webhooks, Permissions plugins</span></div><div class="info-row"><small>Tags</small><div class="tag-row"><span class="tag">Moderation</span><span class="tag">GUI</span><span class="tag">Private</span></div></div></div></section>
-<section class="content-panel"><h2>Download options</h2><p>This project does not currently have a public platform download. Direct GitHub Release links can be added when a build is ready.</p></section></aside></div><section class="content-panel full-description-panel">
+<section class="content-panel"><h2>Download options</h2><p>This project does not currently have a public platform download. Direct GitHub Release links can be added when a build is ready.</p></section>
+<section class="content-panel live-plugin-release" data-live-plugin-release hidden>
+  <div class="live-release-heading">
+    <div>
+      <p class="eyebrow">Latest public release</p>
+      <h2 data-live-release-title>Checking platform data…</h2>
+    </div>
+    <span class="live-release-platform" data-live-release-platform>Live</span>
+  </div>
+  <p class="live-release-copy" data-live-release-copy>
+    The newest public version and changelog will appear here.
+  </p>
+  <div class="live-release-footer">
+    <time data-live-release-time></time>
+    <a data-live-release-link target="_blank" rel="noopener">Open release ↗</a>
+  </div>
+</section>
+
+</aside></div><section class="content-panel full-description-panel">
 <div class="section-head compact"><div><p class="eyebrow">Feature breakdown</p><h2>Everything included in StaffCore</h2><p>Each headline feature is expanded below so visitors can understand the real server use rather than seeing a short tag list.</p></div></div>
 <div class="feature-detail-grid"><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Freeze, warn, mute, kick and ban</h3><p>Common actions are available from a consistent moderation system.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Staff mode</h3><p>Prepare moderators with the tools and visibility needed during investigations.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Player profiles and notes</h3><p>Keep useful context attached to the player for the whole team.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Punishment history</h3><p>Review prior actions before deciding on escalation.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Inventory snapshots</h3><p>Capture evidence about a player's items at important moments.</p></div></article><article class="feature-detail"><div class="feature-check">✓</div><div><h3>Alt checking and ladders</h3><p>Support repeat-offender decisions and structured punishment progression.</p></div></article></div>
 </section><section class="content-panel full-description-panel setup-panel">
@@ -68,15 +86,15 @@
 </div>
 <ol class="setup-steps"><li><span>1</span><p>Private deployment is configured around the staff permission structure.</p></li><li><span>2</span><p>Punishment ladders, reason prompts and webhook channels are reviewed with the moderation team.</p></li><li><span>3</span><p>Staff actions are tested using non-production accounts.</p></li><li><span>4</span><p>Access is limited to the minimum permission level required for each role.</p></li></ol>
 </section>
-<section class="section"><div class="section-head"><div><p class="eyebrow">Related projects</p><h2>Continue exploring</h2></div></div><div class="related-grid"><article class="plugin-card" data-name="mythictrash" data-status="current" data-tags="utility gui safety" style="--accent:#65e0a3">
+<section class="section"><div class="section-head"><div><p class="eyebrow">Related projects</p><h2>Continue exploring</h2></div></div><div class="related-grid"><article class="plugin-card" data-name="mythictrash" data-status="current" data-tags="utility gui safety" style="--accent:#65e0a3" data-plugin-id="mythictrash">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/mythictrash.png"/><span class="status-chip status-public">Public Plugin</span></div>
 <p class="card-category">Inventory Utility</p><h3><a href="../../plugins/mythictrash/">MythicTrash</a></h3><p>A safe, configurable double-chest trash interface.</p>
 <div class="tag-row"><span class="tag">Utility</span><span class="tag">GUI</span><span class="tag">Safety</span></div><div class="card-stats"><span><b>13</b> downloads</span><span><b>1.0.2</b> version</span></div>
-<a class="card-link" href="../../plugins/mythictrash/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicjoins" data-status="current" data-tags="cosmetics vault gui" style="--accent:#d946ef">
+<a class="card-link" href="../../plugins/mythictrash/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicjoins" data-status="current" data-tags="cosmetics vault gui" style="--accent:#d946ef" data-plugin-id="mythicjoins">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/mythicjoins.png"/><span class="status-chip status-public">Public Plugin</span></div>
 <p class="card-category">Cosmetics &amp; Economy</p><h3><a href="../../plugins/mythicjoins/">MythicJoins</a></h3><p>Purchasable join and leave messages with real player identity.</p>
 <div class="tag-row"><span class="tag">Cosmetics</span><span class="tag">Vault</span><span class="tag">GUI</span></div><div class="card-stats"><span><b>8</b> downloads</span><span><b>1.0</b> version</span></div>
-<a class="card-link" href="../../plugins/mythicjoins/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicenchant" data-status="current" data-tags="magic gui enchanting" style="--accent:#c084fc">
+<a class="card-link" href="../../plugins/mythicjoins/">View full plugin page <span>→</span></a></article><article class="plugin-card" data-name="mythicenchant" data-status="current" data-tags="magic gui enchanting" style="--accent:#c084fc" data-plugin-id="mythicenchant">
 <div class="card-head"><img alt="" class="plugin-icon" src="../../assets/icons/mythicenchant.png"/><span class="status-chip status-public">Public Plugin</span></div>
 <p class="card-category">Enchanting Overhaul</p><h3><a href="../../plugins/mythicenchant/">MythicEnchant</a></h3><p>Turn enchanted books into a living, physical arcane library.</p>
 <div class="tag-row"><span class="tag">Magic</span><span class="tag">GUI</span><span class="tag">Enchanting</span></div><div class="card-stats"><span><b>6</b> downloads</span><span><b>2.1.1</b> version</span></div>
