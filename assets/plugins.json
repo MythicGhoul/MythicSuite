@@ -1092,7 +1092,8 @@
         "Decide how each crystal enters the economy.",
         "Test recognition through shops, rewards and storage."
       ]
-    }
+    },
+    "bstatsId": 12692
   },
   {
     "id": "mithrilchains",
