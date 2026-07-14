@@ -1,603 +1,5 @@
 [
   {
-    "pluginId": "mythicenchant",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "MythicEnchant rebuilds enchanting around discovery, collection and player choice. Instead of repeatedly rolling a vanilla table until the right offer appears, players create a physical Arcane Library from enchanted books stored in nearby chiseled bookshelves.",
-      "When an item is placed into the custom enchanting interface, the library checks the knowledge physically available around that table and presents only compatible options. The result is a system that rewards exploration, trading and shared community builds while still respecting Minecraft items, XP and lapis."
-    ],
-    "installation": [
-      "Install the plugin and restart the server to generate its files.",
-      "Configure enchanting rules, custom enchantments, messages and costs.",
-      "Place books in chiseled bookshelves around an enchanting table and test the scan range.",
-      "Install LevelCraft only when Sorcery progression integration is wanted."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for MythicEnchant and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.21.10"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Selectable enchanting GUI, Physical bookshelf libraries, Vanilla and custom enchantments, 100 custom enchantments, Configurable XP and lapis costs, Natural book discovery and drops."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "LevelCraft edition",
-        "description": "Optional or supported integration used by MythicEnchant."
-      },
-      {
-        "name": "Vault-ready design",
-        "description": "Optional or supported integration used by MythicEnchant."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "2.1.1",
-        "date": "11 Jul 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "pickupfilter",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "PickupFilter gives every player control over the items allowed into their inventory. It is aimed at the everyday frustration created by farms, mines, grinders and busy survival areas where unwanted drops repeatedly fill valuable slots.",
-      "Each player manages a personal filter through a clear GUI. Their choices are saved persistently, so the filter behaves like a real account preference rather than a temporary menu setting that disappears after a restart."
-    ],
-    "installation": [
-      "Install the JAR and restart the server.",
-      "Review the default GUI and message settings.",
-      "Grant normal-use permissions to players where required.",
-      "Test common farm drops and verify saved choices after a restart."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for PickupFilter and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.20–1.21.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Per-player item filters, Persistent saved choices, Simple management GUI, Farm-friendly behaviour, Restart-safe storage, Lightweight event handling."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.2.1",
-        "date": "2 Jul 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "mythicjoins",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "MythicJoins turns ordinary login and logout text into a cosmetic collection system. Players can browse themed join and leave messages, purchase them through a Vault economy and select the style that represents them.",
-      "The plugin keeps cosmetics separate from gameplay power. A player can build a collection, switch between owned messages and still fall back to a polished default pool when no custom option is selected."
-    ],
-    "installation": [
-      "Install Vault and a supported economy provider.",
-      "Install MythicJoins and allow it to create the default catalogue.",
-      "Edit messages, prices, icons and webhook settings.",
-      "Test purchases, selection and default behaviour with a normal player account."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for MythicJoins and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.20–1.21.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Join and leave message shops, Owned cosmetics menus, Random default message pool, Vault economy purchases, Admin grants and removal, Discord join and leave embeds."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "Vault",
-        "description": "Optional or supported integration used by MythicJoins."
-      },
-      {
-        "name": "Discord webhooks",
-        "description": "Optional or supported integration used by MythicJoins."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.0",
-        "date": "1 Jul 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "mythicvote",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "MythicVote combines vote handling, repeatable rewards and long-term loyalty tracking in one focused plugin. Each confirmed vote can run configurable commands while the player's lifetime total feeds milestones and leaderboards.",
-      "The system is built to make voting visible rather than treating it as a silent reward command. Players can see progress, compete for ranking positions and receive meaningful recognition for continued support."
-    ],
-    "installation": [
-      "Install NuVotifier and confirm vote services reach the server.",
-      "Install MythicVote and configure per-vote commands.",
-      "Define milestones, leaderboard presentation and webhook settings.",
-      "Send a test vote and confirm online, offline and restart behaviour."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for MythicVote and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.20–1.21.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Per-vote command rewards, Lifetime vote tracking, Milestone rewards, Leaderboards, Discord webhook embeds, Player data persistence."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "NuVotifier",
-        "description": "Optional or supported integration used by MythicVote."
-      },
-      {
-        "name": "Discord webhooks",
-        "description": "Optional or supported integration used by MythicVote."
-      },
-      {
-        "name": "PlaceholderAPI",
-        "description": "Optional or supported integration used by MythicVote."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.2.2",
-        "date": "24 Jun 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "lastwords",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "LastWords replaces repetitive vanilla death messages with a large cause-aware library built for personality and variety. Rather than selecting a random line from one global list, the plugin can choose messages that match how the player actually died.",
-      "A built-in editor lets staff manage the message catalogue on a live server. This avoids constant file editing and makes it practical to refine jokes, formatting and placeholders as the community develops its own tone."
-    ],
-    "installation": [
-      "Install the plugin and allow the default message library to generate.",
-      "Review formatting and cause-specific pools.",
-      "Configure the optional Discord webhook.",
-      "Use the editor to adjust messages to the tone of the community."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for LastWords and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.20–1.21.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: 597 default funny messages, Cause-specific message pools, In-game message editor, Prefix and chat compatibility, Discord webhook embeds, Configurable formatting."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "Discord webhooks",
-        "description": "Optional or supported integration used by LastWords."
-      },
-      {
-        "name": "Essentials-style chat",
-        "description": "Optional or supported integration used by LastWords."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.2.4",
-        "date": "22 Jun 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "pixelblood",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "PixelBlood adds responsive combat feedback through particles, trails, pools, splashes and optional bleeding damage. It is designed to make hits feel heavier without requiring a resource pack or replacing Minecraft combat.",
-      "Effects can be tuned separately for players, bosses, hostile mobs and passive mobs. This lets a server create dramatic boss fights while keeping routine animal or farm interactions restrained."
-    ],
-    "installation": [
-      "Install the plugin and restart the server.",
-      "Choose which entity categories can produce effects.",
-      "Tune particles, trails, pools and optional bleeding values.",
-      "Test damage in protected areas, PvP zones and boss encounters."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for PixelBlood and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.20.x–26.1.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Damage and critical bursts, Ground trails and blood pools, Configurable bleeding effect, Mob-category controls, Boss and death effects, In-game administration GUI."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "WorldGuard awareness",
-        "description": "Optional or supported integration used by PixelBlood."
-      },
-      {
-        "name": "bStats",
-        "description": "Optional or supported integration used by PixelBlood."
-      },
-      {
-        "name": "Update checker",
-        "description": "Optional or supported integration used by PixelBlood."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "3.7",
-        "date": "20 Jun 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "mythictrash",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "MythicTrash provides a dedicated disposal interface without asking players to throw items into lava or rely on risky inventory shortcuts. The double-chest GUI gives enough space for bulk cleanup while keeping the interaction familiar.",
-      "Protection rules can stop important or configured items from being discarded, and an optional confirmation stage gives players a final chance to recover from a mistake."
-    ],
-    "installation": [
-      "Install the plugin and restart the server.",
-      "Configure protected items and blocked worlds first.",
-      "Choose whether confirmation is required.",
-      "Customise the GUI and test protected-item behaviour."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for MythicTrash and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot 1.20–1.21.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Double-chest trash GUI, Protected items, Optional confirmation, Blocked worlds and materials, Usage statistics, Fully configurable visuals."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "Geyser",
-        "description": "Optional or supported integration used by MythicTrash."
-      },
-      {
-        "name": "Floodgate",
-        "description": "Optional or supported integration used by MythicTrash."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.0.2",
-        "date": "17 Jun 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "arcanebuilder",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "ArcaneBuilder turns schematic placement into a visible construction sequence. Instead of instantly pasting a finished structure, the plugin can preview it and then assemble the build block by block for a more cinematic result.",
-      "The approach works well for server events, unlockable structures, player rewards and world development where the act of construction should be part of the experience."
-    ],
-    "installation": [
-      "Install ArcaneBuilder and any required schematic support.",
-      "Add or prepare schematic files.",
-      "Configure placement pacing and protection behaviour.",
-      "Preview a test structure before enabling player-facing use."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for ArcaneBuilder and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Paper/Spigot — see release page"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Schematic file support, Animated block placement, Builder chest workflow, Admin tab completion, Configurable pacing, Event-friendly presentation."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [
-      {
-        "name": "WorldEdit formats",
-        "description": "Optional or supported integration used by ArcaneBuilder."
-      }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.4",
-        "date": "7 Jun 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "auto-breeding",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "Auto Breeding lets established animal farms continue producing without requiring players to manually feed every pair. The system still consumes real survival resources, preserving the cost of breeding while removing repetitive clicking.",
-      "Animals search for appropriate nearby food under configurable conditions. Limits and timing controls prevent the automation from turning a small farm into uncontrolled entity growth."
-    ],
-    "installation": [
-      "Install the plugin and restart the server.",
-      "Configure supported species, ranges, delays and limits.",
-      "Place valid food near a small test farm.",
-      "Observe resource consumption and adjust population controls before production use."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for Auto Breeding and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "1.19–1.20.x and 26.1.x"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Natural automated breeding, Nearby food consumption, Species-aware food handling, Configurable timing and limits, Farm-friendly behaviour, Lightweight server utility."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.5",
-        "date": "21 May 2026",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
     "pluginId": "arcane-exchange",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
@@ -611,8 +13,54 @@
       "Introduce lower-tier machines first and test the progression curve.",
       "Balance outputs against the server economy before wider release."
     ],
-    "commands": [],
-    "permissions": [],
+    "commands": [
+      {
+        "command": "/ae",
+        "permission": "",
+        "description": "Open Arcane Exchange GUI"
+      },
+      {
+        "command": "/ae value",
+        "permission": "",
+        "description": "Check value of held item"
+      },
+      {
+        "command": "/ae energy",
+        "permission": "",
+        "description": "View your energy"
+      },
+      {
+        "command": "/ae pay",
+        "permission": "",
+        "description": "Send energy"
+      },
+      {
+        "command": "/ae admin reload",
+        "permission": "",
+        "description": "Reload config"
+      },
+      {
+        "command": "/ae admin give <gen|ex> <basic|arcane|mythic>",
+        "permission": "",
+        "description": "Give machine"
+      },
+      {
+        "command": "/ae admin give",
+        "permission": "",
+        "description": "Give energy"
+      },
+      {
+        "command": "/ae admin set",
+        "permission": "",
+        "description": "Set energy"
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "ae.admin",
+        "description": ""
+      }
+    ],
     "configuration": [
       {
         "section": "Core settings",
@@ -625,6 +73,50 @@
       {
         "section": "Feature controls",
         "description": "The main systems documented for this plugin include: Arcane energy system, Tiered machines, Magical automation loop, Progression-based upgrades, Survival economy hooks, Configurable machine behaviour."
+      },
+      {
+        "section": "Ticks per operation (per tier)",
+        "description": "Ticks per operation (per tier)"
+      },
+      {
+        "section": "Items processed per tick",
+        "description": "Items processed per tick"
+      },
+      {
+        "section": "Item values for conversion",
+        "description": "Item values for conversion"
+      },
+      {
+        "section": "Energy scaling and balance",
+        "description": "Energy scaling and balance"
+      },
+      {
+        "section": "Why ArcaneExchange?",
+        "description": "Why ArcaneExchange?"
+      },
+      {
+        "section": "Clean and intuitive design",
+        "description": "Clean and intuitive design"
+      },
+      {
+        "section": "No bloated upgrade systems",
+        "description": "No bloated upgrade systems"
+      },
+      {
+        "section": "Strong progression through tiers",
+        "description": "Strong progression through tiers"
+      },
+      {
+        "section": "Optimized for performance",
+        "description": "Optimized for performance"
+      },
+      {
+        "section": "Built for long-term gameplay loops",
+        "description": "Built for long-term gameplay loops"
+      },
+      {
+        "section": "Level up your automation. Master the arcane.",
+        "description": "Level up your automation. Master the arcane."
       }
     ],
     "placeholders": [],
@@ -654,40 +146,149 @@
         "date": "25 Mar 2026",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
-    "pluginId": "healing-stone",
+    "pluginId": "arcanebuilder",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "Healing Stone adds crystal-themed healing utilities that are easy to understand and easy to reward. It provides a compact magical item loop without requiring a complete spell or class framework.",
-      "The project works particularly well as a quest reward, donor-free convenience item or rare survival drop where healing should feel more distinctive than carrying another stack of food."
+      "ArcaneBuilder turns schematic placement into a visible construction sequence. Instead of instantly pasting a finished structure, the plugin can preview it and then assemble the build block by block for a more cinematic result.",
+      "The approach works well for server events, unlockable structures, player rewards and world development where the act of construction should be part of the experience."
     ],
     "installation": [
-      "Test the legacy build on the target server version.",
-      "Review healing values and item access.",
-      "Decide whether stones come from commands, rewards, shops or loot.",
-      "Confirm the items interact correctly with the server's health scaling."
+      "Install ArcaneBuilder and any required schematic support.",
+      "Add or prepare schematic files.",
+      "Configure placement pacing and protection behaviour.",
+      "Preview a test structure before enabling player-facing use."
     ],
-    "commands": [],
-    "permissions": [],
+    "commands": [
+      {
+        "command": "/ac reload",
+        "permission": "arcanebuilder.admin",
+        "description": "Reloads the config and language file"
+      },
+      {
+        "command": "/ac schematic <file>",
+        "permission": "arcanebuilder.admin",
+        "description": "Gives a Builder Chest for a schematic"
+      },
+      {
+        "command": "/ac style",
+        "permission": "arcanebuilder.admin",
+        "description": "Opens the Build Style GUI"
+      },
+      {
+        "command": "/build confirm",
+        "permission": "",
+        "description": "Starts the pending build"
+      },
+      {
+        "command": "/build cancel",
+        "permission": "",
+        "description": "Cancels preparation, preview, pending build, or active build"
+      },
+      {
+        "command": "/build undo",
+        "permission": "",
+        "description": "Restores the last build back to its previous blocks"
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "arcanebuilder.admin",
+        "description": "Access to admin commands such as schematic, style and reload"
+      },
+      {
+        "permission": "arcanebuilder.bypassprotection",
+        "description": "Bypasses WorldGuard, GriefPrevention and Residence build protection checks"
+      }
+    ],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for Healing Stone and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for ArcaneBuilder and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
-        "description": "Legacy resource — check the release page"
+        "description": "Paper/Spigot — see release page"
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Healing stone items, Crystal-themed utility, Simple player commands, Lightweight gameplay loop, Server reward potential, Straightforward configuration."
+        "description": "The main systems documented for this plugin include: Schematic file support, Animated block placement, Builder chest workflow, Admin tab completion, Configurable pacing, Event-friendly presentation."
+      },
+      {
+        "section": "Recommended:",
+        "description": "Recommended:"
+      },
+      {
+        "section": "Protection.Check-Step",
+        "description": "Protection.Check-Step"
+      },
+      {
+        "section": "1",
+        "description": "1"
+      },
+      {
+        "section": "Dynamic Build Speed",
+        "description": "Dynamic Build Speed"
+      },
+      {
+        "section": "Small builds stay cinematic",
+        "description": "Small builds stay cinematic"
+      },
+      {
+        "section": "Medium builds build faster",
+        "description": "Medium builds build faster"
+      },
+      {
+        "section": "Large builds stay practical",
+        "description": "Large builds stay practical"
+      },
+      {
+        "section": "Massive builds are handled more efficiently",
+        "description": "Massive builds are handled more efficiently"
       }
     ],
     "placeholders": [],
-    "integrations": [],
+    "integrations": [
+      {
+        "name": "WorldEdit formats",
+        "description": "Optional or supported integration used by ArcaneBuilder."
+      },
+      {
+        "name": "Required:",
+        "description": "Required:"
+      },
+      {
+        "name": "FastAsyncWorldEdit or WorldEdit schematic support",
+        "description": "FastAsyncWorldEdit or WorldEdit schematic support"
+      },
+      {
+        "name": "WorldGuard",
+        "description": "WorldGuard"
+      },
+      {
+        "name": "GriefPrevention",
+        "description": "GriefPrevention"
+      },
+      {
+        "name": "Residence",
+        "description": "Residence"
+      },
+      {
+        "name": "Important:",
+        "description": "Important:"
+      },
+      {
+        "name": "Place. Preview. Confirm. Build.",
+        "description": "Place. Preview. Confirm. Build."
+      }
+    ],
     "troubleshooting": [
       {
         "problem": "The plugin does not enable",
@@ -704,49 +305,237 @@
       {
         "problem": "Data or integrations are missing",
         "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "Stairs",
+        "solution": "Stairs"
+      },
+      {
+        "problem": "Logs",
+        "solution": "Logs"
+      },
+      {
+        "problem": "Trapdoors",
+        "solution": "Trapdoors"
+      },
+      {
+        "problem": "Doors",
+        "solution": "Doors"
+      },
+      {
+        "problem": "Signs",
+        "solution": "Signs"
+      },
+      {
+        "problem": "Other directional blocks",
+        "solution": "Other directional blocks"
+      },
+      {
+        "problem": "Code (Text): .schem",
+        "solution": "Code (Text): .schem"
+      },
+      {
+        "problem": "Code (Text): .schematic",
+        "solution": "Code (Text): .schematic"
+      },
+      {
+        "problem": "Code (Text): plugins/ArcaneBuilder/schematics/",
+        "solution": "Code (Text): plugins/ArcaneBuilder/schematics/"
+      },
+      {
+        "problem": "FastAsyncWorldEdit schematics folder",
+        "solution": "FastAsyncWorldEdit schematics folder"
+      },
+      {
+        "problem": "WorldEdit schematics folder",
+        "solution": "WorldEdit schematics folder"
       }
     ],
     "apiHooks": [],
     "changelog": [
       {
-        "version": "2.3",
-        "date": "5 Jan 2026",
+        "version": "1.4",
+        "date": "7 Jun 2026",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
-    "pluginId": "exp-gems",
+    "pluginId": "auto-breeding",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "EXP-Gems turns experience bonuses into physical collectible items. Instead of hiding progression behind a permission node, the plugin gives players visible gems that can be crafted, traded, rewarded and upgraded.",
-      "Different strengths create a clear path from early utility to valuable end-game rewards. The system is especially suited to RPG servers where item identity matters as much as the numerical bonus."
+      "Auto Breeding lets established animal farms continue producing without requiring players to manually feed every pair. The system still consumes real survival resources, preserving the cost of breeding while removing repetitive clicking.",
+      "Animals search for appropriate nearby food under configurable conditions. Limits and timing controls prevent the automation from turning a small farm into uncontrolled entity growth."
     ],
     "installation": [
-      "Confirm the legacy version works on the target server.",
-      "Configure gem tiers and experience bonuses.",
-      "Choose recipes or reward sources.",
-      "Test interaction with other XP multipliers before release."
+      "Install the plugin and restart the server.",
+      "Configure supported species, ranges, delays and limits.",
+      "Place valid food near a small test farm.",
+      "Observe resource consumption and adjust population controls before production use."
     ],
-    "commands": [],
+    "commands": [
+      {
+        "command": "/ab gui",
+        "permission": "",
+        "description": "Opens the AutoBreeding admin GUI."
+      },
+      {
+        "command": "/ab menu",
+        "permission": "",
+        "description": "Alias for opening the AutoBreeding admin GUI."
+      },
+      {
+        "command": "/ab reload",
+        "permission": "",
+        "description": "Reloads the config, rebuilds the mob registry, and restarts the breeding task."
+      },
+      {
+        "command": "/ab rl",
+        "permission": "",
+        "description": "Short alias for /ab reload."
+      },
+      {
+        "command": "/ab stats",
+        "permission": "",
+        "description": "Shows plugin scan statistics, including animals scanned, skipped, bred, and scan time."
+      },
+      {
+        "command": "/ab list",
+        "permission": "",
+        "description": "Lists all registered breedable mobs and whether they are enabled or disabled."
+      }
+    ],
     "permissions": [],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for EXP-Gems and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for Auto Breeding and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
-        "description": "1.18–1.20"
+        "description": "1.19–1.20.x and 26.1.x"
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Craftable experience gems, Multiple gem strengths, RPG-friendly progression, Visual item effects, Configurable gain bonuses, Reward and economy potential."
+        "description": "The main systems documented for this plugin include: Natural automated breeding, Nearby food consumption, Species-aware food handling, Configurable timing and limits, Farm-friendly behaviour, Lightweight server utility."
+      },
+      {
+        "section": "Cow Example",
+        "description": "Cow Example"
+      },
+      {
+        "section": "Cows are enabled.",
+        "description": "Cows are enabled."
+      },
+      {
+        "section": "The plugin looks for nearby wheat crops.",
+        "description": "The plugin looks for nearby wheat crops."
+      },
+      {
+        "section": "The wheat crop must be fully grown.",
+        "description": "The wheat crop must be fully grown."
+      },
+      {
+        "section": "The crop is reset after being used.",
+        "description": "The crop is reset after being used."
+      },
+      {
+        "section": "The mob does not need to be tamed.",
+        "description": "The mob does not need to be tamed."
+      },
+      {
+        "section": "The GUI icon is beef.",
+        "description": "The GUI icon is beef."
+      },
+      {
+        "section": "Bee Example",
+        "description": "Bee Example"
+      },
+      {
+        "section": "Bees require a nearby flower.",
+        "description": "Bees require a nearby flower."
+      },
+      {
+        "section": "Flowers are not consumed.",
+        "description": "Flowers are not consumed."
+      },
+      {
+        "section": "Bees do not need to be tamed.",
+        "description": "Bees do not need to be tamed."
+      },
+      {
+        "section": "The GUI icon is honeycomb.",
+        "description": "The GUI icon is honeycomb."
+      },
+      {
+        "section": "Wolf Example",
+        "description": "Wolf Example"
+      },
+      {
+        "section": "Wolves are enabled.",
+        "description": "Wolves are enabled."
+      },
+      {
+        "section": "Only tamed wolves can be auto-bred.",
+        "description": "Only tamed wolves can be auto-bred."
+      },
+      {
+        "section": "The plugin does not search for a food block.",
+        "description": "The plugin does not search for a food block."
+      },
+      {
+        "section": "No food block is consumed.",
+        "description": "No food block is consumed."
+      },
+      {
+        "section": "The GUI icon is a bone.",
+        "description": "The GUI icon is a bone."
+      },
+      {
+        "section": "❖ Config Option Descriptions",
+        "description": "❖ Config Option Descriptions"
+      },
+      {
+        "section": "Enabled",
+        "description": "Turns the whole plugin or a specific mob on or off."
+      },
+      {
+        "section": "Cooldown-Minutes",
+        "description": "How long an animal must wait before being auto-bred again."
+      },
+      {
+        "section": "Task-Delay-Ticks",
+        "description": "How often the plugin scans for animals."
+      },
+      {
+        "section": "Crop-Search-Radius",
+        "description": "How far around each animal to search for food blocks."
+      },
+      {
+        "section": "Mob-Limit-Radius",
+        "description": "Radius used when checking nearby mobs of the same type."
       }
     ],
     "placeholders": [],
-    "integrations": [],
+    "integrations": [
+      {
+        "name": "Spigot or Paper",
+        "description": "Spigot or Paper"
+      },
+      {
+        "name": "Java 17+",
+        "description": "Java 17+"
+      },
+      {
+        "name": "Minecraft 1.20+ recommended",
+        "description": "Minecraft 1.20+ recommended"
+      }
+    ],
     "troubleshooting": [
       {
         "problem": "The plugin does not enable",
@@ -763,74 +552,64 @@
       {
         "problem": "Data or integrations are missing",
         "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "Your server version",
+        "solution": "Your server version"
+      },
+      {
+        "problem": "Your AutoBreeding version",
+        "solution": "Your AutoBreeding version"
+      },
+      {
+        "problem": "Any console errors",
+        "solution": "Any console errors"
+      },
+      {
+        "problem": "Your config section if related",
+        "solution": "Your config section if related"
+      },
+      {
+        "problem": "Steps to reproduce the issue",
+        "solution": "Steps to reproduce the issue"
+      },
+      {
+        "problem": "❖ Disclaimer",
+        "solution": "❖ Disclaimer"
+      },
+      {
+        "problem": "You may not redistribute this plugin as your own.",
+        "solution": "You may not redistribute this plugin as your own."
+      },
+      {
+        "problem": "You may not sell this plugin.",
+        "solution": "You may not sell this plugin."
+      },
+      {
+        "problem": "You may not decompile or modify the plugin for redistribution.",
+        "solution": "You may not decompile or modify the plugin for redistribution."
+      },
+      {
+        "problem": "You may use the plugin on your own server.",
+        "solution": "You may use the plugin on your own server."
+      },
+      {
+        "problem": "AutoBreeding",
+        "solution": "AutoBreeding"
       }
     ],
     "apiHooks": [],
     "changelog": [
       {
-        "version": "3.3",
-        "date": "1 Sep 2024",
+        "version": "1.5",
+        "date": "21 May 2026",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
-    ]
-  },
-  {
-    "pluginId": "uncraftable",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "Uncraftable adds crafting paths for selected vanilla items that are normally limited, non-renewable or unavailable at a crafting table. The goal is to improve long-term survival access without installing a large custom crafting framework.",
-      "It is particularly useful in limited worlds, long-running servers and environments where exploration structures have already been heavily looted."
     ],
-    "installation": [
-      "Test the legacy build on the current server version.",
-      "Review every added recipe for economy impact.",
-      "Disable recipes that conflict with other plugins.",
-      "Publish the final recipe list to players."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for Uncraftable and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Check the current resource release"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Recipes for uncraftable items, Simple survival integration, Configurable recipe set, No large gameplay framework, Easy server adoption, Useful for limited worlds."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.2",
-        "date": "10 Jun 2023",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
+    "platformSynced": true,
+    "platformSources": [
+      "Modrinth",
+      "SpigotMC"
     ]
   },
   {
@@ -847,7 +626,13 @@
       "Set harvest bonus chances conservatively.",
       "Verify sugar cane and cactus behaviour in a test farm."
     ],
-    "commands": [],
+    "commands": [
+      {
+        "command": "/pb",
+        "permission": "ep.admin",
+        "description": "Base Command Argument /ep hoe 1 - gives you an Auto Hoe I /ep hoe 2 - Gives you an Auto Hoe II /ep wand - Gives you an Age Wand /ep max - Gives you an Max Age Wand /ep stats - Prints player stats in chat /ep gui - Opens player GUI menu which shows your stats - basic admin CMD's ep.stats - Access Stats ep.auto - Auto wand usage ep.tool - Usage of tools ep.quick - Quick Growth on place ep.max.wand - Usage of max age wand"
+      }
+    ],
     "permissions": [],
     "configuration": [
       {
@@ -890,40 +675,192 @@
         "date": "19 Mar 2023",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
-    "pluginId": "simplecrystals",
+    "pluginId": "exp-gems",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "SimpleCrystals provides a small custom-item foundation centred on collectible crystal rewards. The items can act as prizes, currencies, crafting components or visual progression tokens.",
-      "Its focused scope makes it suitable for servers that need recognisable custom rewards without a complete item-generation framework."
+      "EXP-Gems turns experience bonuses into physical collectible items. Instead of hiding progression behind a permission node, the plugin gives players visible gems that can be crafted, traded, rewarded and upgraded.",
+      "Different strengths create a clear path from early utility to valuable end-game rewards. The system is especially suited to RPG servers where item identity matters as much as the numerical bonus."
     ],
     "installation": [
-      "Confirm legacy compatibility on a test server.",
-      "Configure crystal names and presentation.",
-      "Decide how each crystal enters the economy.",
-      "Test recognition through shops, rewards and storage."
+      "Confirm the legacy version works on the target server.",
+      "Configure gem tiers and experience bonuses.",
+      "Choose recipes or reward sources.",
+      "Test interaction with other XP multipliers before release."
     ],
-    "commands": [],
-    "permissions": [],
+    "commands": [
+      {
+        "command": "/gem rl",
+        "permission": "",
+        "description": "Reloads The Config"
+      },
+      {
+        "command": "/gem admin",
+        "permission": "",
+        "description": "Opens The Admin GUI"
+      },
+      {
+        "command": "/gem names",
+        "permission": "",
+        "description": "Enable/Disable Names When Items Are On The Ground"
+      },
+      {
+        "command": "/gem ores",
+        "permission": "",
+        "description": "Enable/Disable EXP Given When Minding Ore"
+      },
+      {
+        "command": "/gem crops",
+        "permission": "",
+        "description": "Enable/Disable EXP Given When Harvesting Crops"
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "gem.admin",
+        "description": "Opens the GUI Menu and allows usage of admin commands"
+      },
+      {
+        "permission": "gem.tier2",
+        "description": "Allows for the usage/crafting of tier 2 gems."
+      },
+      {
+        "permission": "gem.tier3",
+        "description": "Allows for the usage/crafting of tier 3 gems."
+      },
+      {
+        "permission": "gem.tier4",
+        "description": "Allows for the usage/crafting of tier 4 gems."
+      },
+      {
+        "permission": "gem.tier5",
+        "description": "Allows for the usage/crafting of tier 5 gems."
+      },
+      {
+        "permission": "gem.tier6",
+        "description": "Allows for the usage/crafting of tier 6 gems."
+      }
+    ],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for SimpleCrystals and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for EXP-Gems and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
-        "description": "Spigot — legacy resource"
+        "description": "1.18–1.20"
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Custom crystal items, Persistent item identity, Reward-ready commands, Configurable presentation, Simple administration, Progression integration."
+        "description": "The main systems documented for this plugin include: Craftable experience gems, Multiple gem strengths, RPG-friendly progression, Visual item effects, Configurable gain bonuses, Reward and economy potential."
       }
     ],
     "placeholders": [],
-    "integrations": [],
+    "integrations": [
+      {
+        "name": "N/A",
+        "description": "N/A"
+      },
+      {
+        "name": "Downloads:",
+        "description": "Downloads:"
+      },
+      {
+        "name": "10",
+        "description": "10"
+      },
+      {
+        "name": "50",
+        "description": "50"
+      },
+      {
+        "name": "75",
+        "description": "75"
+      },
+      {
+        "name": "100",
+        "description": "100"
+      },
+      {
+        "name": "150",
+        "description": "150"
+      },
+      {
+        "name": "250",
+        "description": "250"
+      },
+      {
+        "name": "500",
+        "description": "500"
+      },
+      {
+        "name": "750",
+        "description": "750"
+      },
+      {
+        "name": "1000",
+        "description": "1000"
+      },
+      {
+        "name": "1250",
+        "description": "1250"
+      },
+      {
+        "name": "1500",
+        "description": "1500"
+      },
+      {
+        "name": "1750",
+        "description": "1750"
+      },
+      {
+        "name": "2000",
+        "description": "2000"
+      },
+      {
+        "name": "For support don't hesitate to join my",
+        "description": "For support don't hesitate to join my"
+      },
+      {
+        "name": "discord server: https://discord.gg/HxMp5ejvKU",
+        "description": "discord server: https://discord.gg/HxMp5ejvKU"
+      },
+      {
+        "name": "DISCLAIMER",
+        "description": "DISCLAIMER"
+      },
+      {
+        "name": "You are not to redistribute the plugin as your own",
+        "description": "You are not to redistribute the plugin as your own"
+      },
+      {
+        "name": "You are not to sell the plugin",
+        "description": "You are not to sell the plugin"
+      },
+      {
+        "name": "You re not to decompile the plugin",
+        "description": "You re not to decompile the plugin"
+      },
+      {
+        "name": "Any Tips and Ideas are very welcome!",
+        "description": "Any Tips and Ideas are very welcome!"
+      },
+      {
+        "name": "BStats:",
+        "description": "BStats:"
+      },
+      {
+        "name": "bStats",
+        "description": "bStats"
+      }
+    ],
     "troubleshooting": [
       {
         "problem": "The plugin does not enable",
@@ -945,91 +882,73 @@
     "apiHooks": [],
     "changelog": [
       {
-        "version": "1.6",
-        "date": "13 Mar 2023",
+        "version": "3.3",
+        "date": "1 Sep 2024",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "Modrinth",
+      "SpigotMC"
     ]
   },
   {
-    "pluginId": "mithrilchains",
+    "pluginId": "healing-stone",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "MithrilChains restores a direct survival crafting route for chainmail armour. It is a deliberately small plugin for servers that like chainmail as a progression tier but do not want it restricted to rare mob drops or trading.",
-      "The recipe-focused design means players understand the feature immediately and administrators do not need to maintain a larger custom-item system."
+      "Healing Stone adds crystal-themed healing utilities that are easy to understand and easy to reward. It provides a compact magical item loop without requiring a complete spell or class framework.",
+      "The project works particularly well as a quest reward, donor-free convenience item or rare survival drop where healing should feel more distinctive than carrying another stack of food."
     ],
     "installation": [
-      "Test the legacy JAR on the target version.",
-      "Review the chainmail recipes and economy value.",
-      "Check for recipe conflicts with other plugins.",
-      "Publish the recipes to players if they are not discoverable automatically."
+      "Test the legacy build on the target server version.",
+      "Review healing values and item access.",
+      "Decide whether stones come from commands, rewards, shops or loot.",
+      "Confirm the items interact correctly with the server's health scaling."
     ],
-    "commands": [],
-    "permissions": [],
+    "commands": [
+      {
+        "command": "/hs help",
+        "permission": "",
+        "description": "Spoiler: Images https://imgur.com/gallery/0FmrCPj Commands: - - Gives You Command Options - /hs stone - Gives Your A Healing Block"
+      },
+      {
+        "command": "/hs crystal",
+        "permission": "",
+        "description": "+/++/+++ - Gives You a Health Crystal"
+      },
+      {
+        "command": "/hs regen",
+        "permission": "",
+        "description": "+/++ - Gives You A Regen Crystal"
+      },
+      {
+        "command": "/hs reload",
+        "permission": "",
+        "description": "Reloads Configuration"
+      },
+      {
+        "command": "/hs feed",
+        "permission": "",
+        "description": "Gives Hunger Block"
+      },
+      {
+        "command": "/hs all",
+        "permission": "",
+        "description": "Feeds And Heals ALL Online Players"
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "hs.maxhealth",
+        "description": "s: - = Fully Restore Health On Block Click - hs.getstone = Gives The Player A Healing Block - hs.getcrystal - Spawn A Crystal From A Command - hs.crystal.5 - Allows Use Of The +5 Crystal - hs.crystal.10 - Allows Use Of The +10 Crystal"
+      }
+    ],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for MithrilChains and adjust feature toggles, messages, limits and server-specific behaviour."
-      },
-      {
-        "section": "Compatibility",
-        "description": "Check the current resource release"
-      },
-      {
-        "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Craftable chainmail armour, Simple recipe progression, Lightweight implementation, Survival-friendly materials, No database requirement, Minimal setup."
-      }
-    ],
-    "placeholders": [],
-    "integrations": [],
-    "troubleshooting": [
-      {
-        "problem": "The plugin does not enable",
-        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
-      },
-      {
-        "problem": "Commands or menus do not open",
-        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
-      },
-      {
-        "problem": "Configuration changes are not applied",
-        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
-      },
-      {
-        "problem": "Data or integrations are missing",
-        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
-      }
-    ],
-    "apiHooks": [],
-    "changelog": [
-      {
-        "version": "1.0",
-        "date": "18 Dec 2022",
-        "notes": "Current release tracked by the MythicSuite portfolio."
-      }
-    ]
-  },
-  {
-    "pluginId": "simplespawn",
-    "status": "starter",
-    "lastUpdated": "14 Jul 2026",
-    "overview": [
-      "SimpleSpawn supplies the essential set-spawn and return-to-spawn workflow without installing a broad essentials package. It is intended for small servers that want one clear location and a few dependable commands.",
-      "The focused feature set keeps configuration and permission management easy for administrators who do not need homes, warps, kits and dozens of unrelated utilities."
-    ],
-    "installation": [
-      "Test the legacy build on the current server.",
-      "Set the spawn from a safe loaded location.",
-      "Configure player and administrator permissions.",
-      "Test teleporting from other worlds and after a restart."
-    ],
-    "commands": [],
-    "permissions": [],
-    "configuration": [
-      {
-        "section": "Core settings",
-        "description": "Review the generated configuration for SimpleSpawn and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for Healing Stone and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
@@ -1037,7 +956,79 @@
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Set a server spawn, Teleport to spawn, Simple permissions, Low-overhead commands, Straightforward configuration, Small-server friendly."
+        "description": "The main systems documented for this plugin include: Healing stone items, Crystal-themed utility, Simple player commands, Lightweight gameplay loop, Server reward potential, Straightforward configuration."
+      },
+      {
+        "section": "/hs feed",
+        "description": "Gives Hunger Block"
+      },
+      {
+        "section": "/hs all",
+        "description": "Feeds And Heals ALL Online Players"
+      },
+      {
+        "section": "# -------------------------- # # HealingStone # # By # # MythicGhoul # # -----------------",
+        "description": "# -------------------------- # # HealingStone # # By # # MythicGhoul # # -------------------------- # PluginVersion: 2.3 BlockType: Heal: EMERALDBLOCK Feed: HAYBLOCK CrystalType: NETHERSTAR Economy: Heal: 50 Feed: 50 ## Cooldown is in seconds (150 = 2.5minutes) ## HealingBlock: Cooldown: 150 Message: HealthRestored: \"&bYour Health Was Fully Restored!\" HealthFull: \"&6Your Health Is Full!\" HungerRestored: \"&bYour Hunger Was Fed!\" HungerFull: \"&6Your Stomach Is Full!\" Stone: \"&bYou Obtained A Healing Block!\" Crystal: \"&bYou Obtained A Healing Crystal!\" RegenCrystal: \"&bYou Obtained A Regen Crystal!\" CrystalHeal: \"&bYour Health Was Raised!\" Nofunds: \"&4You Dont Have Enough Money!\""
+      },
+      {
+        "section": "Abillity to change Block Type. -Abillity To Change Crystal Type.",
+        "description": "Ability To Change Cost Of The Healing Block Ability - Ability To Change Messages - Ability Set Cooldown Period"
+      },
+      {
+        "section": "Permissions:",
+        "description": "hs.maxhealth = Fully Restore Health On Block Click - hs.getstone = Gives The Player A Healing Block - hs.getcrystal - Spawn A Crystal From A Command - hs.crystal.5 - Allows Use Of The +5 Crystal - hs.crystal.10 - Allows Use Of The +10 Crystal"
+      },
+      {
+        "section": "hs.crystal.15",
+        "description": "Allows Use Of The +15 Crystal"
+      },
+      {
+        "section": "hs.regen.5",
+        "description": "Allows Use Of The 5s Regen Crystal"
+      },
+      {
+        "section": "hs.regen.10",
+        "description": "Allows use Of The 10s Regen Crystal"
+      },
+      {
+        "section": "hs.maxhunger",
+        "description": "Fully Restore FoodLevel/Saturation Of Block Click"
+      },
+      {
+        "section": "hs.healall",
+        "description": "use of /hs all"
+      },
+      {
+        "section": "Dependancy:",
+        "description": "Vault: Allows The Use Of An Economy Approach To The Plugin Downloads: ✅ 10 ✅ ✅ 50 ✅ ✅ 75 ✅ ✅ 100 ✅ ✅ 150 ✅ ✅ 250 ✅ ✅ 500 ✅ ✅ 750 ✅ ✅ 1000 ✅ 1500 2000 3000 5000 DISCLAIMER"
+      },
+      {
+        "section": "✅",
+        "description": "✅"
+      },
+      {
+        "section": "1500 2000 3000 5000",
+        "description": "1500 2000 3000 5000"
+      },
+      {
+        "section": "You are not to redistribute the plugin as your own",
+        "description": "You are not to redistribute the plugin as your own"
+      },
+      {
+        "section": "You are not to sell the plugin",
+        "description": "You are not to sell the plugin"
+      },
+      {
+        "section": "You re not to decompile the plugin",
+        "description": "You re not to decompile the plugin"
+      },
+      {
+        "section": "If you want to help me create please consider Pledging https://www.patreon.com/MythicGhoul",
+        "description": "If you want to help me create please consider Pledging https://www.patreon.com/MythicGhoul Any Problems Please Come And say Hello: My Server Discord Has A Channel for Support Regarding My Plugins https://discord.gg/94RNdhJ"
+      },
+      {
+        "section": "Any Tips and Ideas are very welcome!",
+        "description": "Any Tips and Ideas are very welcome!"
       }
     ],
     "placeholders": [],
@@ -1063,44 +1054,82 @@
     "apiHooks": [],
     "changelog": [
       {
-        "version": "1.0",
-        "date": "22 Aug 2021",
+        "version": "2.3",
+        "date": "5 Jan 2026",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
-    "pluginId": "levelrewards",
+    "pluginId": "lastwords",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "LevelRewards converts vanilla experience levels into a lightweight milestone track. Server owners can recognise players for levelling without introducing a separate skill or class system.",
-      "Rewards are delivered when configured thresholds are reached, making ordinary mining, combat and enchanting contribute to an additional sense of progression."
+      "LastWords replaces repetitive vanilla death messages with a large cause-aware library built for personality and variety. Rather than selecting a random line from one global list, the plugin can choose messages that match how the player actually died.",
+      "A built-in editor lets staff manage the message catalogue on a live server. This avoids constant file editing and makes it practical to refine jokes, formatting and placeholders as the community develops its own tone."
     ],
     "installation": [
-      "Test legacy compatibility and reward repetition behaviour.",
-      "Define milestone levels and commands.",
-      "Balance rewards around the server's XP rate.",
-      "Verify behaviour after death, enchanting and administrative level changes."
+      "Install the plugin and allow the default message library to generate.",
+      "Review formatting and cause-specific pools.",
+      "Configure the optional Discord webhook.",
+      "Use the editor to adjust messages to the tone of the community."
     ],
     "commands": [],
     "permissions": [],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for LevelRewards and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for LastWords and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
-        "description": "Legacy resource — check the release page"
+        "description": "Paper/Spigot 1.20–1.21.x"
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Vanilla level milestones, Configurable rewards, Simple progression loop, Command-based delivery, Lightweight operation, Easy server setup."
+        "description": "The main systems documented for this plugin include: 597 default funny messages, Cause-specific message pools, In-game message editor, Prefix and chat compatibility, Discord webhook embeds, Configurable formatting."
+      },
+      {
+        "section": "messages.yml",
+        "description": "messages.yml"
+      },
+      {
+        "section": "stats.yml",
+        "description": "stats.yml"
+      },
+      {
+        "section": "players.yml",
+        "description": "players.yml"
       }
     ],
-    "placeholders": [],
-    "integrations": [],
+    "placeholders": [
+      {
+        "placeholder": "%player%",
+        "description": "hugged a cactus. The cactus hugged back with violence."
+      },
+      {
+        "placeholder": "%killer%",
+        "description": "folded %player% like a lawn chair using %weapon%."
+      },
+      {
+        "placeholder": "%weapon%",
+        "description": "%killer% folded %player% like a lawn chair using ."
+      }
+    ],
+    "integrations": [
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by LastWords."
+      },
+      {
+        "name": "Essentials-style chat",
+        "description": "Optional or supported integration used by LastWords."
+      }
+    ],
     "troubleshooting": [
       {
         "problem": "The plugin does not enable",
@@ -1117,15 +1146,120 @@
       {
         "problem": "Data or integrations are missing",
         "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "LastWords can send death messages directly to Discord using configurable webhooks.",
+        "solution": "LastWords can send death messages directly to Discord using configurable webhooks."
+      },
+      {
+        "problem": "Death messages are posted as clean Discord embeds, complete with the player’s Minecraft he",
+        "solution": "Death messages are posted as clean Discord embeds, complete with the player’s Minecraft head, death cause, world, coordinates, killer, weapon, and a colour that changes depending on how the player died."
+      },
+      {
+        "problem": "Server owners can fully customise the webhook URL, embed title, description, footer, playe",
+        "solution": "Server owners can fully customise the webhook URL, embed title, description, footer, player head display, shown fields, and per-cause colours from the config."
+      },
+      {
+        "problem": "Perfect for community servers that want deaths logged in Discord in a clean and polished w",
+        "solution": "Perfect for community servers that want deaths logged in Discord in a clean and polished way."
+      },
+      {
+        "problem": "Example Default Messages",
+        "solution": "Example Default Messages"
+      },
+      {
+        "problem": "```text",
+        "solution": "```text"
+      },
+      {
+        "problem": "%player% hugged a cactus. The cactus hugged back with violence.",
+        "solution": "%player% hugged a cactus. The cactus hugged back with violence."
+      },
+      {
+        "problem": "%player% tried swimming in spicy orange soup.",
+        "solution": "%player% tried swimming in spicy orange soup."
+      },
+      {
+        "problem": "%player% challenged gravity to a duel and gravity brought receipts.",
+        "solution": "%player% challenged gravity to a duel and gravity brought receipts."
+      },
+      {
+        "problem": "%player% heard 'ssss' and selected denial.",
+        "solution": "%player% heard 'ssss' and selected denial."
+      },
+      {
+        "problem": "%player% got folded by calcium.",
+        "solution": "%player% got folded by calcium."
+      },
+      {
+        "problem": "%player% got bass-boosted into the afterlife.",
+        "solution": "%player% got bass-boosted into the afterlife."
+      },
+      {
+        "problem": "%killer% folded %player% like a lawn chair using %weapon%.",
+        "solution": "%killer% folded %player% like a lawn chair using %weapon%."
+      },
+      {
+        "problem": "%player% died so strangely even the plugin looked away.",
+        "solution": "%player% died so strangely even the plugin looked away."
+      },
+      {
+        "problem": "⚡ Perfect For",
+        "solution": "⚡ Perfect For"
+      },
+      {
+        "problem": "Survival servers",
+        "solution": "Survival servers"
+      },
+      {
+        "problem": "SMP servers",
+        "solution": "SMP servers"
+      },
+      {
+        "problem": "RPG servers",
+        "solution": "RPG servers"
+      },
+      {
+        "problem": "Hardcore servers",
+        "solution": "Hardcore servers"
+      },
+      {
+        "problem": "PvP servers",
+        "solution": "PvP servers"
+      },
+      {
+        "problem": "Funny community servers",
+        "solution": "Funny community servers"
+      },
+      {
+        "problem": "Servers that want more personality in chat",
+        "solution": "Servers that want more personality in chat"
+      },
+      {
+        "problem": "Servers that want fun player-facing death tracking",
+        "solution": "Servers that want fun player-facing death tracking"
+      },
+      {
+        "problem": "Servers that want players to control their own chat experience",
+        "solution": "Servers that want players to control their own chat experience"
+      },
+      {
+        "problem": "LastWords",
+        "solution": "LastWords"
       }
     ],
     "apiHooks": [],
     "changelog": [
       {
-        "version": "1.0",
-        "date": "18 Mar 2020",
+        "version": "1.2.4",
+        "date": "22 Jun 2026",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "Modrinth",
+      "SpigotMC"
     ]
   },
   {
@@ -1205,46 +1339,46 @@
     ]
   },
   {
-    "pluginId": "staffcore",
+    "pluginId": "levelrewards",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "StaffCore brings routine moderation actions and player context into one workspace. Staff can move from a report to a profile, evidence, notes and punishment history without relying on disconnected commands or external spreadsheets.",
-      "The aim is faster action with better consistency: important information remains attached to the player so different moderators can understand what happened before making a decision."
+      "LevelRewards converts vanilla experience levels into a lightweight milestone track. Server owners can recognise players for levelling without introducing a separate skill or class system.",
+      "Rewards are delivered when configured thresholds are reached, making ordinary mining, combat and enchanting contribute to an additional sense of progression."
     ],
     "installation": [
-      "Private deployment is configured around the staff permission structure.",
-      "Punishment ladders, reason prompts and webhook channels are reviewed with the moderation team.",
-      "Staff actions are tested using non-production accounts.",
-      "Access is limited to the minimum permission level required for each role."
+      "Test legacy compatibility and reward repetition behaviour.",
+      "Define milestone levels and commands.",
+      "Balance rewards around the server's XP rate.",
+      "Verify behaviour after death, enchanting and administrative level changes."
     ],
     "commands": [],
     "permissions": [],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for StaffCore and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for LevelRewards and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
-        "description": "Paper 1.21.x"
+        "description": "Legacy resource — check the release page"
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Freeze, warn, mute, kick and ban, Staff mode, Player profiles and notes, Punishment history, Inventory snapshots, Alt checking and ladders."
+        "description": "The main systems documented for this plugin include: Vanilla level milestones, Configurable rewards, Simple progression loop, Command-based delivery, Lightweight operation, Easy server setup."
       }
     ],
-    "placeholders": [],
-    "integrations": [
+    "placeholders": [
       {
-        "name": "Discord webhooks",
-        "description": "Optional or supported integration used by StaffCore."
+        "placeholder": "%3A%",
+        "description": "<img src=\"//proxy.spigotmc.org/343495c238c618f5fd7c3c495cdada20e495e2bf?url=http2F%2Fi68.tinypic.com%2F2i7of7l.png\" class=\"bbCodeImage LbImage\" alt=\"[​IMG]\" data-url=\"http://i68.tinypic.com/2i7of7l.png\" style=\"\">"
       },
       {
-        "name": "Permissions plugins",
-        "description": "Optional or supported integration used by StaffCore."
+        "placeholder": "%2Fi68.tinypic.com%",
+        "description": "<img src=\"//proxy.spigotmc.org/343495c238c618f5fd7c3c495cdada20e495e2bf?url=http%3A%2F2F2i7of7l.png\" class=\"bbCodeImage LbImage\" alt=\"[​IMG]\" data-url=\"http://i68.tinypic.com/2i7of7l.png\" style=\"\">"
       }
     ],
+    "integrations": [],
     "troubleshooting": [
       {
         "problem": "The plugin does not enable",
@@ -1266,61 +1400,61 @@
     "apiHooks": [],
     "changelog": [
       {
-        "version": "Private",
-        "date": "Current release",
+        "version": "1.0",
+        "date": "18 Mar 2020",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
-    "pluginId": "mythicrifts",
+    "pluginId": "mithrilchains",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
     "overview": [
-      "MythicRifts creates persistent corruption outbreaks that make the world feel active even when players are not following a traditional quest. Cores appear as escalating regional threats with guardians, visual pressure and server-wide reporting.",
-      "The system is built around controlled spread rather than indiscriminate terrain replacement. Players have time to discover, organise and eliminate the threat before it reaches stronger stages."
+      "MithrilChains restores a direct survival crafting route for chainmail armour. It is a deliberately small plugin for servers that like chainmail as a progression tier but do not want it restricted to rare mob drops or trading.",
+      "The recipe-focused design means players understand the feature immediately and administrators do not need to maintain a larger custom-item system."
     ],
     "installation": [
-      "Private deployment is configured alongside LevelCraft and claim systems.",
-      "Eligible regions, spread pressure and escalation timing are tested in a staging world.",
-      "Map, sign and Discord notifications are verified.",
-      "Guardian rewards are balanced against the wider server economy."
+      "Test the legacy JAR on the target version.",
+      "Review the chainmail recipes and economy value.",
+      "Check for recipe conflicts with other plugins.",
+      "Publish the recipes to players if they are not discoverable automatically."
     ],
     "commands": [],
     "permissions": [],
     "configuration": [
       {
         "section": "Core settings",
-        "description": "Review the generated configuration for MythicRifts and adjust feature toggles, messages, limits and server-specific behaviour."
+        "description": "Review the generated configuration for MithrilChains and adjust feature toggles, messages, limits and server-specific behaviour."
       },
       {
         "section": "Compatibility",
-        "description": "Paper 1.21.x"
+        "description": "Check the current resource release"
       },
       {
         "section": "Feature controls",
-        "description": "The main systems documented for this plugin include: Tiered corruption cores, Escalating guardians, Controlled regional spread, Ambient particles and sound, Map and sign tracking, Outbreak Discord alerts."
+        "description": "The main systems documented for this plugin include: Craftable chainmail armour, Simple recipe progression, Lightweight implementation, Survival-friendly materials, No database requirement, Minimal setup."
       }
     ],
-    "placeholders": [],
-    "integrations": [
+    "placeholders": [
       {
-        "name": "LevelCraft",
-        "description": "Optional or supported integration used by MythicRifts."
+        "placeholder": "%3A%",
+        "description": "<img src=\"//proxy.spigotmc.org/afbe2b651dac98978f9b096afb1788580a510d4f?url=https2F%2Fbstats.org%2Fsignatures%2Fbukkit%2FMithrilChains.svg\" class=\"bbCodeImage LbImage\" alt=\"[​IMG]\" data-url=\"https://bstats.org/signatures/bukkit/MithrilChains.svg\">​"
       },
       {
-        "name": "Dynmap",
-        "description": "Optional or supported integration used by MythicRifts."
+        "placeholder": "%2Fbstats.org%",
+        "description": "<img src=\"//proxy.spigotmc.org/afbe2b651dac98978f9b096afb1788580a510d4f?url=https%3A%2F2Fsignatures%2Fbukkit%2FMithrilChains.svg\" class=\"bbCodeImage LbImage\" alt=\"[​IMG]\" data-url=\"https://bstats.org/signatures/bukkit/MithrilChains.svg\">​"
       },
       {
-        "name": "Discord webhooks",
-        "description": "Optional or supported integration used by MythicRifts."
-      },
-      {
-        "name": "Clan claims",
-        "description": "Optional or supported integration used by MythicRifts."
+        "placeholder": "%2Fbukkit%",
+        "description": "<img src=\"//proxy.spigotmc.org/afbe2b651dac98978f9b096afb1788580a510d4f?url=https%3A%2F%2Fbstats.org%2Fsignatures2FMithrilChains.svg\" class=\"bbCodeImage LbImage\" alt=\"[​IMG]\" data-url=\"https://bstats.org/signatures/bukkit/MithrilChains.svg\">​"
       }
     ],
+    "integrations": [],
     "troubleshooting": [
       {
         "problem": "The plugin does not enable",
@@ -1342,10 +1476,218 @@
     "apiHooks": [],
     "changelog": [
       {
-        "version": "Private",
-        "date": "Current release",
+        "version": "1.0",
+        "date": "18 Dec 2022",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
+    ]
+  },
+  {
+    "pluginId": "mythicenchant",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicEnchant rebuilds enchanting around discovery, collection and player choice. Instead of repeatedly rolling a vanilla table until the right offer appears, players create a physical Arcane Library from enchanted books stored in nearby chiseled bookshelves.",
+      "When an item is placed into the custom enchanting interface, the library checks the knowledge physically available around that table and presents only compatible options. The result is a system that rewards exploration, trading and shared community builds while still respecting Minecraft items, XP and lapis."
+    ],
+    "installation": [
+      "Install the plugin and restart the server to generate its files.",
+      "Configure enchanting rules, custom enchantments, messages and costs.",
+      "Place books in chiseled bookshelves around an enchanting table and test the scan range.",
+      "Install LevelCraft only when Sorcery progression integration is wanted.",
+      "Place the MythicEnchant jar inside your server's plugins folder.",
+      "Start or restart the server to generate the configuration files.",
+      "Adjust config.yml, custom-enchants.yml and messages.yml as required.",
+      "Install LevelCraft only when Sorcery integration is wanted.",
+      "Use /mythicench status to verify the active settings and hook state.",
+      "Built against:"
+    ],
+    "commands": [
+      {
+        "command": "/mythicench status to verify the active settings and",
+        "permission": "",
+        "description": "Use hook state."
+      }
+    ],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicEnchant and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.21.10"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Selectable enchanting GUI, Physical bookshelf libraries, Vanilla and custom enchantments, 100 custom enchantments, Configurable XP and lapis costs, Natural book discovery and drops."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "LevelCraft edition",
+        "description": "Optional or supported integration used by MythicEnchant."
+      },
+      {
+        "name": "Vault-ready design",
+        "description": "Optional or supported integration used by MythicEnchant."
+      },
+      {
+        "name": "Successful custom enchanting grants Sorcery XP",
+        "description": "Successful custom enchanting grants Sorcery XP"
+      },
+      {
+        "name": "Higher enchanting costs can award more Sorcery experience",
+        "description": "Higher enchanting costs can award more Sorcery experience"
+      },
+      {
+        "name": "Custom enchantments can require minimum Sorcery levels",
+        "description": "Custom enchantments can require minimum Sorcery levels"
+      },
+      {
+        "name": "MythicEnchant remains fully usable when LevelCraft is not installed",
+        "description": "MythicEnchant remains fully usable when LevelCraft is not installed"
+      },
+      {
+        "name": "LevelCraft is a soft dependency, not a requirement.",
+        "description": "LevelCraft is a soft dependency, not a requirement."
+      },
+      {
+        "name": "️ BUILT FOR REAL SURVIVAL SERVERS",
+        "description": "️ BUILT FOR REAL SURVIVAL SERVERS"
+      },
+      {
+        "name": "Books remain real items stored inside real chiseled bookshelves",
+        "description": "Books remain real items stored inside real chiseled bookshelves"
+      },
+      {
+        "name": "Custom enchant data is stored safely on items",
+        "description": "Custom enchant data is stored safely on items"
+      },
+      {
+        "name": "Area damage is guarded against recursive enchant triggers",
+        "description": "Area damage is guarded against recursive enchant triggers"
+      },
+      {
+        "name": "Multi-block mining is guarded against recursive block breaking",
+        "description": "Multi-block mining is guarded against recursive block breaking"
+      },
+      {
+        "name": "Secondary PvP damage can be disabled",
+        "description": "Secondary PvP damage can be disabled"
+      },
+      {
+        "name": "Enchantments automatically validate item compatibility and conflicts",
+        "description": "Enchantments automatically validate item compatibility and conflicts"
+      },
+      {
+        "name": "Custom books can be discovered naturally or created through admin commands",
+        "description": "Custom books can be discovered naturally or created through admin commands"
+      },
+      {
+        "name": "Messages, sounds, GUI title and costs are configurable",
+        "description": "Messages, sounds, GUI title and costs are configurable"
+      },
+      {
+        "name": "COMPLETE CUSTOM ENCHANTMENT LIST",
+        "description": "COMPLETE CUSTOM ENCHANTMENT LIST"
+      },
+      {
+        "name": "WEAPON",
+        "description": "WEAPON"
+      },
+      {
+        "name": "TOOL",
+        "description": "TOOL"
+      },
+      {
+        "name": "ARMOR",
+        "description": "ARMOR"
+      },
+      {
+        "name": "ANYGEAR",
+        "description": "ANYGEAR"
+      },
+      {
+        "name": "DISCOVER THE BOOKS. BUILD THE LIBRARY. MASTER THE ARCANE.",
+        "description": "DISCOVER THE BOOKS. BUILD THE LIBRARY. MASTER THE ARCANE."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "Your server version",
+        "solution": "Your server version"
+      },
+      {
+        "problem": "Your AutoBreeding version",
+        "solution": "Your AutoBreeding version"
+      },
+      {
+        "problem": "Any console errors",
+        "solution": "Any console errors"
+      },
+      {
+        "problem": "Your config section if related",
+        "solution": "Your config section if related"
+      },
+      {
+        "problem": "Steps to reproduce the issue",
+        "solution": "Steps to reproduce the issue"
+      },
+      {
+        "problem": "❖ Disclaimer",
+        "solution": "❖ Disclaimer"
+      },
+      {
+        "problem": "You may not redistribute this plugin as your own.",
+        "solution": "You may not redistribute this plugin as your own."
+      },
+      {
+        "problem": "You may not sell this plugin.",
+        "solution": "You may not sell this plugin."
+      },
+      {
+        "problem": "You may not decompile or modify the plugin for redistribution.",
+        "solution": "You may not decompile or modify the plugin for redistribution."
+      },
+      {
+        "problem": "You may use the plugin on your own server.",
+        "solution": "You may use the plugin on your own server."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "2.1.1",
+        "date": "11 Jul 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
@@ -1418,6 +1760,94 @@
         "date": "Current release",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
+    ]
+  },
+  {
+    "pluginId": "mythicjoins",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicJoins turns ordinary login and logout text into a cosmetic collection system. Players can browse themed join and leave messages, purchase them through a Vault economy and select the style that represents them.",
+      "The plugin keeps cosmetics separate from gameplay power. A player can build a collection, switch between owned messages and still fall back to a polished default pool when no custom option is selected."
+    ],
+    "installation": [
+      "Install Vault and a supported economy provider.",
+      "Install MythicJoins and allow it to create the default catalogue.",
+      "Edit messages, prices, icons and webhook settings.",
+      "Test purchases, selection and default behaviour with a normal player account."
+    ],
+    "commands": [
+      {
+        "command": "/mythicjoins",
+        "permission": "",
+        "description": "Alias for ."
+      },
+      {
+        "command": "/mj reload after making changes",
+        "permission": "",
+        "description": "6. Use ."
+      }
+    ],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicJoins and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Join and leave message shops, Owned cosmetics menus, Random default message pool, Vault economy purchases, Admin grants and removal, Discord join and leave embeds."
+      }
+    ],
+    "placeholders": [
+      {
+        "placeholder": "%player%",
+        "description": "<b></b> inside join and leave messages to show the player's name."
+      }
+    ],
+    "integrations": [
+      {
+        "name": "Vault",
+        "description": "Optional or supported integration used by MythicJoins."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicJoins."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "1 Jul 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
     ]
   },
   {
@@ -1552,6 +1982,82 @@
     ]
   },
   {
+    "pluginId": "mythicrifts",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicRifts creates persistent corruption outbreaks that make the world feel active even when players are not following a traditional quest. Cores appear as escalating regional threats with guardians, visual pressure and server-wide reporting.",
+      "The system is built around controlled spread rather than indiscriminate terrain replacement. Players have time to discover, organise and eliminate the threat before it reaches stronger stages."
+    ],
+    "installation": [
+      "Private deployment is configured alongside LevelCraft and claim systems.",
+      "Eligible regions, spread pressure and escalation timing are tested in a staging world.",
+      "Map, sign and Discord notifications are verified.",
+      "Guardian rewards are balanced against the wider server economy."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicRifts and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Tiered corruption cores, Escalating guardians, Controlled regional spread, Ambient particles and sound, Map and sign tracking, Outbreak Discord alerts."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "LevelCraft",
+        "description": "Optional or supported integration used by MythicRifts."
+      },
+      {
+        "name": "Dynmap",
+        "description": "Optional or supported integration used by MythicRifts."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicRifts."
+      },
+      {
+        "name": "Clan claims",
+        "description": "Optional or supported integration used by MythicRifts."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Private",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
     "pluginId": "mythicshop",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
@@ -1620,6 +2126,1017 @@
     ]
   },
   {
+    "pluginId": "mythictrash",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicTrash provides a dedicated disposal interface without asking players to throw items into lava or rely on risky inventory shortcuts. The double-chest GUI gives enough space for bulk cleanup while keeping the interaction familiar.",
+      "Protection rules can stop important or configured items from being discarded, and an optional confirmation stage gives players a final chance to recover from a mistake."
+    ],
+    "installation": [
+      "Install the plugin and restart the server.",
+      "Configure protected items and blocked worlds first.",
+      "Choose whether confirmation is required.",
+      "Customise the GUI and test protected-item behaviour.",
+      "1. Download the MythicTrash .jar",
+      "2. Place it into your server’s plugins folder",
+      "3. Restart your server",
+      "4. Edit the config if needed",
+      "5. Use /trash in-game",
+      "Why use MythicTrash?",
+      "MythicTrash is made for server owners who want a simple, clean, and reliable trash system without unnecessary bloat.",
+      "It helps reduce ground item clutter, removes the need for lava bins, gives players a faster way to clean their inventory, and protects important custom items from being accidentally deleted.",
+      "It is simple enough for small SMP servers, but configurable enough for larger survival, RPG, economy, skyblock, and network servers."
+    ],
+    "commands": [
+      {
+        "command": "/trash",
+        "permission": "",
+        "description": "Opens the trash GUI"
+      },
+      {
+        "command": "/bin",
+        "permission": "",
+        "description": "Opens the trash GUI"
+      },
+      {
+        "command": "/dispose",
+        "permission": "",
+        "description": "Opens the trash GUI"
+      },
+      {
+        "command": "/mythictrash reload",
+        "permission": "",
+        "description": "Reloads the plugin configuration"
+      },
+      {
+        "command": "/mythictrash",
+        "permission": "",
+        "description": "Shows plugin usage/help."
+      },
+      {
+        "command": "/mt reload",
+        "permission": "mythictrash.reload",
+        "description": "Short alias for reloading the plugin, if enabled in plugin.yml."
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "mythictrash.use",
+        "description": "Allows players to open the trash GUI"
+      },
+      {
+        "permission": "mythictrash.admin",
+        "description": "Allows access to admin commands"
+      },
+      {
+        "permission": "mythictrash.bypass",
+        "description": "Allows bypassing certain restrictions if enabled"
+      },
+      {
+        "permission": "mythictrash.reload",
+        "description": "Allows access to the reload command."
+      },
+      {
+        "permission": "mythictrash.bypass.blockeditems",
+        "description": "Allows players to delete items normally protected by the blocked item config."
+      }
+    ],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicTrash and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Double-chest trash GUI, Protected items, Optional confirmation, Blocked worlds and materials, Usage statistics, Fully configurable visuals."
+      },
+      {
+        "section": "```yml",
+        "description": "```yml"
+      },
+      {
+        "section": "Trash-GUI:",
+        "description": "Trash-GUI:"
+      },
+      {
+        "section": "Title: \"&8MythicTrash\"",
+        "description": "Title: \"&8MythicTrash\""
+      },
+      {
+        "section": "Send-Delete-Message: true",
+        "description": "Send-Delete-Message: true"
+      },
+      {
+        "section": "Detailed-Delete-Summary: true",
+        "description": "Detailed-Delete-Summary: true"
+      },
+      {
+        "section": "Max-Summary-Items: 8",
+        "description": "Max-Summary-Items: 8"
+      },
+      {
+        "section": "Blocked-Items:",
+        "description": "Blocked-Items:"
+      },
+      {
+        "section": "Enabled: true",
+        "description": "Enabled: true"
+      },
+      {
+        "section": "Materials:",
+        "description": "Materials:"
+      },
+      {
+        "section": "NETHERSTAR",
+        "description": "NETHERSTAR"
+      },
+      {
+        "section": "DRAGONEGG",
+        "description": "DRAGONEGG"
+      },
+      {
+        "section": "COMMANDBLOCK",
+        "description": "COMMANDBLOCK"
+      },
+      {
+        "section": "STRUCTUREBLOCK",
+        "description": "STRUCTUREBLOCK"
+      },
+      {
+        "section": "BARRIER",
+        "description": "BARRIER"
+      },
+      {
+        "section": "Name-Contains:",
+        "description": "Name-Contains:"
+      },
+      {
+        "section": "\"&8📍 QUEST ITEM\"",
+        "description": "\"&8📍 QUEST ITEM\""
+      },
+      {
+        "section": "Lore-Contains:",
+        "description": "Lore-Contains:"
+      },
+      {
+        "section": "\"&8TEST\"",
+        "description": "\"&8TEST\""
+      },
+      {
+        "section": "Messages:",
+        "description": "Messages:"
+      },
+      {
+        "section": "Blocked-Item-Returned: \"&cSome items cannot be trashed and were returned to you.\"",
+        "description": "Blocked-Item-Returned: \"&cSome items cannot be trashed and were returned to you.\""
+      },
+      {
+        "section": "Items-Deleted: \"&7Disposed of &c%amount% &7item(s).\"",
+        "description": "Items-Deleted: \"&7Disposed of &c%amount% &7item(s).\""
+      },
+      {
+        "section": "Delete-Summary:",
+        "description": "Delete-Summary:"
+      },
+      {
+        "section": "\"&8&m------------------------------\"",
+        "description": "\"&8&m------------------------------\""
+      },
+      {
+        "section": "\"&a&lSelling has never been easier!\"",
+        "description": "\"&a&lSelling has never been easier!\""
+      },
+      {
+        "section": "Messages",
+        "description": "Messages"
+      },
+      {
+        "section": "Why Use MythicTrash?",
+        "description": "Why Use MythicTrash?"
+      },
+      {
+        "section": "Performance Friendly",
+        "description": "Performance Friendly"
+      }
+    ],
+    "placeholders": [
+      {
+        "placeholder": "%amount%",
+        "description": "Items-Deleted: \"&7Disposed of &c &7item(s).\""
+      },
+      {
+        "placeholder": "%items%",
+        "description": "\"\""
+      },
+      {
+        "placeholder": "%total%",
+        "description": "\"&7Total items disposed: &c\""
+      },
+      {
+        "placeholder": "%item%",
+        "description": "Delete-Summary-Item-Format: \"&8- &f &7x%amount%\""
+      }
+    ],
+    "integrations": [
+      {
+        "name": "Geyser",
+        "description": "Optional or supported integration used by MythicTrash."
+      },
+      {
+        "name": "Floodgate",
+        "description": "Optional or supported integration used by MythicTrash."
+      },
+      {
+        "name": "Required:",
+        "description": "Required:"
+      },
+      {
+        "name": "Optional:",
+        "description": "Optional:"
+      },
+      {
+        "name": "Important Notes",
+        "description": "Important Notes"
+      },
+      {
+        "name": "Good For",
+        "description": "Good For"
+      },
+      {
+        "name": "Example Use Cases",
+        "description": "Example Use Cases"
+      },
+      {
+        "name": "Planned Ideas",
+        "description": "Planned Ideas"
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "MythicTrash is lightweight and Folia-friendly because it mainly uses inventory events and ",
+        "solution": "MythicTrash is lightweight and Folia-friendly because it mainly uses inventory events and player actions."
+      },
+      {
+        "problem": "For Folia-supported builds, the plugin should include:",
+        "solution": "For Folia-supported builds, the plugin should include:"
+      },
+      {
+        "problem": "```yml",
+        "solution": "```yml"
+      },
+      {
+        "problem": "folia-supported: true",
+        "solution": "folia-supported: true"
+      },
+      {
+        "problem": "```",
+        "solution": "```"
+      },
+      {
+        "problem": "Always test on your target server software before using any plugin on a live server.",
+        "solution": "Always test on your target server software before using any plugin on a live server."
+      },
+      {
+        "problem": "Found a bug or have a suggestion?",
+        "solution": "Found a bug or have a suggestion?"
+      },
+      {
+        "problem": "Please include your server version, plugin version, any console errors, what you expected ",
+        "solution": "Please include your server version, plugin version, any console errors, what you expected to happen, what actually happened, and your relevant config section if needed."
+      },
+      {
+        "problem": "This helps issues get fixed much faster.",
+        "solution": "This helps issues get fixed much faster."
+      },
+      {
+        "problem": "MythicTrash",
+        "solution": "MythicTrash"
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0.2",
+        "date": "17 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "Modrinth",
+      "SpigotMC"
+    ]
+  },
+  {
+    "pluginId": "mythicvote",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicVote combines vote handling, repeatable rewards and long-term loyalty tracking in one focused plugin. Each confirmed vote can run configurable commands while the player's lifetime total feeds milestones and leaderboards.",
+      "The system is built to make voting visible rather than treating it as a silent reward command. Players can see progress, compete for ranking positions and receive meaningful recognition for continued support."
+    ],
+    "installation": [
+      "Install NuVotifier and confirm vote services reach the server.",
+      "Install MythicVote and configure per-vote commands.",
+      "Define milestones, leaderboard presentation and webhook settings.",
+      "Send a test vote and confirm online, offline and restart behaviour."
+    ],
+    "commands": [
+      {
+        "command": "/mv",
+        "permission": "",
+        "description": "Shows the main MythicVote command help."
+      },
+      {
+        "command": "/mv sites",
+        "permission": "",
+        "description": "Shows configured vote sites."
+      },
+      {
+        "command": "/mv discord",
+        "permission": "",
+        "description": "Shows the configured Discord message or invite."
+      },
+      {
+        "command": "/mv top",
+        "permission": "",
+        "description": "Shows the top monthly voters."
+      },
+      {
+        "command": "/mv fakevote",
+        "permission": "mythicvote.admin",
+        "description": "Runs a test vote for a player."
+      },
+      {
+        "command": "/mv reload",
+        "permission": "mythicvote.admin",
+        "description": "Reloads MythicVote configuration files."
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "mythicvote.admin",
+        "description": "Access to admin commands, reloads, and vote testing."
+      },
+      {
+        "permission": "mythicvote.notify",
+        "description": "Allows players or staff to receive vote-related notifications if enabled."
+      }
+    ],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicVote and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Per-vote command rewards, Lifetime vote tracking, Milestone rewards, Leaderboards, Discord webhook embeds, Player data persistence."
+      },
+      {
+        "section": "❓ Why MythicVote?",
+        "description": "❓ Why MythicVote?"
+      },
+      {
+        "section": "Thank you for using MythicVote!",
+        "description": "Thank you for using MythicVote!"
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "NuVotifier",
+        "description": "Optional or supported integration used by MythicVote."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicVote."
+      },
+      {
+        "name": "PlaceholderAPI",
+        "description": "Optional or supported integration used by MythicVote."
+      },
+      {
+        "name": "Required",
+        "description": "Required"
+      },
+      {
+        "name": "Optional",
+        "description": "Optional"
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2.2",
+        "date": "24 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
+    ]
+  },
+  {
+    "pluginId": "pickupfilter",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "PickupFilter gives every player control over the items allowed into their inventory. It is aimed at the everyday frustration created by farms, mines, grinders and busy survival areas where unwanted drops repeatedly fill valuable slots.",
+      "Each player manages a personal filter through a clear GUI. Their choices are saved persistently, so the filter behaves like a real account preference rather than a temporary menu setting that disappears after a restart."
+    ],
+    "installation": [
+      "Install the JAR and restart the server.",
+      "Review the default GUI and message settings.",
+      "Grant normal-use permissions to players where required.",
+      "Test common farm drops and verify saved choices after a restart.",
+      "Paper or Spigot server",
+      "Geyser",
+      "Floodgate",
+      "PickupFilter",
+      "With this setup, PickupFilter works smoothly on mixed Java and Bedrock servers.",
+      "Perfect For",
+      "Survival servers",
+      "SMP servers",
+      "Economy servers",
+      "RPG servers",
+      "Skyblock servers",
+      "Towny-style servers",
+      "Java and Bedrock crossplay servers",
+      "Servers with lots of mining, farming, grinding, or building"
+    ],
+    "commands": [
+      {
+        "command": "/pickupfilter",
+        "permission": "",
+        "description": ""
+      },
+      {
+        "command": "/filter",
+        "permission": "",
+        "description": ""
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "filter.use",
+        "description": ""
+      },
+      {
+        "permission": "filter.admin",
+        "description": ""
+      }
+    ],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for PickupFilter and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Per-player item filters, Persistent saved choices, Simple management GUI, Farm-friendly behaviour, Restart-safe storage, Lightweight event handling."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "PickupFilter fully supports Bedrock players joining through Geyser and Floodgate.",
+        "solution": "PickupFilter fully supports Bedrock players joining through Geyser and Floodgate."
+      },
+      {
+        "problem": "The plugin is designed around simple, reliable interactions that work well for both Java a",
+        "solution": "The plugin is designed around simple, reliable interactions that work well for both Java and Bedrock users. Bedrock players can use the same pickup filtering system without awkward Java-only controls."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2.1",
+        "date": "2 Jul 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "Modrinth",
+      "SpigotMC"
+    ]
+  },
+  {
+    "pluginId": "pixelblood",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "PixelBlood adds responsive combat feedback through particles, trails, pools, splashes and optional bleeding damage. It is designed to make hits feel heavier without requiring a resource pack or replacing Minecraft combat.",
+      "Effects can be tuned separately for players, bosses, hostile mobs and passive mobs. This lets a server create dramatic boss fights while keeping routine animal or farm interactions restrained."
+    ],
+    "installation": [
+      "Install the plugin and restart the server.",
+      "Choose which entity categories can produce effects.",
+      "Tune particles, trails, pools and optional bleeding values.",
+      "Test damage in protected areas, PvP zones and boss encounters."
+    ],
+    "commands": [
+      {
+        "command": "/pb reload",
+        "permission": "",
+        "description": "Reloads Config"
+      },
+      {
+        "command": "/pb player",
+        "permission": "",
+        "description": "Toggles Player Blood"
+      },
+      {
+        "command": "/pb passive",
+        "permission": "",
+        "description": "Toggles Passive Mob Blood"
+      },
+      {
+        "command": "/pb neutral",
+        "permission": "",
+        "description": "Toggles Neutral Mob Blood"
+      },
+      {
+        "command": "/pb hostile",
+        "permission": "",
+        "description": "Toggles Hostile Mob Blood"
+      },
+      {
+        "command": "/pb spray",
+        "permission": "",
+        "description": "Toggle Blood Spray On Death"
+      },
+      {
+        "command": "/pb boss",
+        "permission": "",
+        "description": "Toggles Boss Blood"
+      },
+      {
+        "command": "/pb gui",
+        "permission": "",
+        "description": "Opens A Gui Menu"
+      },
+      {
+        "command": "/pb help",
+        "permission": "",
+        "description": "Shows the PixelBlood admin command list."
+      },
+      {
+        "command": "/pb rl",
+        "permission": "",
+        "description": "Reloads the config."
+      },
+      {
+        "command": "/pb admin",
+        "permission": "",
+        "description": "Opens the admin GUI."
+      },
+      {
+        "command": "/pb trails",
+        "permission": "",
+        "description": "Toggles low-health blood trails."
+      },
+      {
+        "command": "/pb pools",
+        "permission": "",
+        "description": "Toggles death blood pools."
+      },
+      {
+        "command": "/pb severity",
+        "permission": "",
+        "description": "Toggles damage severity bursts."
+      },
+      {
+        "command": "/pb crits",
+        "permission": "",
+        "description": "Toggles critical hit bursts."
+      },
+      {
+        "command": "/pb splatter",
+        "permission": "",
+        "description": "Toggles directional blood splatter."
+      },
+      {
+        "command": "/pb bleeding",
+        "permission": "",
+        "description": "Toggles the player bleeding effect."
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "pb.reload",
+        "description": ""
+      },
+      {
+        "permission": "pb.toggle",
+        "description": ""
+      },
+      {
+        "permission": "pb.heal",
+        "description": ""
+      }
+    ],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for PixelBlood and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20.x–26.1.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Damage and critical bursts, Ground trails and blood pools, Configurable bleeding effect, Mob-category controls, Boss and death effects, In-game administration GUI."
+      },
+      {
+        "section": "Custom Mob Blood",
+        "description": "Custom Mob Blood"
+      },
+      {
+        "section": "Zombies can have rotten green blood.",
+        "description": "Zombies can have rotten green blood."
+      },
+      {
+        "section": "Blazes can have molten orange blood.",
+        "description": "Blazes can have molten orange blood."
+      },
+      {
+        "section": "Wither Skeletons can have black wither blood.",
+        "description": "Wither Skeletons can have black wither blood."
+      },
+      {
+        "section": "Creepers can have bright green ichor.",
+        "description": "Creepers can have bright green ichor."
+      },
+      {
+        "section": "Bleeding System",
+        "description": "Bleeding System"
+      },
+      {
+        "section": "Damage the player over time.",
+        "description": "Damage the player over time."
+      },
+      {
+        "section": "Show blood drip particles.",
+        "description": "Show blood drip particles."
+      },
+      {
+        "section": "Play optional sounds.",
+        "description": "Play optional sounds."
+      },
+      {
+        "section": "Refresh duration if the player is hit again.",
+        "description": "Refresh duration if the player is hit again."
+      },
+      {
+        "section": "Stop safely at half a heart.",
+        "description": "Stop safely at half a heart."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "WorldGuard awareness",
+        "description": "Optional or supported integration used by PixelBlood."
+      },
+      {
+        "name": "bStats",
+        "description": "Optional or supported integration used by PixelBlood."
+      },
+      {
+        "name": "Update checker",
+        "description": "Optional or supported integration used by PixelBlood."
+      },
+      {
+        "name": "Current Direction",
+        "description": "Current Direction"
+      },
+      {
+        "name": "Immersive, configurable blood effects for Minecraft combat.",
+        "description": "Immersive, configurable blood effects for Minecraft combat."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      },
+      {
+        "problem": "Disclaimer",
+        "solution": "Disclaimer"
+      },
+      {
+        "problem": "You may not redistribute this plugin as your own.",
+        "solution": "You may not redistribute this plugin as your own."
+      },
+      {
+        "problem": "You may not sell this plugin.",
+        "solution": "You may not sell this plugin."
+      },
+      {
+        "problem": "You may not decompile or modify this plugin without permission.",
+        "solution": "You may not decompile or modify this plugin without permission."
+      },
+      {
+        "problem": "PixelBlood is back",
+        "solution": "cleaner, sharper, and bloodier than before. Check out my other plugins here: bStats:"
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "3.7",
+        "date": "20 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "Modrinth",
+      "SpigotMC"
+    ]
+  },
+  {
+    "pluginId": "simplecrystals",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "SimpleCrystals provides a small custom-item foundation centred on collectible crystal rewards. The items can act as prizes, currencies, crafting components or visual progression tokens.",
+      "Its focused scope makes it suitable for servers that need recognisable custom rewards without a complete item-generation framework."
+    ],
+    "installation": [
+      "Confirm legacy compatibility on a test server.",
+      "Configure crystal names and presentation.",
+      "Decide how each crystal enters the economy.",
+      "Test recognition through shops, rewards and storage."
+    ],
+    "commands": [
+      {
+        "command": "/sc",
+        "permission": "",
+        "description": "Base Command For EVERYTHING Gui - Opens The GUI Menu For Crystals Heal - Gives Healing Crystal Feed - Gives Food Crystal Money - Gives Money Crystal EXP - Gives EXP Crystal Spawn - Gives Spawn Crystal Day - Gives Day Crystal Sun - Gives Sun Crystal God - Gives Fake GodMode Crystal Op - Gives Op Crystal"
+      }
+    ],
+    "permissions": [
+      {
+        "permission": "sc.heal",
+        "description": "To Use Crystal sc.feed - To Use Crystal sc.money - To Use Crystal sc.exp - To Use Crystal sc.spawn - To Use Crystal sc.day - To Use Crystal sc.sun - To Use Crystal sc.trick - To Use Crystal sc.god - Gives The Crystal sc.op - To Use Crystal sc.gui - Opens The GUI Menu"
+      }
+    ],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for SimpleCrystals and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Spigot — legacy resource"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Custom crystal items, Persistent item identity, Reward-ready commands, Configurable presentation, Simple administration, Progression integration."
+      },
+      {
+        "section": "# -------------------------- # # SimpleCrystals # # By # # MythicGhoul # # ---------------",
+        "description": "# -------------------------- # # SimpleCrystals # # By # # MythicGhoul # # -------------------------- # Plugin Version: 1.1 CoolDown: 10 MoneyCrystal: 50 CrystalTypes: Heal: DIAMOND Feed: EMERALD Money: PAPER EXP: FEATHER Spawn: NETHERSTAR Day: GHASTTEAR Sun: SUNFLOWER Trick: GOLDNUGGET Op: BLAZEROD Messages: Crystals: '&6You Obtained A Crystal!' Heal: '&aYou Have Been Healed!' Feed: '&a You Have Been Fed!' Money: '&bYouve Been Paid' EXP: '&bYouve Gained Some EXP' Spawn: '&bYouve Been Teleported To Spawn!' Day: '&byou Made It Daytime!' Sun: '&byou Made The Sun Shine!' Trick: '&4Youve Been Tricked... Sorry!' OpTitle: 'I Dont Think So..' OpSubTitle: 'You Are Not Getting To Get Op that Easily..'"
+      },
+      {
+        "section": "Ability to set Cooldown on Health/Food Crystal",
+        "description": "Ability To Set Money Crystal Deposit - Ability To Set Messages - Ability To Set Crystal Types"
+      },
+      {
+        "section": "Dependancies:",
+        "description": "Dependancies:"
+      },
+      {
+        "section": "VAULT",
+        "description": "Latest Version. Downloads: 10 ✅ 50 ✅ 75 ✅ 100 ✅ 150 ✅ 250 ✅ 500"
+      },
+      {
+        "section": "✅",
+        "description": "✅"
+      },
+      {
+        "section": "Any Tips and Ideas are very welcome!",
+        "description": "Any Tips and Ideas are very welcome!"
+      },
+      {
+        "section": "DISCLAIMER",
+        "description": "DISCLAIMER"
+      },
+      {
+        "section": "You are not to redistribute the plugin as your own​",
+        "description": "You are not to redistribute the plugin as your own​"
+      },
+      {
+        "section": "You are not to sell the plugin​",
+        "description": "You are not to sell the plugin​"
+      },
+      {
+        "section": "You re not to decompile the plugin​",
+        "description": "You re not to decompile the plugin​"
+      },
+      {
+        "section": "Any Problems Please Come And say Hello: My Server Discord Has A Channel for Support Regard",
+        "description": "Any Problems Please Come And say Hello: My Server Discord Has A Channel for Support Regarding My Plugins https://discord.gg/94RNdhJ"
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.6",
+        "date": "13 Mar 2023",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
+    ]
+  },
+  {
+    "pluginId": "simplespawn",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "SimpleSpawn supplies the essential set-spawn and return-to-spawn workflow without installing a broad essentials package. It is intended for small servers that want one clear location and a few dependable commands.",
+      "The focused feature set keeps configuration and permission management easy for administrators who do not need homes, warps, kits and dozens of unrelated utilities."
+    ],
+    "installation": [
+      "Test the legacy build on the current server.",
+      "Set the spawn from a safe loaded location.",
+      "Configure player and administrator permissions.",
+      "Test teleporting from other worlds and after a restart."
+    ],
+    "commands": [
+      {
+        "command": "/ss",
+        "permission": "",
+        "description": "Base Command"
+      },
+      {
+        "command": "/ss help",
+        "permission": "",
+        "description": "Prints Help list"
+      },
+      {
+        "command": "/ss SetSpawn",
+        "permission": "",
+        "description": "Sets SpawnPoint"
+      },
+      {
+        "command": "/ss Spawn",
+        "permission": "",
+        "description": "teleports To Spawn"
+      }
+    ],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for SimpleSpawn and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Legacy resource — check the release page"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Set a server spawn, Teleport to spawn, Simple permissions, Low-overhead commands, Straightforward configuration, Small-server friendly."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "22 Aug 2021",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ],
+    "platformSynced": true,
+    "platformSources": [
+      "SpigotMC"
+    ]
+  },
+  {
     "pluginId": "spawnercontrol",
     "status": "starter",
     "lastUpdated": "14 Jul 2026",
@@ -1674,6 +3191,133 @@
       {
         "version": "Direct release planned",
         "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "staffcore",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "StaffCore brings routine moderation actions and player context into one workspace. Staff can move from a report to a profile, evidence, notes and punishment history without relying on disconnected commands or external spreadsheets.",
+      "The aim is faster action with better consistency: important information remains attached to the player so different moderators can understand what happened before making a decision."
+    ],
+    "installation": [
+      "Private deployment is configured around the staff permission structure.",
+      "Punishment ladders, reason prompts and webhook channels are reviewed with the moderation team.",
+      "Staff actions are tested using non-production accounts.",
+      "Access is limited to the minimum permission level required for each role."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for StaffCore and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Freeze, warn, mute, kick and ban, Staff mode, Player profiles and notes, Punishment history, Inventory snapshots, Alt checking and ladders."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by StaffCore."
+      },
+      {
+        "name": "Permissions plugins",
+        "description": "Optional or supported integration used by StaffCore."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Private",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "uncraftable",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "Uncraftable adds crafting paths for selected vanilla items that are normally limited, non-renewable or unavailable at a crafting table. The goal is to improve long-term survival access without installing a large custom crafting framework.",
+      "It is particularly useful in limited worlds, long-running servers and environments where exploration structures have already been heavily looted."
+    ],
+    "installation": [
+      "Test the legacy build on the current server version.",
+      "Review every added recipe for economy impact.",
+      "Disable recipes that conflict with other plugins.",
+      "Publish the final recipe list to players."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for Uncraftable and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Check the current resource release"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Recipes for uncraftable items, Simple survival integration, Configurable recipe set, No large gameplay framework, Easy server adoption, Useful for limited worlds."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2",
+        "date": "10 Jun 2023",
         "notes": "Current release tracked by the MythicSuite portfolio."
       }
     ]
