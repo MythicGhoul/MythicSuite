@@ -367,7 +367,8 @@
         "Configure the optional Discord webhook.",
         "Use the editor to adjust messages to the tone of the community."
       ]
-    }
+    },
+    "bstatsId": 31574
   },
   {
     "id": "pixelblood",
