@@ -23,10 +23,10 @@
   <main class="admin-shell">
     <section class="admin-hero">
       <p class="eyebrow">Repository-backed editor</p>
-      <h1>Manage plugin labels and tags.</h1>
+      <h1>Manage and import plugins.</h1>
       <p>
         Connect with a fine-grained GitHub token, edit <code>assets/plugins.json</code>,
-        and publish the change directly to the MythicSuite repository.
+        publish metadata, discover new public projects and generate complete plugin pages directly in the MythicSuite repository.
       </p>
     </section>
 
@@ -66,6 +66,66 @@
         <span class="connection-status" id="connectionStatus">Not connected</span>
       </div>
     </section>
+
+
+    <section class="import-panel" id="importPanel" hidden>
+      <div class="import-panel-head">
+        <div>
+          <p class="eyebrow">Automatic discovery</p>
+          <h2>Import new SpigotMC and Modrinth plugins</h2>
+          <p>
+            The scanner checks both of your public profiles, compares them with
+            <code>plugins.json</code>, and shows only projects that are not
+            already listed. Nothing becomes public until you approve an import. Each approved plugin is now published as one atomic Git commit.
+          </p>
+        </div>
+        <span class="import-auto-badge">
+          <i aria-hidden="true"></i>
+          Scans when connected
+        </span>
+      </div>
+
+      <div class="field-grid import-profile-grid">
+        <label>
+          <span>Modrinth username</span>
+          <input id="modrinthUsername" value="MythicGhoul" autocomplete="off">
+        </label>
+        <label>
+          <span>Spigot author ID</span>
+          <input id="spigotAuthorId" value="29623" inputmode="numeric" autocomplete="off">
+        </label>
+        <label class="wide-field">
+          <span>Import a specific project URL</span>
+          <div class="import-url-row">
+            <input id="manualPluginUrl"
+                   placeholder="Paste a SpigotMC or Modrinth project URL">
+            <button class="button secondary" type="button"
+                    id="inspectPluginButton">Inspect URL</button>
+          </div>
+        </label>
+      </div>
+
+      <div class="import-actions">
+        <button class="button primary" type="button" id="scanProfilesButton">
+          Scan both profiles
+        </button>
+        <span class="import-status" id="importStatus">
+          Connect to GitHub to compare your public projects.
+        </span>
+      </div>
+
+      <div class="import-results" id="importResults" hidden>
+        <div class="import-results-head">
+          <div>
+            <p class="eyebrow">Approval queue</p>
+            <h3>New projects found</h3>
+          </div>
+          <span id="importResultCount">0</span>
+        </div>
+        <div class="import-candidate-list" id="importCandidateList"></div>
+      </div>
+    </section>
+
 
     <section class="editor-layout" id="editorLayout" hidden>
       <aside class="plugin-browser">
