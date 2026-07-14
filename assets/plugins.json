@@ -1367,7 +1367,8 @@
         "Integrations are tested against the live Vault, PlaceholderAPI, Dynmap and webhook setup.",
         "Updates are staged before production because many systems share player data."
       ]
-    }
+    },
+    "bstatsId": 18731
   },
   {
     "id": "staffcore",
