@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>MythicPrefixes — MythicGhoul Plugins</title><meta content="Players purchase, collect and equip cosmetic prefixes while server owners control chat layout, placeholders, defaults and rarity presentation." name="description"/><meta content="#080913" name="theme-color"/>
-<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-admin-sync.css" rel="stylesheet"/><script defer="" src="../../assets/site-admin-sync.js"></script></head><body data-plugin-id="mythicprefixes"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/styles-admin-sync.css" rel="stylesheet"/><script defer="" src="../../assets/site-admin-sync.js"></script><link href="../../assets/bstats.css" rel="stylesheet"/><script defer src="../../assets/bstats.js"></script></head><body data-plugin-id="mythicprefixes"><a class="skip-link" href="#content">Skip to content</a><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><header class="site-header"><div class="nav-shell">
 <a class="brand" href="../../index.html"><span class="brand-mark"><img src="../../assets/favicon.svg" alt="" aria-hidden="true"></span><span><b>MYTHICGHOUL</b><small>PLUGIN FORGE</small></span></a>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-button" type="button">☰</button>
 <nav class="nav-links"><a href="../../index.html">Home</a><a class="active" href="../../resources/">Resources</a><a href="../../statistics/">Statistics</a><a href="../../about/">About</a><a class="nav-cta" href="https://www.spigotmc.org/resources/authors/ikffxrapzz.29623/" rel="noopener" target="_blank">Find my resources</a></nav>
@@ -33,6 +33,79 @@
   </strong>
   <span>Live plugin page views</span>
 </div><div class="metric live-version-metric"><strong data-live-release-version>—</strong><span>Spigot downloads</span></div><div class="metric live-update-metric"><strong data-live-release-date>—</strong><span>Modrinth downloads</span></div><div class="metric"><strong>No ratings yet</strong><span>Spigot rating</span></div><div class="metric"><strong>Direct release planned</strong><span>Current version</span></div><div class="metric"><strong>—</strong><span>Last public update</span></div></section>
+
+<section class="content-panel bstats-panel" data-bstats-panel hidden>
+  <div class="bstats-panel-head">
+    <div>
+      <p class="eyebrow">Live usage metrics</p>
+      <h2 data-bstats-title>bStats network activity</h2>
+      <p data-bstats-description>
+        Aggregated installation and player activity reported by servers using this plugin.
+      </p>
+    </div>
+    <a class="button button-secondary bstats-open-link"
+       data-bstats-link target="_blank" rel="noopener">
+      Open full bStats page ↗
+    </a>
+  </div>
+
+  <div class="bstats-metrics">
+    <article class="bstats-metric">
+      <span>Servers now</span>
+      <strong data-bstats-current-servers>—</strong>
+      <small data-bstats-server-change>Live reported usage</small>
+    </article>
+    <article class="bstats-metric">
+      <span>Players now</span>
+      <strong data-bstats-current-players>—</strong>
+      <small data-bstats-player-change>Across reporting servers</small>
+    </article>
+    <article class="bstats-metric">
+      <span>Server record</span>
+      <strong data-bstats-record-servers>—</strong>
+      <small>Highest value in the loaded period</small>
+    </article>
+    <article class="bstats-metric">
+      <span>Player record</span>
+      <strong data-bstats-record-players>—</strong>
+      <small>Highest value in the loaded period</small>
+    </article>
+  </div>
+
+  <div class="bstats-chart-grid">
+    <article class="bstats-chart-card">
+      <div class="bstats-chart-head">
+        <div>
+          <span>7-day trend</span>
+          <h3>Servers using the plugin</h3>
+        </div>
+        <strong data-bstats-server-latest>—</strong>
+      </div>
+      <svg class="bstats-chart" data-bstats-server-chart
+           viewBox="0 0 600 190" role="img"
+           aria-label="Servers using this plugin over time"></svg>
+    </article>
+
+    <article class="bstats-chart-card">
+      <div class="bstats-chart-head">
+        <div>
+          <span>7-day trend</span>
+          <h3>Players on reporting servers</h3>
+        </div>
+        <strong data-bstats-player-latest>—</strong>
+      </div>
+      <svg class="bstats-chart" data-bstats-player-chart
+           viewBox="0 0 600 190" role="img"
+           aria-label="Players on servers using this plugin over time"></svg>
+    </article>
+  </div>
+
+  <div class="bstats-panel-footer">
+    <span data-bstats-status>Waiting for bStats data…</span>
+    <span>Public, aggregated metrics · refreshed by bStats approximately every 30 minutes</span>
+  </div>
+</section>
+
 <div class="content-grid"><div>
 <section class="content-panel description-prose">
 <p class="eyebrow">Full overview</p>

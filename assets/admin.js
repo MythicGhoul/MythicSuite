@@ -26,6 +26,7 @@
     category: document.getElementById("pluginCategory"),
     compatibility: document.getElementById("pluginCompatibility"),
     version: document.getElementById("pluginVersion"),
+    bstatsId: document.getElementById("pluginBstatsId"),
     description: document.getElementById("pluginDescription"),
     apply: document.getElementById("applyButton"),
     publish: document.getElementById("publishButton"),
@@ -133,6 +134,7 @@
     elements.category.value = plugin.category || "";
     elements.compatibility.value = plugin.compatibility || "";
     elements.version.value = plugin.version || "";
+    elements.bstatsId.value = plugin.bstatsId || plugin.bstats?.id || "";
     elements.description.value = plugin.description || "";
 
     renderPreview();
@@ -149,6 +151,20 @@
     plugin.category = elements.category.value.trim();
     plugin.compatibility = elements.compatibility.value.trim();
     plugin.version = elements.version.value.trim();
+
+    const bstatsValue = elements.bstatsId.value.trim();
+    const bstatsMatch = bstatsValue.match(/(?:^|\/)(\d+)(?:\/?(?:[?#].*)?)$/);
+    const bstatsId = bstatsMatch
+      ? Number(bstatsMatch[1])
+      : Number(bstatsValue);
+
+    if (Number.isInteger(bstatsId) && bstatsId > 0) {
+      plugin.bstatsId = bstatsId;
+    } else {
+      delete plugin.bstatsId;
+      delete plugin.bstats;
+    }
+
     plugin.description = elements.description.value.trim();
 
     renderPreview();
@@ -333,6 +349,7 @@
     elements.category,
     elements.compatibility,
     elements.version,
+    elements.bstatsId,
     elements.description
   ].forEach(input => {
     input.addEventListener("input", renderPreview);
