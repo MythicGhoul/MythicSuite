@@ -833,6 +833,12 @@
     return [...grouped.values()];
   }
 
+  function isModrinthPlugin(project) {
+    return String(project?.project_type || "")
+      .trim()
+      .toLowerCase() === "plugin";
+  }
+
   async function scanModrinth(existing) {
     const username = elements.modrinthUser.value.trim();
     if (!username) return [];
@@ -843,6 +849,7 @@
 
     return projects
       .filter(project =>
+        isModrinthPlugin(project) &&
         !existing.modrinth.has(String(project.id)) &&
         !existing.names.has(canonicalName(project.title)) &&
         ["approved", "unlisted", "archived"].includes(project.status)
@@ -888,7 +895,7 @@
       const empty = document.createElement("div");
       empty.className = "import-empty";
       empty.textContent =
-        "No unlisted public plugins were found on either profile.";
+        "No unlisted public plugin projects were found. Modrinth server listings, mods, modpacks, resource packs and shaders are ignored.";
       elements.list.append(empty);
       return;
     }
@@ -1081,6 +1088,13 @@
           `${MODRINTH_API}/project/${encodeURIComponent(parsed.id)}`
         );
 
+        if (!isModrinthPlugin(project)) {
+          throw new Error(
+            `Only Modrinth projects with project type "plugin" can be imported. ` +
+            `This project is "${project.project_type || "unknown"}".`
+          );
+        }
+
         if (existing.modrinth.has(String(project.id))) {
           throw new Error("That Modrinth project is already listed.");
         }
@@ -1184,6 +1198,13 @@
       : await fetchJSON(
           `${MODRINTH_API}/project/${encodeURIComponent(project.id || project.slug)}`
         );
+
+    if (!isModrinthPlugin(details)) {
+      throw new Error(
+        `Only Modrinth plugin projects can be imported. ` +
+        `${details.title || "This project"} is type "${details.project_type || "unknown"}".`
+      );
+    }
 
     const versions = await fetchJSON(
       `${MODRINTH_API}/project/${encodeURIComponent(details.id)}/version`
