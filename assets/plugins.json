@@ -69,7 +69,8 @@
         "Place books in chiseled bookshelves around an enchanting table and test the scan range.",
         "Install LevelCraft only when Sorcery progression integration is wanted."
       ]
-    }
+    },
+    "bstatsId": 32547
   },
   {
     "id": "pickupfilter",
