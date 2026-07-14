@@ -96,39 +96,41 @@
     }
   }
 
-  function decodeMaybeBase64(value) {
+  function decodeSpigetBase64(value) {
     const input = String(value || "").trim();
     if (!input) return "";
 
-    const compact = input.replace(/\s+/g, "");
-    if (
-      compact.length < 16 ||
-      compact.length % 4 !== 0 ||
-      !/^[A-Za-z0-9+/]+=*$/.test(compact)
-    ) {
-      return input;
-    }
-
     try {
+      // Spiget returns standard base64, but tolerate URL-safe characters,
+      // omitted padding and embedded whitespace as well.
+      let compact = input
+        .replace(/\s+/g, "")
+        .replace(/-/g, "+")
+        .replace(/_/g, "/");
+
+      compact += "=".repeat((4 - (compact.length % 4)) % 4);
+
       const binary = atob(compact);
       const bytes = Uint8Array.from(
         binary,
         character => character.charCodeAt(0)
       );
       const decoded = new TextDecoder("utf-8").decode(bytes);
-      const printable = [...decoded].filter(character =>
-        character === "\n" ||
-        character === "\r" ||
-        character === "\t" ||
-        character.charCodeAt(0) >= 32
-      ).length;
 
-      return printable / Math.max(1, decoded.length) > .92
-        ? decoded
-        : input;
+      // A genuine Spiget description is rendered HTML. Keep a conservative
+      // fallback in case the upstream service ever returns plain text.
+      if (
+        /<(?:div|p|br|span|b|strong|pre|code|table|ul|ol|li)\b/i.test(decoded) ||
+        decoded.includes("[code]") ||
+        decoded.includes("\n")
+      ) {
+        return decoded;
+      }
     } catch (_) {
-      return input;
+      // Fall through to the original value.
     }
+
+    return input;
   }
 
   function stripInlineMarkup(value) {
@@ -154,28 +156,37 @@
     );
 
     const lines = [];
+    const selector =
+      "h1,h2,h3,h4,h5,h6,p,li,pre,code,tr,b,strong";
+
     const elements = [
-      ...documentValue.body.querySelectorAll(
-        "h1,h2,h3,h4,h5,h6,p,li,pre,tr"
-      )
+      ...documentValue.body.querySelectorAll(selector)
     ];
 
     elements.forEach(element => {
+      const tag = element.tagName;
+
+      // A <code> nested inside <pre> is handled by the parent so entries are
+      // not duplicated.
+      if (tag === "CODE" && element.closest("pre")) return;
+
+      // Bold text inside paragraphs/list entries is normal prose. Standalone
+      // bold nodes are frequently used as BBCode section headings on Spigot.
       if (
-        element.tagName !== "TR" &&
-        element.closest("tr")
+        ["B", "STRONG"].includes(tag) &&
+        element.closest("p,li,pre,code,tr,h1,h2,h3,h4,h5,h6")
       ) {
         return;
       }
 
       if (
-        ["P", "LI"].includes(element.tagName) &&
-        element.querySelector("p,li,pre,tr")
+        ["P", "LI"].includes(tag) &&
+        element.querySelector("p,li,pre,code,tr")
       ) {
         return;
       }
 
-      if (element.tagName === "TR") {
+      if (tag === "TR") {
         const cells = [...element.querySelectorAll(":scope > th,:scope > td")]
           .map(cell => stripInlineMarkup(cell.textContent))
           .filter(Boolean);
@@ -184,18 +195,43 @@
           lines.push({
             text: cells.join(" | "),
             cells,
-            heading: false
+            heading: false,
+            code: false
           });
         }
+        return;
+      }
+
+      if (tag === "PRE" || tag === "CODE") {
+        const blockLines = String(element.textContent || "")
+          .replace(/\r/g, "")
+          .split("\n")
+          .map(line => stripInlineMarkup(line))
+          .filter(line => line && !/^[-|:\s]+$/.test(line));
+
+        blockLines.forEach(text => {
+          lines.push({
+            text,
+            heading: false,
+            code: true
+          });
+        });
         return;
       }
 
       const text = stripInlineMarkup(element.textContent);
       if (!text) return;
 
+      const standaloneBoldHeading =
+        ["B", "STRONG"].includes(tag) &&
+        text.length <= 62;
+
       lines.push({
         text,
-        heading: /^H[1-6]$/.test(element.tagName)
+        heading:
+          /^H[1-6]$/.test(tag) ||
+          standaloneBoldHeading,
+        code: false
       });
     });
 
@@ -203,8 +239,13 @@
   }
 
   function textLines(value) {
+    const codeBlocks = [];
     let source = String(value || "")
       .replace(/\r/g, "")
+      .replace(/\[code(?:=[^\]]+)?]([\s\S]*?)\[\/code]/gi, (_, content) => {
+        const index = codeBlocks.push(content) - 1;
+        return `\n__MYTHIC_CODE_BLOCK_${index}__\n`;
+      })
       .replace(/\[br\s*\/?]/gi, "\n")
       .replace(/\[\/?(?:table|tbody|thead)]/gi, "\n")
       .replace(/\[\/?tr]/gi, "\n")
@@ -212,7 +253,6 @@
       .replace(/\[\/th]\s*\[th(?:=[^\]]+)?]/gi, " | ")
       .replace(/\[(?:td|th)(?:=[^\]]+)?]/gi, "")
       .replace(/\[\/(?:td|th)]/gi, "")
-      .replace(/\[code(?:=[^\]]+)?]([\s\S]*?)\[\/code]/gi, "\n$1\n")
       .replace(/\[spoiler(?:=[^\]]+)?]/gi, "\n")
       .replace(/\[\/spoiler]/gi, "\n")
       .replace(/<br\s*\/?>/gi, "\n");
@@ -222,6 +262,32 @@
     source.split("\n").forEach(rawLine => {
       let line = rawLine.trim();
       if (!line) return;
+
+      const codeMarker = line.match(/^__MYTHIC_CODE_BLOCK_(\d+)__$/);
+      if (codeMarker) {
+        const block = codeBlocks[Number(codeMarker[1])] || "";
+
+        block
+          .replace(/\r/g, "")
+          .split("\n")
+          .map(entry => stripInlineMarkup(entry))
+          .filter(entry => entry && !/^[-|:\s]+$/.test(entry))
+          .forEach(text => {
+            lines.push({
+              text,
+              cells:
+                text.includes("|")
+                  ? text
+                      .split("|")
+                      .map(cell => stripInlineMarkup(cell))
+                      .filter(Boolean)
+                  : null,
+              heading: false,
+              code: true
+            });
+          });
+        return;
+      }
 
       let heading = false;
 
@@ -265,7 +331,8 @@
       lines.push({
         text: line,
         cells: cells && cells.length > 1 ? cells : null,
-        heading
+        heading,
+        code: false
       });
     });
 
@@ -568,23 +635,33 @@
       permissions = parsePermissions(buckets.commands);
     }
 
-    // Safe global fallbacks: slash commands and %placeholders% are distinctive.
+    // Commands and placeholders have distinctive syntax and can be recovered
+    // safely from any description line.
     if (!commands.length) {
       commands = parseCommands(
-        lines.filter(line => /(^|\s|`)\//.test(line.text))
+        lines.filter(line =>
+          line.code || /(^|\s|`)\//.test(line.text)
+        )
       );
     }
 
     if (!placeholders.length) {
       placeholders = parsePlaceholders(
-        lines.filter(line => /%[A-Za-z0-9_.:\-]+%/.test(line.text))
+        lines.filter(line =>
+          line.code || /%[A-Za-z0-9_.:\-]+%/.test(line.text)
+        )
       );
     }
 
-    // Global permission fallback only when the line explicitly says permission.
+    // Permission blocks on Spigot are commonly just raw nodes inside [code],
+    // with no "permission" word repeated on every line.
     if (!permissions.length) {
       permissions = parsePermissions(
         lines.filter(line =>
+          (
+            line.code &&
+            Boolean(permissionToken(line.text))
+          ) ||
           /\bpermission(?:s| node| nodes)?\b/i.test(line.text)
         )
       );
@@ -685,10 +762,21 @@
       requests.push(
         fetchJSON(
           `${SPIGET_API}/resources/${encodeURIComponent(plugin.spigot.id)}`
-        ).then(resource => ({
-          platform: "SpigotMC",
-          text: decodeMaybeBase64(resource.description || "")
-        }))
+        ).then(resource => {
+          const description = decodeSpigetBase64(
+            resource.description || ""
+          );
+          const documentation = decodeSpigetBase64(
+            resource.documentation || ""
+          );
+
+          return {
+            platform: "SpigotMC",
+            text: [description, documentation]
+              .filter(Boolean)
+              .join("\n")
+          };
+        })
       );
     }
 

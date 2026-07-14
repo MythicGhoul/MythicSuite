@@ -635,7 +635,16 @@
 
       let documentation = docsFor(plugin, docs);
 
+      let platformState = {
+        attempted: false,
+        sources: [],
+        added: 0,
+        error: ""
+      };
+
       if (window.MythicDocsPlatform) {
+        platformState.attempted = true;
+
         try {
           const result = await window.MythicDocsPlatform.enrich(
             plugin,
@@ -643,17 +652,44 @@
             { replace: false }
           );
           documentation = result.documentation;
+          platformState.sources = result.platforms;
+          platformState.added = result.added;
 
           if (result.added > 0) {
             documentation.lastUpdated =
               `${documentation.lastUpdated || "Stored guide"} · live platform data`;
           }
-        } catch (_) {
-          // Stored documentation remains available when a platform is unavailable.
+        } catch (error) {
+          platformState.error = error?.message || "Platform lookup failed";
         }
       }
 
       renderDetail(plugin, documentation);
+
+      const commandsMissing =
+        !(documentation.commands || []).length;
+      const permissionsMissing =
+        !(documentation.permissions || []).length;
+
+      if (commandsMissing || permissionsMissing || platformState.error) {
+        const note = document.createElement("div");
+        note.className = platformState.error
+          ? "docs-platform-state is-error"
+          : "docs-platform-state";
+
+        if (platformState.error) {
+          note.textContent =
+            `Live platform documentation could not be read: ${platformState.error}`;
+        } else if (!platformState.sources.length) {
+          note.textContent =
+            "No readable SpigotMC or Modrinth long description was returned for this plugin.";
+        } else {
+          note.textContent =
+            `Checked ${platformState.sources.join(" and ")}, but no additional command or permission entries were detected.`;
+        }
+
+        document.querySelector(".docs-detail-hero")?.after(note);
+      }
     })
     .catch(error => {
       const target = hub

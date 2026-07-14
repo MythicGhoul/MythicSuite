@@ -809,3 +809,21 @@
 body[data-docs-page] .docs-section:has(.docs-table) {
   border-color: rgba(0,229,255,.17);
 }
+
+
+.docs-platform-state {
+  margin-top: .75rem;
+  padding: .72rem .85rem;
+  border: 1px solid rgba(245,201,93,.20);
+  border-radius: .75rem;
+  color: #d9bd76;
+  background: rgba(245,201,93,.045);
+  font-size: .68rem;
+  line-height: 1.55;
+}
+
+.docs-platform-state.is-error {
+  border-color: rgba(255,107,128,.23);
+  color: #ff9aac;
+  background: rgba(255,107,128,.05);
+}
