@@ -445,7 +445,8 @@
         "Tune particles, trails, pools and optional bleeding values.",
         "Test damage in protected areas, PvP zones and boss encounters."
       ]
-    }
+    },
+    "bstatsId": 12691
   },
   {
     "id": "mythictrash",
@@ -521,7 +522,8 @@
         "Choose whether confirmation is required.",
         "Customise the GUI and test protected-item behaviour."
       ]
-    }
+    },
+    "bstatsId": 32015
   },
   {
     "id": "arcanebuilder",
@@ -592,7 +594,8 @@
         "Configure placement pacing and protection behaviour.",
         "Preview a test structure before enabling player-facing use."
       ]
-    }
+    },
+    "bstatsId": 31055
   },
   {
     "id": "auto-breeding",
@@ -665,7 +668,8 @@
         "Place valid food near a small test farm.",
         "Observe resource consumption and adjust population controls before production use."
       ]
-    }
+    },
+    "bstatsId": 23258
   },
   {
     "id": "arcane-exchange",
