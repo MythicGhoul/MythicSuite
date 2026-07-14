@@ -738,7 +738,8 @@
         "Introduce lower-tier machines first and test the progression curve.",
         "Balance outputs against the server economy before wider release."
       ]
-    }
+    },
+    "bstatsId": 30406
   },
   {
     "id": "healing-stone",
