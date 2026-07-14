@@ -882,7 +882,8 @@
         "Choose recipes or reward sources.",
         "Test interaction with other XP multipliers before release."
       ]
-    }
+    },
+    "bstatsId": 13075
   },
   {
     "id": "uncraftable",
