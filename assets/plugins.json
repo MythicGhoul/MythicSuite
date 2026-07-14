@@ -808,7 +808,8 @@
         "Decide whether stones come from commands, rewards, shops or loot.",
         "Confirm the items interact correctly with the server's health scaling."
       ]
-    }
+    },
+    "bstatsId": 12690
   },
   {
     "id": "exp-gems",
