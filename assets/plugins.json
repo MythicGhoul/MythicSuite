@@ -216,7 +216,8 @@
         "Edit messages, prices, icons and webhook settings.",
         "Test purchases, selection and default behaviour with a normal player account."
       ]
-    }
+    },
+    "bstatsId": 32316
   },
   {
     "id": "mythicvote",
@@ -289,7 +290,8 @@
         "Define milestones, leaderboard presentation and webhook settings.",
         "Send a test vote and confirm online, offline and restart behaviour."
       ]
-    }
+    },
+    "bstatsId": 31248
   },
   {
     "id": "lastwords",
