@@ -1942,7 +1942,24 @@
 
       const latestDocumentation = await loadExistingDocumentation();
       if (!latestDocumentation.some(entry => entry.pluginId === plugin.id)) {
-        latestDocumentation.push(starterDocumentation(plugin));
+        let importedDocumentation = starterDocumentation(plugin);
+
+        if (window.MythicDocsPlatform) {
+          try {
+            const enrichment = await window.MythicDocsPlatform.enrich(
+              plugin,
+              importedDocumentation,
+              { replace: false }
+            );
+            importedDocumentation = enrichment.documentation;
+            importedDocumentation.platformSources =
+              enrichment.platforms;
+          } catch (_) {
+            // The starter guide is still committed if a platform is unavailable.
+          }
+        }
+
+        latestDocumentation.push(importedDocumentation);
       }
       latestDocumentation.sort((left, right) =>
         left.pluginId.localeCompare(right.pluginId)

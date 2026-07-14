@@ -796,3 +796,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================================
+   PLATFORM-SYNCED DOCUMENTATION
+   ========================================================= */
+.docs-quick-facts span:last-child {
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-docs-page] .docs-section:has(.docs-table) {
+  border-color: rgba(0,229,255,.17);
+}

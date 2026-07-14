@@ -8,8 +8,10 @@
   <title>MythicSuite Admin</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/styles-admin.css">
+  <script defer src="../assets/docs-platform.js"></script>
   <script defer src="../assets/admin.js"></script>
   <script defer src="../assets/docs-admin.js"></script>
+  <script defer src="../assets/docs-platform-admin.js"></script>
 </head>
 <body>
   <div class="admin-noise" aria-hidden="true"></div>
@@ -304,6 +306,10 @@
           </div>
 
           <div class="editor-actions">
+            <button class="button secondary" type="button"
+                    id="syncPlatformDocsButton">Import missing platform data</button>
+            <button class="button secondary" type="button"
+                    id="syncAllPlatformDocsButton">Sync all plugin docs</button>
             <button class="button secondary" type="button"
                     id="applyDocsButton">Apply documentation locally</button>
             <button class="button primary" type="button"

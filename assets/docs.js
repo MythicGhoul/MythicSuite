@@ -501,9 +501,11 @@
       lifecycleLabels[plugin.lifecycle] ||
       "Current";
     document.querySelector("[data-docs-level]").textContent =
-      String(documentation.status || "starter").toLowerCase() === "complete"
-        ? "Complete guide"
-        : "Starter guide";
+      documentation.platformSynced
+        ? "Platform-enriched guide"
+        : String(documentation.status || "starter").toLowerCase() === "complete"
+          ? "Complete guide"
+          : "Starter guide";
 
     const platform = document.querySelector("[data-docs-primary-platform]");
     const platformUrl = plugin.spigot_url || plugin.modrinth_url;
@@ -622,7 +624,7 @@
   }
 
   loadData()
-    .then(({ plugins, docs }) => {
+    .then(async ({ plugins, docs }) => {
       if (hub) {
         renderHub(plugins, docs);
         return;
@@ -630,7 +632,28 @@
 
       const plugin = plugins.find(entry => entry.id === pluginId);
       if (!plugin) throw new Error("Plugin not found.");
-      renderDetail(plugin, docsFor(plugin, docs));
+
+      let documentation = docsFor(plugin, docs);
+
+      if (window.MythicDocsPlatform) {
+        try {
+          const result = await window.MythicDocsPlatform.enrich(
+            plugin,
+            documentation,
+            { replace: false }
+          );
+          documentation = result.documentation;
+
+          if (result.added > 0) {
+            documentation.lastUpdated =
+              `${documentation.lastUpdated || "Stored guide"} · live platform data`;
+          }
+        } catch (_) {
+          // Stored documentation remains available when a platform is unavailable.
+        }
+      }
+
+      renderDetail(plugin, documentation);
     })
     .catch(error => {
       const target = hub

@@ -688,3 +688,14 @@ code {
     flex-direction: column;
   }
 }
+
+
+#syncPlatformDocsButton,
+#syncAllPlatformDocsButton {
+  border-color: rgba(0,229,255,.24);
+}
+
+#syncAllPlatformDocsButton {
+  color: #081018;
+  background: linear-gradient(105deg,#c084fc,#8179ff 45%,#00e5ff);
+}
