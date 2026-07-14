@@ -1162,7 +1162,8 @@
         "Check for recipe conflicts with other plugins.",
         "Publish the recipes to players if they are not discoverable automatically."
       ]
-    }
+    },
+    "bstatsId": 17110
   },
   {
     "id": "simplespawn",
