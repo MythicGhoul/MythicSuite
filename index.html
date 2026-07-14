@@ -9,7 +9,9 @@
   <meta name="mythicsuite-build" content="repaired-vibrant-2026-07-13">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles-admin-sync.css">
+  <link rel="stylesheet" href="assets/server-status.css">
   <script defer src="assets/site-admin-sync.js"></script>
+  <script defer src="assets/server-status.js"></script>
 </head>
 <body class="studio-home">
   <a class="skip-link" href="#content">Skip to content</a>
@@ -97,15 +99,15 @@
             <span>PLUGIN STUDIO</span>
           </div>
 
-          <a class="orbit-card orbit-card-a" href="plugins/levelcraft/ data-plugin-id="levelcraft">
+          <a class="orbit-card orbit-card-a" href="plugins/levelcraft/" data-plugin-id="levelcraft">
             <img src="assets/icons/levelcraft.png" alt="">
             <span><b>LevelCraft</b><small>RPG ecosystem</small></span>
           </a>
-          <a class="orbit-card orbit-card-b" href="plugins/mythicenchant/ data-plugin-id="mythicenchant">
+          <a class="orbit-card orbit-card-b" href="plugins/mythicenchant/" data-plugin-id="mythicenchant">
             <img src="assets/icons/mythicenchant.png" alt="">
             <span><b>MythicEnchant</b><small>Arcane library</small></span>
           </a>
-          <a class="orbit-card orbit-card-c" href="plugins/pixelblood/ data-plugin-id="pixelblood">
+          <a class="orbit-card orbit-card-c" href="plugins/pixelblood/" data-plugin-id="pixelblood">
             <img src="assets/icons/pixelblood.png" alt="">
             <span><b>PixelBlood</b><small>Combat effects</small></span>
           </a>
@@ -182,6 +184,80 @@
         </article>
       </section>
 
+
+      <section class="studio-section server-live-section" id="ghoulcraft-status"
+               data-minecraft-server="216.201.79.131:9119">
+        <div class="studio-section-head server-section-head">
+          <div>
+            <p class="studio-kicker"><span></span> Live server</p>
+            <h2>See GhoulCraft breathing in real time.</h2>
+            <p>
+              Live Java server status, player activity, message of the day and
+              the current server icon—pulled directly from the public server ping.
+            </p>
+          </div>
+          <div class="server-status-actions">
+            <span class="server-status-pill is-loading" data-server-status-pill>
+              <i aria-hidden="true"></i>
+              Checking server…
+            </span>
+            <button class="server-refresh-button" type="button"
+                    data-server-refresh aria-label="Refresh GhoulCraft server status">
+              Refresh
+            </button>
+          </div>
+        </div>
+
+        <article class="server-live-card" aria-live="polite">
+          <div class="server-live-art">
+            <div class="server-icon-orbit" aria-hidden="true"></div>
+            <img class="server-live-icon"
+                 data-server-icon
+                 src="assets/favicon.svg"
+                 alt="GhoulCraft server icon">
+            <span class="server-edition">Java server</span>
+          </div>
+
+          <div class="server-live-copy">
+            <p class="server-overline">GhoulCraft RPG Survival</p>
+            <h3 data-server-heading>Contacting GhoulCraft…</h3>
+            <div class="server-motd" data-server-motd>
+              Reading the current message of the day.
+            </div>
+
+            <div class="server-address-row">
+              <code data-server-address>216.201.79.131:9119</code>
+              <button type="button" data-copy-server>
+                Copy server address
+              </button>
+            </div>
+
+            <p class="server-check-note">
+              <span data-server-checked>Waiting for the first status check.</span>
+              <span>Public status data may be cached briefly.</span>
+            </p>
+          </div>
+
+          <div class="server-live-metrics">
+            <div class="server-live-metric">
+              <span>Players online</span>
+              <strong data-server-players>—</strong>
+              <small data-server-capacity>of — slots</small>
+            </div>
+            <div class="server-live-metric">
+              <span>Server version</span>
+              <strong data-server-version>—</strong>
+              <small>Reported by the server</small>
+            </div>
+            <div class="server-live-metric">
+              <span>Current state</span>
+              <strong data-server-state>Checking</strong>
+              <small data-server-software>Live Java ping</small>
+            </div>
+          </div>
+        </article>
+      </section>
+
       <section class="studio-section">
         <div class="studio-section-head">
           <div>
@@ -193,7 +269,7 @@
         </div>
 
         <div class="studio-bento">
-          <a class="bento-card bento-wide bento-purple" href="plugins/mythicenchant/ data-plugin-id="mythicenchant">
+          <a class="bento-card bento-wide bento-purple" href="plugins/mythicenchant/" data-plugin-id="mythicenchant">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicenchant.png" alt="">
             <div class="bento-copy">
@@ -205,7 +281,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-tall bento-pink" href="plugins/pixelblood/ data-plugin-id="pixelblood">
+          <a class="bento-card bento-tall bento-pink" href="plugins/pixelblood/" data-plugin-id="pixelblood">
             <div class="bento-glow"></div>
             <img src="assets/icons/pixelblood.png" alt="">
             <div class="bento-copy">
@@ -217,7 +293,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-standard bento-cyan" href="plugins/mythicvote/ data-plugin-id="mythicvote">
+          <a class="bento-card bento-standard bento-cyan" href="plugins/mythicvote/" data-plugin-id="mythicvote">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicvote.png" alt="">
             <div class="bento-copy">
@@ -229,7 +305,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-standard bento-blue" href="plugins/mythicportals/ data-plugin-id="mythicportals">
+          <a class="bento-card bento-standard bento-blue" href="plugins/mythicportals/" data-plugin-id="mythicportals">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicportals.png" alt="">
             <div class="bento-copy">
@@ -241,7 +317,7 @@
             <span class="bento-arrow">↗</span>
           </a>
 
-          <a class="bento-card bento-wide bento-gold" href="plugins/mythicevents/ data-plugin-id="mythicevents">
+          <a class="bento-card bento-wide bento-gold" href="plugins/mythicevents/" data-plugin-id="mythicevents">
             <div class="bento-glow"></div>
             <img src="assets/icons/mythicevents.png" alt="">
             <div class="bento-copy">
