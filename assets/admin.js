@@ -139,6 +139,11 @@
 
     renderPreview();
     renderPluginList();
+    document.dispatchEvent(
+      new CustomEvent("mythicsuite:admin-plugin-selected", {
+        detail: { plugin }
+      })
+    );
   }
 
   function applyFormToPlugin() {
@@ -674,7 +679,10 @@
 
   async function buildUpdatedSitemap(plugin) {
     const current = await getRepositoryFile("sitemap.txt");
-    const url = `https://mythicsuite.co.uk/plugins/${plugin.id}/`;
+    const urls = [
+      `https://mythicsuite.co.uk/plugins/${plugin.id}/`,
+      `https://mythicsuite.co.uk/docs/${plugin.id}/`
+    ];
 
     const lines = current
       ? current.text
@@ -683,7 +691,9 @@
           .filter(Boolean)
       : [];
 
-    if (!lines.includes(url)) lines.push(url);
+    urls.forEach(url => {
+      if (!lines.includes(url)) lines.push(url);
+    });
 
     return lines.join("\n") + "\n";
   }
@@ -1743,6 +1753,117 @@
     return template;
   }
 
+  function starterDocumentation(plugin) {
+    const long = plugin.longDescription || {};
+    return {
+      pluginId: plugin.id,
+      status: "starter",
+      lastUpdated: new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      }).format(new Date()),
+      overview:
+        Array.isArray(long.intro) && long.intro.length
+          ? long.intro
+          : [plugin.description || plugin.tagline],
+      installation:
+        Array.isArray(long.setup) && long.setup.length
+          ? long.setup
+          : [
+              "Download the latest compatible release.",
+              "Stop the server and place the JAR inside the plugins folder.",
+              "Start the server once to generate configuration files.",
+              "Review permissions and integrations before production use."
+            ],
+      commands: [],
+      permissions: [],
+      configuration: [
+        {
+          section: "Core settings",
+          description:
+            `Review the generated configuration for ${plugin.name} and adjust feature toggles, messages and limits.`
+        },
+        {
+          section: "Compatibility",
+          description:
+            plugin.compatibility || "See the public release page."
+        }
+      ],
+      placeholders: [],
+      integrations: (plugin.integrations || []).map(name => ({
+        name,
+        description:
+          `Optional or supported integration used by ${plugin.name}.`
+      })),
+      troubleshooting: [
+        {
+          problem: "The plugin does not enable",
+          solution:
+            "Confirm the server version is supported, required dependencies are installed and the first console error has been resolved."
+        },
+        {
+          problem: "Configuration changes are not applied",
+          solution:
+            "Validate YAML formatting and restart the server instead of using a broad reload command."
+        }
+      ],
+      apiHooks: [],
+      changelog: [
+        {
+          version: plugin.version || "Current",
+          date: "Current release",
+          notes: "Current release imported into MythicSuite."
+        }
+      ]
+    };
+  }
+
+  async function renderDocumentationPage(plugin) {
+    const response = await fetch(
+      `../assets/docs-page-template.html?template=${Date.now()}`,
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error("The documentation-page template could not be loaded.");
+    }
+
+    let template = await response.text();
+    const replacements = {
+      DESCRIPTION:
+        `Installation, commands, permissions, configuration and troubleshooting for ${plugin.name}.`,
+      NAME: plugin.name,
+      PLUGIN_ID: plugin.id,
+      ACCENT: plugin.accent || accentFor(plugin.id),
+      ICON: plugin.icon || `assets/icons/${plugin.id}.png`,
+      STATUS_CLASS: statusClass(plugin.lifecycle),
+      STATUS_LABEL: plugin.statusLabel || "Public Plugin",
+      TAGLINE: plugin.tagline || plugin.description || "",
+      VERSION: plugin.version || "Current",
+      COMPATIBILITY:
+        plugin.compatibility || "See the public release page",
+      CATEGORY: plugin.category || "Minecraft Plugin"
+    };
+
+    Object.entries(replacements).forEach(([key, value]) => {
+      template = template.replaceAll(
+        `{{${key}}}`,
+        escapeHtml(value)
+      );
+    });
+
+    return template;
+  }
+
+  async function loadExistingDocumentation() {
+    const file = await getRepositoryFile("assets/docs.json");
+    if (!file) return [];
+
+    const entries = JSON.parse(file.text);
+    return Array.isArray(entries) ? entries : [];
+  }
+
   async function ensureUniqueId(plugin, existingPlugins) {
     const ids = new Set(existingPlugins.map(entry => entry.id));
     if (!ids.has(plugin.id)) return plugin.id;
@@ -1779,13 +1900,19 @@
 
       setStatus(`Preparing ${plugin.name} files for one commit…`, "busy");
 
-      const [icon, pageHtml, sitemapText] = await Promise.all([
+      const [
+        icon,
+        pageHtml,
+        documentationPageHtml,
+        sitemapText
+      ] = await Promise.all([
         downloadIcon(
           plugin.id,
           built.spigot,
           built.modrinth
         ),
         renderPluginPage(plugin),
+        renderDocumentationPage(plugin),
         buildUpdatedSitemap(plugin)
       ]);
 
@@ -1813,10 +1940,30 @@
         left.name.localeCompare(right.name, "en", { sensitivity: "base" })
       );
 
+      const latestDocumentation = await loadExistingDocumentation();
+      if (!latestDocumentation.some(entry => entry.pluginId === plugin.id)) {
+        latestDocumentation.push(starterDocumentation(plugin));
+      }
+      latestDocumentation.sort((left, right) =>
+        left.pluginId.localeCompare(right.pluginId)
+      );
+
       const changes = [
         {
           path: `plugins/${plugin.id}/index.html`,
           content: encodeUtf8Base64(pageHtml),
+          encoding: "base64"
+        },
+        {
+          path: `docs/${plugin.id}/index.html`,
+          content: encodeUtf8Base64(documentationPageHtml),
+          encoding: "base64"
+        },
+        {
+          path: "assets/docs.json",
+          content: encodeUtf8Base64(
+            JSON.stringify(latestDocumentation, null, 2) + "\n"
+          ),
           encoding: "base64"
         },
         {

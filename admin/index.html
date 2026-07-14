@@ -9,6 +9,7 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/styles-admin.css">
   <script defer src="../assets/admin.js"></script>
+  <script defer src="../assets/docs-admin.js"></script>
 </head>
 <body>
   <div class="admin-noise" aria-hidden="true"></div>
@@ -225,6 +226,94 @@
             <span class="save-state" id="saveState">No unpublished changes</span>
           </div>
         </form>
+
+        <section class="docs-admin-panel" id="docsAdminPanel">
+          <div class="docs-admin-head">
+            <div>
+              <p class="eyebrow">Documentation editor</p>
+              <h2>Installation, commands and support reference</h2>
+              <p>
+                Documentation is stored separately in
+                <code>assets/docs.json</code> and publishes as one commit.
+              </p>
+            </div>
+            <a id="publicDocsLink" href="../docs/" target="_blank"
+               rel="noopener">View documentation ↗</a>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              <span>Documentation level</span>
+              <select id="docsStatus">
+                <option value="starter">Starter guide</option>
+                <option value="complete">Complete guide</option>
+                <option value="draft">Draft</option>
+              </select>
+            </label>
+
+            <label class="wide-field">
+              <span>Overview <small>Separate paragraphs with a blank line</small></span>
+              <textarea id="docsOverview" rows="6"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Installation <small>One step per line</small></span>
+              <textarea id="docsInstallation" rows="6"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Commands <small>command | permission | description</small></span>
+              <textarea id="docsCommands" rows="7"
+                        placeholder="/plugin reload | plugin.admin | Reload the configuration"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Permissions <small>permission | description</small></span>
+              <textarea id="docsPermissions" rows="6"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Configuration <small>section | description</small></span>
+              <textarea id="docsConfiguration" rows="6"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Integrations <small>name | description</small></span>
+              <textarea id="docsIntegrations" rows="5"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Placeholders <small>placeholder | description</small></span>
+              <textarea id="docsPlaceholders" rows="5"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Troubleshooting <small>problem | solution</small></span>
+              <textarea id="docsTroubleshooting" rows="7"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>API & hooks <small>name | description</small></span>
+              <textarea id="docsApiHooks" rows="5"></textarea>
+            </label>
+
+            <label class="wide-field">
+              <span>Changelog <small>version | date | notes</small></span>
+              <textarea id="docsChangelog" rows="6"></textarea>
+            </label>
+          </div>
+
+          <div class="editor-actions">
+            <button class="button secondary" type="button"
+                    id="applyDocsButton">Apply documentation locally</button>
+            <button class="button primary" type="button"
+                    id="publishDocsButton">Publish documentation</button>
+            <span class="save-state" id="docsSaveState">
+              Documentation not loaded
+            </span>
+          </div>
+        </section>
+
       </section>
     </section>
 

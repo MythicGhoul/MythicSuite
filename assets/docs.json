@@ -1,0 +1,1681 @@
+[
+  {
+    "pluginId": "mythicenchant",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicEnchant rebuilds enchanting around discovery, collection and player choice. Instead of repeatedly rolling a vanilla table until the right offer appears, players create a physical Arcane Library from enchanted books stored in nearby chiseled bookshelves.",
+      "When an item is placed into the custom enchanting interface, the library checks the knowledge physically available around that table and presents only compatible options. The result is a system that rewards exploration, trading and shared community builds while still respecting Minecraft items, XP and lapis."
+    ],
+    "installation": [
+      "Install the plugin and restart the server to generate its files.",
+      "Configure enchanting rules, custom enchantments, messages and costs.",
+      "Place books in chiseled bookshelves around an enchanting table and test the scan range.",
+      "Install LevelCraft only when Sorcery progression integration is wanted."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicEnchant and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.21.10"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Selectable enchanting GUI, Physical bookshelf libraries, Vanilla and custom enchantments, 100 custom enchantments, Configurable XP and lapis costs, Natural book discovery and drops."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "LevelCraft edition",
+        "description": "Optional or supported integration used by MythicEnchant."
+      },
+      {
+        "name": "Vault-ready design",
+        "description": "Optional or supported integration used by MythicEnchant."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "2.1.1",
+        "date": "11 Jul 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "pickupfilter",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "PickupFilter gives every player control over the items allowed into their inventory. It is aimed at the everyday frustration created by farms, mines, grinders and busy survival areas where unwanted drops repeatedly fill valuable slots.",
+      "Each player manages a personal filter through a clear GUI. Their choices are saved persistently, so the filter behaves like a real account preference rather than a temporary menu setting that disappears after a restart."
+    ],
+    "installation": [
+      "Install the JAR and restart the server.",
+      "Review the default GUI and message settings.",
+      "Grant normal-use permissions to players where required.",
+      "Test common farm drops and verify saved choices after a restart."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for PickupFilter and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Per-player item filters, Persistent saved choices, Simple management GUI, Farm-friendly behaviour, Restart-safe storage, Lightweight event handling."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2.1",
+        "date": "2 Jul 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicjoins",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicJoins turns ordinary login and logout text into a cosmetic collection system. Players can browse themed join and leave messages, purchase them through a Vault economy and select the style that represents them.",
+      "The plugin keeps cosmetics separate from gameplay power. A player can build a collection, switch between owned messages and still fall back to a polished default pool when no custom option is selected."
+    ],
+    "installation": [
+      "Install Vault and a supported economy provider.",
+      "Install MythicJoins and allow it to create the default catalogue.",
+      "Edit messages, prices, icons and webhook settings.",
+      "Test purchases, selection and default behaviour with a normal player account."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicJoins and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Join and leave message shops, Owned cosmetics menus, Random default message pool, Vault economy purchases, Admin grants and removal, Discord join and leave embeds."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Vault",
+        "description": "Optional or supported integration used by MythicJoins."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicJoins."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "1 Jul 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicvote",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicVote combines vote handling, repeatable rewards and long-term loyalty tracking in one focused plugin. Each confirmed vote can run configurable commands while the player's lifetime total feeds milestones and leaderboards.",
+      "The system is built to make voting visible rather than treating it as a silent reward command. Players can see progress, compete for ranking positions and receive meaningful recognition for continued support."
+    ],
+    "installation": [
+      "Install NuVotifier and confirm vote services reach the server.",
+      "Install MythicVote and configure per-vote commands.",
+      "Define milestones, leaderboard presentation and webhook settings.",
+      "Send a test vote and confirm online, offline and restart behaviour."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicVote and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Per-vote command rewards, Lifetime vote tracking, Milestone rewards, Leaderboards, Discord webhook embeds, Player data persistence."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "NuVotifier",
+        "description": "Optional or supported integration used by MythicVote."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicVote."
+      },
+      {
+        "name": "PlaceholderAPI",
+        "description": "Optional or supported integration used by MythicVote."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2.2",
+        "date": "24 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "lastwords",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "LastWords replaces repetitive vanilla death messages with a large cause-aware library built for personality and variety. Rather than selecting a random line from one global list, the plugin can choose messages that match how the player actually died.",
+      "A built-in editor lets staff manage the message catalogue on a live server. This avoids constant file editing and makes it practical to refine jokes, formatting and placeholders as the community develops its own tone."
+    ],
+    "installation": [
+      "Install the plugin and allow the default message library to generate.",
+      "Review formatting and cause-specific pools.",
+      "Configure the optional Discord webhook.",
+      "Use the editor to adjust messages to the tone of the community."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for LastWords and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: 597 default funny messages, Cause-specific message pools, In-game message editor, Prefix and chat compatibility, Discord webhook embeds, Configurable formatting."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by LastWords."
+      },
+      {
+        "name": "Essentials-style chat",
+        "description": "Optional or supported integration used by LastWords."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2.4",
+        "date": "22 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "pixelblood",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "PixelBlood adds responsive combat feedback through particles, trails, pools, splashes and optional bleeding damage. It is designed to make hits feel heavier without requiring a resource pack or replacing Minecraft combat.",
+      "Effects can be tuned separately for players, bosses, hostile mobs and passive mobs. This lets a server create dramatic boss fights while keeping routine animal or farm interactions restrained."
+    ],
+    "installation": [
+      "Install the plugin and restart the server.",
+      "Choose which entity categories can produce effects.",
+      "Tune particles, trails, pools and optional bleeding values.",
+      "Test damage in protected areas, PvP zones and boss encounters."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for PixelBlood and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20.x–26.1.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Damage and critical bursts, Ground trails and blood pools, Configurable bleeding effect, Mob-category controls, Boss and death effects, In-game administration GUI."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "WorldGuard awareness",
+        "description": "Optional or supported integration used by PixelBlood."
+      },
+      {
+        "name": "bStats",
+        "description": "Optional or supported integration used by PixelBlood."
+      },
+      {
+        "name": "Update checker",
+        "description": "Optional or supported integration used by PixelBlood."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "3.7",
+        "date": "20 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythictrash",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicTrash provides a dedicated disposal interface without asking players to throw items into lava or rely on risky inventory shortcuts. The double-chest GUI gives enough space for bulk cleanup while keeping the interaction familiar.",
+      "Protection rules can stop important or configured items from being discarded, and an optional confirmation stage gives players a final chance to recover from a mistake."
+    ],
+    "installation": [
+      "Install the plugin and restart the server.",
+      "Configure protected items and blocked worlds first.",
+      "Choose whether confirmation is required.",
+      "Customise the GUI and test protected-item behaviour."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicTrash and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot 1.20–1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Double-chest trash GUI, Protected items, Optional confirmation, Blocked worlds and materials, Usage statistics, Fully configurable visuals."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Geyser",
+        "description": "Optional or supported integration used by MythicTrash."
+      },
+      {
+        "name": "Floodgate",
+        "description": "Optional or supported integration used by MythicTrash."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0.2",
+        "date": "17 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "arcanebuilder",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "ArcaneBuilder turns schematic placement into a visible construction sequence. Instead of instantly pasting a finished structure, the plugin can preview it and then assemble the build block by block for a more cinematic result.",
+      "The approach works well for server events, unlockable structures, player rewards and world development where the act of construction should be part of the experience."
+    ],
+    "installation": [
+      "Install ArcaneBuilder and any required schematic support.",
+      "Add or prepare schematic files.",
+      "Configure placement pacing and protection behaviour.",
+      "Preview a test structure before enabling player-facing use."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for ArcaneBuilder and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper/Spigot — see release page"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Schematic file support, Animated block placement, Builder chest workflow, Admin tab completion, Configurable pacing, Event-friendly presentation."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "WorldEdit formats",
+        "description": "Optional or supported integration used by ArcaneBuilder."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.4",
+        "date": "7 Jun 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "auto-breeding",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "Auto Breeding lets established animal farms continue producing without requiring players to manually feed every pair. The system still consumes real survival resources, preserving the cost of breeding while removing repetitive clicking.",
+      "Animals search for appropriate nearby food under configurable conditions. Limits and timing controls prevent the automation from turning a small farm into uncontrolled entity growth."
+    ],
+    "installation": [
+      "Install the plugin and restart the server.",
+      "Configure supported species, ranges, delays and limits.",
+      "Place valid food near a small test farm.",
+      "Observe resource consumption and adjust population controls before production use."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for Auto Breeding and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "1.19–1.20.x and 26.1.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Natural automated breeding, Nearby food consumption, Species-aware food handling, Configurable timing and limits, Farm-friendly behaviour, Lightweight server utility."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.5",
+        "date": "21 May 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "arcane-exchange",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "Arcane Exchange introduces a fantasy automation layer built around generated and routed arcane energy. Players progress through machines that feel like magical constructs rather than modern industrial blocks.",
+      "The system is intended to sit between manual survival and complete automation. Upgrades, tiers and resource costs create a progression path instead of handing powerful processing to players immediately."
+    ],
+    "installation": [
+      "Install the plugin and generate its configuration.",
+      "Review machine recipes, tiers and energy values.",
+      "Introduce lower-tier machines first and test the progression curve.",
+      "Balance outputs against the server economy before wider release."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for Arcane Exchange and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "See the current resource release"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Arcane energy system, Tiered machines, Magical automation loop, Progression-based upgrades, Survival economy hooks, Configurable machine behaviour."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "25 Mar 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "healing-stone",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "Healing Stone adds crystal-themed healing utilities that are easy to understand and easy to reward. It provides a compact magical item loop without requiring a complete spell or class framework.",
+      "The project works particularly well as a quest reward, donor-free convenience item or rare survival drop where healing should feel more distinctive than carrying another stack of food."
+    ],
+    "installation": [
+      "Test the legacy build on the target server version.",
+      "Review healing values and item access.",
+      "Decide whether stones come from commands, rewards, shops or loot.",
+      "Confirm the items interact correctly with the server's health scaling."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for Healing Stone and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Legacy resource — check the release page"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Healing stone items, Crystal-themed utility, Simple player commands, Lightweight gameplay loop, Server reward potential, Straightforward configuration."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "2.3",
+        "date": "5 Jan 2026",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "exp-gems",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "EXP-Gems turns experience bonuses into physical collectible items. Instead of hiding progression behind a permission node, the plugin gives players visible gems that can be crafted, traded, rewarded and upgraded.",
+      "Different strengths create a clear path from early utility to valuable end-game rewards. The system is especially suited to RPG servers where item identity matters as much as the numerical bonus."
+    ],
+    "installation": [
+      "Confirm the legacy version works on the target server.",
+      "Configure gem tiers and experience bonuses.",
+      "Choose recipes or reward sources.",
+      "Test interaction with other XP multipliers before release."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for EXP-Gems and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "1.18–1.20"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Craftable experience gems, Multiple gem strengths, RPG-friendly progression, Visual item effects, Configurable gain bonuses, Reward and economy potential."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "3.3",
+        "date": "1 Sep 2024",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "uncraftable",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "Uncraftable adds crafting paths for selected vanilla items that are normally limited, non-renewable or unavailable at a crafting table. The goal is to improve long-term survival access without installing a large custom crafting framework.",
+      "It is particularly useful in limited worlds, long-running servers and environments where exploration structures have already been heavily looted."
+    ],
+    "installation": [
+      "Test the legacy build on the current server version.",
+      "Review every added recipe for economy impact.",
+      "Disable recipes that conflict with other plugins.",
+      "Publish the final recipe list to players."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for Uncraftable and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Check the current resource release"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Recipes for uncraftable items, Simple survival integration, Configurable recipe set, No large gameplay framework, Easy server adoption, Useful for limited worlds."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.2",
+        "date": "10 Jun 2023",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "easyreplant",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "EasyReplant streamlines crop harvesting while keeping seed and crop resources meaningful. Supported plants are replanted only when the player actually carries the required item, avoiding free infinite replanting.",
+      "Optional growth and multi-harvest mechanics can make farming more rewarding without replacing the basic survival loop."
+    ],
+    "installation": [
+      "Test the plugin on the target server version.",
+      "Choose supported crops and growth options.",
+      "Set harvest bonus chances conservatively.",
+      "Verify sugar cane and cactus behaviour in a test farm."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for EasyReplant and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Spigot 1.18–1.19.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Automatic crop replanting, Inventory requirement, Sugar cane support, Cactus support, Growth controls, Survival-friendly handling."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "3.0",
+        "date": "19 Mar 2023",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "simplecrystals",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "SimpleCrystals provides a small custom-item foundation centred on collectible crystal rewards. The items can act as prizes, currencies, crafting components or visual progression tokens.",
+      "Its focused scope makes it suitable for servers that need recognisable custom rewards without a complete item-generation framework."
+    ],
+    "installation": [
+      "Confirm legacy compatibility on a test server.",
+      "Configure crystal names and presentation.",
+      "Decide how each crystal enters the economy.",
+      "Test recognition through shops, rewards and storage."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for SimpleCrystals and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Spigot — legacy resource"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Custom crystal items, Persistent item identity, Reward-ready commands, Configurable presentation, Simple administration, Progression integration."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.6",
+        "date": "13 Mar 2023",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mithrilchains",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MithrilChains restores a direct survival crafting route for chainmail armour. It is a deliberately small plugin for servers that like chainmail as a progression tier but do not want it restricted to rare mob drops or trading.",
+      "The recipe-focused design means players understand the feature immediately and administrators do not need to maintain a larger custom-item system."
+    ],
+    "installation": [
+      "Test the legacy JAR on the target version.",
+      "Review the chainmail recipes and economy value.",
+      "Check for recipe conflicts with other plugins.",
+      "Publish the recipes to players if they are not discoverable automatically."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MithrilChains and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Check the current resource release"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Craftable chainmail armour, Simple recipe progression, Lightweight implementation, Survival-friendly materials, No database requirement, Minimal setup."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "18 Dec 2022",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "simplespawn",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "SimpleSpawn supplies the essential set-spawn and return-to-spawn workflow without installing a broad essentials package. It is intended for small servers that want one clear location and a few dependable commands.",
+      "The focused feature set keeps configuration and permission management easy for administrators who do not need homes, warps, kits and dozens of unrelated utilities."
+    ],
+    "installation": [
+      "Test the legacy build on the current server.",
+      "Set the spawn from a safe loaded location.",
+      "Configure player and administrator permissions.",
+      "Test teleporting from other worlds and after a restart."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for SimpleSpawn and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Legacy resource — check the release page"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Set a server spawn, Teleport to spawn, Simple permissions, Low-overhead commands, Straightforward configuration, Small-server friendly."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "22 Aug 2021",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "levelrewards",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "LevelRewards converts vanilla experience levels into a lightweight milestone track. Server owners can recognise players for levelling without introducing a separate skill or class system.",
+      "Rewards are delivered when configured thresholds are reached, making ordinary mining, combat and enchanting contribute to an additional sense of progression."
+    ],
+    "installation": [
+      "Test legacy compatibility and reward repetition behaviour.",
+      "Define milestone levels and commands.",
+      "Balance rewards around the server's XP rate.",
+      "Verify behaviour after death, enchanting and administrative level changes."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for LevelRewards and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Legacy resource — check the release page"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Vanilla level milestones, Configurable rewards, Simple progression loop, Command-based delivery, Lightweight operation, Easy server setup."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "18 Mar 2020",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "levelcraft",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "LevelCraft is the progression backbone of GhoulCraft: a private RPG suite that connects skills, ranks, equipment power, magic, quests, bosses, world threats and prestige into one survival ecosystem.",
+      "Its systems are not isolated menus. Mining, combat, farming, exploration, crafting and server events feed the same long-term character journey, giving ordinary survival actions permanent value."
+    ],
+    "installation": [
+      "Private deployment is managed as part of the GhoulCraft server stack.",
+      "Progression, economy and content values are balanced together rather than as independent plugins.",
+      "Integrations are tested against the live Vault, PlaceholderAPI, Dynmap and webhook setup.",
+      "Updates are staged before production because many systems share player data."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for LevelCraft and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Skill levelling and milestones, F-to-S rank progression, Rarity gear, power and sockets, Gems, runes, wands and souls, Bosses and corruption events, Questlines, parties and prestige."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Vault",
+        "description": "Optional or supported integration used by LevelCraft."
+      },
+      {
+        "name": "PlaceholderAPI",
+        "description": "Optional or supported integration used by LevelCraft."
+      },
+      {
+        "name": "Dynmap",
+        "description": "Optional or supported integration used by LevelCraft."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by LevelCraft."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Private",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "staffcore",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "StaffCore brings routine moderation actions and player context into one workspace. Staff can move from a report to a profile, evidence, notes and punishment history without relying on disconnected commands or external spreadsheets.",
+      "The aim is faster action with better consistency: important information remains attached to the player so different moderators can understand what happened before making a decision."
+    ],
+    "installation": [
+      "Private deployment is configured around the staff permission structure.",
+      "Punishment ladders, reason prompts and webhook channels are reviewed with the moderation team.",
+      "Staff actions are tested using non-production accounts.",
+      "Access is limited to the minimum permission level required for each role."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for StaffCore and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Freeze, warn, mute, kick and ban, Staff mode, Player profiles and notes, Punishment history, Inventory snapshots, Alt checking and ladders."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by StaffCore."
+      },
+      {
+        "name": "Permissions plugins",
+        "description": "Optional or supported integration used by StaffCore."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Private",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicrifts",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicRifts creates persistent corruption outbreaks that make the world feel active even when players are not following a traditional quest. Cores appear as escalating regional threats with guardians, visual pressure and server-wide reporting.",
+      "The system is built around controlled spread rather than indiscriminate terrain replacement. Players have time to discover, organise and eliminate the threat before it reaches stronger stages."
+    ],
+    "installation": [
+      "Private deployment is configured alongside LevelCraft and claim systems.",
+      "Eligible regions, spread pressure and escalation timing are tested in a staging world.",
+      "Map, sign and Discord notifications are verified.",
+      "Guardian rewards are balanced against the wider server economy."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicRifts and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Tiered corruption cores, Escalating guardians, Controlled regional spread, Ambient particles and sound, Map and sign tracking, Outbreak Discord alerts."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "LevelCraft",
+        "description": "Optional or supported integration used by MythicRifts."
+      },
+      {
+        "name": "Dynmap",
+        "description": "Optional or supported integration used by MythicRifts."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicRifts."
+      },
+      {
+        "name": "Clan claims",
+        "description": "Optional or supported integration used by MythicRifts."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Private",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicevents",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicEvents is a modular activity engine intended to keep the server active during both busy and quiet periods. It supports lightweight chat challenges alongside physical world events that send players exploring, mining, hunting or surviving unusual conditions.",
+      "Events can rotate automatically, announce through Discord and deliver configurable rewards, allowing the server to create regular moments without requiring a staff member to host each one manually."
+    ],
+    "installation": [
+      "The project remains in development and is tested as part of the GhoulCraft stack.",
+      "Event cleanup, scheduling and rewards are verified individually.",
+      "Discord and economy hooks are staged before live use.",
+      "New event types are enabled only after their tracking and reset logic is confirmed."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicEvents and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Automatic event rotation, Chat games and quizzes, Treasure and block hunts, Mob and mining events, Blood moon system, Reward and question editor."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Vault",
+        "description": "Optional or supported integration used by MythicEvents."
+      },
+      {
+        "name": "Discord webhooks",
+        "description": "Optional or supported integration used by MythicEvents."
+      },
+      {
+        "name": "LevelCraft hooks",
+        "description": "Optional or supported integration used by MythicEvents."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "In development",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicportals",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicPortals creates physical travel points from locations, trigger blocks and configurable regions. Portals can feel like part of the world through particle animations, delays and visual build-up rather than acting as invisible command shortcuts.",
+      "Different portal sizes and destinations support small personal gateways, large server hubs and story-driven transitions between important locations."
+    ],
+    "installation": [
+      "The standalone plugin remains in development.",
+      "Create test portals with different dimensions and animations.",
+      "Verify countdown cancellation and destination safety.",
+      "Load-test particle settings before enabling high-traffic hubs."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicPortals and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Custom trigger locations, Multiple portal sizes, Particle animation presets, Optional teleport countdown, Movement cancellation, Destination management."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "In development",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicprefixes",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicPrefixes combines a cosmetic prefix marketplace with a lightweight chat formatter. Players purchase, collect and equip titles while the server controls how that selection appears beside names and messages.",
+      "The system is designed to work without forcing a separate chat plugin. PlaceholderAPI content can be included in the format, and a configurable default prefix keeps players without a purchased cosmetic visually consistent."
+    ],
+    "installation": [
+      "Install Vault, an economy provider and PlaceholderAPI.",
+      "Remove or disable conflicting chat-format ownership.",
+      "Configure prefixes, rarity prices, default presentation and DiscordSRV behaviour.",
+      "Test normal chat, nicknames, placeholders and Discord forwarding."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicPrefixes and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Purchasable prefix shop, Owned-prefix management, Built-in chat formatting, Rarity tiers and pricing, Default prefix support, Admin management menus."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Vault",
+        "description": "Optional or supported integration used by MythicPrefixes."
+      },
+      {
+        "name": "PlaceholderAPI",
+        "description": "Optional or supported integration used by MythicPrefixes."
+      },
+      {
+        "name": "DiscordSRV",
+        "description": "Optional or supported integration used by MythicPrefixes."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Direct release planned",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "mythicshop",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicShop is a GUI economy market built around controlled stock rather than unlimited server buying and selling. Categories, amount selection and editing tools make the shop approachable for players while stock floors and caps protect the economy.",
+      "The project also understands GhoulCraft custom items, allowing LevelCraft wands, runes, souls, gems, furnaces and other resources to exist beside vanilla materials in the same market."
+    ],
+    "installation": [
+      "Private deployment is connected to Vault and LevelCraft.",
+      "Every listing is reviewed for stock limits and economy impact.",
+      "Custom-item identity is tested before enabling sales.",
+      "Administrative changes are staged and verified with normal player permissions."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicShop and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Buy and sell GUI, Stock floors and caps, Amount selector, In-game category editor, Dynamic item pricing, Custom item providers."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [
+      {
+        "name": "Vault",
+        "description": "Optional or supported integration used by MythicShop."
+      },
+      {
+        "name": "LevelCraft",
+        "description": "Optional or supported integration used by MythicShop."
+      }
+    ],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Private",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  },
+  {
+    "pluginId": "spawnercontrol",
+    "status": "starter",
+    "lastUpdated": "14 Jul 2026",
+    "overview": [
+      "MythicSpawnerControl provides focused control over the distances used by mob spawners. It allows administrators to balance farms and server performance without replacing the complete vanilla spawner system.",
+      "Saved spawner locations make it possible to manage important or intentionally placed spawners rather than applying one blind global rule to every world object."
+    ],
+    "installation": [
+      "The direct-release build is still planned.",
+      "Test default activation and spawn radii in a staging world.",
+      "Verify compatibility with stacked or custom spawner systems.",
+      "Document the final farm rules before public release."
+    ],
+    "commands": [],
+    "permissions": [],
+    "configuration": [
+      {
+        "section": "Core settings",
+        "description": "Review the generated configuration for MythicSpawnerControl and adjust feature toggles, messages, limits and server-specific behaviour."
+      },
+      {
+        "section": "Compatibility",
+        "description": "Paper 1.21.x"
+      },
+      {
+        "section": "Feature controls",
+        "description": "The main systems documented for this plugin include: Activation range control, Spawn radius control, Saved spawner locations, Admin commands, Low-overhead checks, Farm balancing."
+      }
+    ],
+    "placeholders": [],
+    "integrations": [],
+    "troubleshooting": [
+      {
+        "problem": "The plugin does not enable",
+        "solution": "Confirm the server version is supported, check that required dependencies are installed, and read the first startup error in the console."
+      },
+      {
+        "problem": "Commands or menus do not open",
+        "solution": "Check the player's permissions, verify the command is not being overridden by another plugin, and review any disabled-world settings."
+      },
+      {
+        "problem": "Configuration changes are not applied",
+        "solution": "Validate the YAML formatting, restart the server rather than using a general reload command, and confirm the edited file belongs to the active instance."
+      },
+      {
+        "problem": "Data or integrations are missing",
+        "solution": "Confirm the integration plugin loaded before this plugin, verify its API is available, and inspect the console for hook or storage warnings."
+      }
+    ],
+    "apiHooks": [],
+    "changelog": [
+      {
+        "version": "Direct release planned",
+        "date": "Current release",
+        "notes": "Current release tracked by the MythicSuite portfolio."
+      }
+    ]
+  }
+]
