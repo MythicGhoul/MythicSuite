@@ -1323,3 +1323,933 @@ samp {
   .studio-cta { grid-template-columns: 1fr; }
   .studio-cta .button { grid-column: auto; justify-self: stretch; }
 }
+
+
+/* =========================================================
+   LIVE SITE + PLUGIN VIEW TRACKERS
+   ========================================================= */
+.site-activity-bar {
+  position: relative;
+  z-index: 38;
+  border-bottom: 1px solid rgba(0,229,255,.10);
+  background:
+    linear-gradient(90deg, rgba(157,78,221,.055), rgba(0,229,255,.04)),
+    rgba(5,7,13,.82);
+  backdrop-filter: blur(16px);
+}
+
+.site-activity-inner {
+  width: min(var(--max), calc(100% - 2.5rem));
+  min-height: 42px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .75rem;
+  color: #9297aa;
+  font-size: .68rem;
+}
+
+.activity-live {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-right: auto;
+  color: #c5cad7;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.activity-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+  animation: trackerPulse 1.8s ease-in-out infinite;
+}
+
+.activity-counter,
+.plugin-view-counter {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+.activity-counter img,
+.plugin-view-counter img {
+  width: auto;
+  height: 22px;
+  border-radius: 4px;
+}
+
+.activity-stats-link {
+  color: var(--cyan);
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.activity-stats-link:hover {
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+
+.activity-note {
+  color: #71778c;
+  white-space: nowrap;
+}
+
+.view-metric {
+  border-color: rgba(0,229,255,.24);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(0,229,255,.08), transparent 34%),
+    linear-gradient(145deg,rgba(22,14,36,.77),rgba(6,16,24,.74));
+}
+
+.view-metric strong {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.view-metric img {
+  height: 22px;
+  width: auto;
+  max-width: 100%;
+}
+
+.detail-stats {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+@keyframes trackerPulse {
+  50% {
+    opacity: .38;
+    transform: scale(.74);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .activity-live i {
+    animation: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .detail-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .site-activity-inner {
+    width: min(100% - 1.5rem, var(--max));
+    min-height: 48px;
+    justify-content: flex-start;
+    gap: .55rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-activity-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .activity-live {
+    flex: 0 0 auto;
+    margin-right: 0;
+  }
+
+  .activity-note {
+    display: none;
+  }
+
+  .detail-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .activity-live {
+    display: none;
+  }
+
+  .detail-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Home polish patch: transparent logos, fuller bento cards, richer hero art */
+.bento-card img,
+.plugin-icon,
+.detail-title img,
+.orbit-card img {
+  background: transparent !important;
+  object-fit: contain;
+}
+
+.studio-bento { grid-auto-rows: 270px; }
+.bento-standard { min-height: 270px; justify-content: flex-start; }
+.bento-standard img { width: 78px; height: 78px; flex: 0 0 78px; }
+.bento-standard .bento-copy h3 { font-size: 1.5rem; margin: .55rem 0 .35rem; }
+.bento-standard .bento-copy p { font-size: .82rem; line-height: 1.55; max-width: 25ch; }
+.bento-standard .studio-pill { margin-bottom: .35rem; }
+
+.hero-art { overflow: visible; }
+.art-chip { backdrop-filter: blur(12px); }
+.chip-one, .chip-two { white-space: nowrap; }
+
+.art-orb {
+  position: absolute;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--studio-cyan);
+  box-shadow: 0 0 16px var(--studio-cyan), 0 0 32px rgba(0,229,255,.25);
+  animation: orbPulse 5s ease-in-out infinite;
+}
+.art-orb::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,229,255,.18);
+}
+.orb-one { left: 12%; top: 30%; animation-delay: .2s; }
+.orb-two { right: 11%; top: 26%; background: #b388ff; box-shadow: 0 0 16px #b388ff, 0 0 32px rgba(179,136,255,.24); }
+.orb-three { left: 24%; bottom: 16%; width: 8px; height: 8px; animation-delay: 1s; }
+.orb-four { right: 20%; bottom: 22%; width: 12px; height: 12px; animation-delay: 1.8s; }
+.orb-five { left: 50%; top: 8%; width: 7px; height: 7px; animation-delay: 2.6s; background: #b388ff; box-shadow: 0 0 14px #b388ff, 0 0 26px rgba(179,136,255,.24); }
+@keyframes orbPulse {
+  0%,100% { transform: scale(1); opacity: .65; }
+  50% { transform: scale(1.35); opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .studio-bento { grid-auto-rows: 290px; }
+  .bento-standard { min-height: 290px; }
+}
+@media (max-width: 720px) {
+  .bento-standard { min-height: 230px; }
+  .bento-standard img { width: 86px; height: 86px; flex-basis: 86px; }
+  .chip-one, .chip-two { white-space: normal; text-align: center; }
+}
+
+
+/* =========================================================
+   HERO + LOGO POLISH
+   ========================================================= */
+
+/* Plugin artwork should be the badge itself—never a coloured square. */
+.plugin-icon,
+.detail-title img,
+.related-grid .plugin-icon,
+.orbit-card img,
+.bento-card img,
+.flagship-logo,
+.release-icon img,
+img[src*="assets/icons/"] {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.release-icon {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.plugin-icon,
+.detail-title img,
+.related-grid .plugin-icon,
+.orbit-card img,
+.bento-card img,
+.flagship-logo {
+  filter:
+    drop-shadow(0 13px 18px rgba(0,0,0,.34))
+    drop-shadow(0 0 10px rgba(0,229,255,.055));
+}
+
+/* The two narrower selected-work cards now have room for all their content. */
+.studio-bento {
+  grid-auto-rows: 320px;
+}
+
+.bento-standard {
+  min-height: 320px;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.bento-standard img {
+  width: 84px;
+  height: 84px;
+  flex: 0 0 84px;
+}
+
+.bento-standard .bento-copy {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.bento-standard .bento-copy h3 {
+  margin: .55rem 0 .35rem;
+  font-size: 1.5rem;
+}
+
+.bento-standard .bento-copy p {
+  max-width: 27ch;
+  margin-bottom: .85rem;
+  color: #aeb2c2;
+  font-size: .82rem;
+  line-height: 1.58;
+}
+
+.bento-standard .mini-metrics {
+  margin-top: auto;
+  padding-right: 1.5rem;
+}
+
+.bento-standard .studio-pill {
+  margin-bottom: .25rem;
+}
+
+/* Download chips are clearer and retain the original orbit positions. */
+.art-chip {
+  min-width: 132px;
+  display: grid;
+  gap: .08rem;
+  padding: .55rem .78rem;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.art-chip strong {
+  color: #eafdff;
+  font-size: .77rem;
+  line-height: 1.05;
+}
+
+.art-chip span {
+  color: #8ecbd3;
+  font-size: .56rem;
+  font-weight: 750;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+/* More floating energy points, kept subtle so the hero remains professional. */
+.art-orb {
+  pointer-events: none;
+  animation:
+    orbPulse 5s ease-in-out infinite,
+    orbDrift 9s ease-in-out infinite alternate;
+}
+
+.orb-six {
+  left: 6%;
+  top: 53%;
+  width: 6px;
+  height: 6px;
+  animation-delay: .7s;
+  background: #b388ff;
+  box-shadow: 0 0 13px #b388ff, 0 0 27px rgba(179,136,255,.24);
+}
+
+.orb-seven {
+  right: 5%;
+  top: 58%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 1.4s;
+}
+
+.orb-eight {
+  left: 38%;
+  top: 17%;
+  width: 5px;
+  height: 5px;
+  animation-delay: 2.1s;
+}
+
+.orb-nine {
+  right: 35%;
+  bottom: 8%;
+  width: 7px;
+  height: 7px;
+  animation-delay: 2.8s;
+  background: #b388ff;
+  box-shadow: 0 0 14px #b388ff, 0 0 28px rgba(179,136,255,.24);
+}
+
+.orb-ten {
+  left: 43%;
+  bottom: 25%;
+  width: 4px;
+  height: 4px;
+  animation-delay: 3.4s;
+}
+
+.orb-eleven {
+  right: 42%;
+  top: 35%;
+  width: 5px;
+  height: 5px;
+  animation-delay: 4s;
+  background: #b388ff;
+  box-shadow: 0 0 12px #b388ff, 0 0 24px rgba(179,136,255,.22);
+}
+
+.orb-twelve {
+  right: 16%;
+  top: 7%;
+  width: 6px;
+  height: 6px;
+  animation-delay: 4.6s;
+}
+
+@keyframes orbDrift {
+  from { translate: -3px -4px; }
+  to { translate: 5px 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art-orb {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .studio-bento {
+    grid-auto-rows: 330px;
+  }
+
+  .bento-standard {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 720px) {
+  .studio-bento {
+    grid-auto-rows: auto;
+  }
+
+  .bento-standard {
+    min-height: 245px;
+  }
+
+  .bento-standard img {
+    width: 88px;
+    height: 88px;
+    flex-basis: 88px;
+  }
+
+  .bento-standard .mini-metrics {
+    margin-top: .8rem;
+  }
+
+  .art-chip {
+    min-width: 112px;
+  }
+}
+
+
+/* =========================================================
+   AUTOMATIC RELEASE RADAR
+   ========================================================= */
+.release-card-live {
+  position: relative;
+  overflow: hidden;
+}
+
+.release-card-live::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--studio-purple),
+    var(--studio-cyan)
+  );
+  opacity: .82;
+}
+
+.release-card-live .release-copy {
+  min-width: 0;
+}
+
+.release-card-live h3 {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+.release-version {
+  color: #dde4f4;
+  font-size: .8em;
+  font-weight: 800;
+}
+
+.release-source {
+  color: var(--studio-cyan) !important;
+}
+
+.release-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  margin-top: .48rem;
+  color: #9eeef7;
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.release-link:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.release-card time {
+  min-width: 76px;
+  text-align: center;
+}
+
+.release-radar-note {
+  margin: .85rem 0 0;
+  color: #71788b;
+  font-size: .7rem;
+}
+
+.release-radar-loading {
+  opacity: .72;
+}
+
+.release-radar-error .live-badge,
+.live-badge.is-fallback {
+  border-color: rgba(244,186,76,.28);
+  color: #ffd77a;
+  background: rgba(244,186,76,.055);
+}
+
+.live-badge.is-fallback i {
+  background: var(--studio-gold);
+  box-shadow: 0 0 10px var(--studio-gold);
+}
+
+.live-badge.is-live {
+  border-color: rgba(73,227,166,.26);
+  color: #8bf2c6;
+  background: rgba(73,227,166,.055);
+}
+
+.release-platform-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  margin-left: .35rem;
+  padding: .15rem .42rem;
+  border: 1px solid rgba(0,229,255,.17);
+  border-radius: 999px;
+  color: #9eeef7;
+  background: rgba(0,229,255,.04);
+  font-size: .52rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.release-card-skeleton {
+  min-height: 102px;
+}
+
+.release-card-skeleton > * {
+  visibility: hidden;
+}
+
+.release-card-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      100deg,
+      transparent 25%,
+      rgba(255,255,255,.04) 42%,
+      transparent 60%
+    );
+  translate: -100% 0;
+  animation: releaseShimmer 1.35s linear infinite;
+}
+
+@keyframes releaseShimmer {
+  to { translate: 100% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .release-card-skeleton::after {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .release-card-live {
+    align-items: start;
+  }
+
+  .release-card-live time {
+    grid-column: 2;
+    justify-self: start;
+    min-width: 0;
+    margin-top: .2rem;
+  }
+}
+
+
+/* =========================================================
+   LIVE PLUGIN METADATA + ADMIN-MANAGED STATUS
+   ========================================================= */
+.status-chip[data-dynamic-status] {
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+
+.live-plugin-release {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(0,229,255,.22);
+  background:
+    radial-gradient(circle at 90% 8%, rgba(0,229,255,.08), transparent 30%),
+    linear-gradient(145deg,rgba(22,14,36,.82),rgba(6,16,24,.80));
+}
+
+.live-plugin-release::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--purple-bright), var(--cyan));
+}
+
+.live-release-heading,
+.live-release-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .8rem;
+}
+
+.live-release-heading h2 {
+  margin: .25rem 0 0;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.live-release-platform {
+  flex: 0 0 auto;
+  padding: .28rem .48rem;
+  border: 1px solid rgba(0,229,255,.24);
+  border-radius: 999px;
+  color: var(--cyan);
+  background: rgba(0,229,255,.055);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.live-release-copy {
+  margin: 1rem 0;
+  color: #aeb3c5;
+  font-size: .82rem;
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
+.live-release-footer {
+  align-items: center;
+  padding-top: .8rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.live-release-footer time {
+  color: #7f8598;
+  font-size: .68rem;
+}
+
+.live-release-footer a {
+  color: var(--cyan);
+  font-size: .7rem;
+  font-weight: 800;
+}
+
+.live-release-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.live-version-metric,
+.live-update-metric {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0,229,255,.055), transparent 35%),
+    rgba(9,10,21,.64);
+}
+
+.plugin-card[data-plugin-id] .tag-row {
+  min-height: 30px;
+}
+
+.metadata-refreshing {
+  opacity: .72;
+}
+
+/* Lifecycle classes used by the editor and runtime metadata layer. */
+.status-chip.status-current,
+.status-chip.status-public {
+  border-color: rgba(0,229,255,.28);
+  color: #9ff7ff;
+  background: rgba(0,229,255,.055);
+}
+
+.status-chip.status-exclusive {
+  border-color: rgba(192,132,252,.38);
+  color: #dab5ff;
+  background: rgba(168,85,247,.10);
+}
+
+.status-chip.status-development {
+  border-color: rgba(34,211,238,.34);
+  color: #8ceeff;
+  background: rgba(34,211,238,.08);
+}
+
+.status-chip.status-planned {
+  border-color: rgba(59,130,246,.36);
+  color: #a7c9ff;
+  background: rgba(59,130,246,.09);
+}
+
+.status-chip.status-legacy {
+  border-color: rgba(244,186,76,.34);
+  color: #ffd774;
+  background: rgba(244,186,76,.075);
+}
+
+@media (max-width: 620px) {
+  .live-release-heading,
+  .live-release-footer {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   SITE-WIDE ADMIN SYNC
+   ========================================================= */
+html[data-metadata-synced="true"] .status-chip,
+html[data-metadata-synced="true"] .card-stats,
+html[data-metadata-synced="true"] .info-list,
+html[data-metadata-synced="true"] .detail-actions {
+  transition: color .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.live-version-metric strong,
+.live-update-metric strong {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .live-version-metric strong,
+  .live-update-metric strong {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* =========================================================
+   SELECTED WORK CARD COMPLETENESS
+   ========================================================= */
+.studio-bento {
+  grid-auto-rows: 286px;
+}
+
+.bento-card {
+  padding: 1.55rem;
+}
+
+.bento-wide {
+  gap: 1.55rem;
+}
+
+.bento-wide img {
+  width: 132px;
+  height: 132px;
+  flex-basis: 132px;
+}
+
+.bento-wide .bento-copy {
+  min-width: 0;
+}
+
+.bento-wide .bento-copy p {
+  max-width: 58ch;
+}
+
+/* The two compact cards use a horizontal editorial layout so their
+   description and feature tags stay visible without becoming oversized. */
+.bento-standard {
+  min-height: 286px;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  grid-template-rows: 1fr;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.35rem;
+}
+
+.bento-standard img {
+  grid-column: 1;
+  width: 76px;
+  height: 76px;
+  flex: none;
+  margin-top: .15rem;
+}
+
+.bento-standard .bento-copy {
+  grid-column: 2;
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-standard .studio-pill {
+  align-self: flex-start;
+  margin: 0 0 .5rem;
+  font-size: .55rem;
+}
+
+.bento-standard .bento-copy h3 {
+  margin: 0 0 .48rem;
+  font-size: 1.33rem;
+  line-height: 1.1;
+}
+
+.bento-standard .bento-copy p {
+  display: block;
+  max-width: none;
+  margin: 0 0 .85rem;
+  color: #aeb2c2;
+  font-size: .76rem;
+  line-height: 1.55;
+}
+
+.bento-standard .mini-metrics {
+  margin-top: auto;
+  padding: 0 1.2rem 0 0;
+  gap: .32rem;
+}
+
+.bento-standard .mini-metrics span {
+  padding: .28rem .4rem;
+  font-size: .55rem;
+}
+
+/* PixelBlood now follows the same information hierarchy as the other cards. */
+.bento-tall {
+  padding: 1.65rem;
+}
+
+.bento-tall img {
+  width: 176px;
+  height: 176px;
+}
+
+.bento-tall .bento-copy {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.bento-tall .bento-copy p {
+  max-width: 36ch;
+}
+
+.bento-tall .bento-stat {
+  margin-top: 1.1rem;
+}
+
+.bento-tall .mini-metrics {
+  margin-top: auto;
+  padding-right: 1.6rem;
+}
+
+/* Preserve the badge itself—never place it inside a visible square. */
+.bento-card img[src*="pixelblood"],
+img[src*="assets/icons/pixelblood"] {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 1050px) {
+  .studio-bento {
+    grid-auto-rows: 305px;
+  }
+
+  .bento-standard {
+    min-height: 305px;
+  }
+}
+
+@media (max-width: 720px) {
+  .studio-bento {
+    grid-auto-rows: auto;
+  }
+
+  .bento-wide,
+  .bento-tall,
+  .bento-standard {
+    display: flex;
+    min-height: 250px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bento-card img,
+  .bento-wide img,
+  .bento-tall img,
+  .bento-standard img {
+    width: 98px;
+    height: 98px;
+    flex: 0 0 98px;
+    margin: 0;
+  }
+
+  .bento-standard .bento-copy,
+  .bento-tall .bento-copy {
+    min-height: 0;
+  }
+
+  .bento-standard .mini-metrics,
+  .bento-tall .mini-metrics {
+    margin-top: .8rem;
+    padding-right: 1.5rem;
+  }
+}
