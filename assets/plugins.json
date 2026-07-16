@@ -70,7 +70,17 @@
         "Install LevelCraft only when Sorcery progression integration is wanted."
       ]
     },
-    "bstatsId": 32547
+    "sourceDocumented": true,
+    "sourceProject": "MythicEnchant",
+    "sourceMainClass": "me.Ghoul.MythicEnchant.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 3,
+    "sourceConfigFiles": [
+      "config.yml",
+      "custom-enchants.yml",
+      "messages.yml"
+    ]
   },
   {
     "id": "pickupfilter",
@@ -94,7 +104,7 @@
       "QoL"
     ],
     "integrations": [],
-    "compatibility": "Paper/Spigot 1.20–1.21.x",
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
     "version": "1.2.1",
     "spigot_url": "https://www.spigotmc.org/resources/pickupfilter-1-20-1-21-x-%E2%9C%A8-pickup-filters-gui-geyser-%E2%9C%A8.136241/",
     "modrinth_url": "https://modrinth.com/project/26myPReK",
@@ -144,7 +154,18 @@
         "Test common farm drops and verify saved choices after a restart."
       ]
     },
-    "bstatsId": 32037
+    "sourceDocumented": true,
+    "sourceProject": "PickupFilter",
+    "sourceMainClass": "me.Ghoul.PickupFilter.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 4,
+    "sourceConfigFiles": [
+      "categories.yml",
+      "config.yml",
+      "data.yml",
+      "messages.yml"
+    ]
   },
   {
     "id": "mythicjoins",
@@ -171,8 +192,8 @@
       "Vault",
       "Discord webhooks"
     ],
-    "compatibility": "Paper/Spigot 1.20–1.21.x",
-    "version": "1.0",
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
+    "version": "1.0.0",
     "spigot_url": "https://www.spigotmc.org/resources/mythicjoins-1-20-1-21-x-%E2%9C%A8-mythic-join-leave-effects-gui-shop-vault-discord-webhooks-%E2%9C%A8.136663/",
     "modrinth_url": null,
     "spigot": {
@@ -217,7 +238,15 @@
         "Test purchases, selection and default behaviour with a normal player account."
       ]
     },
-    "bstatsId": 32316
+    "sourceDocumented": true,
+    "sourceProject": "MythicJoins",
+    "sourceMainClass": "me.Ghoul.MythicJoins.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 3,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "mythicvote",
@@ -245,7 +274,7 @@
       "Discord webhooks",
       "PlaceholderAPI"
     ],
-    "compatibility": "Paper/Spigot 1.20–1.21.x",
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
     "version": "1.2.2",
     "spigot_url": "https://www.spigotmc.org/resources/mythicvote-1-20-1-21-x-%E2%9C%A8-vote-rewards-leaderboards-milestones-discord-webhooks-%E2%9C%A8.135078/",
     "modrinth_url": null,
@@ -291,7 +320,16 @@
         "Send a test vote and confirm online, offline and restart behaviour."
       ]
     },
-    "bstatsId": 31248
+    "sourceDocumented": true,
+    "sourceProject": "MythicVote",
+    "sourceMainClass": "me.Ghoul.MythicVote.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 2,
+    "sourcePermissions": 2,
+    "sourceConfigFiles": [
+      "config.yml",
+      "rewards.yml"
+    ]
   },
   {
     "id": "lastwords",
@@ -318,7 +356,7 @@
       "Discord webhooks",
       "Essentials-style chat"
     ],
-    "compatibility": "Paper/Spigot 1.20–1.21.x",
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
     "version": "1.2.4",
     "spigot_url": "https://www.spigotmc.org/resources/lastwords-%E2%9C%A6-funny-custom-death-messages-in-game-editor-%E2%9C%A6.135578/",
     "modrinth_url": "https://modrinth.com/project/oyuWDHN2",
@@ -368,7 +406,16 @@
         "Use the editor to adjust messages to the tone of the community."
       ]
     },
-    "bstatsId": 31574
+    "sourceDocumented": true,
+    "sourceProject": "LastWords",
+    "sourceMainClass": "me.Ghoul.LastWords.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 3,
+    "sourceConfigFiles": [
+      "config.yml",
+      "messages.yml"
+    ]
   },
   {
     "id": "pixelblood",
@@ -396,7 +443,7 @@
       "bStats",
       "Update checker"
     ],
-    "compatibility": "Paper/Spigot 1.20.x–26.1.x",
+    "compatibility": "Paper/Spigot 1.20.x\u201326.1.x",
     "version": "3.7",
     "spigot_url": "https://www.spigotmc.org/resources/pixelblood-1-20-x-1-26-x-%E2%9A%94-dynamic-blood-effects-%E2%9A%94-trails-pools-splatter-bleeding.95684/",
     "modrinth_url": "https://modrinth.com/project/1oCiyYKI",
@@ -446,7 +493,15 @@
         "Test damage in protected areas, PvP zones and boss encounters."
       ]
     },
-    "bstatsId": 12691
+    "sourceDocumented": true,
+    "sourceProject": "PixelBlood",
+    "sourceMainClass": "me.Ghoul.PixelBlood.Main",
+    "sourceApiVersion": "1.18",
+    "sourceCommands": 1,
+    "sourcePermissions": 8,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "mythictrash",
@@ -473,7 +528,7 @@
       "Geyser",
       "Floodgate"
     ],
-    "compatibility": "Paper/Spigot 1.20–1.21.x",
+    "compatibility": "Paper/Spigot 1.20\u20131.21.x",
     "version": "1.0.2",
     "spigot_url": "https://www.spigotmc.org/resources/mythictrash-1-20-x-1-21-x-%EF%B8%8F-safe-item-disposal-%EF%B8%8F-%E2%9C%A8-trash-gui-%E2%9C%A8.136211/",
     "modrinth_url": "https://modrinth.com/project/40jnsAKM",
@@ -523,7 +578,15 @@
         "Customise the GUI and test protected-item behaviour."
       ]
     },
-    "bstatsId": 32015
+    "sourceDocumented": true,
+    "sourceProject": "MythicTrash",
+    "sourceMainClass": "me.Ghoul.MythicTrash.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 2,
+    "sourcePermissions": 3,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "arcanebuilder",
@@ -549,7 +612,7 @@
     "integrations": [
       "WorldEdit formats"
     ],
-    "compatibility": "Paper/Spigot — see release page",
+    "compatibility": "Paper/Spigot \u2014 see release page",
     "version": "1.4",
     "spigot_url": "https://www.spigotmc.org/resources/arcanebuilder-%E2%9A%A1-cinematic-building-animated-schematics-preview-claim-protections-undo-%E2%9A%A1.134753/",
     "modrinth_url": null,
@@ -595,13 +658,22 @@
         "Preview a test structure before enabling player-facing use."
       ]
     },
-    "bstatsId": 31055
+    "sourceDocumented": true,
+    "sourceProject": "ArcaneBuilder",
+    "sourceMainClass": "me.Ghoul.ArcaneBuilder.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 2,
+    "sourcePermissions": 2,
+    "sourceConfigFiles": [
+      "config.yml",
+      "lang.yml"
+    ]
   },
   {
     "id": "auto-breeding",
     "name": "Auto Breeding",
     "category": "Farming Automation",
-    "statusLabel": "Public Plugin",
+    "statusLabel": "Published Resource",
     "lifecycle": "current",
     "tagline": "Let animals breed naturally using nearby food sources.",
     "description": "Auto Breeding removes repetitive manual feeding from established farms while keeping the process tied to survival resources. Animals locate and consume nearby food, then enter breeding mode under configurable conditions.",
@@ -619,7 +691,7 @@
       "Automation"
     ],
     "integrations": [],
-    "compatibility": "1.19–1.20.x and 26.1.x",
+    "compatibility": "1.19\u20131.20.x and 26.1.x",
     "version": "1.5",
     "spigot_url": "https://www.spigotmc.org/resources/%E2%9D%A4%EF%B8%8F-auto-breeding-%E2%9D%A4%EF%B8%8F-1-19-1-20-x-26-1-x.119205/",
     "modrinth_url": "https://modrinth.com/project/SzSnrhRB",
@@ -669,13 +741,21 @@
         "Observe resource consumption and adjust population controls before production use."
       ]
     },
-    "bstatsId": 23258
+    "sourceDocumented": true,
+    "sourceProject": "AutoBreeding",
+    "sourceMainClass": "me.Ghoul.AutoBreeding.Main",
+    "sourceApiVersion": "1.20",
+    "sourceCommands": 1,
+    "sourcePermissions": 1,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "arcane-exchange",
     "name": "Arcane Exchange",
     "category": "Magical Automation",
-    "statusLabel": "Public Plugin",
+    "statusLabel": "Published Resource",
     "lifecycle": "current",
     "tagline": "A magical machine system powered by arcane energy.",
     "description": "Arcane Exchange brings an arcane-technology progression loop to survival. Players build tiered machines, generate or route energy and automate useful processes through a fantasy-first presentation.",
@@ -739,7 +819,15 @@
         "Balance outputs against the server economy before wider release."
       ]
     },
-    "bstatsId": 30406
+    "sourceDocumented": true,
+    "sourceProject": "ArcaneExchange",
+    "sourceMainClass": "me.Ghoul.ArcaneExchange.Main",
+    "sourceApiVersion": "1.2",
+    "sourceCommands": 1,
+    "sourcePermissions": 1,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "healing-stone",
@@ -763,7 +851,7 @@
       "Legacy"
     ],
     "integrations": [],
-    "compatibility": "Legacy resource — check the release page",
+    "compatibility": "Legacy resource \u2014 check the release page",
     "version": "2.3",
     "spigot_url": "https://www.spigotmc.org/resources/healing-stone.60488/",
     "modrinth_url": null,
@@ -809,7 +897,15 @@
         "Confirm the items interact correctly with the server's health scaling."
       ]
     },
-    "bstatsId": 12690
+    "sourceDocumented": true,
+    "sourceProject": "HealingStone",
+    "sourceMainClass": "me.Ghoul.HealingStone.Hs",
+    "sourceApiVersion": "1.19",
+    "sourceCommands": 1,
+    "sourcePermissions": 12,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "exp-gems",
@@ -833,8 +929,8 @@
       "Gems"
     ],
     "integrations": [],
-    "compatibility": "1.18–1.20",
-    "version": "3.3",
+    "compatibility": "1.18\u20131.20",
+    "version": "3.4",
     "spigot_url": "https://www.spigotmc.org/resources/exp-gems-1-18-1-20-%E2%9A%94%EF%B8%8F-mega-exp-gains-%E2%9A%94%EF%B8%8F-%E2%9A%92%EF%B8%8F-gem-crafting-%E2%9A%92%EF%B8%8F-%E2%9A%A1-cool-effects-%E2%9A%A1.96947/",
     "modrinth_url": "https://modrinth.com/project/8pKhVJ8t",
     "spigot": {
@@ -883,7 +979,15 @@
         "Test interaction with other XP multipliers before release."
       ]
     },
-    "bstatsId": 13075
+    "sourceDocumented": true,
+    "sourceProject": "EXPGems",
+    "sourceMainClass": "me.Ghoul.EXPGems.Main",
+    "sourceApiVersion": "1.19",
+    "sourceCommands": 1,
+    "sourcePermissions": 9,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "uncraftable",
@@ -953,31 +1057,37 @@
         "Publish the final recipe list to players."
       ]
     },
-    "bstatsId": 18696
+    "sourceDocumented": true,
+    "sourceProject": "Uncraftable",
+    "sourceMainClass": "me.Ghoul.Uncraftables.Main",
+    "sourceApiVersion": "1.18",
+    "sourceCommands": 0,
+    "sourcePermissions": 2,
+    "sourceConfigFiles": []
   },
   {
     "id": "easyreplant",
-    "name": "EasyReplant",
+    "name": "EasyPlanter",
     "category": "Farming Utility",
     "statusLabel": "Utility Plugin",
     "lifecycle": "legacy",
-    "tagline": "Fast crop harvesting with sensible inventory-based replanting.",
-    "description": "A straightforward farming quality-of-life plugin that replants supported crops only when the player actually has the required item.",
+    "tagline": "Automatic crop replanting, quick-grow tools and farming utility items.",
+    "description": "A farming-focused utility plugin featuring auto replanting, quick-grow tools, crop milestones and a growth composter system.",
     "features": [
-      "Automatic crop replanting",
-      "Inventory requirement",
-      "Sugar cane support",
-      "Cactus support",
-      "Growth controls",
-      "Survival-friendly handling"
+      "Automatic replanting",
+      "QuickGrow tools",
+      "Growth composter",
+      "Crop milestone rewards",
+      "Stats GUI",
+      "Vault-ready rewards"
     ],
     "tags": [
       "Farming",
-      "QoL",
-      "Lightweight"
+      "Utility",
+      "Legacy"
     ],
     "integrations": [],
-    "compatibility": "Spigot 1.18–1.19.x",
+    "compatibility": "Paper/Spigot 1.18+",
     "version": "3.0",
     "spigot_url": "https://www.spigotmc.org/resources/easyreplant-1-18-1-19-x-%E2%AD%90-auto-replant-%E2%AD%90-%E2%9A%A1-multi-harvest-chance-%E2%9A%A1-%E2%AD%90-fast-growth-%E2%AD%90.106994/",
     "modrinth_url": null,
@@ -992,62 +1102,74 @@
     "modrinth": null,
     "longDescription": {
       "intro": [
-        "EasyReplant streamlines crop harvesting while keeping seed and crop resources meaningful. Supported plants are replanted only when the player actually carries the required item, avoiding free infinite replanting.",
-        "Optional growth and multi-harvest mechanics can make farming more rewarding without replacing the basic survival loop."
+        "EasyPlanter streamlines repetitive farming while adding a light progression layer through crop milestones and special tools.",
+        "The project combines practical quality-of-life features such as automatic replanting with optional utility items like QuickGrow tools and a custom growth composter."
       ],
-      "workflowTitle": "Harvest quickly while preserving inventory costs",
+      "workflowTitle": "Harvest, replant and enhance crop growth with farming tools",
       "workflow": [
-        "When a supported mature crop is harvested, the plugin checks the player inventory for the correct replanting item. A valid item is consumed and the crop is restored at its starting age.",
-        "Additional settings can influence growth, harvest bonuses and special handling for plants such as sugar cane and cactus."
+        "Players harvest supported crops and the plugin can automatically replant them. Growth and reward settings are configurable per crop, with milestone goals driving additional progression.",
+        "Special items such as QuickGrow tools and the growth composter provide faster field maintenance or passive crop boosting in a local radius."
       ],
       "benefits": [
-        "Reduces repetitive planting clicks",
-        "Consumes real seeds or crops from inventory",
-        "Supports configurable farming bonuses",
-        "Keeps the mechanic lightweight and easy to learn"
+        "Reduces repetitive crop replanting",
+        "Adds farming-focused utility items",
+        "Supports milestone rewards",
+        "Integrates with server economy rewards"
       ],
-      "administration": "Server owners control supported crops, growth behaviour and bonus chances. Because this is a legacy resource, modern server versions should be tested carefully for block-event and crop-age behaviour.",
+      "administration": "This legacy utility depends on Vault and stores its behaviour primarily through a single configuration file with crop-specific reward tables.",
       "featureDetails": {
-        "Automatic crop replanting": "Mature crops are reset after harvest when requirements are met.",
-        "Inventory requirement": "The correct seed or crop item must be available and is consumed.",
-        "Sugar cane support": "Special handling supports vertical crops without breaking the whole plant.",
-        "Cactus support": "Cactus harvesting can follow controlled replant and growth rules.",
-        "Growth controls": "Adjust how the utility interacts with crop development.",
-        "Survival-friendly handling": "Convenience does not create seeds or crops from nothing."
+        "Automatic replanting": "Replant supported crops when harvested so large farms are easier to maintain.",
+        "QuickGrow tools": "Speed up or simplify crop handling with dedicated farming utilities.",
+        "Growth composter": "Boost nearby crop growth on a configurable interval and chance.",
+        "Crop milestone rewards": "Grant experience and money rewards for crop progression goals.",
+        "Stats GUI": "View progress through an in-game farming statistics interface.",
+        "Vault-ready rewards": "Uses economy-compatible rewards for milestone progression."
       },
-      "bestFor": "Survival servers that want faster farming without turning crops into a free automated resource.",
+      "bestFor": "Economy and survival servers that want farming convenience without removing progression entirely.",
       "setup": [
-        "Test the plugin on the target server version.",
-        "Choose supported crops and growth options.",
-        "Set harvest bonus chances conservatively.",
-        "Verify sugar cane and cactus behaviour in a test farm."
+        "Install Vault alongside EasyPlanter.",
+        "Configure supported crops, reward values and milestone goals.",
+        "Enable or disable QuickGrow and the growth composter.",
+        "Grant the relevant ep.* permissions to the intended player groups."
       ]
     },
-    "bstatsId": 17195
+    "sourceDocumented": true,
+    "sourceProject": "EasyPlanter",
+    "sourceMainClass": "me.Ghoul.EasyPlanters.Main",
+    "sourceApiVersion": "1.18",
+    "sourceCommands": 1,
+    "sourcePermissions": 5,
+    "sourceConfigFiles": [
+      "PlayerStats.yml",
+      "config.yml"
+    ]
   },
   {
     "id": "simplecrystals",
     "name": "SimpleCrystals",
-    "category": "Custom Items",
-    "statusLabel": "Utility Plugin",
+    "category": "Consumable Utility",
+    "statusLabel": "Legacy Resource",
     "lifecycle": "legacy",
-    "tagline": "A clean foundation for collectible crystal items and server rewards.",
-    "description": "A focused custom-item project for adding identifiable crystal rewards and collectible materials to server progression loops.",
+    "tagline": "Right-click crystals for healing, hunger, money, XP, travel, weather and playful trick effects.",
+    "description": "A Vault-powered consumable item plugin with nine crystal types, an admin GUI and configurable materials, messages, cooldowns and money rewards.",
     "features": [
-      "Custom crystal items",
-      "Persistent item identity",
-      "Reward-ready commands",
-      "Configurable presentation",
-      "Simple administration",
-      "Progression integration"
+      "Nine consumable crystal types",
+      "Full heal and hunger restoration",
+      "Money and experience rewards",
+      "Spawn, daytime and clear-weather crystals",
+      "Admin crystal GUI",
+      "Configurable materials, values and messages"
     ],
     "tags": [
-      "Items",
-      "Rewards",
-      "Lightweight"
+      "Crystals",
+      "Consumables",
+      "Legacy"
     ],
-    "integrations": [],
-    "compatibility": "Spigot — legacy resource",
+    "integrations": [
+      "Vault economy",
+      "Spawn command integration"
+    ],
+    "compatibility": "Spigot/Paper 1.17+ (legacy source)",
     "version": "1.6",
     "spigot_url": "https://www.spigotmc.org/resources/simplecrystals.66824/",
     "modrinth_url": null,
@@ -1062,108 +1184,38 @@
     "modrinth": null,
     "longDescription": {
       "intro": [
-        "SimpleCrystals provides a small custom-item foundation centred on collectible crystal rewards. The items can act as prizes, currencies, crafting components or visual progression tokens.",
-        "Its focused scope makes it suitable for servers that need recognisable custom rewards without a complete item-generation framework."
+        "SimpleCrystals adds a set of right-click consumables that turn familiar materials into one-use server utilities. Each crystal is identified by its configured material and display name, then consumed when its effect succeeds.",
+        "The supplied source includes healing, food, money, EXP, spawn, day and weather crystals alongside two deliberately misleading prank crystals. An administrative GUI can distribute the items without requiring staff to remember every subcommand."
       ],
-      "workflowTitle": "Create, distribute and recognise crystal rewards",
+      "workflowTitle": "Give a crystal, right-click it and consume its configured effect",
       "workflow": [
-        "Administrators create or grant the available crystal items through the plugin's supported management flow. Persistent item identity separates genuine crystals from ordinary renamed materials.",
-        "The items can then be placed into shops, event rewards, quests or other server systems that accept custom items."
+        "Staff create crystals through /sc subcommands or the admin menu. Players with the matching permission right-click the named item in their main hand to activate it.",
+        "The plugin validates the configured material, display name and permission before applying the effect. Healing uses a configurable cooldown, money is deposited through Vault, and successful consumables are removed from the held stack."
       ],
       "benefits": [
-        "Recognisable custom reward items",
-        "Persistent identity for safer integrations",
-        "Useful as currency or crafting material",
-        "Low-complexity administration"
+        "Nine distinct utility and prank consumables",
+        "Configurable materials and player-facing messages",
+        "Vault-backed money rewards",
+        "GUI and command-based administration"
       ],
-      "administration": "Names, presentation and distribution are the centre of the plugin. As a legacy project, use a staging server to confirm item metadata and command behaviour before connecting it to an economy.",
+      "administration": "SimpleCrystals is a legacy project and should be tested against the target server version. Vault and a registered economy provider are required at startup. The Spawn, Day and Sun crystals execute server commands through the player, so the relevant command provider and permissions must exist.",
       "featureDetails": {
-        "Custom crystal items": "Adds a themed set of collectible materials with their own identity.",
-        "Persistent item identity": "Genuine plugin items can be distinguished from renamed vanilla copies.",
-        "Reward-ready commands": "Staff and other systems can distribute crystals as prizes.",
-        "Configurable presentation": "Names and visual details can match the server theme.",
-        "Simple administration": "The project avoids a large editor or database requirement.",
-        "Progression integration": "Crystals can represent milestones, currencies or crafting ingredients."
+        "Nine consumable crystal types": "Healing, Food, Money, EXP, Spawn, Day, Sun, God/Trick and Op/Trick items are present in the source.",
+        "Full heal and hunger restoration": "Healing and Food crystals restore the player to maximum health or food when needed.",
+        "Money and experience rewards": "Money crystals deposit the configured Vault amount, while EXP crystals grant a fixed experience reward.",
+        "Spawn, daytime and clear-weather crystals": "Utility crystals execute spawn, time and weather commands and consume the item.",
+        "Admin crystal GUI": "The GUI presents the crystal catalogue and lets permitted staff distribute each item.",
+        "Configurable materials, values and messages": "Crystal materials, cooldown, money amount and feedback messages are stored in config.yml."
       },
-      "bestFor": "Servers that need a lightweight custom currency or reward item with a fantasy presentation.",
+      "bestFor": "Legacy survival or economy servers that want simple one-use utility rewards with a fantasy crystal theme.",
       "setup": [
-        "Confirm legacy compatibility on a test server.",
-        "Configure crystal names and presentation.",
-        "Decide how each crystal enters the economy.",
-        "Test recognition through shops, rewards and storage."
+        "Install Vault and a compatible economy provider before starting the server.",
+        "Review every CrystalTypes material and the MoneyCrystal value in config.yml.",
+        "Ensure the server provides working /spawn, /time and /weather commands for the related crystals.",
+        "Grant only the sc.* crystal permissions intended for each player group."
       ]
     },
-    "bstatsId": 12692
-  },
-  {
-    "id": "mithrilchains",
-    "name": "MithrilChains",
-    "category": "Recipe Utility",
-    "statusLabel": "Legacy Resource",
-    "lifecycle": "legacy",
-    "tagline": "Make chainmail armour craftable again.",
-    "description": "MithrilChains is a small recipe-focused plugin that restores a direct crafting path for chainmail armour. It is intentionally simple and easy to drop into survival servers.",
-    "features": [
-      "Craftable chainmail armour",
-      "Simple recipe progression",
-      "Lightweight implementation",
-      "Survival-friendly materials",
-      "No database requirement",
-      "Minimal setup"
-    ],
-    "tags": [
-      "Recipes",
-      "Armour",
-      "Legacy"
-    ],
-    "integrations": [],
-    "compatibility": "Check the current resource release",
-    "version": "1.0",
-    "spigot_url": "https://www.spigotmc.org/resources/mithrilchains.106812/",
-    "modrinth_url": null,
-    "spigot": {
-      "id": "106812",
-      "downloads": 331,
-      "rating": 5,
-      "ratings": 1,
-      "version": "1.0",
-      "updated": "18 Dec 2022"
-    },
-    "modrinth": null,
-    "longDescription": {
-      "intro": [
-        "MithrilChains restores a direct survival crafting route for chainmail armour. It is a deliberately small plugin for servers that like chainmail as a progression tier but do not want it restricted to rare mob drops or trading.",
-        "The recipe-focused design means players understand the feature immediately and administrators do not need to maintain a larger custom-item system."
-      ],
-      "workflowTitle": "A simple recipe addition with clear survival value",
-      "workflow": [
-        "The plugin registers chainmail recipes using the intended survival materials. Players craft the armour through an ordinary crafting table and receive standard chainmail equipment.",
-        "Because the output remains familiar vanilla gear, the resource can slot into most survival economies without introducing new combat mechanics."
-      ],
-      "benefits": [
-        "Makes chainmail a reliable progression option",
-        "Uses familiar crafting-table interaction",
-        "Minimal configuration and overhead",
-        "Does not replace vanilla armour behaviour"
-      ],
-      "administration": "The main balancing decision is the recipe cost. Test the value against iron equipment, villager access and any custom armour systems before publishing it to players.",
-      "featureDetails": {
-        "Craftable chainmail armour": "Provides recipes for the complete vanilla chainmail set.",
-        "Simple recipe progression": "Adds a clear route between early and stronger armour tiers.",
-        "Lightweight implementation": "No menus, databases or background tasks are required.",
-        "Survival-friendly materials": "Recipes can be balanced around obtainable world resources.",
-        "No database requirement": "The plugin does not need persistent player data.",
-        "Minimal setup": "Install, verify recipes and begin using the resource."
-      },
-      "bestFor": "Traditional survival servers that want chainmail to be a deliberate craftable tier.",
-      "setup": [
-        "Test the legacy JAR on the target version.",
-        "Review the chainmail recipes and economy value.",
-        "Check for recipe conflicts with other plugins.",
-        "Publish the recipes to players if they are not discoverable automatically."
-      ]
-    },
-    "bstatsId": 17110
+    "sourceDocumented": true
   },
   {
     "id": "simplespawn",
@@ -1187,8 +1239,8 @@
       "Legacy"
     ],
     "integrations": [],
-    "compatibility": "Legacy resource — check the release page",
-    "version": "1.0",
+    "compatibility": "Legacy resource \u2014 check the release page",
+    "version": "1.1",
     "spigot_url": "https://www.spigotmc.org/resources/simplespawn.71281/",
     "modrinth_url": null,
     "spigot": {
@@ -1232,76 +1284,16 @@
         "Configure player and administrator permissions.",
         "Test teleporting from other worlds and after a restart."
       ]
-    }
-  },
-  {
-    "id": "levelrewards",
-    "name": "LevelRewards",
-    "category": "Progression Utility",
-    "statusLabel": "Legacy Resource",
-    "lifecycle": "legacy",
-    "tagline": "Reward players for reaching vanilla experience levels.",
-    "description": "LevelRewards turns vanilla levelling into a simple reward track. Server owners can use it to recognise milestones without installing a full RPG progression suite.",
-    "features": [
-      "Vanilla level milestones",
-      "Configurable rewards",
-      "Simple progression loop",
-      "Command-based delivery",
-      "Lightweight operation",
-      "Easy server setup"
-    ],
-    "tags": [
-      "Rewards",
-      "Levels",
-      "Legacy"
-    ],
-    "integrations": [],
-    "compatibility": "Legacy resource — check the release page",
-    "version": "1.0",
-    "spigot_url": "https://www.spigotmc.org/resources/levelrewards.67276/",
-    "modrinth_url": null,
-    "spigot": {
-      "id": "67276",
-      "downloads": 290,
-      "rating": 4,
-      "ratings": 1,
-      "version": "1.0",
-      "updated": "18 Mar 2020"
     },
-    "modrinth": null,
-    "longDescription": {
-      "intro": [
-        "LevelRewards converts vanilla experience levels into a lightweight milestone track. Server owners can recognise players for levelling without introducing a separate skill or class system.",
-        "Rewards are delivered when configured thresholds are reached, making ordinary mining, combat and enchanting contribute to an additional sense of progression."
-      ],
-      "workflowTitle": "Attach rewards to familiar vanilla progress",
-      "workflow": [
-        "The plugin watches player experience levels and compares them with configured milestones. Reaching an eligible level triggers the associated reward action.",
-        "Because the system uses existing Minecraft levels, players do not need to learn a new interface or currency."
-      ],
-      "benefits": [
-        "Adds progression without a full RPG framework",
-        "Uses familiar vanilla experience levels",
-        "Command-based rewards work with other plugins",
-        "Simple milestone configuration"
-      ],
-      "administration": "Milestone spacing and reward value should account for level loss, XP farms and any plugins that modify experience gain. As a legacy resource, verify duplicate-reward protection and compatibility before production use.",
-      "featureDetails": {
-        "Vanilla level milestones": "Use the experience bar players already understand.",
-        "Configurable rewards": "Choose what each important level should grant.",
-        "Simple progression loop": "Normal gameplay naturally moves players toward the next target.",
-        "Command-based delivery": "Connect milestones to economy, items, permissions or announcements.",
-        "Lightweight operation": "No large profile or skill database is required.",
-        "Easy server setup": "Define levels, test rewards and begin using the track."
-      },
-      "bestFor": "Small survival servers that want milestone rewards without installing a complete RPG suite.",
-      "setup": [
-        "Test legacy compatibility and reward repetition behaviour.",
-        "Define milestone levels and commands.",
-        "Balance rewards around the server's XP rate.",
-        "Verify behaviour after death, enchanting and administrative level changes."
-      ]
-    }
+    "sourceDocumented": true,
+    "sourceProject": "SimpleSpawn",
+    "sourceMainClass": "me.Ghoul.SimpleSpawn.Main.Main",
+    "sourceApiVersion": "1.17",
+    "sourceCommands": 1,
+    "sourcePermissions": 2,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "levelcraft",
@@ -1369,7 +1361,22 @@
         "Updates are staged before production because many systems share player data."
       ]
     },
-    "bstatsId": 18731
+    "sourceDocumented": true,
+    "sourceProject": "LevelCraft",
+    "sourceMainClass": "me.Ghoul.LevelCraft.Main",
+    "sourceApiVersion": "1.18",
+    "sourceCommands": 5,
+    "sourcePermissions": 35,
+    "sourceConfigFiles": [
+      "BossData.yml",
+      "RankConfig.yml",
+      "config.yml",
+      "corruption.yml",
+      "discord.yml",
+      "lang.yml",
+      "quests.yml",
+      "src/Clans/clan-flags-config-section.yml"
+    ]
   },
   {
     "id": "staffcore",
@@ -1434,74 +1441,20 @@
         "Staff actions are tested using non-production accounts.",
         "Access is limited to the minimum permission level required for each role."
       ]
-    }
-  },
-  {
-    "id": "mythicrifts",
-    "name": "MythicRifts",
-    "category": "Living World System",
-    "statusLabel": "Server Exclusive",
-    "lifecycle": "exclusive",
-    "tagline": "Corruption cores that spread danger and reshape the world around them.",
-    "description": "A persistent world-threat system built around escalating corruption cores, guardians, spreading terrain pressure and server-wide outbreak reporting.",
-    "features": [
-      "Tiered corruption cores",
-      "Escalating guardians",
-      "Controlled regional spread",
-      "Ambient particles and sound",
-      "Map and sign tracking",
-      "Outbreak Discord alerts"
-    ],
-    "tags": [
-      "World",
-      "Events",
-      "Private"
-    ],
-    "integrations": [
-      "LevelCraft",
-      "Dynmap",
-      "Discord webhooks",
-      "Clan claims"
-    ],
-    "compatibility": "Paper 1.21.x",
-    "version": "Private",
-    "spigot_url": null,
-    "modrinth_url": null,
-    "spigot": null,
-    "modrinth": null,
-    "longDescription": {
-      "intro": [
-        "MythicRifts creates persistent corruption outbreaks that make the world feel active even when players are not following a traditional quest. Cores appear as escalating regional threats with guardians, visual pressure and server-wide reporting.",
-        "The system is built around controlled spread rather than indiscriminate terrain replacement. Players have time to discover, organise and eliminate the threat before it reaches stronger stages."
-      ],
-      "workflowTitle": "Discover the outbreak, fight its guardians and stop the spread",
-      "workflow": [
-        "A corruption core establishes itself in an eligible region and begins progressing through configured levels. Each stage can increase environmental effects, danger and guardian strength.",
-        "Players track active outbreaks through world information, map hooks and physical signs. Defeating the core or guardian resolves the event and connects back into LevelCraft quests and rewards."
-      ],
-      "benefits": [
-        "Persistent world pressure outside scheduled events",
-        "Escalating difficulty with visible progression",
-        "Map, sign and Discord awareness",
-        "Claim-aware placement and controlled terrain effects"
-      ],
-      "administration": "Administrators control eligibility, spread rules, level timing, guardians and notification behaviour. Clan-claim awareness prevents outbreaks from ignoring protected community areas.",
-      "featureDetails": {
-        "Tiered corruption cores": "Outbreaks progress through multiple levels instead of appearing at full strength.",
-        "Escalating guardians": "Stronger stages introduce more dangerous defenders and encounters.",
-        "Controlled regional spread": "Corruption applies pressure without replacing every block in the area.",
-        "Ambient particles and sound": "Players can feel that a region is becoming unsafe before reaching the core.",
-        "Map and sign tracking": "Active threats remain visible through server information points.",
-        "Outbreak Discord alerts": "The wider community receives updates when corruption appears or intensifies."
-      },
-      "bestFor": "GhoulCraft's private living-world design, where threats should develop independently of normal quests.",
-      "setup": [
-        "Private deployment is configured alongside LevelCraft and claim systems.",
-        "Eligible regions, spread pressure and escalation timing are tested in a staging world.",
-        "Map, sign and Discord notifications are verified.",
-        "Guardian rewards are balanced against the wider server economy."
-      ]
-    }
+    },
+    "sourceDocumented": true,
+    "sourceProject": "StaffCore",
+    "sourceMainClass": "me.Ghoul.StaffCore.Main",
+    "sourceApiVersion": "1.18",
+    "sourceCommands": 1,
+    "sourcePermissions": 29,
+    "sourceConfigFiles": [
+      "config.yml",
+      "data.yml",
+      "gui.yml",
+      "messages.yml",
+      "punishments.yml"
+    ]
   },
   {
     "id": "mythicevents",
@@ -1530,7 +1483,7 @@
       "LevelCraft hooks"
     ],
     "compatibility": "Paper 1.21.x",
-    "version": "In development",
+    "version": "1.1.1",
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
@@ -1567,7 +1520,20 @@
         "Discord and economy hooks are staged before live use.",
         "New event types are enabled only after their tracking and reset logic is confirmed."
       ]
-    }
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicEvents",
+    "sourceMainClass": "me.Ghoul.WorldEvents.MythicEvents",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 8,
+    "sourceConfigFiles": [
+      "config.yml",
+      "data.yml",
+      "events.yml",
+      "gui.yml",
+      "messages.yml"
+    ]
   },
   {
     "id": "mythicportals",
@@ -1592,7 +1558,7 @@
     ],
     "integrations": [],
     "compatibility": "Paper 1.21.x",
-    "version": "In development",
+    "version": "1.3.0",
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
@@ -1616,7 +1582,7 @@
       "administration": "Portal definitions focus on location data, dimensions, animation, timing and destination safety. The project is in development and is intended to remain standalone rather than require LevelCraft.",
       "featureDetails": {
         "Custom trigger locations": "Define exactly where players must stand or walk to activate travel.",
-        "Multiple portal sizes": "Build compact one-block portals or wider structures such as 2×1 gateways.",
+        "Multiple portal sizes": "Build compact one-block portals or wider structures such as 2\u00d71 gateways.",
         "Particle animation presets": "Helixes and other patterns give each portal a distinct visual identity.",
         "Optional teleport countdown": "Create anticipation before the destination change.",
         "Movement cancellation": "Cancel a pending teleport when the player leaves the trigger area.",
@@ -1629,7 +1595,16 @@
         "Verify countdown cancellation and destination safety.",
         "Load-test particle settings before enabling high-traffic hubs."
       ]
-    }
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicPortals",
+    "sourceMainClass": "me.Ghoul.MythicPortals.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 2,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "mythicprefixes",
@@ -1658,7 +1633,7 @@
       "DiscordSRV"
     ],
     "compatibility": "Paper 1.21.x",
-    "version": "Direct release planned",
+    "version": "1.0.0",
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
@@ -1695,7 +1670,16 @@
         "Configure prefixes, rarity prices, default presentation and DiscordSRV behaviour.",
         "Test normal chat, nicknames, placeholders and Discord forwarding."
       ]
-    }
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicPrefixes",
+    "sourceMainClass": "me.Ghoul.MythicPrefixes.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 1,
+    "sourcePermissions": 4,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   },
   {
     "id": "mythicshop",
@@ -1760,68 +1744,371 @@
         "Custom-item identity is tested before enabling sales.",
         "Administrative changes are staged and verified with normal player permissions."
       ]
-    }
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicShop",
+    "sourceMainClass": "me.Ghoul.Mythicshop.Main",
+    "sourceApiVersion": "1.2",
+    "sourceCommands": 2,
+    "sourcePermissions": 4,
+    "sourceConfigFiles": [
+      "config.yml",
+      "shops.yml",
+      "stats.yml"
+    ]
   },
   {
     "id": "spawnercontrol",
-    "name": "MythicSpawnerControl",
-    "category": "Performance Utility",
-    "statusLabel": "Under Development",
-    "lifecycle": "development",
-    "tagline": "Control when and where mob spawners are allowed to work.",
-    "description": "A lightweight administration tool for controlling spawner activation distance, spawn radius and registered spawner locations.",
+    "name": "SpawnerControl",
+    "category": "Spawner Administration",
+    "statusLabel": "Direct Release Planned",
+    "lifecycle": "planned",
+    "tagline": "Save, tune and safely apply mob-spawner behaviour per spawner, world and entity type.",
+    "description": "A focused spawner administration plugin with saved per-location settings, global defaults, world/entity overrides, filters, safety caps and loaded-chunk reapplication.",
     "features": [
-      "Activation range control",
-      "Spawn radius control",
-      "Saved spawner locations",
-      "Admin commands",
-      "Low-overhead checks",
-      "Farm balancing"
+      "Per-spawner saved settings",
+      "Activation range and spawn-radius control",
+      "Spawn count, delay and nearby-entity tuning",
+      "World and entity overrides",
+      "Whitelist or blacklist filtering",
+      "Configurable safety caps and automatic application"
     ],
     "tags": [
+      "Spawners",
       "Performance",
-      "Mobs",
       "Admin"
     ],
     "integrations": [],
-    "compatibility": "Paper 1.21.x",
-    "version": "Under Development",
+    "compatibility": "Spigot/Paper 1.18+",
+    "version": "1.1.0",
     "spigot_url": null,
     "modrinth_url": null,
     "spigot": null,
     "modrinth": null,
     "longDescription": {
       "intro": [
-        "MythicSpawnerControl provides focused control over the distances used by mob spawners. It allows administrators to balance farms and server performance without replacing the complete vanilla spawner system.",
-        "Saved spawner locations make it possible to manage important or intentionally placed spawners rather than applying one blind global rule to every world object."
+        "SpawnerControl provides precise control over vanilla CreatureSpawner values without replacing the complete spawning system. Administrators can save settings against individual spawner locations or apply layered defaults across loaded worlds.",
+        "Rules are resolved from global defaults, per-world overrides and entity-specific overrides, then passed through optional safety caps. Saved values can be restored when the server starts or when chunks load."
       ],
-      "workflowTitle": "Tune activation and spawn areas around registered spawners",
+      "workflowTitle": "Look at a spawner, tune its values and persist the result",
       "workflow": [
-        "Administrators register or manage spawner locations and define the player activation distance and mob spawn radius. The plugin applies those values through lightweight checks during normal operation.",
-        "Smaller radii can reduce oversized farm designs, while carefully chosen activation ranges ensure players must remain meaningfully close to production."
+        "An administrator targets a spawner within the configured distance and uses /spawnercontrol add or set commands. The plugin reads the current or resolved settings, applies safety caps, updates the block and stores the location in data.yml.",
+        "Automatic listeners can apply defaults when spawners are placed, right-clicked, loaded with chunks or found during startup. Filters decide which entity types are eligible, while cleanup settings remove broken or missing saved entries."
       ],
       "benefits": [
-        "Direct farm-balancing controls",
-        "Per-location management potential",
-        "Low-overhead focused checks",
-        "No need for a complete mob-system replacement"
+        "Detailed control without replacing vanilla spawners",
+        "Persistent settings for important farm locations",
+        "World and entity-specific balancing rules",
+        "Safety limits against accidental performance-heavy values"
       ],
-      "administration": "The project is planned as a direct release. Defaults should be tested against normal mob-cap behaviour, stacked spawners and any third-party spawner plugins before public deployment.",
+      "administration": "The plugin exposes activation range, spawn range, spawn count, minimum and maximum delay, and maximum nearby entities. Apply-all commands can update currently loaded spawners, while the force option for saved spawners may load chunks and should be used deliberately.",
       "featureDetails": {
-        "Activation range control": "Set how close a player must be before a spawner works.",
-        "Spawn radius control": "Restrict how far spawned mobs may appear from the block.",
-        "Saved spawner locations": "Keep managed spawners available across restarts.",
-        "Admin commands": "Register and inspect controlled locations from the server.",
-        "Low-overhead checks": "Focuses specifically on spawner operation rather than scanning all mobs.",
-        "Farm balancing": "Reduces extreme layouts while preserving legitimate survival use."
+        "Per-spawner saved settings": "Store resolved or manually tuned settings against a specific world coordinate.",
+        "Activation range and spawn-radius control": "Adjust how close players must be and how far mobs may spawn from the block.",
+        "Spawn count, delay and nearby-entity tuning": "Control production rate and the vanilla nearby-mob limiter.",
+        "World and entity overrides": "Layer world-specific and Bukkit EntityType-specific rules over global defaults.",
+        "Whitelist or blacklist filtering": "Choose whether listed entities are the only allowed types or the only excluded types.",
+        "Configurable safety caps and automatic application": "Clamp dangerous values and decide when defaults are applied or saved."
       },
-      "bestFor": "Survival servers that want predictable spawner farms and finer performance control.",
+      "bestFor": "Survival servers that want predictable farms, controlled spawner performance and transparent administrative tuning.",
       "setup": [
-        "The direct-release build is still planned.",
-        "Test default activation and spawn radii in a staging world.",
-        "Verify compatibility with stacked or custom spawner systems.",
-        "Document the final farm rules before public release."
+        "Review Defaults and Safety-Caps before allowing automatic application.",
+        "Configure world and entity overrides using exact Bukkit names.",
+        "Choose which startup, chunk-load, placement and right-click application modes should be enabled.",
+        "Use /spawnercontrol info and defaults to verify resolved values before applying them broadly."
       ]
-    }
+    },
+    "sourceDocumented": true
+  },
+  {
+    "id": "mythicbroadcast",
+    "name": "MythicBroadcast",
+    "category": "Server Announcements",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "Timed server broadcasts with simple rotation and configurable formatting.",
+    "description": "A lightweight announcement plugin for looping or random broadcast messages with a configurable prefix and interval.",
+    "features": [
+      "Loop or random broadcast mode",
+      "Configurable interval timer",
+      "Optional prefix formatting",
+      "Simple message list configuration",
+      "Lightweight admin reload command",
+      "Low-overhead utility design"
+    ],
+    "tags": [
+      "Chat",
+      "Utility",
+      "Private"
+    ],
+    "integrations": [],
+    "compatibility": "Paper/Spigot 1.20+",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicBroadcast keeps important reminders, server notices and community prompts visible without relying on external plugins or complicated schedules.",
+        "It is intentionally lightweight: configure a list of messages, choose whether they should cycle in order or appear randomly, and let the plugin handle regular delivery."
+      ],
+      "workflowTitle": "Configure messages once and let the server speak for itself",
+      "workflow": [
+        "Administrators add messages to the configuration, choose a minute-based interval and select either LOOP or RANDOM mode. Broadcasts then appear automatically to all online players using the optional prefix formatting.",
+        "When changes are made, the /mb reload command lets staff refresh the configuration without rebuilding the entire server setup."
+      ],
+      "benefits": [
+        "Very quick to configure",
+        "Useful for votes, Discord reminders and server rules",
+        "No heavy dependencies",
+        "Predictable timed announcements"
+      ],
+      "administration": "This project is currently a private server utility. It focuses on reliability and minimal overhead rather than bloated scheduling features.",
+      "featureDetails": {
+        "Loop or random broadcast mode": "Run broadcasts in a strict sequence or let them shuffle for a less repetitive feel.",
+        "Configurable interval timer": "Set how often messages appear with a simple minute-based value.",
+        "Optional prefix formatting": "Display messages with or without a branded server prefix.",
+        "Simple message list configuration": "All broadcast lines live in one readable configuration section.",
+        "Lightweight admin reload command": "Refresh configuration changes with /mb reload.",
+        "Low-overhead utility design": "Small scope and simple behaviour keep the plugin easy to maintain."
+      },
+      "bestFor": "Private or community servers that want automated reminders without the weight of a full chat suite.",
+      "setup": [
+        "Install the plugin and let it generate config.yml.",
+        "Add your message list under Messages.",
+        "Choose the interval, mode and prefix options.",
+        "Use /mb reload after edits."
+      ]
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicBroadcast",
+    "sourceMainClass": "me.Ghoul.MythicBroadcast.Main",
+    "sourceApiVersion": "1.2",
+    "sourceCommands": 1,
+    "sourcePermissions": 1,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
+  },
+  {
+    "id": "mythicmaps",
+    "name": "MythicMaps",
+    "category": "Visual Media System",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "Image maps, GIF maps, floating displays and transparent sprite art for Minecraft worlds.",
+    "description": "A media display system that turns custom images and animations into map-based art, item-frame walls and floating display entities.",
+    "features": [
+      "Static image maps",
+      "Animated GIF map rendering",
+      "Floating display entities",
+      "Transparent sprite displays",
+      "Fit modes and scaling controls",
+      "Saved map and display data"
+    ],
+    "tags": [
+      "Maps",
+      "Visuals",
+      "Private"
+    ],
+    "integrations": [],
+    "compatibility": "Paper/Spigot 1.20+",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicMaps is built for servers that want to bring custom art into the world in more than one form. It supports traditional image maps, animated GIF playback and modern display-based presentation.",
+        "The plugin is designed as a media toolkit rather than a single-purpose image importer, making it useful for spawn art, billboards, quests, decorations and interactive builds."
+      ],
+      "workflowTitle": "Import media, choose the presentation style and deploy it in-world",
+      "workflow": [
+        "Images are stored inside the configured images folder, then converted into one or more maps or display records. The plugin supports fit modes, wall limits, scale values and saved records for later reuse.",
+        "Animated GIFs use dedicated renderers and timing controls, while display and sprite systems allow more modern presentation styles with transparency handling and performance boundaries."
+      ],
+      "benefits": [
+        "Supports both classic maps and modern displays",
+        "Useful for art, signage and animated showcases",
+        "Multiple fit and scaling options",
+        "Persists map and display data"
+      ],
+      "administration": "Maximum wall size, GIF behaviour, sprite scaling and entity caps are all configurable so the system can be adapted to different hardware and build styles.",
+      "featureDetails": {
+        "Static image maps": "Convert still images into map art for walls, framed displays or decorative builds.",
+        "Animated GIF map rendering": "Play moving media through optimized GIF renderers with timing controls.",
+        "Floating display entities": "Use display entities for clean presentation without relying only on item frames.",
+        "Transparent sprite displays": "Render sprite-style visuals with alpha threshold handling for cleaner cut-outs.",
+        "Fit modes and scaling controls": "Choose how images fill their target area and how large they appear.",
+        "Saved map and display data": "Persist records so media installations can survive restarts and be managed later."
+      },
+      "bestFor": "Creative hubs, RPG servers and showcase worlds that want custom media embedded into the environment.",
+      "setup": [
+        "Create or copy media files into the configured images folder.",
+        "Configure fit mode, wall limits, GIF options and display defaults.",
+        "Use /mythicmaps (or /mmap) commands to create and manage displays.",
+        "Test animated media carefully in your target world."
+      ]
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicMaps",
+    "sourceMainClass": "me.Ghoul.MythicMaps.Main",
+    "sourceApiVersion": "1.20",
+    "sourceCommands": 1,
+    "sourcePermissions": 2,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
+  },
+  {
+    "id": "mythictab",
+    "name": "MythicTab",
+    "category": "Server UI",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "A custom tablist with rank-aware ordering, header/footer design and placeholder-driven formatting.",
+    "description": "A server tab system with configurable header and footer text, group formatting, sorting logic and support for PlaceholderAPI, Vault, GroupManager and LevelCraft placeholders.",
+    "features": [
+      "Custom header and footer",
+      "Rank-based tab sorting",
+      "Group formatting overrides",
+      "PlaceholderAPI support",
+      "Vault and GroupManager integration",
+      "LevelCraft placeholder compatibility"
+    ],
+    "tags": [
+      "Tablist",
+      "UI",
+      "Private"
+    ],
+    "integrations": [
+      "PlaceholderAPI",
+      "Vault",
+      "GroupManager",
+      "LevelCraft"
+    ],
+    "compatibility": "Paper/Spigot 1.18+",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "MythicTab gives the server tablist the same level of polish as the rest of the network. Instead of a static player list, it becomes a branded panel that can communicate rank, level and server information at a glance.",
+        "It is especially useful on RPG or community servers where group identity matters and PlaceholderAPI data should be visible directly in the tablist."
+      ],
+      "workflowTitle": "Sort players, format groups and present live server information",
+      "workflow": [
+        "The configuration defines rank order, header and footer lines, fallback colours and optional formatting overrides for each known group. MythicTab then updates the tablist every configured interval.",
+        "Custom placeholders can be inserted into names, headers and footers. This makes it easy to show online counts, ping, rank, LevelCraft totals or other data already exposed through PlaceholderAPI."
+      ],
+      "benefits": [
+        "Much cleaner first impression for players",
+        "Does not rely on scoreboard teams for ordering",
+        "Works with popular server management plugins",
+        "Fully configurable tab branding"
+      ],
+      "administration": "This private build is tuned around GroupManager and Vault workflows. Placeholder-enabled servers can expose far more live information without changing the codebase.",
+      "featureDetails": {
+        "Custom header and footer": "Design the top and bottom of the tablist with branded multi-line text.",
+        "Rank-based tab sorting": "Define the exact order groups should appear in the tab list.",
+        "Group formatting overrides": "Apply display names, colours and prefixes independently of raw permission plugin prefixes.",
+        "PlaceholderAPI support": "Use third-party placeholders inside headers, footers and tab names.",
+        "Vault and GroupManager integration": "Pull primary group, prefix and suffix information from common server plugins.",
+        "LevelCraft placeholder compatibility": "Display RPG data such as total level when LevelCraft and PlaceholderAPI are installed."
+      },
+      "bestFor": "Servers that want a polished tablist with rank identity and live placeholder-driven data.",
+      "setup": [
+        "Install MythicTab alongside Vault and GroupManager for the best results.",
+        "Optionally install PlaceholderAPI and LevelCraft for extended placeholders.",
+        "Set rank order, group formatting and header/footer lines in config.yml.",
+        "Use /mythictab reload after editing."
+      ]
+    },
+    "sourceDocumented": true,
+    "sourceProject": "MythicTab",
+    "sourceMainClass": "me.Ghoul.MythicTab.Main",
+    "sourceApiVersion": "1.18",
+    "sourceCommands": 1,
+    "sourcePermissions": 1,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
+  },
+  {
+    "id": "welcomeplayer",
+    "name": "WelcomePlayer",
+    "category": "Community Rewards",
+    "statusLabel": "Server Exclusive",
+    "lifecycle": "exclusive",
+    "tagline": "Reward players for welcoming newcomers and support simple referral bonuses.",
+    "description": "A social utility plugin that tracks welcome messages for joining players, pays greeters and optionally allows new players to claim referral rewards.",
+    "features": [
+      "Greeter rewards for welcome messages",
+      "Separate first-time and returning-player rewards",
+      "Referral reward system",
+      "Configurable time window and cooldowns",
+      "Custom trigger word lists",
+      "Simple admin reload support"
+    ],
+    "tags": [
+      "Community",
+      "Rewards",
+      "Private"
+    ],
+    "integrations": [
+      "Vault-compatible economy commands"
+    ],
+    "compatibility": "Paper/Spigot 1.21+",
+    "version": "Private",
+    "spigot_url": null,
+    "modrinth_url": null,
+    "spigot": null,
+    "modrinth": null,
+    "longDescription": {
+      "intro": [
+        "WelcomePlayer is designed to encourage social interaction at the exact moment it matters most: when someone joins the server and needs acknowledgement from the community.",
+        "Instead of treating a warm welcome as something purely cosmetic, the plugin turns it into a small reward loop with configurable messages, time windows and optional referral bonuses for invited players."
+      ],
+      "workflowTitle": "Detect genuine welcomes, reward greeters and handle referrals",
+      "workflow": [
+        "When a player joins, the plugin opens a short welcome window. If another player sends a configured welcome phrase within that period, the greeter is rewarded according to whether the joining player is new or returning.",
+        "The referral system optionally lets new players run /referral <player> to credit the friend who brought them in, with configurable command rewards for both the referrer and the newcomer."
+      ],
+      "benefits": [
+        "Makes chat feel friendlier",
+        "Rewards positive social behaviour",
+        "Includes a built-in referral flow",
+        "Simple to adapt through config commands"
+      ],
+      "administration": "Reward commands, message text, welcome phrases and referral rules all live in config.yml, making it easy to align the system with the server economy and onboarding goals.",
+      "featureDetails": {
+        "Greeter rewards for welcome messages": "Players receive rewards when they properly greet a joining player within the allowed time window.",
+        "Separate first-time and returning-player rewards": "Different command rewards can be used depending on whether the joining player is brand new or simply coming back.",
+        "Referral reward system": "New players can credit the person who invited them and trigger additional rewards.",
+        "Configurable time window and cooldowns": "Prevent spam and control how long welcome opportunities remain open.",
+        "Custom trigger word lists": "Define exactly which welcome phrases count for first-time and returning players.",
+        "Simple admin reload support": "Staff can refresh configuration changes without a full restart."
+      },
+      "bestFor": "Community-focused servers that want onboarding and social engagement to feel meaningful.",
+      "setup": [
+        "Install the plugin and configure reward commands in config.yml.",
+        "Set the welcome time window, cooldowns and valid greeting phrases.",
+        "Enable or disable referrals depending on your onboarding flow.",
+        "Use /wp reload after editing."
+      ]
+    },
+    "sourceDocumented": true,
+    "sourceProject": "WelcomePlayer",
+    "sourceMainClass": "me.Ghoul.WelcomePlayer.Main",
+    "sourceApiVersion": "1.21",
+    "sourceCommands": 2,
+    "sourcePermissions": 1,
+    "sourceConfigFiles": [
+      "config.yml"
+    ]
   }
 ]
