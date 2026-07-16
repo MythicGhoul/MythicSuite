@@ -74,6 +74,12 @@ MythicBroadcast, MythicMaps, MythicTab and WelcomePlayer use transparent PNG
 badge artwork in `assets/icons/`.
 
 
-## Portfolio cleanup and source update
+## Documentation-only correction
 
-MithrilChains, MythicRifts and LevelRewards were removed completely. SimpleCrystals and SpawnerControl now have static source-grounded documentation generated from the supplied current projects.
+This package preserves the previous stable website presentation byte-for-byte for the main CSS, JavaScript, favicon and retained plugin artwork. Only catalogue/documentation content was changed:
+
+- Removed MithrilChains, MythicRifts and LevelRewards
+- Added source-grounded SimpleCrystals documentation
+- Added source-grounded SpawnerControl documentation
+- Updated resource, documentation, statistics and sitemap content
+- Preserved the homepage portal/orbs, layout, animations and transparent badge assets
