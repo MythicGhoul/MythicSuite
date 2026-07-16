@@ -57,29 +57,3 @@ appear smaller than the other plugin images.
 The shared `assets/favicon.svg` artwork is now used in the navigation header,
 footer branding and the large homepage portal logo. Sizing is responsive and
 all pages now declare the same browser favicon.
-
-
-## Source-grounded documentation build
-
-This build contains static technical references for 25 uploaded source projects.
-Each documented plugin page includes exact plugin.yml commands, permissions,
-dependencies, configuration paths, detected tokens and a source architecture map.
-The Documentation page at `/documentation/` provides an index.
-
-The following existing catalogue entries were not present in the uploaded source
-archive and retain their previous overview documentation: SimpleCrystals,
-MithrilChains, LevelRewards, MythicRifts and MythicSpawnerControl.
-
-MythicBroadcast, MythicMaps, MythicTab and WelcomePlayer use transparent PNG
-badge artwork in `assets/icons/`.
-
-
-## Documentation-only correction
-
-This package preserves the previous stable website presentation byte-for-byte for the main CSS, JavaScript, favicon and retained plugin artwork. Only catalogue/documentation content was changed:
-
-- Removed MithrilChains, MythicRifts and LevelRewards
-- Added source-grounded SimpleCrystals documentation
-- Added source-grounded SpawnerControl documentation
-- Updated resource, documentation, statistics and sitemap content
-- Preserved the homepage portal/orbs, layout, animations and transparent badge assets
