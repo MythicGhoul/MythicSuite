@@ -815,8 +815,8 @@
     "id": "exp-gems",
     "name": "EXP-Gems",
     "category": "RPG Progression",
-    "statusLabel": "Legacy Resource",
-    "lifecycle": "legacy",
+    "statusLabel": "Public Plugin",
+    "lifecycle": "current",
     "tagline": "Craftable gems that enhance experience gains.",
     "description": "EXP-Gems gives RPG and fantasy servers a tangible way to reward progression. Players can craft or obtain gems that improve experience gains and provide a more visible upgrade path than invisible permissions.",
     "features": [
